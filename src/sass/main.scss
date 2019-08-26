@@ -1,0 +1,26 @@
+@import "vars.scss";
+@import "fonts.scss";
+
+html, body {
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    color: $text;
+    background: #fff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: Cera;
+    font-weight: normal;
+  
+}
