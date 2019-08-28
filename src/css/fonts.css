@@ -61,3 +61,17 @@
   src: url(../fonts/Museo/MuseoCyrl-700.woff);
   font-weight: bold;
 }
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoCyrl-900.woff);
+  font-weight: 900;
+}
+
+/* ALSSchlangeslab */
+
+@font-face {
+  font-family: ALS;
+  src: url(../fonts/ALSSchlangeslab/alsschlangebold.otf);
+  font-weight: bold;
+}

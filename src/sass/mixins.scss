@@ -1,3 +1,4 @@
+@import "./vars.scss";
 @mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
     @font-face {
         font-family: $font-family;
@@ -6,4 +7,8 @@
         src: url('#{$file-path}.eot');
         src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
     }
+}
+
+@mixin borderBottom {
+	border-bottom: 1px solid $lightGray;
 }
