@@ -28,8 +28,36 @@
   font-weight: 500;
 }
 
+/* CERAPRO */
+
 @font-face {
-  font-family: Cera;
+  font-family: CeraPro;
+  src: url(../fonts/CeraPro/CeraPro-Regular.woff);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: CeraPro;
   src: url(../fonts/CeraPro/CeraPro-Medium.woff);
   font-weight: 500;
+}
+
+@font-face {
+  font-family: CeraPro;
+  src: url(../fonts/CeraPro/CeraPro-Bold.woff);
+  font-weight: bold;
+}
+
+/* MUSEO */
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoSansCyrl.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoCyrl-700.woff);
+  font-weight: bold;
 }
