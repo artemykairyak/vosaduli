@@ -78,9 +78,9 @@
 
 html,
 body {
-  font-family: MuseoCyrl;
+  font-family: CeraPro;
   font-weight: normal;
-  font-size: 17px;
+  font-size: 13px;
   margin: 0;
   padding: 0;
   cursor: default;
@@ -120,16 +120,68 @@ input {
   padding: 0 28px;
   text-transform: uppercase;
   border-radius: 18.5px;
-  border: solid 1px #ccd6e2;
   position: relative;
   z-index: 1;
   background: transparent;
-  font-family: CeraPRO;
-  font-size: 13px;
   font-weight: bold;
   line-height: 37px;
   color: #64686e;
   text-align: center;
+}
+
+.button_green {
+  height: 37px;
+  padding: 0 28px;
+  text-transform: uppercase;
+  border-radius: 18.5px;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  font-weight: bold;
+  line-height: 37px;
+  color: #4e801a;
+  text-align: center;
+}
+
+.button_green:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  border: solid 1px #90c952;
+  width: 100%;
+  height: 37px;
+  border-radius: 18.5px;
+}
+
+.button_green:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 3px;
+  top: 3px;
+  width: 100%;
+  background: #c4dfa5;
+  height: 37px;
+  border-radius: 18.5px;
+  z-index: -1;
+}
+
+.button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  border: solid 1px #ccd6e2;
+  width: 100%;
+  height: 37px;
+  border-radius: 18.5px;
 }
 
 .button:after {
@@ -138,8 +190,8 @@ input {
   position: absolute;
   bottom: 0;
   right: 0;
-  left: 4px;
-  top: 4px;
+  left: 3px;
+  top: 3px;
   width: 100%;
   background: #f4f7fb;
   height: 37px;
@@ -203,7 +255,6 @@ input {
 
 .submenu__link {
   color: #1e5cd6;
-  font-family: CeraPRO;
   font-size: 12px;
   font-weight: bold;
 }
@@ -283,7 +334,7 @@ input {
 
 .icons-section__icon {
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .icons-section__icon_contests {
@@ -311,7 +362,6 @@ input {
 }
 
 .icons-section__label {
-  font-size: 13px;
   font-weight: bold;
   color: #21224e;
 }
@@ -461,13 +511,14 @@ input {
 .user-data__bio {
   font-size: 16px;
   font-weight: bold;
-  font-family: CeraPRO;
 }
 
 .actions {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 15px;
 }
 
 .actions__add-friend,
@@ -489,6 +540,7 @@ input {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+  align-items: flex-start;
 }
 
 .content_mt15px {
@@ -496,12 +548,14 @@ input {
 }
 
 .profile-menu {
-  width: 20%;
+  width: 21%;
   background: #fff;
   border-radius: 2px;
   border: solid 1px #e6e9f1;
   padding: 26px 11px 28px 15px;
   transition: all 0.3s ease;
+  position: sticky;
+  top: 0;
 }
 
 .profile-menu__container {
@@ -552,7 +606,6 @@ input {
 
 .profile-menu__item-text {
   display: inline-block;
-  font-family: CeraPRO;
   font-size: 16px;
   font-weight: 500;
   color: #5b5b5b;
@@ -605,15 +658,13 @@ input {
 }
 
 .profile-menu__submenu-link {
-  font-family: CeraPRO;
   font-size: 14px;
   font-weight: 500;
   color: #5b5b5b;
 }
 
 .main-content {
-  background: blue;
-  width: 60%;
+  width: 58%;
 }
 
 .blogs-menu {
@@ -668,8 +719,6 @@ input {
   border: none;
   border-radius: 0;
   width: 50%;
-  font-family: CeraPRO;
-  font-size: 13px;
   font-weight: 500;
   line-height: 37px;
   color: #9b9b9b;
@@ -679,6 +728,10 @@ input {
 .blogs-menu__trigger:after {
   border-radius: 0;
   display: none;
+}
+
+.blogs-menu__trigger:before {
+  border-radius: 0;
 }
 
 .blogs-menu__trigger:first-child {
@@ -691,6 +744,8 @@ input {
 
 .blogs-menu__trigger_active:after {
   display: inline-block;
+  left: 2px;
+  top: 2px;
 }
 
 .blogs-menu__item {
@@ -723,7 +778,6 @@ input {
 }
 
 .blogs-menu__item-header {
-  font-family: CeraPRO;
   font-size: 12px;
   font-weight: 500;
 }
@@ -739,14 +793,11 @@ input {
 .blogs-menu__item-text {
   margin-top: 8px;
   margin-bottom: 15px;
-  font-family: CeraPRO;
   font-size: 14px;
   font-weight: bold;
 }
 
 .blogs-menu__item-footer * {
-  font-family: CeraPRO;
-  font-size: 13px;
   font-weight: 500;
   margin-right: 14px;
 }
@@ -774,4 +825,62 @@ input {
   width: 7px;
   height: 11px;
   background: url(../img/icons/read-after.svg) 0 0/contain no-repeat;
+}
+
+.blogs-menu__navigation {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  border: solid 1px #e5e5e5;
+  border-top: none;
+  height: 37px;
+  align-items: center;
+}
+
+.blogs-menu__prev,
+.blogs-menu__next {
+  width: 30%;
+  text-align: center;
+  line-height: 37px;
+}
+
+.blogs-menu__prev svg path,
+.blogs-menu__next svg path {
+  fill: #282829;
+}
+
+.blogs-menu__prev_disabled,
+.blogs-menu__next_disabled {
+  cursor: default;
+}
+
+.blogs-menu__prev_disabled svg path,
+.blogs-menu__next_disabled svg path {
+  fill: #A0A0A0;
+}
+
+.blogs-menu__all-blogs {
+  width: 40%;
+  border-left: solid 1px #e5e5e5;
+  border-right: solid 1px #e5e5e5;
+  text-align: center;
+  line-height: 33px;
+  font-weight: bold;
+  color: #282829;
+}
+
+.blogs-menu__add-button {
+  background: #fdb62c;
+  width: 100%;
+  margin-top: 25px;
+  font-weight: bold;
+  color: #884235;
+  text-transform: none;
+}
+
+.blogs-menu__add-button:before,
+.blogs-menu__add-button:after {
+  display: none;
 }

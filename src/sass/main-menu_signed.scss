@@ -1,0 +1,74 @@
+@import 'vars.scss';
+
+.logo {
+	
+	background: #fff;
+	
+	&_nopadding {
+		
+	}
+
+	&__picture-container {
+		display: inline-block;
+		box-shadow: 0 0 15px 0 #00000009;
+		position: relative;
+		width: 75px;
+		height: 75px;
+		margin-top: -15px;
+		z-index: 92;
+	}
+
+	&__picture {
+		background: url(../img/icons/signed-logo.svg) 0 0 / contain no-repeat;
+		width: 40px;
+		height: 52px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+	}
+
+	&__text-picture {
+		margin-left: 16px;
+		display: inline-block;
+		width: 139px;
+		height: 57px;
+		background: url(../img/icons/logo-text.svg) 0 0 / contain no-repeat;
+	}
+}
+
+.search {
+	width: 27%;
+}
+
+.icons-section {
+	width: 35%;
+}
+
+.user-info {
+	&__text {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	&__greeting {
+		font-size: 12px;
+		font-weight: 500;
+		color: #a1a1a1;
+		text-align: right;
+		display: inline-block;
+		width: 100%;
+	}
+
+	&__username {
+		font-size: 13px;
+		font-weight: 500;
+		color: $blue;
+		display: block;
+	}
+
+	&__avatar {
+		transform: translateY(5px);
+	}
+}

@@ -8,8 +8,10 @@
 	<meta name="keywords" content="ключевые, слова, через, запятую">
 	<link rel="shortcut icon" type='image/png' href="img/icons/favicon.ico" />
 	<title>Личный кабинет</title>
-	<link rel="stylesheet" href="css/main.css" type="text/css">
-	<link rel="stylesheet" href="css/profile.css" type="text/css">
+	
+	<link rel="stylesheet" href="css/main.css" type="text/css">	
+	<!-- <link rel="stylesheet" href="css/main-menu_signed.css"> -->
+	<link rel="stylesheet" href="css/journal.css" type="text/css">
 </head>
 <body>
 	<main>
@@ -33,11 +35,11 @@
 							<a href="" class="submenu__link">Журналы</a>
 						</li>
 					</ul>
-				</div>
+				</div>	
+
 				<div class="main-menu">
 					<a href="/" class="logo">
 						<div class="logo__picture"></div>
-						<!-- <div class="logo__text">Восадули<br>жунал садовода</div> -->
 					</a>
 					<div class="search">
 						<input type="text" class="search-input" placeholder="Поиск по сайту">
@@ -63,10 +65,6 @@
 						</a>
 					</div>
 					<div class="user-info">
-						<!-- <div class="user-info__text">
-							<span class="user-info__greeting">Привет,</span>
-							<span class="user-info__username">Елена Старовойтова</span>
-						</div> -->
 						<a href="#" class="user-info__avatar">
 							<img src="img/avatar.jpg" class="user-info__avatar-picture avatar"></img>
 						</a>
@@ -215,7 +213,78 @@
 								</li>
 							</ul>
 						</div>
-						<div class="main-content"></div>
+						<div class="main-content">
+							<div class="journal">
+								<div class="journal__search">
+									<h2 class="journal__title">«Наша дача в Московской области или как мы строили свой дом»</h2>
+									<div class="journal__search-container">
+										<input type="text" class="journal__search-input search-input" placeholder="Поиск по журналу">
+										<a href="#" class="journal__search-button">Найти</a>
+										<div class="search__shadow"></div>
+									</div>
+								</div>
+								<div class="journal__article">
+									<span class="journal__article-title">
+										Всё, что нужно знать о пересадке чудного цветка из африканских широт — зигокактуса
+									</span>
+									<p class="journal__article-pubinfo">
+										<span class="journal__article-date">24.03.18</span>
+										<span class="journal__article-time">в 14:38</span>
+										<span class="journal__article-category">Безымянная</span>
+									</p>
+									<div class="journal__article-content">
+										<p class="journal__article-text">Зигокактус или рождественник – одно из самых популярных комнатных растений, которое часто можно встретить на подоконниках. Благодаря своему неприхотливому характеру цветок способен расти практически в любых условиях и каждую зиму радовать обильным цветением.</p>
+									</div>
+									<div class="journal__article-picture">
+										<img src="img/plant.webp" alt="">
+									</div>
+									<div class="journal__article-footer">
+										<div class="journal__article-tags">
+											<a href="#" class="journal__article-tag">#пересадка</a>
+											<a href="#" class="journal__article-tag">#суккуленты</a>
+											<a href="#" class="journal__article-tag">#уход</a>
+										</div>
+										<div class="journal__article-controls">
+											<a href="#" class="journal__article-read-more button_green">Читать далее</a>
+											<span class="journal__article-likes">23</span>
+											<span class="journal__article-comments">5</span>
+											<a href="#" class="journal__article-comment-btn button">Комментировать</a>
+											<a href="#" class="journal__article-more button">...</a>
+										</div>
+									</div>
+								</div>
+								<div class="journal__article">
+									<span class="journal__article-title">
+										Всё, что нужно знать о пересадке чудного цветка из африканских широт — зигокактуса
+									</span>
+									<p class="journal__article-pubinfo">
+										<span class="journal__article-date">24.03.18</span>
+										<span class="journal__article-time">в 14:38</span>
+										<span class="journal__article-category">Безымянная</span>
+									</p>
+									<div class="journal__article-content">
+										<p class="journal__article-text">Зигокактус или рождественник – одно из самых популярных комнатных растений, которое часто можно встретить на подоконниках. Благодаря своему неприхотливому характеру цветок способен расти практически в любых условиях и каждую зиму радовать обильным цветением.</p>
+									</div>
+									<div class="journal__article-picture">
+										<img src="img/plant2.jpg" alt="">
+									</div>
+									<div class="journal__article-footer">
+										<div class="journal__article-tags">
+											<a href="#" class="journal__article-tag">#пересадка</a>
+											<a href="#" class="journal__article-tag">#суккуленты</a>
+											<a href="#" class="journal__article-tag">#уход</a>
+										</div>
+										<div class="journal__article-controls">
+											<a href="#" class="journal__article-read-more button_green">Читать далее</a>
+											<span class="journal__article-likes">23</span>
+											<span class="journal__article-comments">5</span>
+											<a href="#" class="journal__article-comment-btn button">Комментировать</a>
+											<a href="#" class="journal__article-more button">...</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<div class="blogs-menu">
 							<div class="blogs-menu__header">
 								<span class="blogs-menu__logo"></span>
@@ -294,6 +363,20 @@
 									</div>
 								</div>
 							</div>
+							<div class="blogs-menu__navigation">
+								<a href="#" class="blogs-menu__prev blogs-menu__prev_disabled">
+									<svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7">
+										<path fill="#A0A0A0" fill-rule="nonzero" d="M.012 5.936c-.19-.185 1.956-2.223 2.334-2.47a13.136 13.136 0 0 0 1.767-1.481C4.618 1.491 5.123.874 5.69.38c.19-.185.442-.432.694-.37.127 0 .127.061.316.185.505.432.82.926 1.325 1.358.442.309.757.74 1.136 1.111l.946.926c.505.556.947 1.111 1.388 1.728.19.247.316.556.505.741-.379.247-.757.494-1.136.803-.189.061-.378.123-.568.123-.252 0-.63-.617-.82-.802-.315-.309-.442-.68-.757-.988-.82-.926-1.64-1.79-2.524-2.593a5.338 5.338 0 0 1-1.199 1.173c-.378.309-.694.618-.946 1.05-.442.617-1.01 1.049-1.514 1.605-.063.123-.253.308-.379.432-.252.247-.442.123-.694-.062-.505-.309-1.01-.617-1.451-.988 0 0 .063.062 0 .124z"/>
+									</svg>
+								</a>
+								<a href="#" class="blogs-menu__all-blogs">Все блоги</a>
+								<a href="#" class="blogs-menu__next">
+									<svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7">
+										<path fill="#A0A0A0" fill-rule="nonzero" d="M.012 1.064c-.19.185 1.956 2.223 2.334 2.47.631.432 1.2.925 1.767 1.481.505.494 1.01 1.111 1.577 1.605.19.185.442.432.694.37.127 0 .127-.061.316-.185.505-.432.82-.926 1.325-1.358.442-.309.757-.74 1.136-1.111l.946-.926c.505-.556.947-1.111 1.388-1.728.19-.247.316-.556.505-.741a12.791 12.791 0 0 1-1.136-.803c-.189-.061-.378-.123-.568-.123-.252 0-.63.617-.82.802-.315.309-.442.68-.757.988-.82.926-1.64 1.79-2.524 2.593a5.338 5.338 0 0 0-1.199-1.173c-.378-.309-.694-.618-.946-1.05C3.608 1.558 3.04 1.126 2.536.57 2.473.447 2.283.262 2.157.138 1.905-.109 1.715.015 1.463.2.958.509.453.817.012 1.188c0 0 .063-.062 0-.124z"/>
+									</svg>
+								</a>
+							</div>
+							<a href="#" class="blogs-menu__add-button button">Добавить запись</a>
 						</div>
 					</section>
 				</div>

@@ -1,0 +1,171 @@
+@import 'vars.scss';
+@import 'mixins.scss';
+
+.journal {
+	width: 100%;
+
+	&__search {
+		background: url(../img/patoka-bg.svg) 0 50% / cover no-repeat;
+		width: 100%;
+		padding: 21px 10px 31px;
+
+		&-container {
+			width: 50%;
+			margin: 30px auto 0;
+			position: relative;
+
+			.search__shadow {
+				background: #fff;
+			}
+		}
+
+		&-input {
+			padding-right: 23%;
+		}
+
+		&-button {
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 2;
+			height: 37px;
+			border-radius: 18.5px;
+			background: $cloudyBlue;
+			width: 22%;
+			text-align: center;
+			line-height: 37px;
+			color: $greyBlue;
+			font-size: 12px;
+			font-weight: bold;
+		}
+	}
+
+	&__title {
+		font-family: MuseoCyrl;
+		font-size: 30px;
+		font-weight: bold;	
+		color: $blue;
+		text-align: center;
+		width: 65%;
+		margin: 0 auto;
+	}
+
+	&__article {
+		padding: 33px 18px 28px;
+		@include borderBottom;
+
+		&-title {
+			font-family: MuseoCyrl;
+			font-size: 24px;
+			font-weight: bold;
+			color: $blue;
+		}
+
+		&-pubinfo {
+			height: 14px;
+			font-family: CeraPRO;
+			font-size: 14px;
+			font-weight: 500;
+			color: #5b5b5b;
+			margin: 13px 0 16px;
+		}
+
+		&-category {
+			&:before {
+				content: '';
+				width: 4px;
+				height: 4px;
+				background-color: #5b5b5b;
+				display: inline-block;
+				border-radius: 100%;
+				margin-bottom: 2px;
+				margin-right: 3px;
+			}		
+		}
+
+		&-text {
+			font-family: Roboto;
+			font-size: 17px;
+			color: $text;
+			line-height: 1.41;
+		}
+
+		&-picture {
+			width: 100%;
+			height: auto;
+			margin: 16px 0 23px;
+
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		&-tag {
+			padding: 6px 15px;
+			border-radius: 12px;
+			border: solid 1px $cloudyBlue;
+			font-size: 12px;
+			font-weight: 500;
+			color: $cloudyBlue;
+			margin-right: 8px;
+		}
+
+		&-controls {
+			margin-top: 16px;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&-likes, &-comments {
+			font-size: 15px;
+			font-weight: bold;
+			line-height: 0.93;
+			color: $darkGray;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: center;
+
+			&:before {
+				content:'';
+				display: inline-block;
+				margin-right: 4px;
+				width: 25px;
+				height: 20px;
+			}
+		}
+
+		&-likes {
+			&:before {
+				background: url(../img/icons/lovers-icon-copy.svg) 0 0 / contain no-repeat;
+			}
+		}
+
+		&-comments {
+			&:before {
+				background: url(../img/icons/comment-anons-icon-copy.svg) 0 0 / contain no-repeat;	
+			}
+		}
+
+		&-more {
+			border: 1px solid $lightGray;
+			width: 38px;
+			height: 38px;
+			padding: 0px;
+			line-height: 30px;
+			
+			&:before, &:after {
+				display: none;
+			}
+		}
+	}
+}
