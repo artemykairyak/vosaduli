@@ -12,3 +12,11 @@
 @mixin borderBottom {
 	border-bottom: 1px solid $lightGray;
 }
+
+@mixin pseudo($url, $width: 5px, $height: 5px) {
+	content: '';
+	display: inline-block;
+	background: url($url) 0 0 / contain no-repeat;
+	width: $width;
+	height: $height;
+}

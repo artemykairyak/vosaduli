@@ -11,7 +11,6 @@ html, body {
     cursor: default;
     color: $text;
     background: #fff;
-    overflow-x: hidden;
     position: relative;
 }
 
@@ -22,7 +21,7 @@ body * {
 }
 
 .wrapper {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
@@ -205,7 +204,7 @@ input {
 }
 
 .search {
-    width: 40%;
+    width: 80%;
     position: relative;
 
     &__button {
@@ -248,6 +247,7 @@ input {
     display: -o-flex;
     display: flex;
     justify-content: space-between;
+    display: none;
 
     &__item {
         display: -webkit-flex;
@@ -445,8 +445,6 @@ input {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    border-bottom: 1px solid $lightGray;
-    padding-bottom: 15px; 
 
     &__add-friend, &__write-message {
         margin-right: 20px;
@@ -468,6 +466,9 @@ input {
     display: -o-flex;
     display: flex;
     align-items: flex-start;
+    border-top: 1px solid $lightGray;
+    border-bottom: 1px solid $lightGray;
+    padding: 15px 0 40px;
 
     &_mt15px {
         margin-top: 17px;
@@ -475,7 +476,7 @@ input {
 }
 
 .profile-menu {
-    width: 21%;
+    width: 25%;
     background: #fff;
     border-radius: 2px;
     border: solid 1px #e6e9f1;
@@ -502,7 +503,9 @@ input {
         align-items: center;
 
         &_active {
+
             svg path:last-child {
+                transition: all 0.3s ease;
                 fill: $violet;
             }
         }
@@ -549,7 +552,6 @@ input {
         border-radius: 2px;
         border-bottom: solid 1px #e6e9f1;
 
-
         &:after {
             content: '';
             background:url(../img/icons/arrow-list-right.svg) 0 0 / contain no-repeat;
@@ -557,6 +559,7 @@ input {
             height: 7px;
             display: inline-block;
             margin-left: 5px;
+            transition: all 0.3s ease;
         }
     }
 
@@ -596,20 +599,22 @@ input {
           font-size: 14px;
           font-weight: 500;
           color: #5b5b5b;
-      }
-  }
+        }
+    }
 }
 
 .main-content {
-    width: 58%;
+    width: 50%;
 }
 
 .blogs-menu {
-    width: 21%;
+    width: 25%;
     border-radius: 2px;
     border: solid 1px #e6e9f1;
     background: #ffffff;
     padding: 21px 16px 25px;
+    position: sticky;
+    top: 0;
 
     &__header {
         display: -webkit-flex;
@@ -618,7 +623,6 @@ input {
         display: -o-flex;
         display: flex;
         align-items: center;
-
     }
 
     &__logo {
@@ -784,6 +788,17 @@ input {
     border-top: none;
     height: 37px;
     align-items: center;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -78px;
+        left: 0;
+        height: 77px;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 90%);
+    } 
 }
 
 &__prev, &__next {
