@@ -2,12 +2,7 @@
 @import 'mixins.scss';
 
 .logo {
-	
 	background: #fff;
-	
-	&_nopadding {
-		
-	}
 
 	&__picture-container {
 		display: inline-block;
@@ -27,7 +22,6 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-
 	}
 
 	&__text-picture {
@@ -40,7 +34,7 @@
 }
 
 .search {
-	width: 55%;
+	width: 52%;
 }
 
 .icons-section {
@@ -76,7 +70,7 @@
 		display: block;
 
 		&:before {
-			@include pseudo('../img/icons/blue-arrow-down.svg', 7px, 5px)
+			@include pseudo('../img/icons/blue-arrow-down.svg', 7px, 5px);
 			margin-right: 9px;
 			transform: translateY(-30%);
 		}
@@ -85,4 +79,50 @@
 	&__avatar {
 		transform: translateY(5px);
 	}
+}
+
+@media screen and (max-width: 1180px) {
+	.search {
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 990px) {
+	 .user-info__text {
+        display: none;
+    }
+
+   .user-info__avatar {
+   		transform: none;
+   }
+
+   .logo__picture-container {
+        margin-top: 0;
+    }
+
+
+} 
+
+@media screen and (max-width: 768px) {
+	
+
+
+    .icons-section {
+    	width: auto;
+    	justify-content: flex-end;
+    	align-items: center;
+    	width: 40%;
+
+    	&__item:last-child {
+    		.icons-section__icon {
+    			margin-right: 0;
+    		}
+    	}
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .icons-section {
+        width: 25%;
+    }
 }
