@@ -1,0 +1,216 @@
+@import 'vars.scss';
+@import 'mixins.scss';
+
+.friends {
+	&__menu {
+		background: url(../img/patoka-bg.svg) 0 50% / cover no-repeat;
+		width: 100%;
+		padding: 30px 10px 31px;
+
+		& * {
+			transition: all 0.3s ease;
+		}
+
+		&-items {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 70%;
+			margin: 0 auto;
+		}
+
+		&-item {
+			background: transparent;
+			height: 37px;
+			
+			position: relative;
+			z-index: 1;
+			font-weight: bold;
+
+			&_active {
+				&:before, &:after {
+					content: '';
+					height: 37px;
+					width: 100%;
+					position: absolute;
+				}
+
+				&:before {
+					border-radius: 2px;
+	  				border: solid 1px #94acc4;
+	  				top: 0;
+	  				left: 0;
+	  				z-index: 1;
+				}
+
+				&:after {
+					border-radius: 2px;
+	  				background-color: #c4d2e1;
+	  				top: 5px;
+	  				left: 5px;
+	  				z-index: -1;
+				}
+
+				.friends__menu-count {
+					position: absolute;
+					top: 0px;
+					right: -17px;
+					font-weight: bold;
+					color: #94acc4;
+				}
+
+				.friends__menu-link {
+					color: $blue;
+				}
+			}	
+		}
+
+		&-count {
+			position: absolute;
+			top: 2px;
+			right: 7px;
+			font-weight: bold;
+			color: #94acc4;
+		}
+
+		&-link {
+			color: #5b5b5b;
+			position: relative;
+			padding: 14px 20px;
+			
+
+		}
+	}
+
+	.search__shadow {
+		background: #fff;
+	}
+
+	&__search {
+		&-container {
+			width: 70%;
+			margin: 33px auto 0;
+			position: relative;	
+		}
+
+		&-input {
+			padding-right: 23%;
+		}
+
+		&-button {
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 2;
+			height: 37px;
+			border-radius: 18.5px;
+			background: $cloudyBlue;
+			width: 22%;
+			text-align: center;
+			line-height: 37px;
+			color: $greyBlue;
+			font-size: 12px;
+			font-weight: bold;
+		}
+	}
+
+	&__friends-list {
+		margin: 36px 18px 0;
+	}
+
+
+}
+
+.friend {
+	padding: 20px 15px 20px 45px; 
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	@include borderBottom;
+
+	&:last-child {
+		border: none;
+	}
+	
+	&__avatar {
+		width: 80px;
+		height: 80px;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+		border: solid 3px #ffffff;
+		background-color: #d8d8d8;
+		border-radius: 100%;
+	}
+
+	&__info {
+		margin-left: 15px;
+
+	}
+
+	&__name {
+		display: block;
+		font-size: 15px;
+		font-weight: bold;
+		color: $darkGray;
+	}
+
+	&__address {
+		font-weight: 500;
+		color: #5b5b5b;
+		display: block;
+		margin: 10px 0;
+	}
+
+	&__write-btn {
+		font-weight: 500;
+		color: #1e5cd6;
+	}
+
+}
+
+@media screen and (max-width: 550px) {
+	.friends__menu-items {
+		width: 90%;
+	}
+
+	.friends__search-container {
+		width: 90%;
+	}
+
+	.friend {
+		padding: 20px 15px 20px 20px;
+	}
+}
+
+@media screen and (max-width: 440px) { 
+	.friend {
+		padding: 20px 10px 20px 10px;
+	}
+
+	.friend__avatar {
+		width: 70px;
+		height: 70px;
+	}
+
+	.friends__menu-item {
+		padding: 10px 10px;
+		height: 30px;
+		font-size: 12px;
+
+		&:before, &:after {
+			height: 30px;
+		}	
+
+		&:after {
+			top: 2px;
+			left: 2px;
+		}
+	}
+}
+
+

@@ -12,9 +12,15 @@ $(function(){
 		e.preventDefault();
 	})
 
-	$('.blogs-menu__trigger').on('click', function(e) {
-		$(this).toggleClass('blogs-menu__trigger_active');
-		$(this).siblings().removeClass('blogs-menu__trigger_active');
+	$('.trigger').on('click', function(e) {
+		$(this).toggleClass('trigger_active');
+		$(this).siblings().removeClass('trigger_active');
+		e.preventDefault();
+	});
+
+	$('.friends__menu-item').on('click', function(e) {
+		$(this).addClass('friends__menu-item_active');
+		$(this).siblings().removeClass('friends__menu-item_active');
 		e.preventDefault();
 	})
 })

@@ -511,6 +511,21 @@ input {
         margin-left: 20px;
         display: inline-block;
         transform: translateY(35%);
+        position: relative;
+
+        &_online {
+            &:before {
+                content: '';
+                background: #8dbc24;
+                width: 12px;
+                height: 12px;
+                border: solid 2px #ffffff;
+                position: absolute;
+                left: 40px;
+                top: 13px;
+                border-radius: 100%;
+            }
+        }
     }
 
     &__avatar-picture {
@@ -519,7 +534,7 @@ input {
         box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
         border: solid 1px #e6e9f1;
         background-color: #ffffff;
-        border-radius: 40%;
+        border-radius: 45%;
     }
 
     &__text {
@@ -548,7 +563,7 @@ input {
     margin: 0 auto;
 
     &__add-friend, &__write-message {
-        margin-right: 20px;
+       /* margin-right: 20px;*/
     }
 
     &__write-message {
@@ -573,7 +588,7 @@ input {
     display: flex;
     align-items: flex-start;
     border-top: 1px solid $lightGray;
-    border-bottom: 1px solid $lightGray;
+    @include borderBottom;
     padding: 15px 0 40px;
 
     &_mt15px {
@@ -590,6 +605,10 @@ input {
     transition: all 0.3s ease;
     position: sticky;
     top: 17px;
+
+    svg {
+        width: 29px;    
+    }
 
     &__container {
         display: -webkit-flex;
@@ -745,6 +764,51 @@ input {
     width: 50%;
 }
 
+.triggers {
+    margin-top: 20px;
+    border: 1px solid $lightGray;
+    border-radius: 2px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.trigger {
+    border: none;
+    border-radius: 0;
+    width: 50%;
+    font-weight: 500;
+    line-height: 37px;
+    color: #9b9b9b;
+    text-transform: none;
+
+    &:after {
+        border-radius: 0;
+        display: none;
+    }
+
+    &:before {
+        border-radius: 0;
+    }
+
+    &:first-child {
+        border-right: 1px solid $lightGray;
+    }
+
+    &_active {
+        color: $darkGray;
+
+        &:after {
+            display: inline-block;
+            left: 2px;
+            top: 2px;
+        }
+
+    }
+}
+
 .blogs-menu {
     width: 25%;
     border-radius: 2px;
@@ -753,6 +817,10 @@ input {
     padding: 21px 16px 25px;
     position: sticky;
     top: 17px;
+
+    & * {
+        transition: all 0.3s ease;
+    }
 
     &__header {
         display: -webkit-flex;
@@ -775,6 +843,7 @@ input {
         font-weight: bold;
         color: $blue;
         line-height: 0.77;
+        margin-right: 15px;
     }
 
     &__add-post {
@@ -783,50 +852,6 @@ input {
         background: url(../img/icons/plus.svg) 0 0 / contain no-repeat;
     }
 
-    &__triggers {
-        margin-top: 20px;
-        border: 1px solid $lightGray;
-        border-radius: 2px;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: flex;
-    }
-
-    &__trigger {
-        border: none;
-        border-radius: 0;
-        width: 50%;
-        font-weight: 500;
-        line-height: 37px;
-        color: #9b9b9b;
-        text-transform: none;
-
-        &:after {
-            border-radius: 0;
-            display: none;
-        }
-
-        &:before {
-            border-radius: 0;
-        }
-
-        &:first-child {
-            border-right: 1px solid $lightGray;
-        }
-
-        &_active {
-            color: $darkGray;
-
-            &:after {
-                display: inline-block;
-                left: 2px;
-                top: 2px;
-            }
-
-        }
-    }
 
     &__item {
         display: -webkit-flex;
@@ -1045,6 +1070,15 @@ input {
         padding: 0;
     }
 
+    .user-data__avatar {
+        &_online {
+            &:before {
+                left: 25px;
+                top: 7px; 
+            }
+        }
+    }
+
     .user-data__avatar-picture {
         width: 176px;
         height: 176px;
@@ -1080,7 +1114,7 @@ input {
         font-size: 34px;
     }
 
-    .main-content {
+     .main-content {
         width: 100%;
     }
 
@@ -1088,7 +1122,6 @@ input {
         display: none;
     }
 }
-
 
 @media screen and (max-width: 576px) {
 
@@ -1137,8 +1170,19 @@ input {
         padding: 19px 20px 19px 26px;
     }
 
+
+
     .mobile-profile-menu__container {
         width: 100%;
+    }
+
+    .user-data__avatar {
+        &_online {
+            &:before {
+                left: 25px;
+                top: 2px; 
+            }
+        }
     }
 
     .user-data__info {
@@ -1180,6 +1224,49 @@ input {
 
         &:after {
             height: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .actions {
+        padding: 0 20px;
+        justify-content: center;
+    }
+
+    .user-data__avatar {
+        transform: none;
+    }
+
+    .user-data__avatar-picture {
+        height: 100px;
+        width: 100px;
+    }
+
+    .user-data__info {
+        align-items: center;
+        padding-bottom: 10%;
+        padding-right: 20px;
+    }
+
+    .user-data__username {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .user-data__text {
+        margin-bottom: 0;
+        margin-left: 15px;
+    }
+
+      .user-data__avatar {
+        &_online {
+            &:before {
+                left: 7px;
+                top: 5px; 
+                height: 10px;
+                width: 10px;
+            }
         }
     }
 }
