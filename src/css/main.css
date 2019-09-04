@@ -110,8 +110,109 @@ li {
   display: inline-block;
 }
 
-input {
+input,
+select,
+option,
+textarea {
+  appearance: none;
+  /* remove arrow        */
+  -webkit-appearance: none;
+  /* remove arrow Chrome */
+  -moz-appearance: none;
   box-sizing: border-box;
+}
+
+.input {
+  height: 40px;
+  color: #2e2e2e;
+  padding: 0 16px;
+  font-size: 16px;
+  font-family: Roboto;
+  border-radius: 2px;
+  box-shadow: inset 0 2px 2px 0 #0000000f;
+  border: solid 1px #c4d2e1;
+  background-color: #ffffff;
+  font-weight: 500;
+}
+
+.input::-webkit-input-placeholder {
+  font-family: Roboto;
+  font-size: 16px;
+  color: #64686e;
+  font-weight: normal;
+}
+
+.input:-moz-placeholder {
+  font-family: Roboto;
+  font-size: 16px;
+  color: #64686e;
+  font-weight: normal;
+}
+
+.input::-moz-placeholder {
+  font-family: Roboto;
+  font-size: 16px;
+  color: #64686e;
+  font-weight: normal;
+}
+
+.input:-ms-input-placeholder {
+  font-family: Roboto;
+  font-size: 16px;
+  color: #64686e;
+  font-weight: normal;
+}
+
+.edit-input {
+  border-radius: 2px;
+  box-shadow: inset 0 2px 2px 0 #0000000f;
+  border: solid 1px #c4d2e1;
+  background-color: #ffffff;
+  height: 37px;
+  padding: 0 16px;
+  font-family: CeraPRO;
+  font-weight: 500;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select.edit-select {
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0 3px 7px 0 #0000000e, inset 0 -3px 0 0 #e0e4e8;
+  border: solid 1px #c4d2e1;
+  background-color: #fafafa;
+  color: #21224e;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 0 21px 0 16px;
+  font-family: CeraPRO;
+  position: relative;
+  cursor: pointer;
+}
+
+select.edit-select:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 7px;
+}
+
+option {
+  height: 40px;
+  border: solid 1px #c4d2e1;
+  background-color: #fafafa;
+  color: #21224e;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 0 21px 0 16px;
+  font-family: CeraPRO;
+  position: relative;
 }
 
 .button {
@@ -228,7 +329,7 @@ input {
   font-family: CeraPRO;
   font-size: 12px;
   font-weight: bold;
-  color: #99999a;
+  color: #2e2e2e;
 }
 
 .search-input:focus {
@@ -1278,6 +1379,10 @@ input {
 
   .user-data__avatar {
     transform: none;
+  }
+
+  .mobile-nav-menu__item {
+    margin-left: 30px;
   }
 
   .user-data__avatar-picture {

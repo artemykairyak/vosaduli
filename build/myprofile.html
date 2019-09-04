@@ -324,71 +324,179 @@
 							</div>
 						</div>
 					</div>
+					<div class="groups-menu__navigation">
+						<a href="#" class="groups-menu__prev groups-menu__prev_disabled">
+							<div class="svg" data-src="img/icons/arrow-sidbar-up.svg"></div>
+						</a>
+						<a href="#" class="groups-menu__next">
+							<div class="svg" data-src="img/icons/arrow-sidbar-down.svg"></div>
+						</a>
+					</div>
 				</div>
 			</div>
 			
-
 			<div class="main-content">
-				<div class="friends">
-					<div class="friends__menu">
-						<ul class="friends__menu-items">
-							<li class="friends__menu-item friends__menu-item_active">
-								<span class="friends__menu-count">4</span>
-								<a href="#" class="friends__menu-link">Друзья</a>
-							</li>
-							<li class="friends__menu-item">
-								<span class="friends__menu-count">13</span>
-								<a href="#" class="friends__menu-link">Подписчики</a>
-							</li>
-							<li class="friends__menu-item">
-								<span class="friends__menu-count">5</span>
-								<a href="#" class="friends__menu-link">Подписки</a>
-							</li>
-						</ul>
-						<div class="friends__search-container">
-							<input type="text" class="friends__search-input search-input" placeholder="Поиск по друзьям">
-							<a href="#" class="friends__search-button">Найти</a>
-							<div class="search__shadow"></div>
+				<div class="myprofile">
+					<div class="myprofile__tabs">
+						<h2 class="myprofile__tabs-title">Мой профиль</h2>
+						<div class="myprofile__tabs-container triggers">
+							<a href="#" class="myprofile__tabs-tab myprofile__tabs-tab_main trigger trigger_active button">Основное</a>
+							<a href="#" class="myprofile__tabs-tab myprofile__tabs-tab_stats trigger button">Статистика</a>
+							<a href="#" class="myprofile__tabs-tab myprofile__tabs-tab_coins trigger button">Монеты</a>
+							<a href="#" class="myprofile__tabs-tab myprofile__tabs-tab_prizes trigger button">Награды</a>
 						</div>
+						<ul class="myprofile__submenu">
+							<li class="myprofile__submenu-item myprofile__submenu-item_active">
+								<a href="#" class="myprofile__submenu-link">О себе</a>
+							</li>
+							<li class="myprofile__submenu-item">
+								<a href="#" class="myprofile__submenu-link">Соцсети</a>
+							</li>
+							<li class="myprofile__submenu-item">
+								<a href="#" class="myprofile__submenu-link">Контакты</a>
+							</li>
+
+						</ul>
 					</div>
-					<div class="friends__friends-list">
-						<a href="#" class="friend">
-							<div class="friend__avatar" style="background: url(img/friend1.png) center / cover no-repeat;">
+					<div class="myprofile-content">
+						<div class="myprofile-cards">
+							<div class="myprofile-cards__container">
+								<div class="myprofile-cards__card myprofile-cards__card_rating">
+									<span class="myprofile-cards__card-title">Рейтинг</span>
+									<div class="myprofile-cards__card-value">-5</div>
+								</div>
+								<div class="myprofile-cards__card myprofile-cards__card_reputation">
+									<span class="myprofile-cards__card-title">Репутация</span>
+									<div class="myprofile-cards__card-value">27</div>
+								</div>
+								<div class="myprofile-cards__card myprofile-cards__card_prizes">
+									<span class="myprofile-cards__card-title">Рейтинг</span>
+									<div class="myprofile-cards__card-value">0</div>
+								</div>
+								<div class="myprofile-cards__card myprofile-cards__card_posts">
+									<span class="myprofile-cards__card-title">Публикации</span>
+									<div class="myprofile-cards__card-value">21</div>
+								</div>
 							</div>
-							<div class="friend__info">
-								<span class="friend__name">Кристина Воложина</span>
-								<span class="friend__address"><span class="friend__region">Вологодская обл.</span> <span class="friend__city">Киров</span>, <span class="friend__country">Россия</span></span>
-								<span class="friend__write-btn">Написать сообщение</span>
+							<div class="myprofile-cards__other-stats">
+								<div class="myprofile-cards__other-stats-item myprofile-cards__other-stats_likedpeople">
+									<span class="myprofile-cards__other-stats-icon"></span>
+									<span class="myprofile-cards__other-stats-value">0 человек</span>
+								</div>
+								<div class="myprofile-cards__other-stats-item myprofile-cards__other-stats_followedpeople">
+									<span class="myprofile-cards__other-stats-icon"></span>
+									<span class="myprofile-cards__other-stats-value">35 человек</span>
+								</div>
+								<div class="myprofile-cards__other-stats-item myprofile-cards__other-stats_coins">
+									<span class="myprofile-cards__other-stats-icon"></span>
+									<span class="myprofile-cards__other-stats-value">1000 монет</span>
+								</div>
 							</div>
-						</a>
-						<a href="#" class="friend">
-							<div class="friend__avatar" style="background: url(img/friend2.png) center / cover no-repeat;">
+						</div>
+						<div class="myprofile-status">
+							<div class="myprofile-status__input-container">
+								<input type="text" placeholder="Напишите что-нибудь о себе" class="myprofile-status__input input">
 							</div>
-							<div class="friend__info">
-								<span class="friend__name">Ольга Дубцова</span>
-								<span class="friend__address"><span class="friend__region"></span> <span class="friend__city">Дубницы</span>, <span class="friend__country">Беларусь</span></span>
-								<span class="friend__write-btn">Написать сообщение</span>
+							<a href="#" class="myprofile-status__save-btn button_green">Сохранить</a>
+						</div>
+
+						<div class="edit-info">
+							<span class="edit-info__title">Персональная информация</span>
+							<span class="edit-info__adv">Заполните все обязательные поля (помеченные звёздочкой)<br> и получите 100 монет на свой счёт!</span>
+							<div class="edit-info__form-container">
+								<form class="edit-info__form" action="">
+									<div class="edit-info__input-container">
+										<span class="edit-info__input-name">Страна проживания<sup class="edit-info__star">*</sup></span>
+										<div class="edit-info__select-container">
+											<select size="1" class="edit-info__select edit-select" name="country">
+												<option disabled selected>Выберите страну</option>
+												<option value="Россия">Россия</option>
+												<option value="Украина">Украина</option>
+												<option value="Беларусь">Беларусь</option>
+											</select>
+										</div>
+									</div>
+									<div class="edit-info__input-container">
+										<span class="edit-info__input-name">Регион проживания<sup class="edit-info__star">*</sup></span>
+										<div class="edit-info__select-container edit-select_disabled">
+											<select size="1" class="edit-info__select edit-select" name="region">
+												<option disabled selected>Регион</option>
+												<option value="Московская обл.">Московская обл.</option>
+												<option value="Ленинградская обл.">Ленинградская обл.</option>
+												<option value="Краснодарский край.">Краснодарский край.</option>
+											</select>
+										</div>
+										
+									</div>
+									<div class="edit-info__input-container">
+										<span class="edit-info__input-name">Ваш пол<sup class="edit-info__star">*</sup></span>
+										<div class="edit-info__select-container">
+											<select size="1" class="edit-info__select edit-select" name="gender">
+												<option disabled selected>Не выбрано</option>
+												<option value="Мужской">Мужской</option>
+												<option value="Женский">Женский</option>
+											</select>
+										</div>
+									</div>
+									<div class="edit-info__input-container">
+										<span class="edit-info__input-name">Ближайший районный центр<sup class="edit-info__star">*</sup></span>
+										<div class="edit-info__select-container edit-select_disabled">
+											<select size="1" class="edit-info__select edit-select" name="city">
+												<option disabled selected>Город</option>
+												<option value="Москва">Москва</option>
+												<option value="Санкт-Петербург">Санкт-Петербург</option>
+												<option value="Саратов">Саратов</option>
+											</select>
+										</div>
+									</div>
+									<div class="edit-info__input-container edit-info__input-container_date">
+										<span class="edit-info__input-name edit-info__input-name_date">Дата рождения<sup class="edit-info__star">*</sup></span>
+										<div class="edit-info__select-container edit-info__select-container_day">
+											<select size="1" class="edit-info__select edit-info__select_day edit-select" name="day-birth">
+												<option disabled selected></option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+											</select>
+										</div>
+										<div class="edit-info__select-container edit-info__select-container_month">
+											<select size="1" class="edit-info__select edit-info__select_month edit-select" name="month-birth">
+												<option disabled selected></option>
+												<option value="Января">Января</option>
+												<option value="Февраля">Февраля</option>
+												<option value="Марта">Марта</option>
+											</select>
+										</div>
+										<div class="edit-info__select-container edit-info__select-container_year">
+											<select size="1" class="edit-info__select edit-info__select_year edit-select" name="year-birth">
+												<option disabled selected></option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+											</select>
+										</div>
+									</div>
+									<div class="edit-info__input-container">
+										<span class="edit-info__input-name">Отображать в профиле дату</span>
+										<div class="edit-info__select-container">
+											<select size="1" class="edit-info__select edit-select" name="show-data">
+												<option value="0" selected>Не показывать</option>
+												<option value="1">Показывать</option>
+											</select>
+										</div>
+									</div>
+									<p class="edit-info__warning">Если Вы захотите участвовать в <a href="#" class="edit-info__link">Конкурсах</a>, Розыгрышах призов, Тестах и других мероприятиях, Вам необходимо заполнить поле ниже и обязательно телефон на странице <a href="#" class="edit-info__link">Контакты</a></p>
+									<span class="edit-info__name-label">Ваши полные ФИО (как в паспорте)</span>
+									<input type="text" class="edit-info__name-input edit-input">
+									<div class="edit-info__save-btn-container">
+										<input type="submit" class="edit-info__save-btn" value="Сохранить">
+										<div class="edit-info__shadow"></div>
+									</div>
+									
+								</form>
 							</div>
-						</a>
-						<a href="#" class="friend">
-							<div class="friend__avatar" style="background: url(img/friend3.jpg) center / cover no-repeat;">
-							</div>
-							<div class="friend__info">
-								<span class="friend__name">Стефания Графт</span>
-								<span class="friend__address"><span class="friend__region"></span> <span class="friend__city">Симферополь</span>, <span class="friend__country">Россия</span></span>
-								<span class="friend__write-btn">Написать сообщение</span>
-							</div>
-						</a>
-						<a href="#" class="friend">
-							<div class="friend__avatar" style="background: url(img/friend4.png) center / cover no-repeat;">
-							</div>
-							<div class="friend__info">
-								<span class="friend__name">Валентина Мирошниченко</span>
-								<span class="friend__address"><span class="friend__region">NY</span> <span class="friend__city">New-York</span>, <span class="friend__country">USA</span></span>
-								<span class="friend__write-btn">Написать сообщение</span>
-							</div>
-						</a>
-					</div>
+						</div>
+					</div>					
 				</div>
 			</div>
 
@@ -402,7 +510,7 @@
 					<a href="#" class="blogs-menu__trigger blogs-menu__trigger_new blogs-menu__trigger_active button"></span>Новое</a>			
 					<a href="#" class="blogs-menu__trigger blogs-menu__trigger_best button">Лучшее</a>			
 				</div>
-				<a href="" class="blogs-menu__item">
+				<a href="#" class="blogs-menu__item">
 					<div class="blogs-menu__item-avatar">
 						<img src="img/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
 					</div>
