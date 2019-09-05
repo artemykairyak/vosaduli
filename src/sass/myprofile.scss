@@ -1,19 +1,60 @@
 @import 'vars.scss';
 @import 'mixins.scss';
 
-.profile-menu {
-
-}
 .left-sidebar {
 	width: 24%;
 	position: sticky;
 	top: 17px;
-	background: red;
-
+	max-height: 100vh;
+	overflow-y: auto;
+	-ms-overflow-style: none;
+    scrollbar-width: none; 
+	box-sizing: content-box;
 
 	& > * {
 		width: 100%;
 		position: static;
+	}
+}
+
+.content {
+	height: 7000px;
+}
+
+.left-sidebar::-webkit-scrollbar { display: none; }
+
+.groups-menu, .online-report {
+	&__navigation {
+		border: 1px solid $lightGray;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		height: 37px;
+		margin-top: 20px;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -78px;
+			left: 0;
+			height: 77px;
+			width: 100%;
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 90%);
+		} 
+
+		& * {
+			width: 50%;
+			text-align: center;
+			line-height: 37px;
+		}
+	}
+
+	&__prev {
+		border-right: 1px solid $lightGray;
 	}
 }
 
@@ -52,6 +93,12 @@
 		line-height: 0.77;
 	}
 
+	&__items {
+		&_disabled {
+			display: none;
+		}
+	}
+
 	&__item {
 		display: -webkit-flex;
 		display: -moz-flex;
@@ -61,6 +108,14 @@
 		align-items: center;
 		padding: 18px 0 10px;
 		@include borderBottom;
+
+		&_verified {
+			.groups-menu__item-name:after {
+				@include pseudo('../img/icons/confirmed-public-icon.svg', 13px, 13px)
+				margin-left: 8px;
+				vertical-align: middle;
+			}
+		}
 
 		&:last-child {
 			border: none;
@@ -101,41 +156,6 @@
 			font-weight: bold;
 		}
 	}
-
-	&__navigation {
-		border: 1px solid $lightGray;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		align-items: center;
-		height: 37px;
-		margin-top: 20px;
-		position: relative;
-
-		&:before {
-			content: '';
-			position: absolute;
-			top: -78px;
-			left: 0;
-			height: 77px;
-			width: 100%;
-			background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 90%);
-		} 
-
-		& * {
-			width: 50%;
-			text-align: center;
-			line-height: 37px;
-		}
-	}
-
-	&__prev {
-		border-right: 1px solid $lightGray;
-	}
-
-
 }
 
 .header-menu {
@@ -147,6 +167,26 @@
 		display: flex;
 		justify-content: flex-end;
 		margin-right: 15%;
+	}
+
+	&__nav-arrow {
+		width: 35px;
+		height: 35px;
+		border-radius: 100%;
+		background: #f0f2f7;
+		box-shadow: 0 2px 5px 0 #000;
+		border: solid 3px #ffffff;
+		position: relative;
+		display: none;
+		cursor: pointer;
+
+		&_disabled {
+			cursor: default;
+			svg path {
+				fill: #cad4e1;
+			}
+		}
+
 	}
 
 	&__item {
@@ -184,7 +224,6 @@
 				left: 4px;
 				z-index: -1;
 			}
-			
 		}
 	}
 
@@ -196,11 +235,14 @@
 		text-transform: uppercase;
 		line-height: 38px;
 		text-align: center;
-
 	}
 }
 
 .myprofile {
+	&-section_disabled {
+		display: none;
+	}
+
 	&__tabs {
 		background: url(../img/patoka-bg.svg) 0 50% / cover no-repeat;
 		width: 100%;
@@ -218,7 +260,6 @@
 			text-align: center;
 			margin-left: 5px;
 		}
-
 
 		&-title {
 			font-family: ALS;
@@ -253,8 +294,8 @@
 		}
 
 		&-container {
-			width: 80%;
-			margin: 30px auto 0;
+
+			margin: 30px 10% 0;
 			position: relative;
 			border: none;
 
@@ -291,7 +332,6 @@
 				border-left: 1px solid $lightGray;
 			}
 		}
-
 	}
 
 	&__submenu {
@@ -343,8 +383,6 @@
 					z-index: -1;
 				}
 			}
-
-			
 		}
 
 		&-link {
@@ -355,6 +393,7 @@
 
 	&-cards {
 		padding: 35px 11px 42px;
+
 		&__container {
 			@include flex;
 			justify-content: center;
@@ -364,6 +403,7 @@
 		&__card {
 			text-align: center;
 			margin-right: 6%;
+
 			&:last-child {
 				margin-right: 0;
 			}
@@ -523,8 +563,6 @@
 			-o-flex-wrap: wrap;
 			flex-wrap: wrap;
 		}
-
-
 	}
 
 	&__input-name {
@@ -560,7 +598,6 @@
 				&:after {
 					@include pseudo('../img/icons/select-arr_disabled.svg', 9px, 7px);
 				}
-
 			}
 
 			&:after {
@@ -579,9 +616,6 @@
 				width: 45%;
 			}
 		}
-		
-
-		
 	}
 
 	&__warning {
@@ -589,7 +623,6 @@
 		font-weight: 500;
 		color: $blue;
 		width: 80%;
-
 	}
 
 	&__link {
@@ -638,5 +671,131 @@
 		border-radius: 18.5px;
 		background: $cloudyBlue;
 		z-index: -1;
+	}
+}
+
+.user-data__avatar-changephoto {
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	border-radius: 100%;
+	display: inline-block;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	z-index: 20;
+
+	&_header {
+		top: 18px;
+		right: 18px;
+	}
+
+	&:hover {
+		svg path {
+			fill: #f19757;
+		}
+	}
+}
+
+.online-report {
+	&__ad {
+		border-radius: 2px;
+		border: solid 1px #e6e9f1;
+		background-color: #fff;
+		padding: 14px;
+	}
+
+	&__header {
+		margin: 20px 0 16px;
+		@include flex;
+		justify-content: flex-start;
+		padding-left: 15px;
+	}
+
+	&__logo {
+		display: inline-block;
+		height: 54px;
+		width: 54px;
+		margin-right: 16px;
+		background: url(../img/icons/snitch-right-sidebar-icon.svg) 0 0 / contain no-repeat;
+	}
+
+	&__title {
+		font-family: ALS;
+		font-size: 30px;
+		font-weight: bold;
+		color: $blue;
+		line-height: 0.77;
+		margin-right: 20px;
+	}
+
+	&__info-btn {
+		width: 22px;
+		height: 22px;
+		background: url(../img/icons/information-icon.svg) 0 0 / contain no-repeat;
+	}
+
+	&__items {
+		&_disabled {
+			display: none;
+		}
+	}
+
+	&__item {
+		@include borderBottom;
+		padding: 15px 0;
+		@include flex;
+		justify-content: flex-start;
+
+		&:last-child {
+			border: none;
+		}
+
+		&-icon {
+			width: 49px;
+			height: 49px;
+			display: inline-block;
+			margin-right: 12px;
+
+			&_coins {
+				background: url(../img//icons/coin-big-event-icon.svg) 0 0 / contain no-repeat;
+			}
+		}
+
+		&-text {
+			display: inline-block;
+			font-size: 14px;
+ 			font-weight: 500;
+ 			color: $darkGray;
+ 			width: 65%;
+ 			line-height: 1;
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.header-menu__container {
+		display: inline-block;
+		width: 55%;
+		overflow: hidden;
+	}
+
+	.header-menu__nav-arrow {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }

@@ -113,7 +113,8 @@ li {
 input,
 select,
 option,
-textarea {
+textarea,
+button {
   appearance: none;
   /* remove arrow        */
   -webkit-appearance: none;
@@ -213,6 +214,11 @@ option {
   padding: 0 21px 0 16px;
   font-family: CeraPRO;
   position: relative;
+}
+
+.ad {
+  width: 100%;
+  height: auto;
 }
 
 .button {
@@ -705,9 +711,9 @@ option {
   width: 254px;
   height: 254px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
-  border: solid 1px #e6e9f1;
+  border: solid 2px #e6e9f1;
   background-color: #ffffff;
-  border-radius: 45%;
+  border-radius: 43%;
 }
 
 .user-data__text {
@@ -961,12 +967,27 @@ option {
 
 .trigger_active {
   color: #282829;
+  font-weight: bold;
 }
 
 .trigger_active:after {
   display: inline-block;
   left: 2px;
   top: 2px;
+}
+
+.right-sidebar {
+  width: 25%;
+  border-radius: 2px;
+  border: solid 1px #e6e9f1;
+  background: #ffffff;
+  padding: 21px 16px 25px;
+  position: sticky;
+  top: 17px;
+}
+
+.right-sidebar * {
+  transition: all 0.3s ease;
 }
 
 .blogs-menu {
@@ -1186,7 +1207,8 @@ option {
     width: 60%;
   }
 
-  .blogs-menu {
+  .blogs-menu,
+  .right-sidebar {
     width: 40%;
   }
 
@@ -1194,7 +1216,8 @@ option {
     display: block;
   }
 
-  .profile-menu {
+  .profile-menu,
+  .left-sidebar {
     display: none;
   }
 
@@ -1250,7 +1273,8 @@ option {
     width: 59%;
   }
 
-  .blogs-menu {
+  .blogs-menu,
+  .right-sidebar {
     width: 41%;
   }
 }
@@ -1264,7 +1288,8 @@ option {
     width: 100%;
   }
 
-  .blogs-menu {
+  .blogs-menu,
+  .right-sidebar {
     display: none;
   }
 }

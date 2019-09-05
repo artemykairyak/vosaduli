@@ -35,7 +35,7 @@ li {
     display: inline-block;
 }
 
-input, select, option, textarea {
+input, select, option, textarea, button {
     appearance: none;            /* remove arrow        */
     -webkit-appearance: none;    /* remove arrow Chrome */
     -moz-appearance: none;   
@@ -114,6 +114,11 @@ option {
     padding: 0 21px 0 16px;
     font-family: CeraPRO;
     position: relative;
+}
+
+.ad {
+    width: 100%;
+    height: auto;
 }
 
 .button {
@@ -609,9 +614,9 @@ option {
         width: 254px;
         height: 254px;
         box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
-        border: solid 1px #e6e9f1;
+        border: solid 2px #e6e9f1;
         background-color: #ffffff;
-        border-radius: 45%;
+        border-radius: 43%;
     }
 
     &__text {
@@ -876,6 +881,7 @@ option {
 
     &_active {
         color: $darkGray;
+        font-weight: bold;
 
         &:after {
             display: inline-block;
@@ -883,6 +889,20 @@ option {
             top: 2px;
         }
 
+    }
+}
+
+.right-sidebar {
+    width: 25%;
+    border-radius: 2px;
+    border: solid 1px #e6e9f1;
+    background: #ffffff;
+    padding: 21px 16px 25px;
+    position: sticky;
+    top: 17px;
+
+    & * {
+            transition: all 0.3s ease;
     }
 }
 
@@ -1085,13 +1105,12 @@ option {
 
 @media screen and (max-width: 1226px) {
    .nav-menu {
-    display: none;
-}
+        display: none;
+    }
 
-.mobile-nav-menu {
-    display: flex;
-}
-
+    .mobile-nav-menu {
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 1180px) {
@@ -1099,34 +1118,31 @@ option {
         width: 60%;
     }
 
-
-
     .journal-slider__photo:last-child {
         display: none;
     }
 }
 
 @media screen and (max-width: 1050px) {
- .main-content {
-    width: 60%;
-}
+     .main-content {
+        width: 60%;
+    }
 
-.blogs-menu {
-    width: 40%;
-}
+    .blogs-menu, .right-sidebar {
+        width: 40%;
+    }
 
-.mobile-profile-menu {
-    display: block;
-}
+    .mobile-profile-menu {
+        display: block;
+    }
 
+    .profile-menu, .left-sidebar {
+        display: none;
+    }
 
-.profile-menu {
-    display: none;
-}
-
-.user-data__username {
-    font-size: 46px;
-}
+    .user-data__username {
+        font-size: 46px;
+    }
 }
 
 
@@ -1181,7 +1197,7 @@ option {
         width: 59%;
     }
 
-    .blogs-menu {
+    .blogs-menu, .right-sidebar {
         width: 41%;
     }
 }
@@ -1195,7 +1211,7 @@ option {
         width: 100%;
     }
 
-    .blogs-menu {
+    .blogs-menu, .right-sidebar {
         display: none;
     }
 }
