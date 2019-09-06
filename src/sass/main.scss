@@ -574,7 +574,7 @@ option {
     position: relative;
     border-radius: 2px;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.11);
-    border: solid 1px #e6e9f1;
+    /*border: solid 1px #e6e9f1;*/
     background-color: #ffffff;
 
     &_mt20px {
@@ -1163,6 +1163,10 @@ option {
         padding: 0;
     }
 
+    .user-data_m15px {
+       margin: 0 15px;
+    }
+
     .user-data__avatar {
         &_online {
             &:before {
@@ -1204,7 +1208,7 @@ option {
 
 @media screen and (max-width: 690px) {
     .user-data__username {
-        font-size: 34px;
+        font-size: 32px;
     }
 
     .main-content {
@@ -1213,6 +1217,9 @@ option {
 
     .blogs-menu, .right-sidebar {
         display: none;
+    }
+    .user-data__text {
+        margin-left: 20px;
     }
 }
 
@@ -1228,7 +1235,7 @@ option {
         justify-content: space-between;
     }
     .user-data__username {
-        font-size: 34px;
+        font-size: 32px;
         width: 50%;
     }
 

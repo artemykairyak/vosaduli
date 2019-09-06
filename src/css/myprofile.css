@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .left-sidebar {
   width: 24%;
   position: sticky;
@@ -174,19 +176,11 @@
   height: 35px;
   border-radius: 100%;
   background: #f0f2f7;
-  box-shadow: 0 2px 5px 0 #000;
+  box-shadow: 0 2px 5px 0 #e5e5e5;
   border: solid 3px #ffffff;
   position: relative;
   display: none;
   cursor: pointer;
-}
-
-.header-menu__nav-arrow_disabled {
-  cursor: default;
-}
-
-.header-menu__nav-arrow_disabled svg path {
-  fill: #cad4e1;
 }
 
 .header-menu__item {
@@ -309,6 +303,7 @@
 .myprofile__tabs-tab {
   color: #5b5b5b;
   font-weight: bold;
+  padding: 0;
 }
 
 .myprofile__tabs-tab:last-child:before {
@@ -787,11 +782,398 @@
   line-height: 1;
 }
 
+.myprofile-soc__soc-container {
+  padding: 30px 41px 37px;
+}
+
+.myprofile-soc__title {
+  font-family: ALS;
+  font-size: 30px;
+  font-weight: bold;
+  color: #21224e;
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+.myprofile-soc__subtitle {
+  font-weight: 500;
+  color: #21224e;
+  text-align: center;
+  width: 83%;
+  margin: 0 auto;
+  line-height: 1.38;
+  margin-bottom: 35px;
+}
+
+.myprofile-soc__triggers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.myprofile-soc__trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 20%;
+}
+
+.myprofile-soc__trigger_disabled .myprofile-soc__trigger-trigger {
+  border: solid 1px #94acc4;
+  background-color: #c4d2e1;
+}
+
+.myprofile-soc__trigger_disabled .myprofile-soc__trigger-trigger:after {
+  left: -1px;
+  top: -1px;
+  box-shadow: inset -3px 0 0 0 #ededed;
+  border: solid 1px #c1c1c1;
+}
+
+.myprofile-soc__trigger_disabled .myprofile-soc__trigger-trigger:before {
+  content: 'выкл';
+  margin-left: 32px;
+  color: #21224e;
+}
+
+.myprofile-soc__trigger-state {
+  display: block;
+  text-align: center;
+}
+
+.myprofile-soc__trigger-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+}
+
+.myprofile-soc__trigger-icon_ok {
+  background: url(../img/icons/odnoklassniki.svg) 0 0/contain no-repeat;
+}
+
+.myprofile-soc__trigger-icon_mir {
+  background: url(../img/icons/mir.svg) 0 0/contain no-repeat;
+}
+
+.myprofile-soc__trigger-icon_facebook {
+  background: url(../img/icons/fb.svg) 0 0/contain no-repeat;
+}
+
+.myprofile-soc__trigger-icon_vk {
+  background: url(../img/icons/vk.svg) 0 0/contain no-repeat;
+}
+
+.myprofile-soc__trigger-trigger {
+  width: 67px;
+  height: 26px;
+  background: #74af33;
+  border-radius: 4px;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: solid 1px #74af33;
+}
+
+.myprofile-soc__trigger-trigger:before {
+  content: 'вкл';
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+  margin-left: 12px;
+  line-height: 25px;
+  transition: all 0.3s ease;
+}
+
+.myprofile-soc__trigger-trigger:after {
+  content: '';
+  position: absolute;
+  left: 40px;
+  top: -1px;
+  width: 26px;
+  height: 26px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: inset 3px 0 0 0 #ededed;
+  border: solid 1px #558422;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.myprofile-soc__trigger-label {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #5b5b5b;
+}
+
+.myprofile-soc__stream {
+  margin: 0 15px;
+  border-radius: 2px;
+  background-color: #f4f7fb;
+  padding: 22px 50px 40px;
+  text-align: center;
+}
+
+.myprofile-soc__stream-title {
+  font-family: ALS;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 23px;
+  color: #21224e;
+}
+
+.myprofile-soc__stream-subtitle {
+  font-weight: 500;
+  color: #21224e;
+  background: #f9e7ce;
+  display: inline;
+}
+
+.myprofile-soc__stream-checkboxes {
+  margin: 30px auto 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+}
+
+.myprofile-soc__stream-checkbox {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px 0 #f4f7fb;
+  border: solid 1px #94acc4;
+  background: #ffffff;
+  position: relative;
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-right: 14px;
+}
+
+.myprofile-soc__stream-checkbox:checked {
+  background: #03a9f4;
+  box-shadow: inset 0 1px 2px 0 #0398db;
+}
+
+.myprofile-soc__stream-checkbox:checked:after {
+  background-color: #03a9f4;
+  content: '';
+  display: inline-block;
+  background: url("../img/icons/check.svg") 0 0/contain no-repeat;
+  width: 7px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.myprofile-soc__stream-checkbox-container {
+  margin-bottom: 14px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+}
+
+.myprofile-soc__stream-checkbox-container:last-child {
+  margin-bottom: 0;
+}
+
+.myprofile-soc__stream-checkbox-label {
+  cursor: pointer;
+  font-weight: 500;
+  color: #21224e;
+}
+
+.myprofile-contacts {
+  padding: 30px 15px 0;
+}
+
+.myprofile-contacts__title {
+  font-family: ALS;
+  font-size: 30px;
+  font-weight: bold;
+  color: #21224e;
+  text-align: center;
+}
+
+.myprofile-contacts__contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  margin: 35px 0;
+}
+
+.myprofile-contacts__contact {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  margin-right: 17%;
+}
+
+.myprofile-contacts__contact:last-child {
+  margin-right: 0;
+}
+
+.myprofile-contacts__contact-label {
+  font-weight: bold;
+  color: #282829;
+}
+
+.myprofile-contacts__contact-state {
+  display: block;
+  color: #5b5b5b;
+  margin-top: 3px;
+}
+
+.myprofile-contacts__contact-icon {
+  height: 41px;
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.myprofile-contacts__contact-icon_address {
+  background: url(../img/icons/contact-home-icon.svg) 0 0/contain no-repeat;
+  width: 46px;
+}
+
+.myprofile-contacts__contact-icon_phone {
+  background: url(../img/icons/contact-phone-icon.svg) 0 0/contain no-repeat;
+  width: 42px;
+}
+
+.myprofile-contacts__form {
+  border-radius: 2px;
+  background-color: #f4f7fb;
+  padding: 23px 56px 26px;
+  text-align: center;
+}
+
+.myprofile-contacts__form-title {
+  font-family: ALS;
+  font-size: 26px;
+  font-weight: bold;
+  color: #21224e;
+}
+
+.myprofile-contacts__form-subtitle {
+  font-weight: 500;
+  line-height: 1.38;
+  color: #21224e;
+  margin: 19px 0 35px;
+}
+
+.myprofile-contacts__form-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 50px;
+}
+
+.myprofile-contacts__form-input-container_postindex {
+  width: 32%;
+  margin-bottom: 8px;
+}
+
+.myprofile-contacts__form-input-container_phone {
+  width: 63%;
+  margin-bottom: 8px;
+}
+
+.myprofile-contacts__form-input-container_address {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.myprofile-contacts__form-input-container_show-btn {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.myprofile-contacts__form-input {
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: inset 0 2px 2px 0 #f4f7fb;
+  border: solid 1px #c4d2e1;
+  background-color: #ffffff;
+  outline: none;
+  padding: 10px 15px;
+  resize: none;
+}
+
+.myprofile-contacts__form-input-label {
+  text-align: left;
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #5b5b5b;
+  margin-bottom: 8px;
+}
+
+.myprofile-contacts__form-input_address {
+  height: 140px;
+}
+
+.myprofile-contacts__form-footer {
+  font-weight: 500;
+  line-height: 1.38;
+  color: #21224e;
+  display: inline-block;
+  background: #f9e7ce;
+  padding: 2px 9px;
+}
+
+.myprofile-contacts__save-btn-container {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 25px 0;
+}
+
 @media screen and (max-width: 1050px) {
+  .user-data {
+    margin: 0;
+  }
+
+  .header-menu {
+    height: 40px;
+    position: relative;
+  }
+
+  .header-menu__link {
+    height: 40px;
+  }
+
   .header-menu__container {
     display: inline-block;
-    width: 55%;
     overflow: hidden;
+    padding: 0 50px;
+    position: absolute;
+    right: 15px;
+    width: 65%;
+    margin-right: 0;
+    margin-left: 15%;
+    margin-top: 9px;
+    margin-bottom: 9px;
   }
 
   .header-menu__nav-arrow {
@@ -802,5 +1184,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 3px;
+  }
+
+  .header-menu__nav-arrow_prev {
+    left: 5px;
+  }
+
+  .header-menu__nav-arrow_next {
+    right: 5px;
+  }
+
+  .owl-carousel .owl-item {
+    text-align: center;
   }
 }

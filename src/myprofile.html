@@ -8,6 +8,7 @@
 	<meta name="keywords" content="ключевые, слова, через, запятую">
 	<link rel="shortcut icon" type='image/png' href="img/icons/favicon.ico" />
 	<title>Профиль</title>
+	<link rel="stylesheet" href="vendors/css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="vendors/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/main.css" type="text/css">	
 	<link rel="stylesheet" href="css/main-menu_signed.css">
@@ -178,7 +179,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="user-data user-data_mt20px user-data_mb20px" style="background: url(img/bg.jpg) center / cover no-repeat;">
+				<div class="user-data user-data_mt20px user-data_mb20px user-data_m15px" style="background: url(img/bg.jpg) center / cover no-repeat;">
 					<div class="user-data__info">
 						<span class="user-data__avatar-changephoto user-data__avatar-changephoto_header">
 							<span class="svg" data-src="img/icons/camera-icon.svg"></span>
@@ -202,7 +203,7 @@
 					</span>
 					<ul class="header-menu__container owl-carousel owl-theme">
 						
-						<li class="header-menu__item header-menu__item_profile header-menu__item_active header-menu__item_active">
+						<li class="header-menu__item header-menu__item_profile header-menu__item_active">
 							<a href="#" class="header-menu__link header-menu__link_profile">Профиль</a>
 						</li>
 						<li class="header-menu__item header-menu__item_feed">
@@ -396,7 +397,7 @@
 
 						</ul>
 					</div>
-					<div class="myprofile-content">
+					<div class="myprofile-content myprofile-section_disabled">
 						<div class="myprofile-cards">
 							<div class="myprofile-cards__container">
 								<div class="myprofile-cards__card myprofile-cards__card_rating">
@@ -442,7 +443,7 @@
 							<span class="edit-info__title">Персональная информация</span>
 							<span class="edit-info__adv">Заполните все обязательные поля (помеченные звёздочкой)<br> и получите 100 монет на свой счёт!</span>
 							<div class="edit-info__form-container">
-								<form class="edit-info__form" action="">
+								<form class="edit-info__form" name="edit-info-form" action="">
 									<div class="edit-info__input-container">
 										<span class="edit-info__input-name">Страна проживания<sup class="edit-info__star">*</sup></span>
 										<div class="edit-info__select-container">
@@ -536,62 +537,165 @@
 						</div>
 					</div>	
 					<div class="myprofile-soc myprofile-section_disabled">
-						<h1>Соцсети</h1>
-					</div>	
-					<div class="myprofile-contacts myprofile-section_disabled">
-						<h1>Контакты</h1>
-					</div>	
+						<div class="myprofile-soc__soc-container">
+							<h2 class="myprofile-soc__title">Социальные аккаунты</h2>
+							<p class="myprofile-soc__subtitle">Привязка учетных записей социальных сетей (можно сразу нескольких) 
+							к аккаунту позволит вам входить на Восадули.ру в один клик</p>
+							<div class="myprofile-soc__triggers">
+								<div class="myprofile-soc__trigger myprofile-soc__trigger_ok myprofile-soc__trigger_disabled">
+									<span class="myprofile-soc__trigger-icon myprofile-soc__trigger-icon_ok"></span>
+									<span class="myprofile-soc__trigger-trigger"></span>
+									<span class="myprofile-soc__trigger-label">Одноклассники<span class="myprofile-soc__trigger-state">не подключены</span></span>
+								</div>
+								<div class="myprofile-soc__trigger myprofile-soc__trigger_mir myprofile-soc__trigger_disabled">
+									<span class="myprofile-soc__trigger-icon myprofile-soc__trigger-icon_mir"></span>
+									<span class="myprofile-soc__trigger-trigger"></span>
+									<span class="myprofile-soc__trigger-label">Мир <span class="myprofile-soc__trigger-state">не подключен</span></span>
+								</div>
+								<div class="myprofile-soc__trigger myprofile-soc__trigger_facebook
+								myprofile-soc__trigger_disabled">
+								<span class="myprofile-soc__trigger-icon myprofile-soc__trigger-icon_facebook"></span>
+								<span class="myprofile-soc__trigger-trigger"></span>
+								<span class="myprofile-soc__trigger-label">Фейсбук<span class="myprofile-soc__trigger-state">не подключен</span></span>
+							</div>
+							<div class="myprofile-soc__trigger myprofile-soc__trigger_vk myprofile-soc__trigger_disabled">
+								<span class="myprofile-soc__trigger-icon myprofile-soc__trigger-icon_vk"></span>
+								<span class="myprofile-soc__trigger-trigger"></span>
+								<span class="myprofile-soc__trigger-label">Вконтакте<span class="myprofile-soc__trigger-state">не подключен</span></span>
+							</div>
 
-				</div>
-				
-			</div>
-			<div class="right-sidebar">
-				<div class="online-report">
-					<a href="#" class="online-report__ad">
-						<img src="img/ad.png" class="ad">
-					</a>
-					<div class="online-report__header">
-						<span class="online-report__logo"></span>
-						<p class="online-report__title">Онлайн<br> отчёт</p>
-						<a href="#" class="online-report__info-btn"></a>
-					</div>
-					<div class="online-report__triggers triggers">
-						<a href="#" class="online-report__trigger online-report__trigger_news button trigger"></span>Мои новости</a>			
-						<a href="#" class="online-report__trigger online-report__trigger_events button trigger trigger_active">События</a>	
-					</div>
-					<div class="online-report__events-items">
-						<div class="online-report__items">
-							<a href="#" class="online-report__item">
-								<span class="online-report__item-icon online-report__item-icon_coins"></span>
-								<span class="online-report__item-text">Вам начислено 1000 монет за регистрацию</span>
-							</a>
 						</div>
 					</div>
-					<div class="online-report__news-items online-report__items_disabled">
-						<div class="online-report__items">
-							<a href="#" class="online-report__item">
-								<span class="online-report__item-icon online-report__item-icon_coins"></span>
-								<span class="online-report__item-text">Вам начислено 0 монет за регистрацию</span>
-							</a>
+					<div class="myprofile-soc__stream">
+						<h2 class="myprofile-soc__stream-title">Автоматически транслировать:</h2>
+						<p class="myprofile-soc__stream-subtitle">После подключения соц. аккаунтов вы сможете автоматически транслировать
+						всю активность на Восадули.ру вашим подписчикам в соц. сетях!</p>
+						<form action="" name="stream-checkboxes" class="myprofile-soc__stream-checkboxes">
+							<span class="myprofile-soc__stream-checkbox-container">
+								<input type="checkbox" id="newposts" class="myprofile-soc__stream-checkbox">
+								<label for="newposts" class="myprofile-soc__stream-checkbox-label">Мои новые публикации в журнале</span>
+								</span>
+								<span class="myprofile-soc__stream-checkbox-container">
+									<input type="checkbox" id="newfollowers" class="myprofile-soc__stream-checkbox">
+									<label for="newfollowers" class="myprofile-soc__stream-checkbox-label">Мои новые подписки</span>
+									</span>
+									<span class="myprofile-soc__stream-checkbox-container">
+										<input type="checkbox" id="newcontests" class="myprofile-soc__stream-checkbox">
+										<label for="newcontests" class="myprofile-soc__stream-checkbox-label">Мои участия в конкурсах</span>
+										</span>
+									</form>
+								</div>
+							</div>	
+							<div class="myprofile-contacts">
+								<h2 class="myprofile-contacts__title">Контактные данные</h2>
+								<div class="myprofile-contacts__contacts">
+									<div class="myprofile-contacts__contact myprofile-contacts__contact_address">
+										<span class="myprofile-contacts__contact-icon myprofile-contacts__contact-icon_address"></span>
+										<span class="myprofile-contacts__contact-label">Адрес: 
+											<span class="myprofile-contacts__contact-state">Не заполнено</span>
+										</span>
+									</div>
+									<div class="myprofile-contacts__contact myprofile-contacts__contact_phone">
+										<span class="myprofile-contacts__contact-icon myprofile-contacts__contact-icon_phone"></span>
+										<span class="myprofile-contacts__contact-label">Телефон: 
+											<span class="myprofile-contacts__contact-state">Не заполнено</span>
+										</span>
+									</div>
+								</div>
+								<form action="" name="contacts-form" class="myprofile-contacts__form">
+									<h2 class="myprofile-contacts__form-title">Адрес и телефон</h2>
+									<p class="myprofile-contacts__form-subtitle">Укажите свои контакты если участвуете в Конкурсе, Тестах или просто хотите 
+									чтобы другие участники смогли с вами связаться</p>
+									<div class="myprofile-contacts__form-inputs">
+										<div class="myprofile-contacts__form-input-container myprofile-contacts__form-input-container_postindex">
+											<span class="myprofile-contacts__form-input-label">
+												Почтовый индекс
+											</span>
+											<input type="text" name="postindex" class="myprofile-contacts__form-input myprofile-contacts__form-input_postindex">
+										</div>
+
+										<div class="myprofile-contacts__form-input-container myprofile-contacts__form-input-container_phone">
+											<span class="myprofile-contacts__form-input-label">
+												Номер телефона
+											</span>
+											<input type="text" name="phone" class="myprofile-contacts__form-input myprofile-contacts__form-input_phone">
+										</div>
+										<div class="myprofile-contacts__form-input-container myprofile-contacts__form-input-container_address">
+											<span class="myprofile-contacts__form-input-label">
+												Полный адрес (населеный пункт, улица, дом/квартира)
+											</span>
+											<textarea name="address" class="myprofile-contacts__form-input myprofile-contacts__form-input_address"></textarea>
+										</div>
+										<div class="myprofile-contacts__form-input-container myprofile-contacts__form-input-container_show-btn">
+											<span class="myprofile-contacts__form-input-label">
+												Отображать в профиле
+											</span>
+											<div class="edit-info__select-container">
+												<select size="1" name="address" class="myprofile-contacts__form-input edit-select edit-info-select myprofile-contacts__form-input_show-btn">
+													<option value="Не показывать" selected>Не показывать</option>
+													<option value="Показывать">Показывать</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="myprofile-contacts__save-btn-container">
+										<input type="submit" class="edit-info__save-btn" value="Сохранить">
+										<div class="edit-info__shadow"></div>
+									</div>
+									<p class="myprofile-contacts__form-footer">Ваши контакты никогда не будут переданы третьим лицам</p>
+								</form>
+							</div>	
+
 						</div>
+
 					</div>
-					<div class="online-report__navigation">
-						<a href="#" class="online-report__prev online-report__prev_disabled">
-							<div class="svg" data-src="img/icons/arrow-sidbar-up.svg"></div>
-						</a>
-						<a href="#" class="online-report__next">
-							<div class="svg" data-src="img/icons/arrow-sidbar-down.svg"></div>
-						</a>
+					<div class="right-sidebar">
+						<div class="online-report">
+							<a href="#" class="online-report__ad">
+								<img src="img/ad.png" class="ad">
+							</a>
+							<div class="online-report__header">
+								<span class="online-report__logo"></span>
+								<p class="online-report__title">Онлайн<br> отчёт</p>
+								<a href="#" class="online-report__info-btn"></a>
+							</div>
+							<div class="online-report__triggers triggers">
+								<a href="#" class="online-report__trigger online-report__trigger_news button trigger"></span>Мои новости</a>			
+								<a href="#" class="online-report__trigger online-report__trigger_events button trigger trigger_active">События</a>	
+							</div>
+							<div class="online-report__events-items">
+								<div class="online-report__items">
+									<a href="#" class="online-report__item">
+										<span class="online-report__item-icon online-report__item-icon_coins"></span>
+										<span class="online-report__item-text">Вам начислено 1000 монет за регистрацию</span>
+									</a>
+								</div>
+							</div>
+							<div class="online-report__news-items online-report__items_disabled">
+								<div class="online-report__items">
+									<a href="#" class="online-report__item">
+										<span class="online-report__item-icon online-report__item-icon_coins"></span>
+										<span class="online-report__item-text">Вам начислено 0 монет за регистрацию</span>
+									</a>
+								</div>
+							</div>
+							<div class="online-report__navigation">
+								<a href="#" class="online-report__prev online-report__prev_disabled">
+									<div class="svg" data-src="img/icons/arrow-sidbar-up.svg"></div>
+								</a>
+								<a href="#" class="online-report__next">
+									<div class="svg" data-src="img/icons/arrow-sidbar-down.svg"></div>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</main>
-<script src="vendors/js/jquery-3.4.1.min.js" type="text/javascript"></script>
-<script src="vendors/js/easySVG.min.js" type="text/javascript"></script>
-<script src="vendors/js/owl.carousel.min.js" type="text/javascript"></script>
-<script src="js/scripts.js" type="text/javascript"></script>
+		</main>
+		<script src="vendors/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+		<script src="vendors/js/easySVG.min.js" type="text/javascript"></script>
+		<script src="vendors/js/owl.carousel.min.js" type="text/javascript"></script>
+		<script src="js/scripts.js" type="text/javascript"></script>
 
-</body>
-</html>
+	</body>
+	</html>

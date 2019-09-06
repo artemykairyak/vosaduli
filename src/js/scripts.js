@@ -74,20 +74,31 @@ $(function(){
 		$('select[name="city"]').removeAttr('disabled').parent().removeClass('edit-select_disabled');
 	});
 
+	$('.myprofile-soc__trigger-trigger').on('click', function() {
+		socTriggerChange($(this))
+	})
+
 	$(window).on('resize', function() {
+
+	})
+
+	$('.header-menu__item').on('click', function(e) {
+		e.preventDefault();
+		$(this).parent().siblings().find('.header-menu__item').removeClass('header-menu__item_active');
+		$(this).addClass('header-menu__item_active');
 
 	})
 
 	
 	if($(window).width() < 1050) {
 		$('.header-menu__container').owlCarousel({
-			// navText: [$('.header-menu__nav-arrow_prev'), $('.header-menu__nav-arrow_next')],
+			navText: [$('.header-menu__nav-arrow_prev'), $('.header-menu__nav-arrow_next')],
 			items: 4,
 			margin: 10,
-			nav: false,
+			nav: true,
 			dots: false,
-			loop: false,
-			autoWidth: true
+			loop: false
+			// autoWidth: true
 			// responsive: {
 			// 	0: {
 			// 		items: 1.3,
@@ -113,5 +124,23 @@ function onTriggerClick(trigger) {
 	if (!trigger.hasClass('trigger_active')) {
 		trigger.toggleClass('trigger_active');
 		trigger.siblings().removeClass('trigger_active');
+	}
+}
+
+function socTriggerChange(trigger) {
+	if(trigger.parent().hasClass('myprofile-soc__trigger_disabled')) {
+		trigger.parent().removeClass('myprofile-soc__trigger_disabled');
+		if(trigger.parent().hasClass('myprofile-soc__trigger_ok')) {
+			trigger.parent().find('.myprofile-soc__trigger-state').text('работают');
+		} else {		
+			trigger.parent().find('.myprofile-soc__trigger-state').text('работает');
+		}
+	} else {
+		trigger.parent().addClass('myprofile-soc__trigger_disabled');
+		if(trigger.parent().hasClass('myprofile-soc__trigger_ok')) {
+			trigger.parent().find('.myprofile-soc__trigger-state').text('не подключены');
+		} else {
+			trigger.parent().find('.myprofile-soc__trigger-state').text('не подключен');
+		}
 	}
 }
