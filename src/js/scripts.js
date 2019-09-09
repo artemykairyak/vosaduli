@@ -77,47 +77,54 @@ $(function(){
 	$('.myprofile-soc__trigger-trigger').on('click', function() {
 		socTriggerChange($(this))
 	})
-
-	$(window).on('resize', function() {
-
-	})
-
-	$('.header-menu__item').on('click', function(e) {
-		e.preventDefault();
-		$(this).parent().siblings().find('.header-menu__item').removeClass('header-menu__item_active');
-		$(this).addClass('header-menu__item_active');
-
-	})
-
 	
-	if($(window).width() < 1050) {
+	if($('.header-menu__container').length > 0 && $(window).width() < 1050) {
+		$('.header-menu__item').on('click', function(e) {
+			e.preventDefault();
+			$(this).parent().siblings().find('.header-menu__item').removeClass('header-menu__item_active');
+			$(this).addClass('header-menu__item_active');
+		});
 		$('.header-menu__container').owlCarousel({
 			navText: [$('.header-menu__nav-arrow_prev'), $('.header-menu__nav-arrow_next')],
 			items: 4,
 			margin: 10,
 			nav: true,
 			dots: false,
-			loop: false
-			// autoWidth: true
-			// responsive: {
-			// 	0: {
-			// 		items: 1.3,
-			// 		margin: 30
-			// 	},
-			// 	834: {
-			// 		items: 2,
-			// 		margin: 30
-			// 	},
-
-			// 	1240: {
-			// 		items: 3,
-			// 		margin: 30
-			// 	}
-			// }
-
+			loop: false,
+			mouseDrag: false,
+			touchDrag: false,
+			pullDrag: false,
+			responsive: {
+				0: {
+					items: 2.8,
+					nav: false,
+					margin: 10,
+					mouseDrag: true,
+					touchDrag: true,
+					pullDrag: true
+				},
+				690: {
+					items: 4
+				}
+			}
+		});
+	} else if($('.header-menu__container').length > 0 && $(window).width() >= 1050){
+		$('.header-menu__container').trigger('destroy.owl.carousel');
+		$('.header-menu__item').on('click', function(e) {
+			e.preventDefault();
+			$(this).siblings().removeClass('header-menu__item_active');
+			$(this).addClass('header-menu__item_active');
 		});
 	}
-	
+
+	if($('.myprofile-contacts__form-input_phone').length > 0) {
+		$('.myprofile-contacts__form-input_phone').val('+7');
+		$('.myprofile-contacts__form-input_phone').on('keyup', function() {
+			if($(this).val().length < 2 || !$(this).val().startsWith('+7')) {
+				$(this).val('+7');
+			}
+		})
+	}	
 })
 
 function onTriggerClick(trigger) {

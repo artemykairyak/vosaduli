@@ -469,6 +469,7 @@ option {
 .user-info__avatar-picture {
   width: 35px;
   height: 35px;
+  object-fit: cover;
 }
 
 .nav-menu {
@@ -702,6 +703,7 @@ option {
   border: solid 2px #e6e9f1;
   background-color: #ffffff;
   border-radius: 43%;
+  object-fit: cover;
 }
 
 .user-data__text {
@@ -976,6 +978,13 @@ option {
 
 .right-sidebar * {
   transition: all 0.3s ease;
+}
+
+.right-sidebar__ad {
+  border-radius: 2px;
+  border: solid 1px #e6e9f1;
+  background-color: #fff;
+  padding: 14px;
 }
 
 .blogs-menu {

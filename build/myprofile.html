@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="vendors/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/main.css" type="text/css">	
 	<link rel="stylesheet" href="css/main-menu_signed.css">
-
+	<link rel="icon" href="img/icons/favicon-96x96.png" type="image/png">
 	<!-- <link rel="stylesheet" href="css/main-menu_unsigned.css"> -->
 	<link rel="stylesheet" href="css/myprofile.css" type="text/css">
 </head>
@@ -209,15 +209,6 @@
 						<li class="header-menu__item header-menu__item_feed">
 							<a href="#" class="header-menu__link header-menu__link_feed">Лента</a>
 						</li>
-						<li class="header-menu__item header-menu__item_journal">
-							<a href="#" class="header-menu__link header-menu__link_journal">Журнал</a>
-						</li>
-						<li class="header-menu__item header-menu__item_notes">
-							<a href="#" class="header-menu__link header-menu__link_notes">Заметки</a>
-						</li>
-						<li class="header-menu__item header-menu__item_messages">
-							<a href="#" class="header-menu__link header-menu__link_messages">Сообщения</a>
-						</li>
 						<li class="header-menu__item header-menu__item_friends">
 							<a href="#" class="header-menu__link header-menu__link_friends">Друзья</a>
 						</li>
@@ -409,7 +400,7 @@
 									<div class="myprofile-cards__card-value">27</div>
 								</div>
 								<div class="myprofile-cards__card myprofile-cards__card_prizes">
-									<span class="myprofile-cards__card-title">Рейтинг</span>
+									<span class="myprofile-cards__card-title">Награды</span>
 									<div class="myprofile-cards__card-value">0</div>
 								</div>
 								<div class="myprofile-cards__card myprofile-cards__card_posts">
@@ -441,7 +432,9 @@
 
 						<div class="edit-info">
 							<span class="edit-info__title">Персональная информация</span>
-							<span class="edit-info__adv">Заполните все обязательные поля (помеченные звёздочкой)<br> и получите 100 монет на свой счёт!</span>
+							<div class="edit-info__adv-container">
+								<span class="edit-info__adv">Заполните все обязательные поля (помеченные звёздочкой) и получите 100 монет на свой счёт!</span>
+							</div>
 							<div class="edit-info__form-container">
 								<form class="edit-info__form" name="edit-info-form" action="">
 									<div class="edit-info__input-container">
@@ -642,7 +635,10 @@
 										<input type="submit" class="edit-info__save-btn" value="Сохранить">
 										<div class="edit-info__shadow"></div>
 									</div>
-									<p class="myprofile-contacts__form-footer">Ваши контакты никогда не будут переданы третьим лицам</p>
+									<div class="myprofile-contacts__form-footer-container">
+										<p class="myprofile-contacts__form-footer">Ваши контакты никогда не будут переданы третьим лицам</p>
+									</div>
+									
 								</form>
 							</div>	
 
@@ -650,10 +646,10 @@
 
 					</div>
 					<div class="right-sidebar">
+						<a href="#" class="right-sidebar__ad">
+							<img src="img/ad.png" class="ad">
+						</a>
 						<div class="online-report">
-							<a href="#" class="online-report__ad">
-								<img src="img/ad.png" class="ad">
-							</a>
 							<div class="online-report__header">
 								<span class="online-report__logo"></span>
 								<p class="online-report__title">Онлайн<br> отчёт</p>

@@ -382,6 +382,7 @@ option {
     &__avatar-picture {
       width: 35px;
       height: 35px;
+      object-fit: cover;
   }
 }
 
@@ -617,6 +618,7 @@ option {
         border: solid 2px #e6e9f1;
         background-color: #ffffff;
         border-radius: 43%;
+         object-fit: cover;
     }
 
     &__text {
@@ -903,6 +905,13 @@ option {
 
     & * {
             transition: all 0.3s ease;
+    }
+
+    &__ad {
+        border-radius: 2px;
+        border: solid 1px #e6e9f1;
+        background-color: #fff;
+        padding: 14px;
     }
 }
 
@@ -1270,8 +1279,6 @@ option {
         padding: 19px 20px 19px 26px;
     }
 
-
-
     .mobile-profile-menu__container {
         width: 100%;
     }
@@ -1374,3 +1381,5 @@ option {
         }
     }
 }
+
+
