@@ -32,6 +32,13 @@ $(function(){
 			$('.myprofile-soc').addClass('myprofile-section_disabled');
 			$('.myprofile-contacts').removeClass('myprofile-section_disabled')
 		}
+	});
+
+	$('.actions__add-friend').on('click', function(e) {
+		e.preventDefault();
+		$(this).toggleClass('actions__add-friend_sended');
+		$(this).hasClass('actions__add-friend_sended') ? 
+		$(this).text('Заявка отправлена') : $(this).text('Добавить в друзья');
 	})
 
 	$('.groups-menu__trigger').on('click', function(e) {
@@ -125,7 +132,42 @@ $(function(){
 			}
 		})
 	}	
-})
+
+	$('.blogs-menu__trigger').on('click', function(e) {
+		e.preventDefault();
+		onTriggerClick($(this));
+	});
+
+	$('.sign-in-modal__show-pass, .sign-up-modal__show-pass').on('click', function() {
+		$(this).prev().attr('type') === 'password' ? 
+		$(this).prev().attr('type', 'text').addClass('sign-in-modal__show-pass_showed') :
+		$(this).prev().attr('type', 'password').removeClass('sign-in-modal__show-pass_showed');
+	});
+
+	$('.sign-buttons__sign-in').on('click', function(e) {
+		e.preventDefault();
+		showModal($('.sign-in-modal'));
+	});
+
+	$('.sign-buttons__sign-up').on('click', function(e) {
+		e.preventDefault();
+		showModal($('.sign-up-modal'));
+	});
+
+	$('.overlay, .modal__close').on('click', function() {
+		hideModal();
+	})
+});
+
+function showModal(modal) {
+	$('.overlay').removeClass('overlay_disabled');
+	modal.removeClass('modal_disabled');
+}
+
+function hideModal() {
+	$('.overlay').addClass('overlay_disabled');
+	$('.modal').addClass('modal_disabled');
+}
 
 function onTriggerClick(trigger) {
 	if (!trigger.hasClass('trigger_active')) {

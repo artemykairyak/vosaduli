@@ -45,6 +45,8 @@
   display: none !important;
 }
 
+/* HIDDEN ITEMS */
+
 .left-sidebar {
   width: 24%;
   position: sticky;
@@ -625,14 +627,6 @@
 
 .edit-info__input-name_date {
   width: 100%;
-}
-
-.edit-info__star {
-  color: #f8454b;
-  font-size: 14px;
-  display: inline-block;
-  position: absolute;
-  top: -5px;
 }
 
 .edit-info__select {

@@ -11,12 +11,134 @@
 	<link rel="stylesheet" href="vendors/css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="vendors/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/main.css" type="text/css">	
-	<link rel="stylesheet" href="css/main-menu_signed.css">
+	<!-- <link rel="stylesheet" href="css/main-menu_signed.css" type="text/css"> -->
 	<link rel="icon" href="img/icons/favicon-96x96.png" type="image/png">
-	<!-- <link rel="stylesheet" href="css/main-menu_unsigned.css"> -->
+	<link rel="stylesheet" href="css/main-menu_unsigned.css">
 	<link rel="stylesheet" href="css/myprofile.css" type="text/css">
 </head>
 <body>
+	<div class="overlay overlay_disabled"></div>
+	<div class="sign-in-modal modal modal_disabled">
+		<div class="sign-in-modal__close modal__close">
+			<span class="svg" data-src="img/icons/close-icon.svg"></span>
+		</div>
+		<h2 class="sign-in-modal__title modal__title">Вход</h2>
+		<div class="sign-in-modal__socials modal__socials">
+			<a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_vk modal__soc-icon">
+				<span class="svg" data-src="img/icons/vkontakte-icon.svg"></span>
+			</a>
+			<a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_ok modal__soc-icon">
+				<span class="svg" data-src="img/icons/odnoklassniki-icon.svg"></span>
+			</a>
+			<a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_fb modal__soc-icon">
+				<span class="svg" data-src="img/icons/facebook-icon.svg"></span>
+			</a>
+			<a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_yandex modal__soc-icon">
+				<span class="svg" data-src="img/icons/yandex-icon.svg"></span>
+			</a>
+			<a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_mailru modal__soc-icon">
+				<span class="svg" data-src="img/icons/mailru-icon.svg"></span>
+			</a>
+		</div>
+		<span class="sign-in-modal__separator modal__separator">или</span>
+		<form action="" name="sign-in-form" class="sign-in-modal__form modal__form">
+			<div class="modal__input-container sign-in-modal__input-container sign-in-modal__input-container_email">
+				<p class="modal__label sign-in-modal__label sign-in-modal__label_email">
+					Введите ваш e-mail<sup class="star">*</sup>	
+				</p>
+				<div class="modal__input-wrapper sign-in-modal__input-wrapper">
+					<input type="text" name="email" class="modal__input sign-in-modal__input sign-in-modal__input_email">
+				</div>
+			</div>
+			<div class="modal__input-container sign-in-modal__input-container sign-in-modal__input-container_email">
+				<p class="modal__label sign-in-modal__label sign-in-modal__label_email">
+					Ваш пароль<sup class="star">*</sup>	
+				</p>
+				<div class="modal__input-wrapper sign-in-modal__input-wrapper">
+					<input type="password" name="password" class="modal__input sign-in-modal__input sign-in-modal__input_password">
+					<span class="sign-in-modal__show-pass">
+						<span class="svg" data-src="img/icons/invisible-pass-icon.svg"></span>
+					</span>
+				</div>
+				
+			</div>
+			<div class="sign-in-modal__bottom-inputs">
+				<div class="sign-in-modal__rememberme-container">
+					<input type="checkbox" checked id="rememberme" name="rememberme" class="sign-in-modal__rememberme-checkbox">
+					<label for="rememberme" class="sign-in-modal__rememberme-label">Запомнить меня</label>
+				</div>
+				<a href="#" class="sign-in-modal__forget-password">Забыли пароль?</a>
+			</div>
+			<div class="sign-in-modal__enter-btn-container">
+				<input type="submit" value="Войти" class="modal__btn sign-in-modal__enter-btn ">
+				<div class="modal__btn-shadow"></div>
+			</div>
+			
+		</form>
+		<a href="#" class="sign-in-modal__register-btn">Ещё нет аккаунта?</a>
+	</div>
+	<div class="sign-up-modal modal modal_disabled">
+		<div class="sign-up-modal__close modal__close">
+			<span class="svg" data-src="img/icons/close-icon.svg"></span>
+		</div>
+		<h2 class="sign-up-modal__title modal__title">Регистрация</h2>
+		<div class="sign-up-modal__socials modal__socials">
+			<a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_vk modal__soc-icon">
+				<span class="svg" data-src="img/icons/vkontakte-icon.svg"></span>
+			</a>
+			<a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_ok modal__soc-icon">
+				<span class="svg" data-src="img/icons/odnoklassniki-icon.svg"></span>
+			</a>
+			<a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_fb modal__soc-icon">
+				<span class="svg" data-src="img/icons/facebook-icon.svg"></span>
+			</a>
+			<a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_yandex modal__soc-icon">
+				<span class="svg" data-src="img/icons/yandex-icon.svg"></span>
+			</a>
+			<a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_mailru modal__soc-icon">
+				<span class="svg" data-src="img/icons/mailru-icon.svg"></span>
+			</a>
+		</div>
+		<span class="sign-up-modal__separator modal__separator">или</span>
+		<form action="" name="sign-up-form" class="sign-up-modal__form modal__form">
+			<div class="modal__input-container sign-up-modal__input-container sign-up-modal__input-container_name">
+				<p class="modal__label sign-up-modal__label sign-up-modal__label_name">
+					Напишите своё имя<sup class="star">*</sup>	
+				</p>
+				<div class="modal__input-wrapper sign-up-modal__input-wrapper">
+					<input type="text" name="name" class="modal__input sign-up-modal__input sign-up-modal__input_name">
+				</div>
+			</div>
+			<div class="modal__input-container sign-up-modal__input-container sign-up-modal__input-container_email">
+				<p class="modal__label sign-up-modal__label sign-up-modal__label_email">
+					Ваша электронная почта<sup class="star">*</sup>	
+				</p>
+				<div class="modal__input-wrapper sign-up-modal__input-wrapper">
+					<input type="text" name="email" class="modal__input sign-up-modal__input sign-up-modal__input_email">
+				</div>
+			</div>
+			<div class="modal__input-container sign-up-modal__input-container sign-up-modal__input-container_email">
+				<p class="modal__label sign-up-modal__label sign-up-modal__label_email">
+					Придумайте пароль<sup class="star">*</sup>	
+				</p>
+				<div class="modal__input-wrapper sign-up-modal__input-wrapper">
+					<input type="password" name="password" class="modal__input sign-up-modal__input sign-up-modal__input_password">
+					<span class="sign-up-modal__show-pass">
+						<span class="svg" data-src="img/icons/invisible-pass-icon.svg"></span>
+					</span>
+				</div>
+			</div>
+			<div class="sign-up-modal__register-btn-container">
+				<input type="submit" value="Зарегистрироваться" class="modal__btn sign-up-modal__register-btn ">
+				<div class="modal__btn-shadow"></div>
+			</div>	
+			<a href="#" class="sign-up-modal__registered-btn">У меня уже есть аккаунт!</a>
+			<div class="sign-up-modal__policyaccept-container">
+					<input type="checkbox" checked id="policyaccept" name="policyaccept" class=" sign-up-modal__policyaccept-checkbox">
+					<label for="policyaccept" class="sign-up-modal__policyaccept-label">Выражаю согласие на обработку персональных данных ООО "Гугелот" в соответствии с <a href="#" class="sign-up-modal__policyaccept-temps">Условиями</a></label>
+				</div>
+		</form>
+	</div>
 	<main>
 		<div class="wrapper">
 			<header class="header">
@@ -39,7 +161,7 @@
 						</li>
 					</ul>
 				</div>	
-				<div class="main-menu">
+				<!-- <div class="main-menu">
 					<a href="/" class="logo logo_nopadding">
 						<div class="logo__picture-container">
 							<div class="logo__picture"></div>
@@ -72,11 +194,39 @@
 					<div class="user-info">
 						<div class="user-info__text">
 							<span class="user-info__greeting">Привет,</span>
-							<span class="user-info__username">Елена Старовойтова</span>
+							<a href="#" class="user-info__username">Елена Старовойтова</a>
 						</div>
 						<a href="#" class="user-info__avatar">
 							<img src="img/avatar.jpg" class="user-info__avatar-picture avatar"></img>
 						</a>
+					</div>
+				</div> -->
+				<div class="main-menu">
+					<a href="/" class="logo">
+						<div class="logo__picture"></div>
+					</a>
+					<div class="search">
+						<input type="text" class="search-input" placeholder="Поиск по сайту">
+						<a href="#" class="search__button"></a>
+						<div class="search__shadow"></div>
+					</div> 
+					<div class="icons-section">
+						<a href="#" class="icons-section__item icons-section__item_contests">
+							<div class="icons-section__icon icons-section__icon_contests"></div>
+							<span class="icons-section__label">Конкурсы</span>
+						</a>
+						<a href="#" class="icons-section__item icons-section__item_podcasts">
+							<div class="icons-section__icon icons-section__icon_podcasts"></div>
+							<span class="icons-section__label icons-section__label_podcasts">Экспертное<br> мнение</span>
+						</a>
+						<a href="#" class="icons-section__item icons-section__item_money">
+							<div class="icons-section__icon icons-section__icon_money"></div>
+							<span class="icons-section__label icons-section__label_money">+1000</span>
+						</a>
+					</div>
+					<div class="sign-buttons">
+						<a href="#" class="sign-buttons__sign-up button">Регистрация</a>
+						<a href="#" class="sign-buttons__sign-in button">Войти</a>
 					</div>
 				</div>
 				<div class="mobile-nav-menu">
@@ -388,7 +538,7 @@
 
 						</ul>
 					</div>
-					<div class="myprofile-content myprofile-section_disabled">
+					<div class="myprofile-content">
 						<div class="myprofile-cards">
 							<div class="myprofile-cards__container">
 								<div class="myprofile-cards__card myprofile-cards__card_rating">
@@ -438,7 +588,7 @@
 							<div class="edit-info__form-container">
 								<form class="edit-info__form" name="edit-info-form" action="">
 									<div class="edit-info__input-container">
-										<span class="edit-info__input-name">Страна проживания<sup class="edit-info__star">*</sup></span>
+										<span class="edit-info__input-name">Страна проживания<sup class="edit-info__star star">*</sup></span>
 										<div class="edit-info__select-container">
 											<select size="1" class="edit-info__select edit-select" name="country">
 												<option disabled selected>Выберите страну</option>
@@ -449,7 +599,7 @@
 										</div>
 									</div>
 									<div class="edit-info__input-container">
-										<span class="edit-info__input-name">Регион проживания<sup class="edit-info__star">*</sup></span>
+										<span class="edit-info__input-name">Регион проживания<sup class="edit-info__star star">*</sup></span>
 										<div class="edit-info__select-container edit-select_disabled">
 											<select disabled size="1" class="edit-info__select edit-select" name="region">
 												<option disabled selected>Регион</option>
@@ -461,7 +611,7 @@
 										
 									</div>
 									<div class="edit-info__input-container">
-										<span class="edit-info__input-name">Ваш пол<sup class="edit-info__star">*</sup></span>
+										<span class="edit-info__input-name">Ваш пол<sup class="edit-info__star star">*</sup></span>
 										<div class="edit-info__select-container">
 											<select size="1" class="edit-info__select edit-select" name="gender">
 												<option disabled selected>Не выбрано</option>
@@ -471,7 +621,7 @@
 										</div>
 									</div>
 									<div class="edit-info__input-container">
-										<span class="edit-info__input-name">Ближайший районный центр<sup class="edit-info__star">*</sup></span>
+										<span class="edit-info__input-name">Ближайший районный центр<sup class="edit-info__star star">*</sup></span>
 										<div class="edit-info__select-container edit-select_disabled">
 											<select disabled size="1" class="edit-info__select edit-select" name="city">
 												<option disabled selected>Город</option>
@@ -482,7 +632,7 @@
 										</div>
 									</div>
 									<div class="edit-info__input-container edit-info__input-container_date">
-										<span class="edit-info__input-name edit-info__input-name_date">Дата рождения<sup class="edit-info__star">*</sup></span>
+										<span class="edit-info__input-name edit-info__input-name_date">Дата рождения<sup class="edit-info__star star">*</sup></span>
 										<div class="edit-info__select-container edit-info__select-container_day">
 											<select size="1" class="edit-info__select edit-info__select_day edit-select" name="day-birth">
 												<option disabled selected></option>
@@ -579,7 +729,7 @@
 									</form>
 								</div>
 							</div>	
-							<div class="myprofile-contacts">
+							<div class="myprofile-contacts myprofile-section_disabled">
 								<h2 class="myprofile-contacts__title">Контактные данные</h2>
 								<div class="myprofile-contacts__contacts">
 									<div class="myprofile-contacts__contact myprofile-contacts__contact_address">
