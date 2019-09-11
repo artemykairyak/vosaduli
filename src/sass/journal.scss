@@ -1,5 +1,6 @@
 @import 'vars.scss';
 @import 'mixins.scss';
+@import 'fonts.scss';
 
 .journal {
 	width: 100%;
@@ -43,13 +44,13 @@
 
 	&-likes {
 		&:before {
-			background: url(../img/icons/lovers-icon-copy.svg) 0 0 / contain no-repeat;
+			background: url(../images/icons/lovers-icon-copy.svg) 0 0 / contain no-repeat;
 		}
 	}
 
 	&-comments {
 		&:before {
-			background: url(../img/icons/comment-anons-icon-copy.svg) 0 0 / contain no-repeat;	
+			background: url(../images/icons/comment-anons-icon-copy.svg) 0 0 / contain no-repeat;	
 		}
 	}
 
@@ -79,7 +80,7 @@
 	}
 
 	&__search {
-		background: url(../img/patoka-bg.svg) 0 50% / cover no-repeat;
+		background: url(../images/patoka-bg.svg) 0 50% / cover no-repeat;
 		width: 100%;
 		padding: 21px 10px 31px;
 

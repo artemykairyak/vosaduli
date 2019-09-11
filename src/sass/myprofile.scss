@@ -1,5 +1,6 @@
 @import 'vars.scss';
 @import 'mixins.scss';
+@import 'fonts.scss';
 
 /* HIDDEN ITEMS */
 
@@ -125,7 +126,7 @@
 		width: 58px;
 		height: 45px;
 		margin-right: 15px;
-		background: url(../img/icons/groups-icon-left-sidebar.svg) 0 0 / contain no-repeat;
+		background: url(../images/icons/groups-icon-left-sidebar.svg) 0 0 / contain no-repeat;
 	}
 
 	&__title {
@@ -153,7 +154,7 @@
 
 		&_verified {
 			.groups-menu__item-name:after {
-				@include pseudo('../img/icons/confirmed-public-icon.svg', 13px, 13px)
+				@include pseudo('../images/icons/confirmed-public-icon.svg', 13px, 13px)
 				margin-left: 8px;
 				vertical-align: middle;
 			}
@@ -279,7 +280,7 @@
 	}
 
 	&__tabs {
-		background: url(../img/patoka-bg.svg) 0 50% / cover no-repeat;
+		background: url(../images/patoka-bg.svg) 0 50% / cover no-repeat;
 		width: 100%;
 		padding: 21px 10px 31px;
 		position: relative;
@@ -457,7 +458,7 @@
 			&-value {
 				width: 75px;
 				height: 75px;
-				background: url(../img/icons/figure-bg-icon.svg) center / contain no-repeat;
+				background: url(../images/icons/figure-bg-icon.svg) center / contain no-repeat;
 				display: -webkit-flex;
 				display: -moz-flex;
 				display: -ms-flex;
@@ -510,19 +511,19 @@
 
 			&_likedpeople {
 				.myprofile-cards__other-stats-icon {
-					background: url(../img/icons/likes-people-counter-icon.svg) 0 0 / contain no-repeat;
+					background: url(../images/icons/likes-people-counter-icon.svg) 0 0 / contain no-repeat;
 				}
 			}
 
 			&_followedpeople {
 				.myprofile-cards__other-stats-icon {
-					background: url(../img/icons/followers-people-counter-icon.svg) 0 0 / contain no-repeat;
+					background: url(../images/icons/followers-people-counter-icon.svg) 0 0 / contain no-repeat;
 				}
 			}
 
 			&_coins {
 				.myprofile-cards__other-stats-icon {
-					background: url(../img/icons/coins-accaunt-counter-icon.svg) 0 0 / contain no-repeat;
+					background: url(../images/icons/coins-accaunt-counter-icon.svg) 0 0 / contain no-repeat;
 				}
 			}
 
@@ -633,7 +634,7 @@
 
 			&.edit-select_disabled {
 				&:after {
-					@include pseudo('../img/icons/select-arr_disabled.svg', 9px, 7px);
+					@include pseudo('../images/icons/select-arr_disabled.svg', 9px, 7px);
 				}
 			}
 
@@ -642,7 +643,7 @@
 				right: 10px;
 				top: 50%;
 				transform: translateY(-50%);
-				@include pseudo('../img/icons/select-arr.svg', 9px, 7px);
+				@include pseudo('../images/icons/select-arr.svg', 9px, 7px);
 			}
 
 			&_day, &_year {
@@ -731,6 +732,11 @@
 	cursor: pointer;
 	z-index: 20;
 
+	svg {
+		 width: 22px;
+  		height: 19px;
+	}
+
 	&_header {
 		top: 18px;
 		right: 18px;
@@ -756,7 +762,7 @@
 		height: 54px;
 		width: 54px;
 		margin-right: 16px;
-		background: url(../img/icons/snitch-right-sidebar-icon.svg) 0 0 / contain no-repeat;
+		background: url(../images/icons/snitch-right-sidebar-icon.svg) 0 0 / contain no-repeat;
 	}
 
 	&__title {
@@ -771,7 +777,7 @@
 	&__info-btn {
 		width: 22px;
 		height: 22px;
-		background: url(../img/icons/information-icon.svg) 0 0 / contain no-repeat;
+		background: url(../images/icons/information-icon.svg) 0 0 / contain no-repeat;
 	}
 
 	&__items {
@@ -797,7 +803,7 @@
 			margin-right: 12px;
 
 			&_coins {
-				background: url(../img//icons/coin-big-event-icon.svg) 0 0 / contain no-repeat;
+				background: url(../images//icons/coin-big-event-icon.svg) 0 0 / contain no-repeat;
 			}
 		}
 
@@ -877,19 +883,19 @@
 
 
 			&_ok {
-				background: url(../img/icons/odnoklassniki.svg) 0 0 / contain no-repeat;
+				background: url(../images/icons/odnoklassniki.svg) 0 0 / contain no-repeat;
 			}
 
 			&_mir {
-				background: url(../img/icons/mir.svg) 0 0 / contain no-repeat;
+				background: url(../images/icons/mir.svg) 0 0 / contain no-repeat;
 			}
 
 			&_facebook {
-				background: url(../img/icons/fb.svg) 0 0 / contain no-repeat;
+				background: url(../images/icons/fb.svg) 0 0 / contain no-repeat;
 			}
 
 			&_vk {
-				background: url(../img/icons/vk.svg) 0 0 / contain no-repeat;
+				background: url(../images/icons/vk.svg) 0 0 / contain no-repeat;
 			}
 		}
 
@@ -994,7 +1000,7 @@
 
 				&:after {
 					background-color: #03a9f4;
-					@include pseudo('../img/icons/check.svg', 7px, 5px);
+					@include pseudo('../images/icons/check.svg', 7px, 5px);
 					position: absolute;
 					top: 50%;
 					left: 50%;
@@ -1074,12 +1080,12 @@
 		margin-right: 12px;
 
 		&_address {
-			background: url(../img/icons/contact-home-icon.svg) 0 0 / contain no-repeat;
+			background: url(../images/icons/contact-home-icon.svg) 0 0 / contain no-repeat;
 			width: 46px;
 		}
 
 		&_phone {
-			background: url(../img/icons/contact-phone-icon.svg) 0 0 / contain no-repeat;
+			background: url(../images/icons/contact-phone-icon.svg) 0 0 / contain no-repeat;
 			width: 42px;
 		}
 	}

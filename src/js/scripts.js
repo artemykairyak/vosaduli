@@ -138,6 +138,23 @@ $(function(){
 		onTriggerClick($(this));
 	});
 
+	//MODERATION
+
+	$('.moderation-header__tab').on('click', function() {
+		if (!$(this).hasClass('tab_selected')) {
+			$(this).toggleClass('tab_selected');
+			$(this).siblings().removeClass('tab_selected');
+		}
+	});
+
+	// console.log($('.moderation-articles__article-title:first').text().length);
+
+	// truncText('.moderation-articles__article-title', 77);
+
+	//MODERATION
+
+	//MODALS
+
 	$('.sign-in-modal__show-pass, .sign-up-modal__show-pass').on('click', function() {
 		$(this).prev().attr('type') === 'password' ? 
 		$(this).prev().attr('type', 'text').addClass('sign-in-modal__show-pass_showed') :
@@ -156,8 +173,22 @@ $(function(){
 
 	$('.overlay, .modal__close').on('click', function() {
 		hideModal();
-	})
+	});
+
+	//MODALS
 });
+
+String.prototype.trunc = function(n){
+	return this.substr(0,n-1)+(this.length>n?'...':'');
+};
+
+function truncText(selector, substr){
+	if($(selector).length > 0){
+		$(selector).each(function(i, item){
+			$(this).text($(this).text().trunc(substr))
+		});
+	}
+}
 
 function showModal(modal) {
 	$('.overlay').removeClass('overlay_disabled');

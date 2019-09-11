@@ -75,14 +75,14 @@ gulp.task('buildHtml', function(){
 //HTML
 //img
 gulp.task('img', function() {
-  return gulp.src('src/img/**/*')
-  .pipe(gulp.dest('build/img'))
+  return gulp.src('src/images/**/*')
+  .pipe(gulp.dest('build/images'))
   .pipe(reload({stream: true}));
 });
 //img
 //images optimization
 gulp.task('imgmin', function() {
-  return gulp.src('src/img/**/*')
+  return gulp.src('src/images/**/*')
   .pipe(imagemin([
             imageminJpegRecompress({
             	method: 'smallfry',
@@ -99,7 +99,7 @@ gulp.task('imgmin', function() {
                 ]
             })
         ]))
-  .pipe(gulp.dest('build/img'))
+  .pipe(gulp.dest('build/images'))
   .pipe(reload({stream: true}));
 });
 //images optimization

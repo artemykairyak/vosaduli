@@ -1,3 +1,69 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto.woff);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Robotobold.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Robotomedium.woff);
+  font-weight: 500;
+}
+
+/* CERAPRO */
+
+@font-face {
+  font-family: CeraPro;
+  src: url(../fonts/CeraPro/CeraPro-Regular.woff);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: CeraPro;
+  src: url(../fonts/CeraPro/CeraPro-Medium.woff);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: CeraPro;
+  src: url(../fonts/CeraPro/CeraPro-Bold.woff);
+  font-weight: bold;
+}
+
+/* MUSEO */
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoSansCyrl.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoCyrl-700.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoCyrl-900.woff);
+  font-weight: 900;
+}
+
+/* ALSSchlangeslab */
+
+@font-face {
+  font-family: ALS;
+  src: url(../fonts/ALSSchlangeslab/alsschlangebold.otf), url(../fonts/ALSSchlangeslab/alsschlangebold.eot), url(../fonts/ALSSchlangeslab/alsschlangebold.woff);
+  font-weight: bold;
+}
+
 .journal {
   width: 100%;
   padding: 0 18px;
@@ -42,11 +108,11 @@
 }
 
 .journal-likes:before {
-  background: url(../img/icons/lovers-icon-copy.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/lovers-icon-copy.svg) 0 0/contain no-repeat;
 }
 
 .journal-comments:before {
-  background: url(../img/icons/comment-anons-icon-copy.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/comment-anons-icon-copy.svg) 0 0/contain no-repeat;
 }
 
 .journal-more {
@@ -76,7 +142,7 @@
 }
 
 .journal__search {
-  background: url(../img/patoka-bg.svg) 0 50%/cover no-repeat;
+  background: url(../images/patoka-bg.svg) 0 50%/cover no-repeat;
   width: 100%;
   padding: 21px 10px 31px;
 }

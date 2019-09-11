@@ -1,5 +1,71 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto.woff);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Robotobold.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Robotomedium.woff);
+  font-weight: 500;
+}
+
+/* CERAPRO */
+
+@font-face {
+  font-family: CeraPro;
+  src: url(../fonts/CeraPro/CeraPro-Regular.woff);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: CeraPro;
+  src: url(../fonts/CeraPro/CeraPro-Medium.woff);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: CeraPro;
+  src: url(../fonts/CeraPro/CeraPro-Bold.woff);
+  font-weight: bold;
+}
+
+/* MUSEO */
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoSansCyrl.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoCyrl-700.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoCyrl-900.woff);
+  font-weight: 900;
+}
+
+/* ALSSchlangeslab */
+
+@font-face {
+  font-family: ALS;
+  src: url(../fonts/ALSSchlangeslab/alsschlangebold.otf), url(../fonts/ALSSchlangeslab/alsschlangebold.eot), url(../fonts/ALSSchlangeslab/alsschlangebold.woff);
+  font-weight: bold;
+}
+
 .friends__menu {
-  background: url(../img/patoka-bg.svg) 0 50%/cover no-repeat;
+  background: url(../images/patoka-bg.svg) 0 50%/cover no-repeat;
   width: 100%;
   padding: 30px 10px 31px;
 }
@@ -28,6 +94,16 @@
   font-weight: bold;
 }
 
+.friends__menu-item_active {
+  /*.friends__menu-count {
+					position: absolute;
+					top: -10px;
+					right: -17px;
+					font-weight: bold;
+					color: #94acc4;
+				}*/
+}
+
 .friends__menu-item_active:before,
 .friends__menu-item_active:after {
   content: '';
@@ -52,22 +128,14 @@
   z-index: -1;
 }
 
-.friends__menu-item_active .friends__menu-count {
-  position: absolute;
-  top: 0px;
-  right: -17px;
-  font-weight: bold;
-  color: #94acc4;
-}
-
 .friends__menu-item_active .friends__menu-link {
   color: #21224e;
 }
 
 .friends__menu-count {
   position: absolute;
-  top: 2px;
-  right: 7px;
+  top: -10px;
+  right: -17px;
   font-weight: bold;
   color: #94acc4;
 }

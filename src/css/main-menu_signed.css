@@ -13,7 +13,7 @@
 }
 
 .logo__picture {
-  background: url(../img/icons/signed-logo.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/signed-logo.svg) 0 0/contain no-repeat;
   width: 40px;
   height: 52px;
   position: absolute;
@@ -27,7 +27,7 @@
   display: inline-block;
   width: 139px;
   height: 57px;
-  background: url(../img/icons/logo-text.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/logo-text.svg) 0 0/contain no-repeat;
 }
 
 .search {
@@ -69,7 +69,7 @@
 .user-info__username:before {
   content: '';
   display: inline-block;
-  background: url("../img/icons/blue-arrow-down.svg") 0 0/contain no-repeat;
+  background: url("../images/icons/blue-arrow-down.svg") 0 0/contain no-repeat;
   width: 7px;
   height: 5px;
   margin-right: 9px;

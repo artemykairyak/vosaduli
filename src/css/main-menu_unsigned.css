@@ -7,7 +7,7 @@
 }
 
 .icons-section__icon_podcasts {
-  background: url(../img/icons/podcasts-icon.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/podcasts-icon.svg) 0 0/contain no-repeat;
   width: 37px;
   height: 37px;
 }
@@ -22,7 +22,7 @@
 .icons-section__icon_money {
   width: 30px;
   height: 37px;
-  background: url(../img/icons/money-icon.PNG) 0 0/contain no-repeat;
+  background: url(../images/icons/money-icon.PNG) 0 0/contain no-repeat;
 }
 
 .icons-section__label_money {

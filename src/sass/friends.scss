@@ -1,9 +1,10 @@
 @import 'vars.scss';
 @import 'mixins.scss';
+@import 'fonts.scss';
 
 .friends {
 	&__menu {
-		background: url(../img/patoka-bg.svg) 0 50% / cover no-repeat;
+		background: url(../images/patoka-bg.svg) 0 50% / cover no-repeat;
 		width: 100%;
 		padding: 30px 10px 31px;
 
@@ -55,13 +56,13 @@
 	  				z-index: -1;
 				}
 
-				.friends__menu-count {
+				/*.friends__menu-count {
 					position: absolute;
-					top: 0px;
+					top: -10px;
 					right: -17px;
 					font-weight: bold;
 					color: #94acc4;
-				}
+				}*/
 
 				.friends__menu-link {
 					color: $blue;
@@ -71,8 +72,8 @@
 
 		&-count {
 			position: absolute;
-			top: 2px;
-			right: 7px;
+			top: -10px;
+			right: -17px;
 			font-weight: bold;
 			color: #94acc4;
 		}
@@ -81,8 +82,6 @@
 			color: #5b5b5b;
 			position: relative;
 			padding: 14px 20px;
-			
-
 		}
 	}
 

@@ -15,7 +15,7 @@
 	}
 
 	&__picture {
-		background: url(../img/icons/signed-logo.svg) 0 0 / contain no-repeat;
+		background: url(../images/icons/signed-logo.svg) 0 0 / contain no-repeat;
 		width: 40px;
 		height: 52px;
 		position: absolute;
@@ -29,7 +29,7 @@
 		display: inline-block;
 		width: 139px;
 		height: 57px;
-		background: url(../img/icons/logo-text.svg) 0 0 / contain no-repeat;
+		background: url(../images/icons/logo-text.svg) 0 0 / contain no-repeat;
 	}
 }
 
@@ -70,7 +70,7 @@
 		display: block;
 
 		&:before {
-			@include pseudo('../img/icons/blue-arrow-down.svg', 7px, 5px);
+			@include pseudo('../images/icons/blue-arrow-down.svg', 7px, 5px);
 			margin-right: 9px;
 			transform: translateY(-30%);
 		}

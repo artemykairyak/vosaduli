@@ -1,5 +1,71 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto.woff);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Robotobold.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Robotomedium.woff);
+  font-weight: 500;
+}
+
+/* CERAPRO */
+
+@font-face {
+  font-family: CeraPro;
+  src: url(../fonts/CeraPro/CeraPro-Regular.woff);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: CeraPro;
+  src: url(../fonts/CeraPro/CeraPro-Medium.woff);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: CeraPro;
+  src: url(../fonts/CeraPro/CeraPro-Bold.woff);
+  font-weight: bold;
+}
+
+/* MUSEO */
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoSansCyrl.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoCyrl-700.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoCyrl-900.woff);
+  font-weight: 900;
+}
+
+/* ALSSchlangeslab */
+
+@font-face {
+  font-family: ALS;
+  src: url(../fonts/ALSSchlangeslab/alsschlangebold.otf), url(../fonts/ALSSchlangeslab/alsschlangebold.eot), url(../fonts/ALSSchlangeslab/alsschlangebold.woff);
+  font-weight: bold;
+}
+
 /* HIDDEN ITEMS */
 
 .header-menu__item_journal,
@@ -130,7 +196,7 @@
   width: 58px;
   height: 45px;
   margin-right: 15px;
-  background: url(../img/icons/groups-icon-left-sidebar.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/groups-icon-left-sidebar.svg) 0 0/contain no-repeat;
 }
 
 .groups-menu__title {
@@ -158,7 +224,7 @@
 .groups-menu__item_verified .groups-menu__item-name:after {
   content: '';
   display: inline-block;
-  background: url("../img/icons/confirmed-public-icon.svg") 0 0/contain no-repeat;
+  background: url("../images/icons/confirmed-public-icon.svg") 0 0/contain no-repeat;
   width: 13px;
   height: 13px;
   margin-left: 8px;
@@ -281,7 +347,7 @@
 }
 
 .myprofile__tabs {
-  background: url(../img/patoka-bg.svg) 0 50%/cover no-repeat;
+  background: url(../images/patoka-bg.svg) 0 50%/cover no-repeat;
   width: 100%;
   padding: 21px 10px 31px;
   position: relative;
@@ -462,7 +528,7 @@
 .myprofile-cards__card-value {
   width: 75px;
   height: 75px;
-  background: url(../img/icons/figure-bg-icon.svg) center/contain no-repeat;
+  background: url(../images/icons/figure-bg-icon.svg) center/contain no-repeat;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -519,15 +585,15 @@
 }
 
 .myprofile-cards__other-stats_likedpeople .myprofile-cards__other-stats-icon {
-  background: url(../img/icons/likes-people-counter-icon.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/likes-people-counter-icon.svg) 0 0/contain no-repeat;
 }
 
 .myprofile-cards__other-stats_followedpeople .myprofile-cards__other-stats-icon {
-  background: url(../img/icons/followers-people-counter-icon.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/followers-people-counter-icon.svg) 0 0/contain no-repeat;
 }
 
 .myprofile-cards__other-stats_coins .myprofile-cards__other-stats-icon {
-  background: url(../img/icons/coins-accaunt-counter-icon.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/coins-accaunt-counter-icon.svg) 0 0/contain no-repeat;
 }
 
 .myprofile-cards__other-stats-value {
@@ -640,7 +706,7 @@
 .edit-info__select-container.edit-select_disabled:after {
   content: '';
   display: inline-block;
-  background: url("../img/icons/select-arr_disabled.svg") 0 0/contain no-repeat;
+  background: url("../images/icons/select-arr_disabled.svg") 0 0/contain no-repeat;
   width: 9px;
   height: 7px;
 }
@@ -652,7 +718,7 @@
   transform: translateY(-50%);
   content: '';
   display: inline-block;
-  background: url("../img/icons/select-arr.svg") 0 0/contain no-repeat;
+  background: url("../images/icons/select-arr.svg") 0 0/contain no-repeat;
   width: 9px;
   height: 7px;
 }
@@ -742,6 +808,11 @@
   z-index: 20;
 }
 
+.user-data__avatar-changephoto svg {
+  width: 22px;
+  height: 19px;
+}
+
 .user-data__avatar-changephoto_header {
   top: 18px;
   right: 18px;
@@ -765,7 +836,7 @@
   height: 54px;
   width: 54px;
   margin-right: 16px;
-  background: url(../img/icons/snitch-right-sidebar-icon.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/snitch-right-sidebar-icon.svg) 0 0/contain no-repeat;
 }
 
 .online-report__title {
@@ -780,7 +851,7 @@
 .online-report__info-btn {
   width: 22px;
   height: 22px;
-  background: url(../img/icons/information-icon.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/information-icon.svg) 0 0/contain no-repeat;
 }
 
 .online-report__items_disabled {
@@ -808,7 +879,7 @@
 }
 
 .online-report__item-icon_coins {
-  background: url(../img//icons/coin-big-event-icon.svg) 0 0/contain no-repeat;
+  background: url(../images//icons/coin-big-event-icon.svg) 0 0/contain no-repeat;
 }
 
 .online-report__item-text {
@@ -887,19 +958,19 @@
 }
 
 .myprofile-soc__trigger-icon_ok {
-  background: url(../img/icons/odnoklassniki.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/odnoklassniki.svg) 0 0/contain no-repeat;
 }
 
 .myprofile-soc__trigger-icon_mir {
-  background: url(../img/icons/mir.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/mir.svg) 0 0/contain no-repeat;
 }
 
 .myprofile-soc__trigger-icon_facebook {
-  background: url(../img/icons/fb.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/fb.svg) 0 0/contain no-repeat;
 }
 
 .myprofile-soc__trigger-icon_vk {
-  background: url(../img/icons/vk.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/vk.svg) 0 0/contain no-repeat;
 }
 
 .myprofile-soc__trigger-trigger {
@@ -1007,7 +1078,7 @@
   background-color: #03a9f4;
   content: '';
   display: inline-block;
-  background: url("../img/icons/check.svg") 0 0/contain no-repeat;
+  background: url("../images/icons/check.svg") 0 0/contain no-repeat;
   width: 7px;
   height: 5px;
   position: absolute;
@@ -1088,12 +1159,12 @@
 }
 
 .myprofile-contacts__contact-icon_address {
-  background: url(../img/icons/contact-home-icon.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/contact-home-icon.svg) 0 0/contain no-repeat;
   width: 46px;
 }
 
 .myprofile-contacts__contact-icon_phone {
-  background: url(../img/icons/contact-phone-icon.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/contact-phone-icon.svg) 0 0/contain no-repeat;
   width: 42px;
 }
 
