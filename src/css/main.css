@@ -105,11 +105,13 @@ option,
 textarea,
 button {
   appearance: none;
-  /* remove arrow        */
   -webkit-appearance: none;
-  /* remove arrow Chrome */
   -moz-appearance: none;
   box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
 }
 
 .input {
@@ -418,6 +420,11 @@ option {
   margin: 25px auto;
 }
 
+.modal__soc-icon svg {
+  width: 35px;
+  height: 35px;
+}
+
 .modal__separator {
   color: #5b5b5b;
   font-size: 14px;
@@ -434,7 +441,7 @@ option {
   background-color: #5b5b5b;
   position: absolute;
   opacity: 0.3;
-  top: calc(50%);
+  top: 50%;
 }
 
 .modal__separator:before {
@@ -1138,7 +1145,7 @@ option {
 }
 
 .profile-menu svg {
-  width: 29px;
+  width: 27px;
 }
 
 .profile-menu__container {

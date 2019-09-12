@@ -118,7 +118,6 @@ $(function(){
 	} else if($('.header-menu__container').length > 0 && $(window).width() >= 1050){
 		$('.header-menu__container').trigger('destroy.owl.carousel');
 		$('.header-menu__item').on('click', function(e) {
-			e.preventDefault();
 			$(this).siblings().removeClass('header-menu__item_active');
 			$(this).addClass('header-menu__item_active');
 		});
@@ -147,11 +146,86 @@ $(function(){
 		}
 	});
 
-	// console.log($('.moderation-articles__article-title:first').text().length);
-
-	// truncText('.moderation-articles__article-title', 77);
+	cutText($('.moderation-articles__article-title'), 76);
 
 	//MODERATION
+
+	// ADD ARTICLE
+
+	$('.pub-format__format').on('click', function() {
+		$(this).siblings().removeClass('pub-format__format_selected');
+		$(this).addClass('pub-format__format_selected');
+		$(this).siblings().find('.pub-format__format-radio').removeAttr('checked');
+		$(this).find('.pub-format__format-radio').attr('checked', 'checked');
+	});
+
+	$('input[type="file"]').on('change', function() {
+		let file = this.files;
+		sendFile(file);
+	});
+
+	var dropZone = $('.pub-thumbnail__image');
+
+	dropZone[0].ondragover = function() {
+		dropZone.addClass('pub-thumbnail__image_onDrag');
+		return false;
+	};
+
+	dropZone[0].ondragleave = function() {
+		dropZone.removeClass('pub-thumbnail__image_onDrag');
+		return false;
+	};
+
+	dropZone[0].ondrop = function(e) {
+		e.preventDefault();
+		var file = e.dataTransfer.files[0];
+		e.stopPropagation();
+		dropZone.removeClass('pub-thumbnail__image_onDrag');
+		dropZone.addClass('pub-thumbnail__image_dragged');
+		sendFile(file);
+	};
+
+	var config = {};
+	config.toolbarGroups = [
+	{ name: 'styles', groups: [ 'styles' ] },
+	{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+	{ name: 'paragraph', groups: [ 'list', 'blocks', 'indent', 'align', 'bidi', 'paragraph' ] },
+	{ name: 'insert', groups: [ 'insert' ] },
+	{ name: 'links', groups: [ 'links' ] },
+	{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
+	{ name: 'tools', groups: [ 'tools' ] },
+	{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+	{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+	{ name: 'forms', groups: [ 'forms' ] },
+	{ name: 'others', groups: [ 'others' ] },
+	'/',
+	{ name: 'colors', groups: [ 'colors' ] },
+	{ name: 'about', groups: [ 'about' ] }
+	];
+	config.placeholder = 'some value'; 
+	config.removeButtons = 'Underline,Subscript,Superscript,Cut,Copy,PasteText,PasteFromWord,Outdent,Indent,Strike,HorizontalRule,SpecialChar,Scayt,Undo,Redo,RemoveFormat,About,Anchor,Unlink,Format';
+	config.extraPlugins = 'cloudservices';
+	config.extraPlugins = 'confighelper';
+	config.resize_enabled = false;
+	config.uiColor = '#fafafa';
+	CKEDITOR.replace('article-content', config);
+
+	$('.pub-theme__input').on('keyup', function(e) {
+		if(e.key === ',') {
+			var propText = $(this).val().slice(0, $(this).val().length);
+			$(this).val(propText + ' ');
+			$(this).css('color', '#2e2e2e');
+		} else {
+			$(this).css('color', '#9b9b9b');
+		}
+	});
+
+	$('.pub-theme__input').on('blur', function(e) {
+		$(this).css('color', '#2e2e2e');
+	});
+
+
+	//ADD ARTICLE
 
 	//MODALS
 
@@ -178,49 +252,80 @@ $(function(){
 	//MODALS
 });
 
-String.prototype.trunc = function(n){
-	return this.substr(0,n-1)+(this.length>n?'...':'');
-};
 
-function truncText(selector, substr){
-	if($(selector).length > 0){
-		$(selector).each(function(i, item){
-			$(this).text($(this).text().trunc(substr))
+	function sendFile(file) {
+		let maxFileSize = 5242880;
+		let Data = new FormData();
+		if ((file.size <= maxFileSize) && ((file.type == 'image/png') || (file.type == 'image/jpeg'))) {
+			Data.append('images[]', file);
+		}
+
+		$.ajax({
+			url: 'test.html',
+			type: 'post',
+			data: Data,
+			contentType: false,
+			processData: false,
+			success: function(data) {
+				alert('Файлы были успешно загружены');
+			}
 		});
-	}
-}
 
-function showModal(modal) {
-	$('.overlay').removeClass('overlay_disabled');
-	modal.removeClass('modal_disabled');
-}
+	};
 
-function hideModal() {
-	$('.overlay').addClass('overlay_disabled');
-	$('.modal').addClass('modal_disabled');
-}
-
-function onTriggerClick(trigger) {
-	if (!trigger.hasClass('trigger_active')) {
-		trigger.toggleClass('trigger_active');
-		trigger.siblings().removeClass('trigger_active');
-	}
-}
-
-function socTriggerChange(trigger) {
-	if(trigger.parent().hasClass('myprofile-soc__trigger_disabled')) {
-		trigger.parent().removeClass('myprofile-soc__trigger_disabled');
-		if(trigger.parent().hasClass('myprofile-soc__trigger_ok')) {
-			trigger.parent().find('.myprofile-soc__trigger-state').text('работают');
-		} else {		
-			trigger.parent().find('.myprofile-soc__trigger-state').text('работает');
+	function stateChange(e) {
+		if (e.target.readyState == 4) {
+			if (e.target.status == 200) {
+				dropZone.text('Загрузка успешно завершена!');
+			} else {
+				dropZone.text('Произошла ошибка!');
+				dropZone.addClass('error');
+			}
 		}
-	} else {
-		trigger.parent().addClass('myprofile-soc__trigger_disabled');
-		if(trigger.parent().hasClass('myprofile-soc__trigger_ok')) {
-			trigger.parent().find('.myprofile-soc__trigger-state').text('не подключены');
+	}
+
+	function cutText(element, len) {
+		element.each(function(index, elem) {
+			let elemText = $(elem).text();
+			if( elemText.length > len) {
+				let cutText = elemText.slice(0, len);
+				let resultText = cutText.slice(0, cutText.lastIndexOf(' ')) + '...';
+				$(elem).text(resultText);
+			}
+		})
+	}
+
+	function showModal(modal) {
+		$('.overlay').removeClass('overlay_disabled');
+		modal.removeClass('modal_disabled');
+	}
+
+	function hideModal() {
+		$('.overlay').addClass('overlay_disabled');
+		$('.modal').addClass('modal_disabled');
+	}
+
+	function onTriggerClick(trigger) {
+		if (!trigger.hasClass('trigger_active')) {
+			trigger.toggleClass('trigger_active');
+			trigger.siblings().removeClass('trigger_active');
+		}
+	}
+
+	function socTriggerChange(trigger) {
+		if(trigger.parent().hasClass('myprofile-soc__trigger_disabled')) {
+			trigger.parent().removeClass('myprofile-soc__trigger_disabled');
+			if(trigger.parent().hasClass('myprofile-soc__trigger_ok')) {
+				trigger.parent().find('.myprofile-soc__trigger-state').text('работают');
+			} else {		
+				trigger.parent().find('.myprofile-soc__trigger-state').text('работает');
+			}
 		} else {
-			trigger.parent().find('.myprofile-soc__trigger-state').text('не подключен');
+			trigger.parent().addClass('myprofile-soc__trigger_disabled');
+			if(trigger.parent().hasClass('myprofile-soc__trigger_ok')) {
+				trigger.parent().find('.myprofile-soc__trigger-state').text('не подключены');
+			} else {
+				trigger.parent().find('.myprofile-soc__trigger-state').text('не подключен');
+			}
 		}
 	}
-}

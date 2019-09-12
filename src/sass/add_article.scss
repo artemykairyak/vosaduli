@@ -1,0 +1,266 @@
+@import 'vars.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+.addarticle-form {
+	@include flex;
+	align-items: flex-start;
+	padding: 32px 0 40px;
+}
+
+.left-sidebar {
+	width: 19%;
+}
+
+.main-content {
+	width: 57%;
+}
+
+.right-sidebar {
+	width: 24%;
+}
+
+.pub-maininfo__inputs-container {
+	background: $paleGray;
+	padding: 15px;
+	border-radius: 2px;
+}
+
+.pub-maininfo__input  {
+	box-sizing: border-box;
+	border-radius: 2px;
+	box-shadow: inset 0 2px 2px 0 #0000000f;
+	border: solid 1px #c4d2e1;
+	background-color: #ffffff;
+	outline: none;
+	padding: 15px;
+	font-family: CeraPro;
+	color: $text;
+	font-weight: 500;
+}
+
+.pub-title {
+	font-family: MuseoCyrl;
+	font-size: 18px;
+	font-weight: bold;
+	color: $blue;
+	position: relative;
+}
+
+.pub-format {
+	border-radius: 2px;
+	background-color: $paleGray;
+	padding: 20px 0 40px;
+	text-align: center; 
+
+	&__title {
+		margin-bottom: 16px;
+	}
+
+	&__format {
+		height: 38px;
+		width: 80%;
+		margin: 0 auto;
+		padding: 0 28px;
+		text-transform: uppercase;
+		border-radius: 18.5px;
+		position: relative;
+		z-index: 1;
+		background: 0 0;
+		font-weight: 700;
+		line-height: 37px;
+		color: #64686e;
+		text-align: center;
+		cursor: pointer;
+		margin-bottom: 16px;
+		transition: all 0.3s ease;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			background: 0 0;
+			border: 1px solid #c9c9c9;
+			width: 100%;
+			height: 37px;
+			border-radius: 18.5px;
+			-webkit-transition: .3s;
+			transition: .3s;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			top: 3px;
+			left: 3px;
+			height: 39px;
+			border-radius: 18.5px;
+			background-color: #e8e9e9;
+			z-index: -1;
+			transition: .3s;
+		}
+
+		&:hover {
+			&:not(.pub-format__format_selected) {
+				color: $blue;
+
+				&:before {
+					border: solid 1px #94acc4;
+				}
+
+				&:after {
+					background: #c4d2e1;
+				}
+			}
+		}
+
+		&_selected {
+			color: #4e801a;
+
+			&:before {
+				border: solid 1px #90c952;
+			}
+
+			&:after {
+				background: #c4dfa5;
+			}
+		}
+	}
+}
+
+.pub-thumbnail {
+	padding-top: 20px;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+
+
+	&__title {
+		margin-bottom: 10px;
+	}
+
+	&__image {
+		z-index: 2;
+		border-radius: 2px;
+		border: solid 1px #e6e9f1;
+		background-color: #ffffff;
+		width: 100%;
+		padding-bottom: 100%;
+		position: relative;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		transition: all 0.3s ease;
+
+		&:after {
+			@include pseudo('../images/icons/no-miniature-icon.svg', 70%, 70%);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0.5;
+			transition: all 0.3s ease;
+		}
+
+		&_onDrag {
+			border: dashed 1px darken(#e6e9f1, 5%);
+
+			&:after {
+				opacity: 1;
+			}
+		}
+
+		&_dragged {
+			border: solid 1px #90c952;
+		}
+
+		&_error {
+			border: solid 1px #f8454b;
+		}
+		
+		&-label {
+			position: absolute;
+			display: block;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 3;
+			cursor: pointer;
+		}
+	}
+
+	input[type=file] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		z-index: -2;
+
+	}
+}
+
+.pub-period {
+	padding-top: 20px;
+	text-align: center;
+
+	&__title {
+		margin-bottom: 8px;
+	}
+
+	&__period-btn {
+		color: #73777d;
+		height: 40px;
+		border-radius: 4px;
+		box-shadow: 0 3px 7px 0 #0000000e, inset 0 -3px 0 0 #e0e4e8;
+		border: solid 1px #c4d2e1;
+		background-color: #fafafa;
+		font-size: 15px;
+		font-weight: 500;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	&__period-icon {
+		background: url(../images/icons/period-icon.svg) 0 0 / contain no-repeat;
+		width: 19px;
+		height: 9px;
+		margin-right: 15px;
+
+	}
+}
+
+.pub-theme {
+	padding-top: 20px;
+	text-align: center;
+
+	&__title {
+		margin-bottom: 10px;
+	}
+
+	&__input {
+		width: 100%;
+		height: 120px;
+		color: #9b9b9b;
+	}
+
+	&__footer {
+		margin-top: 17px;
+		font-weight: 500;
+		color: #9b9b9b;
+	}
+}
+
