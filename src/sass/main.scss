@@ -138,6 +138,18 @@ option {
     color: #64686e;
     text-align: center;
 
+    &:hover {
+        color: $blue;
+
+        &:before {
+            border: solid 1px #94acc4;
+        }
+
+        &:after {
+            background: #c4d2e1;
+        }
+    }
+
     &_green {
         height: 37px;
         padding: 0 28px;
@@ -893,22 +905,22 @@ option {
         }
 
         &_add-photo {
-           color: $avocado;
-           font-size: 18px;
-           font-weight: 900;
-           text-transform: uppercase;
-           display: inline-block;
-           width: 100%;
-           transform: translateY(-2px);
-       }
-   }
+         color: $avocado;
+         font-size: 18px;
+         font-weight: 900;
+         text-transform: uppercase;
+         display: inline-block;
+         width: 100%;
+         transform: translateY(-2px);
+     }
+ }
 
-   &__item_tridot {
-      background: url(../images/icons/tridot.svg) 0 0 / contain no-repeat;
-      height: 27px;
-      width: 5px;
-      margin: 0 21px 0 28px;
-  }   
+ &__item_tridot {
+  background: url(../images/icons/tridot.svg) 0 0 / contain no-repeat;
+  height: 27px;
+  width: 5px;
+  margin: 0 21px 0 28px;
+}   
 }
 
 .user-data {
@@ -987,10 +999,10 @@ option {
     margin: 0 auto;
 
     &__add-friend, &__write-message {
-     /* margin-right: 20px;*/
- }
+       /* margin-right: 20px;*/
+   }
 
- &__add-friend {
+   &__add-friend {
     color: #4e801a;
     transition: all 0.3s ease;
 
@@ -1580,7 +1592,7 @@ option {
 }
 
 @media screen and (max-width: 1226px) {
-   .nav-menu {
+ .nav-menu {
     display: none;
 }
 
@@ -1600,7 +1612,7 @@ option {
 }
 
 @media screen and (max-width: 1050px) {
- .main-content {
+   .main-content {
     width: 60%;
 }
 
@@ -1640,10 +1652,10 @@ option {
     }
 
     .user-data_m15px {
-       margin: 0 15px;
-   }
+     margin: 0 15px;
+ }
 
-   .user-data__avatar {
+ .user-data__avatar {
     &_online {
         &:before {
             left: 25px;
@@ -1801,9 +1813,9 @@ option {
 
     .navigation-page {
         &:nth-last-child(3) {
-         display: none;
-     }
- }
+           display: none;
+       }
+   }
 }
 
 @media screen and (max-width: 440px) {

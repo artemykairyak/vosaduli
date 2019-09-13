@@ -226,6 +226,18 @@ option {
   text-align: center;
 }
 
+.button:hover {
+  color: #21224e;
+}
+
+.button:hover:before {
+  border: solid 1px #94acc4;
+}
+
+.button:hover:after {
+  background: #c4d2e1;
+}
+
 .button_green {
   height: 37px;
   padding: 0 28px;

@@ -2,6 +2,10 @@
 @import 'mixins.scss';
 @import 'fonts.scss';
 
+textarea {
+	font: normal 13px Roboto;
+}
+
 .addarticle-form {
 	@include flex;
 	align-items: flex-start;
@@ -10,14 +14,20 @@
 
 .left-sidebar {
 	width: 19%;
+	position: sticky;
+	top: 15px;
 }
 
 .main-content {
-	width: 57%;
+	width: 55.5%;
 }
 
 .right-sidebar {
-	width: 24%;
+	width: 24.5%;
+}
+
+.star {
+	top: -2px;
 }
 
 .pub-maininfo__inputs-container {
@@ -33,10 +43,15 @@
 	border: solid 1px #c4d2e1;
 	background-color: #ffffff;
 	outline: none;
-	padding: 15px;
-	font-family: CeraPro;
+	padding: 12px 15px;
+	font-family: Roboto;
 	color: $text;
-	font-weight: 500;
+	width: 100%;
+	height: 40px;
+
+	&:focus {
+		outline: solid 1px darken(#c4d2e1, 5%);
+	}
 }
 
 .pub-title {
@@ -74,6 +89,7 @@
 		cursor: pointer;
 		margin-bottom: 16px;
 		transition: all 0.3s ease;
+		outline: none;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -107,7 +123,7 @@
 			transition: .3s;
 		}
 
-		&:hover {
+		&_hover {
 			&:not(.pub-format__format_selected) {
 				color: $blue;
 
@@ -132,6 +148,16 @@
 				background: #c4dfa5;
 			}
 		}
+
+		&-radio {
+			width: 100%;
+			left: 0;
+			top: 0;
+			z-index: -1;
+			position: absolute;
+			height: 37px;
+			outline: none;
+		}
 	}
 }
 
@@ -140,7 +166,6 @@
 	text-align: center;
 	cursor: pointer;
 	position: relative;
-
 
 	&__title {
 		margin-bottom: 10px;
@@ -171,7 +196,13 @@
 			transition: all 0.3s ease;
 		}
 
-		&_onDrag {
+		&_loaded {
+			&:after {
+				display: none;
+			}
+		}
+
+		&_hover {
 			border: dashed 1px darken(#e6e9f1, 5%);
 
 			&:after {
@@ -179,8 +210,12 @@
 			}
 		}
 
-		&_dragged {
-			border: solid 1px #90c952;
+		&:hover, &_onDrag {
+			border: dashed 1px darken(#e6e9f1, 5%);
+
+			&:after {
+				opacity: 1;
+			}
 		}
 
 		&_error {
@@ -189,13 +224,32 @@
 		
 		&-label {
 			position: absolute;
-			display: block;
+			display: flex;
 			top: 0;
 			right: 0;
 			bottom: 0;
 			left: 0;
 			z-index: 3;
 			cursor: pointer;
+			justify-content: center;
+			align-items: center;
+			color: #73777d;
+			font-size: 15px;
+			font-weight: 500;
+		}
+
+		&-preview {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: none;
+			object-fit: cover;
+
+			&_loaded {
+				display: block;
+			}
 		}
 	}
 
@@ -207,13 +261,22 @@
 		height: 0.1px;
 		opacity: 0;
 		z-index: -2;
-
 	}
 }
 
 .pub-period {
 	padding-top: 20px;
 	text-align: center;
+
+	input[name="period"] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		z-index: -1;
+	}
 
 	&__title {
 		margin-bottom: 8px;
@@ -232,6 +295,12 @@
 		justify-content: center;
 		align-items: center;
 		cursor: pointer;
+		position: relative;
+
+		&_hover {
+			border: solid 2px darken(#c4d2e1, 5%);
+			box-shadow: 0 4px 8px 0 #0000000e, inset 0 -3px 0 0 #e0e4e8;
+		}
 	}
 
 	&__period-icon {
@@ -239,7 +308,6 @@
 		width: 19px;
 		height: 9px;
 		margin-right: 15px;
-
 	}
 }
 
@@ -255,6 +323,7 @@
 		width: 100%;
 		height: 120px;
 		color: #9b9b9b;
+
 	}
 
 	&__footer {
@@ -264,3 +333,350 @@
 	}
 }
 
+.pub-maininfo {
+	padding: 30px 32px 0;
+
+	&__maintitle {
+		font-family: ALS;
+		font-size: 32px;
+		font-weight: bold;
+		color: $blue;
+		text-align: center;
+		margin-bottom: 38px;
+
+		&:after, &:before {
+			content: '';
+			display: inline-block;
+			width: 6px;
+			height: 13px;
+			margin-bottom: 3px;
+		}
+
+		&:before {
+			background: url(../images/icons/separator-h-1-left.svg);
+			margin-right: 10px;
+		}
+
+		&:after {
+			background: url(../images/icons/separator-h-1-right.svg);
+			margin-left: 10px;
+		}
+	}
+
+	&__title {
+		font-size: 16px;
+		font-weight: 500;
+		color: $blue;
+		position: relative;
+		margin-bottom: 7px;
+		margin-left: 16px;
+	}
+
+	&__category-inputs-container {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__category-input_main-category {
+		margin-bottom: 15px;
+	}
+
+	&__category-label {
+		font-size: 12px;
+		font-weight: 500;
+		color: #5b5b5b;
+		display: inline-block;
+		margin-bottom: 8px;
+	}
+
+	&__category-secoundary-inputs-container {
+		width: 49%;
+	}
+
+	&__inputs-container {
+		margin-bottom: 20px;
+	}
+
+	&__content-input {
+		height: 400px;
+	}
+
+	&__SEO-description-input {
+		height: 120px;
+	}
+}
+
+.right-sidebar {
+	border: none;
+	padding: 0;
+	text-align: center;
+}
+
+.pub-rules {
+	border-radius: 2px;
+	background-color: $paleGray;
+	padding: 20px 15px 24px;
+	text-align: left;
+
+	&__title {
+		@include flex;
+		justify-content: center;
+		@include borderBottom;
+		padding-bottom: 15px;
+
+		&-icon {
+			width: 64px;
+			height: 56px;
+			display: inline-block;
+			background: url(../images/icons/memo-icon.svg) 0 0 / contain no-repeat;
+			margin-right: 10%;
+		}
+
+		&-text {
+			font-family: ALS;
+			font-size: 30px;
+			font-weight: bold;
+			color: $blue;
+			width: 50%;
+		}
+	}
+
+	&__rule {
+		padding: 15px 0;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		@include borderBottom;
+
+		&:first-child {
+			padding: 25px 0 15px;
+		}
+
+		&:last-child {
+			border: none;
+		}
+
+		&-icon {
+			width: 27px;
+			background-position: center;
+			-webkit-background-size: contain;
+			background-size: contain;
+			background-repeat: no-repeat;
+			display: inline-block;
+			margin-right: 16px;
+
+			&_temps {
+				height: 30px;
+				background-image: url(../images/icons/pravila-vosaduly-icon-sid-bar.svg);
+			}
+
+			&_decor {
+				height: 30px;
+				background-image: url(../images/icons/oformlenie-posta-icon-sibebar.svg);
+			}
+
+			&_images {
+				height: 28px;
+				background-image: url(../images/icons/image-size-icon-sidebar.svg);
+			}
+		}
+
+		&-text {
+			font-family: Roboto;
+			font-size: 16px;
+			color: #5b5b5b;
+			width: 90%;
+			line-height: 1.25;
+
+		}
+
+		&-link {
+			color: #383aaa;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.pub-controls {
+	border-radius: 2px;
+	border: solid 1px #e6e9f1;
+	background-color: #ffffff;
+	padding: 0 15px;
+
+	&_mt18px {
+		margin-top: 18px;
+	}
+
+	&_mb30px {
+		margin-bottom: 30px;
+	}
+
+	&__control {
+		font-weight: 500;
+		color: #5b5b5b;
+		text-align: center;
+		padding: 20px 0;
+		@include borderBottom;
+
+		&:last-child {
+			border: none;
+		} 
+	}
+
+	&__preview-icon, &__draft-icon {
+		margin-right: 16px;
+		display: inline-block;
+	}
+
+	&__preview-icon{
+		width: 22px;
+		height: 12px;
+		transform: translateY(2px);
+	}
+
+	&__draft-icon {
+		width: 18px;
+		height: 17px;
+		transform: translateY(4px);
+	}
+
+	&__link {
+		@include flex;
+		justify-content: center;
+		margin: 0 auto 20px;
+		display: inline-block;
+
+		&_preview {
+			width: 74%;
+		}
+
+		&_draft {
+			width: 64%;
+		}
+
+		&:hover {
+			.pub-controls__preview-icon, .pub-controls__draft-icon {
+				svg {
+					path:last-child {
+						fill: $blue;
+					}
+				}
+			}
+		}
+	}
+
+	&__delete {
+		color: #f8454b;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.publish-btn {
+	margin: 0 auto;
+	display: inline-block;
+	position: relative;
+	width: 60%;
+	height: 37px;
+
+
+	&__input {
+		color: #4e801a;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		height: 37px;
+		z-index: 1;
+		background: transparent;
+		border: none;
+		border-radius: 18.5px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		border: 1px solid #90c952;
+		cursor: pointer;
+	}
+
+	&__shadow {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 4px;
+		top: 4px;
+		width: 100%;
+		background: #c4dfa5;
+		height: 37px;
+		border-radius: 18.5px;
+	}
+}
+
+.period-modal {
+	padding: 50px 16px 34px;
+
+	&__title {
+		position: absolute;
+		top: 13px;
+		left: 16px;
+	}
+
+	&__period-table {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-wrap: wrap;
+		width: 80%;
+		margin: 0 auto 25px;
+
+		&-item {
+			width: 33%;
+			font-family: Roboto;
+			font-size: 15px;
+			font-weight: 500;
+			color: $blue;
+			text-align: center;
+			padding: 6px 0;
+			cursor: pointer;
+			background: #fff;
+
+			&:hover {
+				background: $paleGray;
+			}
+
+			&_selected {
+				&:not(.period-modal__period-table-item_disabled) {
+					background: #ffdeb0;
+
+					&:hover {
+						background: darken(#ffdeb0, 5%);
+					}
+				}
+				
+			}
+
+			&_disabled {
+				color: $lightGray;
+				cursor: default;
+			}
+		}
+
+
+	}
+}

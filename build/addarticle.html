@@ -16,6 +16,28 @@
 	<link rel="stylesheet" href="css/add_article.css" type="text/css">
 </head>
 <body>
+	<div class="overlay overlay_disabled"></div>
+	<div class="period-modal modal">
+		<p class="period-modal__title">Выбор периода</p>
+		<div class="period-modal__close modal__close">
+			<span class="svg" data-src="images/icons/close-icon.svg"></span>
+		</div>
+		<div class="period-modal__period-table">
+			<div class="period-modal__period-table-item" data-month="1">январь</div>
+			<div class="period-modal__period-table-item" data-month="2">февраль</div>
+			<div class="period-modal__period-table-item" data-month="3">март</div>
+			<div class="period-modal__period-table-item" data-month="4">апрель</div>
+			<div class="period-modal__period-table-item" data-month="5">май</div>
+			<div class="period-modal__period-table-item" data-month="6">июнь</div>
+			<div class="period-modal__period-table-item" data-month="7">июль</div>
+			<div class="period-modal__period-table-item" data-month="8">август</div>
+			<div class="period-modal__period-table-item" data-month="9">сентябрь</div>
+			<div class="period-modal__period-table-item" data-month="10">октябрь</div>
+			<div class="period-modal__period-table-item" data-month="11">ноябрь</div>
+			<div class="period-modal__period-table-item" data-month="12">декабрь</div>
+		</div>
+		<a href="#" class="period-modal__enter-btn button">Применить</a>
+	</div>
 	<main>
 		<div class="wrapper">
 			<header class="header">
@@ -197,6 +219,7 @@
 						<div class="pub-thumbnail__image" draggable="true">
 							<input class="" type="file" name="thumbnail" id="thumbnail" class="pub-thumbnail__image-input">
 							<label for="thumbnail" class="pub-thumbnail__image-label"></label>
+							<img src="" alt="Миниатюра" class="pub-thumbnail__image-preview">
 						</div>
 						
 					</div>
@@ -205,7 +228,7 @@
 						<div class="pub-period__period-btn">
 							<span class="pub-period__period-icon"></span>
 							<span class="pub-period__btn-label">Выбрать период</span>
-							<input type="range" hidden name="period" min="" max="">
+							<input type="range" name="period" min="" max="">
 						</div>
 					</div>
 					<div class="pub-theme">
@@ -218,8 +241,8 @@
 						лето, природа, деревня</p>
 					</div>
 				</div>
-				<div class="main-content">
-					<h1 class="pub-maininfo__title">Добавляем статью на сайт</h1>
+				<div class="main-content pub-maininfo">
+					<h1 class="pub-maininfo__maintitle">Добавляем статью на сайт</h1>
 					<div class="pub-maininfo__category">
 						<p class="pub-maininfo__category-title pub-maininfo__title">Категория <sup class="star">*</sup></p>
 						<div class="pub-maininfo__category-inputs-container pub-maininfo__inputs-container">
@@ -281,31 +304,38 @@
 							</div>
 							<div class="pub-rules__rule">
 								<span class="pub-rules__rule-icon pub-rules__rule-icon_images"></span>
-								<p class="pub-rules__rule-text">Не вставляйте большие (>1Мб) изображения до кнопки «Читать далее».<br>Используйте <a href="#" target="_blank" class="pub-rules__rule-link">специальные сервисы</a> для уменьшения веса картинок без потери качества. записей.</p>
+								<p class="pub-rules__rule-text">Не вставляйте большие (>1Мб) изображения до кнопки «Читать далее». Используйте <a href="#" target="_blank" class="pub-rules__rule-link">специальные сервисы</a> для уменьшения веса картинок без потери качества. записей.</p>
 							</div>
 						</div>
 					</div>
-					<div class="pub-controls">
-						<div class="pub-controls__preview">
-							<a href="#" class="pub-controls__preview-link"><span class="pub-controls__preview-icon"></span>Предпросмотр</a>
+					<div class="pub-controls pub-controls_mt18px pub-controls_mb30px">
+						<div class="pub-controls__preview pub-controls__control">
+							<a href="#" class="pub-controls__link_preview pub-controls__link button"><span class="pub-controls__preview-icon">
+								<span class="svg" data-src="images/icons/see-icon-btn.svg"></span>
+							</span>Предпросмотр</a>
 							<p class="pub-controls__preview-footer">Если вы довольны получившейся 
 							записью, опубликуйте её</p>
 						</div>
-						<div class="pub-controls__draft">
-							<a href="#" class="pub-controls__draft-link"><span class="pub-controls__draft-icon"></span>В черновик</a>
+						<div class="pub-controls__draft pub-controls__control">
+							<a href="#" class="pub-controls__link_draft pub-controls__link button"><span class="pub-controls__draft-icon">
+								<span class="svg" data-src="images/icons/edite-after-icon.svg"></span>
+							</span>В черновик</a>
 							<p class="pub-controls__preview-footer">Если вы не готовы опубликовать запись, хотите её дополнить позже,
-							сохраните черновик<br><br>Или можно <a href="#" target="_blank" class="pub-controls__delete">Удалить</a></p>
+								сохраните черновик<br><br>Или можно <a href="#" target="_blank" class="pub-controls__delete">удалить</a></p>
+							</div>
 						</div>
-						<input type="submit" name="publish" id="publish" value="Опубликовать">
+						<div class="publish-btn">
+							<input type="submit" name="publish" id="publish" class="publish-btn__input" value="Опубликовать">
+							<div class="publish-btn__shadow"></div>
+						</div>
+						
 					</div>
-				</div>
-			</form>
-		</div>
-	</main>
+				</form>
+			</div>
+		</main>
 
-	<script src="vendors/js/ckeditor/ckeditor.js"></script>
-	<script src="vendors/js/jquery-3.4.1.min.js"></script>
-	<script src="vendors/js/easySVG.min.js"></script>
-	<script src="js/scripts.js" type="text/javascript"></script>
-</body>
-</html>
+		<script src="vendors/js/jquery-3.4.1.min.js"></script>
+		<script src="vendors/js/easySVG.min.js"></script>
+		<script src="js/scripts.js" type="text/javascript"></script>
+	</body>
+	</html>
