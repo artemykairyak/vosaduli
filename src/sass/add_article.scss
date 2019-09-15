@@ -655,6 +655,7 @@ textarea {
 			padding: 6px 0;
 			cursor: pointer;
 			background: #fff;
+			transition: all 0.3s ease;
 
 			&:hover {
 				background: $paleGray;
@@ -668,7 +669,14 @@ textarea {
 						background: darken(#ffdeb0, 5%);
 					}
 				}
-				
+			}
+
+			&_filled {
+				background: #ffdeb0;
+
+				&:hover {
+					background: lighten(#ffdeb0, 5%);
+				}
 			}
 
 			&_disabled {

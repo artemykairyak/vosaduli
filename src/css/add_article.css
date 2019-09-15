@@ -721,6 +721,7 @@ textarea {
   padding: 6px 0;
   cursor: pointer;
   background: #fff;
+  transition: all 0.3s ease;
 }
 
 .period-modal__period-table-item:hover {
@@ -733,6 +734,14 @@ textarea {
 
 .period-modal__period-table-item_selected:not(.period-modal__period-table-item_disabled):hover {
   background: #ffd397;
+}
+
+.period-modal__period-table-item_filled {
+  background: #ffdeb0;
+}
+
+.period-modal__period-table-item_filled:hover {
+  background: #ffe9ca;
 }
 
 .period-modal__period-table-item_disabled {

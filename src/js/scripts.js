@@ -289,64 +289,96 @@ $(function(){
 
 	$('.pub-period__period-btn').on('click', function() {
 		showModal($('.period-modal'));
+	});
+
+	$('.period-modal__enter-btn').on('click', function(e) {
+		e.preventDefault();
+		if(firstMonth && secondMonth) {
+			$('.pub-period__period-input').attr('min', $('[data-order = first]').attr('data-month'));
+			$('.pub-period__period-input').attr('max', $('[data-order = second]').attr('data-month'));
+		}
+		
+		hideModal();
 	})
 
-	var monthCount = false;
+	var firstMonth = false;
+	var secondMonth = false;
 
 	$('.period-modal__period-table-item').on('click', function() {
 		if(!$(this).hasClass('period-modal__period-table-item_selected')) {
 			if(!$(this).hasClass('period-modal__period-table-item_disabled')) {
 				$(this).addClass('period-modal__period-table-item_selected');
-				if(!monthCount) {
+				if(!firstMonth) {
 					$(this).attr('data-order', 'first');
-					monthCount = true;
+					firstMonth = true;
+				} else if(!secondMonth) {
+					$(this).attr('data-order', 'second');
+					secondMonth = true;
+					selectPeriod($(this), firstMonth, secondMonth);
+				} else {
+					$(this).removeClass('period-modal__period-table-item_selected')
 				}
-				
-				selectPeriod($(this), monthCount);
 			}
 			
-		} else if($(this).hasClass('period-modal__period-table-item_selected')) {
-			console.log(1);
+		} else if($(this).hasClass('period-modal__period-table-item_selected')) {	
 			$(this).removeClass('period-modal__period-table-item_selected');
+			var months = $('.period-modal__period-table-item');
 
-			$(this).prevAll('.period-modal__period-table-item').each(function(i, item) {
-				$(item).removeClass('period-modal__period-table-item_disabled');
-				if ($(item).hasClass('period-modal__period-table-item_selected')) {
-					$(item).removeClass('period-modal__period-table-item_selected');
+			for(var i = 0; i < months.length; i++) {
+				$(months[i]).removeClass('period-modal__period-table-item_filled');
+			}
+			
+			if($(this).attr('data-order') === 'first') {
+				$(this).removeAttr('data-order');
+				firstMonth = false;
+				$('.pub-period__period-input').attr('min', '');
+				$('.pub-period__period-input').attr('max', '');
+				for(var i = 0; i < months.length; i++) {
+					$(months[i]).removeClass('period-modal__period-table-item_selected');
+					$(months[i]).removeAttr('data-order');
+					secondMonth = false;
+					$('.pub-period__btn-label').text('Выбрать период');
+
 				}
-			})
-		} else if($(this).hasClass('period-modal__period-table-item_disabled')) {
-
+			} else if($(this).attr('data-order') === 'second'){
+				$(this).removeAttr('data-order');
+				secondMonth = false;
+				$('.pub-period__btn-label').text('Выбрать период');
+				$('.pub-period__period-input').attr('min', '');
+				$('.pub-period__period-input').attr('max', '');
+			}
 		}
-		
 	})
 
 	//MODALS
 });
 
 
-function selectPeriod(month, monthCount) {
+function selectPeriod(month, firstMonth, secondMonth) {
+	if(firstMonth && secondMonth) {
+		var months = $('.period-modal__period-table-item');
+		var start = $('[data-order = first]').attr('data-month');
+		var end = $('[data-order = second]').attr('data-month');
 
-	$('.period-modal__period-table-item').each(function(i, item) {
-		
-		// console.log($(item).attr('data-month'));
-		if(Number($(item).attr('data-month')) < Number($(month).attr('data-month'))) {
+		for(var i = start - 1; i < 30; i++) {
+			if($(months[i]).attr('data-month') === end) {
+				break;
+			} else {
+				if(!$(months[i]).hasClass('period-modal__period-table-item_selected')) {
+					$(months[i]).addClass('period-modal__period-table-item_filled');
+				}
+			}
 
-			$(item).addClass('period-modal__period-table-item_disabled');
-			$(item).removeClass('period-modal__period-table-item_selected')
+			if(i > months.length - 1) {
+				i = 0;
+				if(!$(months[i]).hasClass('period-modal__period-table-item_selected')) {
+					$(months[i]).addClass('period-modal__period-table-item_filled');
+				}
+			}
 		}
-
-		if($(item).attr('data-order') === 'first') {
-			console.log($(item):gt($(item).attr('data-month')));
-		}
-
-
-	});
-
-	
-	
-
-
+		$('.pub-period__btn-label').text($('[data-order = first]').attr('data-alias') 
+			+ ' - ' + $('[data-order = second]').attr('data-alias'));
+	}
 }
 
 function loadThumbnail(file) {	

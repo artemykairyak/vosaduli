@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Описание страницы для SEO и соцсетей">
 	<meta name="keywords" content="ключевые, слова, через, запятую">
-	<link rel="shortcut icon" type='image/png' href="images/icons/favicon.ico" />
+	<link rel="shortcut icon" type='image/png' href="images/icons/favicon-96x96.png" />
 	<title>Добавить статью</title>
 	<link rel="icon" href="images/icons/favicon-96x96.png" type="image/png">
 	<link rel="stylesheet" href="css/main.css" type="text/css">	
@@ -17,24 +17,24 @@
 </head>
 <body>
 	<div class="overlay overlay_disabled"></div>
-	<div class="period-modal modal">
+	<div class="period-modal modal modal_disabled">
 		<p class="period-modal__title">Выбор периода</p>
 		<div class="period-modal__close modal__close">
 			<span class="svg" data-src="images/icons/close-icon.svg"></span>
 		</div>
 		<div class="period-modal__period-table">
-			<div class="period-modal__period-table-item" data-month="1">январь</div>
-			<div class="period-modal__period-table-item" data-month="2">февраль</div>
-			<div class="period-modal__period-table-item" data-month="3">март</div>
-			<div class="period-modal__period-table-item" data-month="4">апрель</div>
-			<div class="period-modal__period-table-item" data-month="5">май</div>
-			<div class="period-modal__period-table-item" data-month="6">июнь</div>
-			<div class="period-modal__period-table-item" data-month="7">июль</div>
-			<div class="period-modal__period-table-item" data-month="8">август</div>
-			<div class="period-modal__period-table-item" data-month="9">сентябрь</div>
-			<div class="period-modal__period-table-item" data-month="10">октябрь</div>
-			<div class="period-modal__period-table-item" data-month="11">ноябрь</div>
-			<div class="period-modal__period-table-item" data-month="12">декабрь</div>
+			<div class="period-modal__period-table-item" data-alias="янв" data-month="1">январь</div>
+			<div class="period-modal__period-table-item" data-alias="фев" data-month="2">февраль</div>
+			<div class="period-modal__period-table-item" data-alias="март" data-month="3">март</div>
+			<div class="period-modal__period-table-item" data-alias="апр" data-month="4">апрель</div>
+			<div class="period-modal__period-table-item" data-alias="май" data-month="5">май</div>
+			<div class="period-modal__period-table-item" data-alias="июн" data-month="6">июнь</div>
+			<div class="period-modal__period-table-item" data-alias="июл" data-month="7">июль</div>
+			<div class="period-modal__period-table-item" data-alias="авг" data-month="8">август</div>
+			<div class="period-modal__period-table-item" data-alias="сен" data-month="9">сентябрь</div>
+			<div class="period-modal__period-table-item" data-alias="окт" data-month="10">октябрь</div>
+			<div class="period-modal__period-table-item" data-alias="нов" data-month="11">ноябрь</div>
+			<div class="period-modal__period-table-item" data-alias="дек" data-month="12">декабрь</div>
 		</div>
 		<a href="#" class="period-modal__enter-btn button">Применить</a>
 	</div>
@@ -228,7 +228,7 @@
 						<div class="pub-period__period-btn">
 							<span class="pub-period__period-icon"></span>
 							<span class="pub-period__btn-label">Выбрать период</span>
-							<input type="range" name="period" min="" max="">
+							<input type="range" name="period" min="" max="" class="pub-period__period-input">
 						</div>
 					</div>
 					<div class="pub-theme">
