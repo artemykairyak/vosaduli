@@ -61,11 +61,8 @@
 					</ul>
 				</div>	
 				<div class="main-menu">
-					<a href="/" class="logo logo_nopadding">
-						<div class="logo__picture-container">
-							<div class="logo__picture"></div>
-						</div>
-						<div class="logo__text-picture"></div>
+					<a href="/" class="logo">
+						<div class="logo__picture"></div>
 					</a>
 					<div class="search">
 						<input type="text" class="search-input" placeholder="Поиск по сайту">
@@ -96,7 +93,7 @@
 							<span class="user-info__username">Елена Старовойтова</span>
 						</div>
 						<a href="#" class="user-info__avatar">
-							<img src="images/avatar.jpg" class="user-info__avatar-picture avatar"></img>
+							<img src="images/avatar.jpg" alt="" class="user-info__avatar-picture avatar">
 						</a>
 					</div>
 				</div>
@@ -119,7 +116,7 @@
 						<li class="mobile-nav-menu__item mobile-nav-menu__item_tridot"></li>
 						<li class="mobile-nav-menu__item mobile-nav-menu__item_add-photo">
 							<a href="#" class="mobile-nav-menu__link_add-photo-icon"></a>
-							<a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_add-photo">Добавить фото</a>
+							<a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_add-photo">Добавить пост</a>
 						</li>
 					</ul>
 				</div>
@@ -157,7 +154,7 @@
 						</li>
 						<li class="nav-menu__tridot"></li>
 						<li class="nav-menu__item nav-menu__item_add-photo">
-							<a href="#" class="nav-menu__link nav-menu__link_add-photo">Добавить фото</a>
+							<a href="#" class="nav-menu__link nav-menu__link_add-photo">Добавить пост</a>
 						</li>
 					</ul>
 				</div>
@@ -191,7 +188,7 @@
 					</ul>
 				</div>
 			</header>
-			<form action="" method="POST" enctype="multipart/form-data" name="addarticle" id="addarticle" class="addarticle-form">
+			<form action="test.php" method="POST" enctype="multipart/form-data" name="addarticle" id="addarticle" class="addarticle-form">
 				<div class="left-sidebar">
 					<div class="pub-format">
 						<p class="pub-format__title pub-title">Формат</p>
@@ -217,18 +214,17 @@
 					<div class="pub-thumbnail">
 						<p class="pub-thumbnail__title pub-title">Миниатюра<sup class="star">*</sup></p>
 						<div class="pub-thumbnail__image" draggable="true">
-							<input class="" type="file" name="thumbnail" id="thumbnail" class="pub-thumbnail__image-input">
+							<input type="file" name="thumbnail" id="thumbnail" class="pub-thumbnail__image-input">
 							<label for="thumbnail" class="pub-thumbnail__image-label"></label>
 							<img src="" alt="Миниатюра" class="pub-thumbnail__image-preview">
-						</div>
-						
+						</div>						
 					</div>
 					<div class="pub-period">
 						<p class="pub-period__title pub-title">Актуальность <sup class="star">*</sup></p>
 						<div class="pub-period__period-btn">
 							<span class="pub-period__period-icon"></span>
 							<span class="pub-period__btn-label">Выбрать период</span>
-							<input type="range" name="period" min="" max="" class="pub-period__period-input">
+							<input type="range" name="period" min="0" max="0" class="pub-period__period-input">
 						</div>
 					</div>
 					<div class="pub-theme">
@@ -257,14 +253,12 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="pub-maininfo__name">
 						<p class="pub-maininfo__name-title pub-maininfo__title">Заголовок <sup class="star">*</sup></p>
 						<div class="pub-maininfo__name-inputs-container pub-maininfo__inputs-container">
 							<input type="text" name="article-name" id="article-name" placeholder="Напишите заголовок статьи" class="pub-maininfo__input pub-maininfo__name-input">
 						</div>
 					</div>
-
 					<div class="pub-maininfo__content">
 						<p class="pub-maininfo__content-title pub-maininfo__title">Содержание <sup class="star">*</sup></p>
 						<div class="pub-maininfo__content-inputs-container pub-maininfo__inputs-container">
@@ -272,14 +266,12 @@
 							</textarea>
 						</div>
 					</div>
-
 					<div class="pub-maininfo__SEO-title">
 						<p class="pub-maininfo__SEO-title-title pub-maininfo__title">SEO title <sup class="star">*</sup></p>
 						<div class="pub-maininfo__SEO-title-inputs-container pub-maininfo__inputs-container">
 							<input type="text" name="SEO-title" id="SEO-title" placeholder="Напишите SEO заголовок" class="pub-maininfo__input pub-maininfo__SEO-title-input">
 						</div>
 					</div>
-
 					<div class="pub-maininfo__SEO-description">
 						<p class="pub-maininfo__SEO-description-title pub-maininfo__title">SEO description <sup class="star">*</sup></p>
 						<div class="pub-maininfo__SEO-description-inputs-container pub-maininfo__inputs-container">
@@ -327,15 +319,13 @@
 						<div class="publish-btn">
 							<input type="submit" name="publish" id="publish" class="publish-btn__input" value="Опубликовать">
 							<div class="publish-btn__shadow"></div>
-						</div>
-						
+						</div>						
 					</div>
 				</form>
 			</div>
 		</main>
-
 		<script src="vendors/js/jquery-3.4.1.min.js"></script>
 		<script src="vendors/js/easySVG.min.js"></script>
-		<script src="js/scripts.js" type="text/javascript"></script>
+		<script src="js/scripts.js"></script>
 	</body>
 	</html>

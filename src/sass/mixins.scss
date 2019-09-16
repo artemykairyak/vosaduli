@@ -33,3 +33,15 @@
   &::-moz-placeholder          { @content; }
   &:-ms-input-placeholder      { @content; }  
 }
+
+@mixin bHover {
+  color: $blue;
+
+    &:before {
+        border: solid 1px #94acc4;
+    }
+
+    &:after {
+        background: #c4d2e1;
+    }
+}

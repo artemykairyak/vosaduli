@@ -251,7 +251,10 @@
 			border: solid 2px #ffffff;
 			background-color: #d8d8d8;
 			position: absolute;
-
+			
+			&:hover {
+				z-index: 10 !important;
+			}
 
 			&:first-child {
 				left: 0;
@@ -286,6 +289,7 @@
 			&-img {
 				width: 100%;
 				height: 100%;
+				object-fit: cover;
 			}
 		}
 
@@ -351,6 +355,23 @@
 		}
 	}
 
+	&-comment-btn, &-more {
+		&:hover {
+				@include bHover;
+			}
+	}
+
+	&-more {
+		transition: all 0.3s ease;
+		&:hover {
+			@include bHover;
+	        border: solid 1px #94acc4;
+	        background: #c4d2e1;
+		}
+
+		
+	}
+
 	&__navigation {
 		display: -webkit-flex;
 		display: -moz-flex;
@@ -376,13 +397,18 @@
 			width: 44px;
 			height: 44px;
 			border: solid 1px $lightGray;
-			border-radius: 100%;
-			text-align: center;
-			line-height: 40px;
+			border-radius: 100%;		
 			font-size: 16px;
 			font-weight: 500;
 			color: #2e2e2e;
 			margin-right: 12px;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
 			&_selected {
 				background: #c4d2e1;

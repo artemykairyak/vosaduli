@@ -226,18 +226,6 @@ option {
   text-align: center;
 }
 
-.button:hover {
-  color: #21224e;
-}
-
-.button:hover:before {
-  border: solid 1px #94acc4;
-}
-
-.button:hover:after {
-  background: #c4d2e1;
-}
-
 .button_green {
   height: 37px;
   padding: 0 28px;
@@ -833,6 +821,7 @@ option {
 }
 
 .nav-menu__container {
+  height: 55px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -843,7 +832,7 @@ option {
   background: #fafafa;
   border-top: 2px solid #e5e5e5;
   border-bottom: 2px solid #e5e5e5;
-  padding: 21px 25px;
+  padding: 0 25px;
 }
 
 .nav-menu__separator {
@@ -867,6 +856,7 @@ option {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+  align-items: center;
 }
 
 .nav-menu__item_shop:before {
@@ -889,18 +879,21 @@ option {
   font-size: 18px;
   font-weight: bold;
   color: #21224e;
+  font-family: MuseoCyrl;
 }
 
 .nav-menu__link_add-photo {
   color: #82ad20;
-  font-size: 18px;
-  font-weight: 900;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
   display: flex;
   text-transform: uppercase;
+  font-family: MuseoCyrl;
+  font-size: 14px;
+  font-weight: 900;
+  align-items: center;
 }
 
 .nav-menu__link_add-photo:before {
@@ -915,9 +908,10 @@ option {
 .mobile-nav-menu {
   display: none;
   justify-content: space-between;
-  padding: 19px 20px 19px 26px;
+  padding: 0 20px 0 26px;
   background: #fafafa;
   align-items: center;
+  height: 55px;
 }
 
 .mobile-nav-menu__burger {
@@ -969,7 +963,7 @@ option {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .mobile-nav-menu__link {
@@ -998,7 +992,8 @@ option {
 
 .mobile-nav-menu__link_add-photo {
   color: #82ad20;
-  font-size: 18px;
+  font-family: MuseoCyrl;
+  font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
   display: inline-block;
@@ -1030,7 +1025,8 @@ option {
 }
 
 .user-data__info {
-  padding-top: 10%;
+  padding-top: 5%;
+  height: 376px;
 }
 
 .user-data__avatar {
@@ -1146,7 +1142,7 @@ option {
 }
 
 .profile-menu {
-  width: 25%;
+  width: 23.5%;
   background: #fff;
   border-radius: 2px;
   border: solid 1px #e6e9f1;
@@ -1187,6 +1183,18 @@ option {
   width: 100%;
 }
 
+.profile-menu__item:hover .profile-menu__item-text {
+  color: #4e4e4e;
+}
+
+.profile-menu__item:hover .profile-menu__item-text:after {
+  margin-left: 10px;
+}
+
+.profile-menu__item:hover .profile-menu__item-icon svg path:last-child {
+  fill: #849fbb;
+}
+
 .profile-menu__item:last-child .profile-menu__submenu .profile-menu__submenu-item:last-child {
   border: none;
 }
@@ -1218,6 +1226,7 @@ option {
   padding-bottom: 15px;
   border-radius: 2px;
   border-bottom: solid 1px #e6e9f1;
+  transition: all 0.3s ease;
 }
 
 .profile-menu__item-text:after {
@@ -1299,7 +1308,7 @@ option {
 }
 
 .main-content {
-  width: 50%;
+  width: 53%;
 }
 
 .triggers {
@@ -1348,7 +1357,7 @@ option {
 }
 
 .right-sidebar {
-  width: 25%;
+  width: 23.5%;
   border-radius: 2px;
   border: solid 1px #e6e9f1;
   background: #ffffff;
@@ -1369,7 +1378,7 @@ option {
 }
 
 .blogs-menu {
-  width: 25%;
+  width: 23.5%;
   border-radius: 2px;
   border: solid 1px #e6e9f1;
   background: #ffffff;
@@ -1404,12 +1413,17 @@ option {
   color: #21224e;
   line-height: 0.77;
   margin-right: 15px;
+  font-family: MuseoCyrl;
 }
 
 .blogs-menu__add-post {
   width: 43px;
   height: 30px;
   background: url(../images/icons/plus.svg) 0 0/contain no-repeat;
+}
+
+.blogs-menu__triggers {
+  border: none;
 }
 
 .blogs-menu__item {
@@ -1684,6 +1698,10 @@ option {
     width: 60%;
   }
 
+  .user-data_mt20px {
+    margin-top: 0;
+  }
+
   .blogs-menu,
   .right-sidebar {
     width: 40%;
@@ -1716,12 +1734,8 @@ option {
     display: none;
   }
 
-  .main-menu {
-    padding: 0;
-  }
-
   .user-data_m15px {
-    margin: 0 15px;
+    margin: 0 15px 20px;
   }
 
   .user-data__avatar_online:before {
@@ -1744,6 +1758,10 @@ option {
 
   .user-data_mt20px {
     margin-top: 0;
+  }
+
+  .user-data__info {
+    height: 296px;
   }
 
   .profile-menu {
@@ -1863,6 +1881,7 @@ option {
     display: -o-flex;
     display: flex;
     align-items: flex-end;
+    height: 230px;
   }
 
   .user-data__avatar {

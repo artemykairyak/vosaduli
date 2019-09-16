@@ -138,18 +138,6 @@ option {
     color: #64686e;
     text-align: center;
 
-    &:hover {
-        color: $blue;
-
-        &:before {
-            border: solid 1px #94acc4;
-        }
-
-        &:after {
-            background: #c4d2e1;
-        }
-    }
-
     &_green {
         height: 37px;
         padding: 0 28px;
@@ -742,6 +730,7 @@ option {
     width: 100%;
 
     &__container {
+        height: 55px;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -752,7 +741,7 @@ option {
         background: #fafafa;
         border-top: 2px solid $lightGray;
         border-bottom: 2px solid $lightGray;
-        padding: 21px 25px;
+        padding: 0 25px;
     }
 
     &__separator {
@@ -776,6 +765,7 @@ option {
         display: -ms-flex;
         display: -o-flex;
         display: flex;
+        align-items: center;
 
         &:before {
             content: '';
@@ -798,17 +788,20 @@ option {
         font-size: 18px;
         font-weight: bold;
         color: $blue;
+        font-family: MuseoCyrl;
 
         &_add-photo {
             color: $avocado;
-            font-size: 18px;
-            font-weight: 900;
             display: -webkit-flex;
             display: -moz-flex;
             display: -ms-flex;
             display: -o-flex;
             display: flex;
             text-transform: uppercase;
+            font-family: MuseoCyrl;
+            font-size: 14px;
+            font-weight: 900;
+            align-items: center;
 
             &:before {
                 content: '';
@@ -825,9 +818,10 @@ option {
 .mobile-nav-menu {
     display: none;
     justify-content: space-between;
-    padding: 19px 20px 19px 26px;
+    padding: 0 20px 0 26px;
     background: #fafafa;
     align-items: center;
+    height: 55px;
 
     &__burger {
         transition: all 0.3s ease;
@@ -877,7 +871,7 @@ option {
             display: -ms-flex;
             display: -o-flex;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
         }
     }
 
@@ -905,13 +899,14 @@ option {
         }
 
         &_add-photo {
-         color: $avocado;
-         font-size: 18px;
-         font-weight: 900;
-         text-transform: uppercase;
-         display: inline-block;
-         width: 100%;
-         transform: translateY(-2px);
+            color: $avocado;
+            font-family: MuseoCyrl;
+            font-size: 13px;
+            font-weight: 900;
+            text-transform: uppercase;
+            display: inline-block;
+            width: 100%;
+            transform: translateY(-2px);
      }
  }
 
@@ -929,6 +924,7 @@ option {
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.11);
     /*border: solid 1px #e6e9f1;*/
     background-color: #ffffff;
+    
 
     &_mt20px {
         margin-top: 20px;
@@ -939,7 +935,8 @@ option {
     }
 
     &__info {
-        padding-top: 10%;
+        padding-top: 5%;
+        height: 376px;
     }
 
     &__avatar {
@@ -1058,7 +1055,7 @@ option {
 }
 
 .profile-menu {
-    width: 25%;
+    width: 23.5%;
     background: #fff;
     border-radius: 2px;
     border: solid 1px #e6e9f1;
@@ -1107,6 +1104,20 @@ option {
     &__item {
         width: 100%;
 
+        &:hover {
+            .profile-menu__item-text {
+                color: darken(#5b5b5b, 5%);
+            }
+
+            .profile-menu__item-text:after {
+                margin-left: 10px;
+            }
+
+            .profile-menu__item-icon svg path:last-child {
+                fill: darken(#94ACC4, 5%);
+            }
+        }
+
         &:last-child {
             .profile-menu__submenu .profile-menu__submenu-item:last-child {
                 border: none;
@@ -1120,7 +1131,6 @@ option {
             
             .profile-menu__item-text:after {
                 transform: rotate(90deg);
-
             }
 
             .profile-menu__submenu {
@@ -1144,6 +1154,7 @@ option {
         padding-bottom: 15px;
         border-radius: 2px;
         border-bottom: solid 1px #e6e9f1;
+        transition: all 0.3s ease;
 
         &:after {
             content: '';
@@ -1230,7 +1241,7 @@ option {
 }
 
 .main-content {
-    width: 50%;
+    width: 53%;
 }
 
 .triggers {
@@ -1280,7 +1291,7 @@ option {
 }
 
 .right-sidebar {
-    width: 25%;
+    width: 23.5%;
     border-radius: 2px;
     border: solid 1px #e6e9f1;
     background: #ffffff;
@@ -1301,7 +1312,7 @@ option {
 }
 
 .blogs-menu {
-    width: 25%;
+    width: 23.5%;
     border-radius: 2px;
     border: solid 1px #e6e9f1;
     background: #ffffff;
@@ -1335,12 +1346,17 @@ option {
         color: $blue;
         line-height: 0.77;
         margin-right: 15px;
+        font-family: MuseoCyrl;
     }
 
     &__add-post {
         width: 43px;
         height: 30px;
         background: url(../images/icons/plus.svg) 0 0 / contain no-repeat;
+    }
+
+    &__triggers {
+        border: none;
     }
 
 
@@ -1592,13 +1608,13 @@ option {
 }
 
 @media screen and (max-width: 1226px) {
- .nav-menu {
-    display: none;
-}
+     .nav-menu {
+        display: none;
+    }
 
-.mobile-nav-menu {
-    display: flex;
-}
+    .mobile-nav-menu {
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 1180px) {
@@ -1613,24 +1629,27 @@ option {
 
 @media screen and (max-width: 1050px) {
    .main-content {
-    width: 60%;
-}
+        width: 60%;
+    }
+    .user-data_mt20px {
+        margin-top: 0;
+    }
 
-.blogs-menu, .right-sidebar {
-    width: 40%;
-}
+    .blogs-menu, .right-sidebar {
+        width: 40%;
+    }
 
-.mobile-profile-menu {
-    display: block;
-}
+    .mobile-profile-menu {
+        display: block;
+    }
 
-.profile-menu, .left-sidebar {
-    display: none;
-}
+    .profile-menu, .left-sidebar {
+        display: none;
+    }
 
-.user-data__username {
-    font-size: 46px;
-}
+    .user-data__username {
+        font-size: 46px;
+    }
 }
 
 
@@ -1647,12 +1666,8 @@ option {
         display: none;
     }
 
-    .main-menu {
-        padding: 0;
-    }
-
     .user-data_m15px {
-     margin: 0 15px;
+     margin: 0 15px 20px;
  }
 
  .user-data__avatar {
@@ -1679,6 +1694,10 @@ option {
 
 .user-data_mt20px {
     margin-top: 0;
+}
+
+.user-data__info {
+    height: 296px;
 }
 
 .profile-menu {
@@ -1800,6 +1819,7 @@ option {
         display: -o-flex;
         display: flex;
         align-items: flex-end;
+        height: 230px;
     }
 
     .user-data__avatar {

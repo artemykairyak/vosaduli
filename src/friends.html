@@ -8,10 +8,10 @@
 	<meta name="keywords" content="ключевые, слова, через, запятую">
 	<link rel="shortcut icon" type='image/png' href="images/icons/favicon.ico" />
 	<title>Друзья</title>
-	
+	<link rel="icon" href="images/icons/favicon-96x96.png" type="image/png">
 	<link rel="stylesheet" href="css/main.css" type="text/css">	
 	<link rel="stylesheet" href="css/main-menu_signed.css">
-
+	
 	<!-- <link rel="stylesheet" href="css/main-menu_unsigned.css"> -->
 	<link rel="stylesheet" href="css/friends.css" type="text/css">
 </head>
@@ -39,11 +39,8 @@
 					</ul>
 				</div>	
 				<div class="main-menu">
-					<a href="/" class="logo logo_nopadding">
-						<div class="logo__picture-container">
-							<div class="logo__picture"></div>
-						</div>
-						<div class="logo__text-picture"></div>
+					<a href="/" class="logo">
+						<div class="logo__picture"></div>
 					</a>
 					<div class="search">
 						<input type="text" class="search-input" placeholder="Поиск по сайту">
@@ -74,7 +71,7 @@
 							<span class="user-info__username">Елена Старовойтова</span>
 						</div>
 						<a href="#" class="user-info__avatar">
-							<img src="images/avatar.jpg" class="user-info__avatar-picture avatar"></img>
+							<img src="images/avatar.jpg" alt="" class="user-info__avatar-picture avatar">
 						</a>
 					</div>
 				</div>
@@ -97,7 +94,7 @@
 						<li class="mobile-nav-menu__item mobile-nav-menu__item_tridot"></li>
 						<li class="mobile-nav-menu__item mobile-nav-menu__item_add-photo">
 							<a href="#" class="mobile-nav-menu__link_add-photo-icon"></a>
-							<a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_add-photo">Добавить фото</a>
+							<a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_add-photo">Добавить пост</a>
 						</li>
 					</ul>
 				</div>
@@ -135,7 +132,7 @@
 						</li>
 						<li class="nav-menu__tridot"></li>
 						<li class="nav-menu__item nav-menu__item_add-photo">
-							<a href="#" class="nav-menu__link nav-menu__link_add-photo">Добавить фото</a>
+							<a href="#" class="nav-menu__link nav-menu__link_add-photo">Добавить пост</a>
 						</li>
 					</ul>
 				</div>
@@ -180,11 +177,11 @@
 					</div>
 				</div>
 			</header>
-			<section class="actions">
+			<div class="actions">
 				<a href="#" class="actions__add-friend button">Заявка отправлена</a>
 				<a href="#" class="actions__write-message button">Написать сообщение</a>
 				<a href="#" class="actions__more button">...</a>
-			</section>
+			</div>
 			<div class="content content_mt15px">
 				<div class="profile-menu">
 					<ul class="profile-menu__container">
@@ -210,7 +207,6 @@
 									<span class="svg" data-src="images/icons/friends-user-icon-none.svg"></span>
 								</span>
 								<p class="profile-menu__item-text">Друзья</p>
-								<a href="#" class="profile-menu__link"></a>
 							</a>
 						</li>
 						<li class="profile-menu__item rofile-menu__item_categories">
@@ -317,7 +313,7 @@
 						<a href="#" class="blogs-menu__add-post"></a>
 					</div>
 					<div class="blogs-menu__triggers triggers">
-						<a href="#" class="blogs-menu__trigger blogs-menu__trigger_new button trigger trigger_active"></span>Новое</a>			
+						<a href="#" class="blogs-menu__trigger blogs-menu__trigger_new button trigger trigger_active">Новое</a>			
 						<a href="#" class="blogs-menu__trigger blogs-menu__trigger_best trigger button">Лучшее</a>			
 					</div>
 					<a href="" class="blogs-menu__item">
@@ -404,6 +400,6 @@
 	</main>
 	<script src="vendors/js/jquery-3.4.1.min.js"></script>
 	<script src="vendors/js/easySVG.min.js"></script>
-	<script src="js/scripts.js" type="text/javascript"></script>
+	<script src="js/scripts.js"></script>
 </body>
 </html>

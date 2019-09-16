@@ -83,7 +83,11 @@ $(function(){
 
 	$('.myprofile-soc__trigger-trigger').on('click', function() {
 		socTriggerChange($(this))
-	})
+	});
+
+	// if($('.myprofile-contacts__form').length > 0) {
+	// 	$('myprofile-contacts__form-input').val($('myprofile-contacts__form-input').val)
+	// }
 	
 	if($('.header-menu__container').length > 0 && $(window).width() < 1050) {
 		$('.header-menu__item').on('click', function(e) {
@@ -123,14 +127,14 @@ $(function(){
 		});
 	}
 
-	if($('.myprofile-contacts__form-input_phone').length > 0) {
-		$('.myprofile-contacts__form-input_phone').val('+7');
-		$('.myprofile-contacts__form-input_phone').on('keyup', function() {
-			if($(this).val().length < 2 || !$(this).val().startsWith('+7')) {
-				$(this).val('+7');
-			}
-		})
-	}	
+	// if($('.myprofile-contacts__form-input_phone').length > 0) {
+	// 	$('.myprofile-contacts__form-input_phone').val('+7');
+	// 	$('.myprofile-contacts__form-input_phone').on('keyup', function() {
+	// 		if($(this).val().length < 2 || !$(this).val().startsWith('+7')) {
+	// 			$(this).val('+7');
+	// 		}
+	// 	})
+	// }
 
 	$('.blogs-menu__trigger').on('click', function(e) {
 		e.preventDefault();

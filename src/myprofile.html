@@ -41,7 +41,7 @@
 			</a>
 		</div>
 		<span class="sign-in-modal__separator modal__separator">или</span>
-		<form action="" name="sign-in-form" class="sign-in-modal__form modal__form">
+		<form action="test.php" name="sign-in-form" class="sign-in-modal__form modal__form">
 			<div class="modal__input-container sign-in-modal__input-container sign-in-modal__input-container_email">
 				<p class="modal__label sign-in-modal__label sign-in-modal__label_email">
 					Введите ваш e-mail<sup class="star">*</sup>	
@@ -100,7 +100,7 @@
 			</a>
 		</div>
 		<span class="sign-up-modal__separator modal__separator">или</span>
-		<form action="" name="sign-up-form" class="sign-up-modal__form modal__form">
+		<form action="test.php" name="sign-up-form" class="sign-up-modal__form modal__form">
 			<div class="modal__input-container sign-up-modal__input-container sign-up-modal__input-container_name">
 				<p class="modal__label sign-up-modal__label sign-up-modal__label_name">
 					Напишите своё имя<sup class="star">*</sup>	
@@ -134,9 +134,9 @@
 			</div>	
 			<a href="#" class="sign-up-modal__registered-btn">У меня уже есть аккаунт!</a>
 			<div class="sign-up-modal__policyaccept-container">
-					<input type="checkbox" checked id="policyaccept" name="policyaccept" class=" sign-up-modal__policyaccept-checkbox">
-					<label for="policyaccept" class="sign-up-modal__policyaccept-label">Выражаю согласие на обработку персональных данных ООО "Гугелот" в соответствии с <a href="#" class="sign-up-modal__policyaccept-temps">Условиями</a></label>
-				</div>
+				<input type="checkbox" checked id="policyaccept" name="policyaccept" class=" sign-up-modal__policyaccept-checkbox">
+				<label for="policyaccept" class="sign-up-modal__policyaccept-label">Выражаю согласие на обработку персональных данных ООО "Гугелот" в соответствии с <a href="#" class="sign-up-modal__policyaccept-temps">Условиями</a></label>
+			</div>
 		</form>
 	</div>
 	<main>
@@ -162,11 +162,8 @@
 					</ul>
 				</div>	
 				<!-- <div class="main-menu">
-					<a href="/" class="logo logo_nopadding">
-						<div class="logo__picture-container">
-							<div class="logo__picture"></div>
-						</div>
-						<div class="logo__text-picture"></div>
+					<a href="/" class="logo">
+						<div class="logo__picture"></div>
 					</a>
 					<div class="search">
 						<input type="text" class="search-input" placeholder="Поиск по сайту">
@@ -194,10 +191,10 @@
 					<div class="user-info">
 						<div class="user-info__text">
 							<span class="user-info__greeting">Привет,</span>
-							<a href="#" class="user-info__username">Елена Старовойтова</a>
+							<span class="user-info__username">Елена Старовойтова</span>
 						</div>
 						<a href="#" class="user-info__avatar">
-							<img src="images/avatar.jpg" class="user-info__avatar-picture avatar"></img>
+							<img src="images/avatar.jpg" alt="" class="user-info__avatar-picture avatar"></img>
 						</a>
 					</div>
 				</div> -->
@@ -248,7 +245,7 @@
 						<li class="mobile-nav-menu__item mobile-nav-menu__item_tridot"></li>
 						<li class="mobile-nav-menu__item mobile-nav-menu__item_add-photo">
 							<a href="#" class="mobile-nav-menu__link_add-photo-icon"></a>
-							<a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_add-photo">Добавить фото</a>
+							<a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_add-photo">Добавить пост</a>
 						</li>
 					</ul>
 				</div>
@@ -286,7 +283,7 @@
 						</li>
 						<li class="nav-menu__tridot"></li>
 						<li class="nav-menu__item nav-menu__item_add-photo">
-							<a href="#" class="nav-menu__link nav-menu__link_add-photo">Добавить фото</a>
+							<a href="#" class="nav-menu__link nav-menu__link_add-photo">Добавить пост</a>
 						</li>
 					</ul>
 				</div>
@@ -371,10 +368,8 @@
 						<span class="svg" data-src="images/icons/arrow-next-btn.svg"></span>
 					</span>
 				</div>
-			</header>
-			
+			</header>			
 			<div class="content content_mt15px">
-				
 				<div class="left-sidebar">
 					<div class="profile-menu">
 						<ul class="profile-menu__container">
@@ -400,7 +395,6 @@
 										<span class="svg" data-src="images/icons/friends-user-icon-none.svg"></span>
 									</span>
 									<p class="profile-menu__item-text">Друзья</p>
-									<a href="#" class="profile-menu__link"></a>
 								</a>
 							</li>
 							<li class="profile-menu__item profile-menu__item_groups">
@@ -409,7 +403,6 @@
 										<span class="svg" data-src="images/icons/group-user-icon-none.svg"></span>
 									</span>
 									<p class="profile-menu__item-text">Группы</p>
-									<a href="#" class="profile-menu__link"></a>
 								</a>
 							</li>
 							<li class="profile-menu__item profile-menu__item_photoalbums">
@@ -418,7 +411,6 @@
 										<span class="svg" data-src="images/icons/photoalbum-user-icon-none.svg"></span>
 									</span>
 									<p class="profile-menu__item-text">Фотоальбомы</p>
-									<a href="#" class="profile-menu__link"></a>
 								</a>
 							</li>
 							<li class="profile-menu__item profile-menu__item_drafts">
@@ -429,419 +421,417 @@
 									<p class="profile-menu__item-text">Черновики</p>
 								</a>
 							</li>
-						</li>
-						<li class="profile-menu__item profile-menu__item_settings">
-							<a href="#" class="profile-menu__link profile-menu__link_settings">
-								<span class="profile-menu__item-icon">
-									<span class="svg" data-src="images/icons/settings-icon-user-none.svg"></span>
-								</span>
-								<p class="profile-menu__item-text">Настройки</p>
+							<li class="profile-menu__item profile-menu__item_settings">
+								<a href="#" class="profile-menu__link profile-menu__link_settings">
+									<span class="profile-menu__item-icon">
+										<span class="svg" data-src="images/icons/settings-icon-user-none.svg"></span>
+									</span>
+									<p class="profile-menu__item-text">Настройки</p>
+								</a>
+							</li>
+							<li class="profile-menu__item profile-menu__item_exit">
+								<a href="#" class="profile-menu__link profile-menu__link_exit">
+									<span class="profile-menu__item-icon">
+										<span class="svg" data-src="images/icons/exit-user-icon-none.svg"></span>
+									</span>
+									<p class="profile-menu__item-text">Выход</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="groups-menu groups-menu_mt15px">
+						<div class="groups-menu__header">
+							<span class="groups-menu__logo"></span>
+							<p class="groups-menu__title">Сообщества и группы</p>
+						</div>
+						<div class="groups-menu__triggers triggers">
+							<a href="#" class="groups-menu__trigger groups-menu__trigger_new trigger_active button trigger">Новые</a>			
+							<a href="#" class="groups-menu__trigger groups-menu__trigger_best button trigger">Лучшие</a>			
+						</div>
+						<div class="groups-menu__items">
+							<div class="groups-menu__new-items">
+								<div class="groups-menu__item">
+									<div class="groups-menu__item-pic" style="background: url(images/cat.jpg) center / cover no-repeat"></div>
+									<div class="groups-menu__item-info">
+										<span class="groups-menu__item-name">Комнатные растения</span>
+										<span class="groups-menu__item-members"><span class="groups-menu__item-members-count">245 028 </span>участников</span>
+										<a href="#" class="groups-menu__item-join-btn">Присоединиться</a>
+									</div>
+								</div>
+								<div class="groups-menu__item groups-menu__item_verified">
+									<div class="groups-menu__item-pic" style="background: url(images/cat.jpg) center / cover no-repeat"></div>
+									<div class="groups-menu__item-info">
+										<span class="groups-menu__item-name">Комнатные растения</span>
+										<span class="groups-menu__item-members"><span class="groups-menu__item-members-count">245 028 </span>участников</span>
+										<a href="#" class="groups-menu__item-join-btn">Присоединиться</a>
+									</div>
+								</div>
+								<div class="groups-menu__item">
+									<div class="groups-menu__item-pic" style="background: url(images/cat.jpg) center / cover no-repeat"></div>
+									<div class="groups-menu__item-info">
+										<span class="groups-menu__item-name">Комнатные растения</span>
+										<span class="groups-menu__item-members"><span class="groups-menu__item-members-count">245 028 </span>участников</span>
+										<a href="#" class="groups-menu__item-join-btn">Присоединиться</a>
+									</div>
+								</div>
+								<div class="groups-menu__item">
+									<div class="groups-menu__item-pic" style="background: url(images/cat.jpg) center / cover no-repeat"></div>
+									<div class="groups-menu__item-info">
+										<span class="groups-menu__item-name">Комнатные растения</span>
+										<span class="groups-menu__item-members"><span class="groups-menu__item-members-count">245 028 </span>участников</span>
+										<a href="#" class="groups-menu__item-join-btn">Присоединиться</a>
+									</div>
+								</div>
+							</div>
+							<div class="groups-menu__best-items groups-menu__items_disabled">
+								<div class="groups-menu__item">
+									<div class="groups-menu__item-pic" style="background: url(images/cat.jpg) center / cover no-repeat"></div>
+									<div class="groups-menu__item-info">
+										<span class="groups-menu__item-name">Комнатные растения</span>
+										<span class="groups-menu__item-members"><span class="groups-menu__item-members-count">245 028 </span>участников</span>
+										<a href="#" class="groups-menu__item-join-btn">Присоединиться</a>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						<div class="groups-menu__navigation">
+							<a href="#" class="groups-menu__prev groups-menu__prev_disabled">
+								<div class="svg" data-src="images/icons/arrow-sidbar-up.svg"></div>
 							</a>
-						</li>
-						<li class="profile-menu__item profile-menu__item_exit">
-							<a href="#" class="profile-menu__link profile-menu__link_exit">
-								<span class="profile-menu__item-icon">
-									<span class="svg" data-src="images/icons/exit-user-icon-none.svg"></span>
-								</span>
-								<p class="profile-menu__item-text">Выход</p>
+							<a href="#" class="groups-menu__next">
+								<div class="svg" data-src="images/icons/arrow-sidbar-down.svg"></div>
 							</a>
-						</li>
-					</ul>
+						</div>
+					</div>
 				</div>
-				<div class="groups-menu groups-menu_mt15px">
-					<div class="groups-menu__header">
-						<span class="groups-menu__logo"></span>
-						<p class="groups-menu__title">Сообщества и группы</p>
-					</div>
-					<div class="groups-menu__triggers triggers">
-						<a href="#" class="groups-menu__trigger groups-menu__trigger_new trigger_active button trigger"></span>Новые</a>			
-						<a href="#" class="groups-menu__trigger groups-menu__trigger_best button trigger">Лучшие</a>			
-					</div>
-					<div class="groups-menu__items">
-						<div class="groups-menu__new-items">
-							<div class="groups-menu__item">
-								<div class="groups-menu__item-pic" style="background: url(images/cat.jpg) center / cover no-repeat"></div>
-								<div class="groups-menu__item-info">
-									<span class="groups-menu__item-name">Комнатные растения</span>
-									<span class="groups-menu__item-members"><span class="groups-menu__item-members-count">245 028 </span>участников</span>
-									<a href="#" class="groups-menu__item-join-btn">Присоединиться</a>
+				
+				<div class="main-content">
+					<div class="myprofile">
+						<div class="myprofile__tabs">
+							<h2 class="myprofile__tabs-title">Мой профиль</h2>
+							<div class="myprofile__tabs-container triggers">
+								<a href="#" class="myprofile__tabs-tab myprofile__tabs-tab_main trigger trigger_active button">Основное</a>
+								<a href="#" class="myprofile__tabs-tab myprofile__tabs-tab_stats trigger button">Статистика</a>
+								<a href="#" class="myprofile__tabs-tab myprofile__tabs-tab_coins trigger button">Монеты</a>
+								<a href="#" class="myprofile__tabs-tab myprofile__tabs-tab_prizes trigger button">Награды</a>
+							</div>
+							<ul class="myprofile__submenu">
+								<li class="myprofile__submenu-item myprofile__submenu-item_aboutme myprofile__submenu-item_active">
+									<a href="#" class="myprofile__submenu-link">О себе</a>
+								</li>
+								<li class="myprofile__submenu-item myprofile__submenu-item_soc">
+									<a href="#" class="myprofile__submenu-link">Соцсети</a>
+								</li>
+								<li class="myprofile__submenu-item myprofile__submenu-item_contacts">
+									<a href="#" class="myprofile__submenu-link">Контакты</a>
+								</li>
+
+							</ul>
+						</div>
+						<div class="myprofile-content">
+							<div class="myprofile-cards">
+								<div class="myprofile-cards__container">
+									<div class="myprofile-cards__card myprofile-cards__card_rating">
+										<span class="myprofile-cards__card-title">Рейтинг</span>
+										<div class="myprofile-cards__card-value">-5</div>
+									</div>
+									<div class="myprofile-cards__card myprofile-cards__card_reputation">
+										<span class="myprofile-cards__card-title">Репутация</span>
+										<div class="myprofile-cards__card-value">27</div>
+									</div>
+									<div class="myprofile-cards__card myprofile-cards__card_prizes">
+										<span class="myprofile-cards__card-title">Награды</span>
+										<div class="myprofile-cards__card-value">0</div>
+									</div>
+									<div class="myprofile-cards__card myprofile-cards__card_posts">
+										<span class="myprofile-cards__card-title">Публикации</span>
+										<div class="myprofile-cards__card-value">21</div>
+									</div>
+								</div>
+								<div class="myprofile-cards__other-stats">
+									<div class="myprofile-cards__other-stats-item myprofile-cards__other-stats_likedpeople">
+										<span class="myprofile-cards__other-stats-icon"></span>
+										<span class="myprofile-cards__other-stats-value">0 человек</span>
+									</div>
+									<div class="myprofile-cards__other-stats-item myprofile-cards__other-stats_followedpeople">
+										<span class="myprofile-cards__other-stats-icon"></span>
+										<span class="myprofile-cards__other-stats-value">35 человек</span>
+									</div>
+									<div class="myprofile-cards__other-stats-item myprofile-cards__other-stats_coins">
+										<span class="myprofile-cards__other-stats-icon"></span>
+										<span class="myprofile-cards__other-stats-value">1000 монет</span>
+									</div>
 								</div>
 							</div>
-							<div class="groups-menu__item groups-menu__item_verified">
-								<div class="groups-menu__item-pic" style="background: url(images/cat.jpg) center / cover no-repeat"></div>
-								<div class="groups-menu__item-info">
-									<span class="groups-menu__item-name">Комнатные растения</span>
-									<span class="groups-menu__item-members"><span class="groups-menu__item-members-count">245 028 </span>участников</span>
-									<a href="#" class="groups-menu__item-join-btn">Присоединиться</a>
+							<div class="myprofile-status">
+								<div class="myprofile-status__input-container">
+									<input type="text" placeholder="Напишите что-нибудь о себе" class="myprofile-status__input input">
+								</div>
+								<a href="#" class="myprofile-status__save-btn button_green">Сохранить</a>
+							</div>
+
+							<div class="edit-info">
+								<span class="edit-info__title">Персональная информация</span>
+								<div class="edit-info__adv-container">
+									<span class="edit-info__adv">Заполните все обязательные поля (помеченные звёздочкой) и получите 100 монет на свой счёт!</span>
+								</div>
+								<div class="edit-info__form-container">
+									<form class="edit-info__form" name="edit-info-form" action="test.php">
+										<div class="edit-info__input-container">
+											<span class="edit-info__input-name">Страна проживания<sup class="edit-info__star star">*</sup></span>
+											<div class="edit-info__select-container">
+												<select size="1" class="edit-info__select edit-select" name="country">
+													<option disabled selected>Выберите страну</option>
+													<option value="Россия">Россия</option>
+													<option value="Украина">Украина</option>
+													<option value="Беларусь">Беларусь</option>
+												</select>
+											</div>
+										</div>
+										<div class="edit-info__input-container">
+											<span class="edit-info__input-name">Регион проживания<sup class="edit-info__star star">*</sup></span>
+											<div class="edit-info__select-container edit-select_disabled">
+												<select disabled size="1" class="edit-info__select edit-select" name="region">
+													<option disabled selected>Регион</option>
+													<option value="Московская обл.">Московская обл.</option>
+													<option value="Ленинградская обл.">Ленинградская обл.</option>
+													<option value="Краснодарский край.">Краснодарский край.</option>
+												</select>
+											</div>
+											
+										</div>
+										<div class="edit-info__input-container">
+											<span class="edit-info__input-name">Ваш пол<sup class="edit-info__star star">*</sup></span>
+											<div class="edit-info__select-container">
+												<select size="1" class="edit-info__select edit-select" name="gender">
+													<option disabled selected>Не выбрано</option>
+													<option value="Мужской">Мужской</option>
+													<option value="Женский">Женский</option>
+												</select>
+											</div>
+										</div>
+										<div class="edit-info__input-container">
+											<span class="edit-info__input-name">Ближайший районный центр<sup class="edit-info__star star">*</sup></span>
+											<div class="edit-info__select-container edit-select_disabled">
+												<select disabled size="1" class="edit-info__select edit-select" name="city">
+													<option disabled selected>Город</option>
+													<option value="Москва">Москва</option>
+													<option value="Санкт-Петербург">Санкт-Петербург</option>
+													<option value="Саратов">Саратов</option>
+												</select>
+											</div>
+										</div>
+										<div class="edit-info__input-container edit-info__input-container_date">
+											<span class="edit-info__input-name edit-info__input-name_date">Дата рождения<sup class="edit-info__star star">*</sup></span>
+											<div class="edit-info__select-container edit-info__select-container_day">
+												<select size="1" class="edit-info__select edit-info__select_day edit-select" name="day-birth">
+													<option value="" disabled selected> </option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+												</select>
+											</div>
+											<div class="edit-info__select-container edit-info__select-container_month">
+												<select size="1" class="edit-info__select edit-info__select_month edit-select" name="month-birth">
+													<option disabled selected></option>
+													<option value="Января">Января</option>
+													<option value="Февраля">Февраля</option>
+													<option value="Марта">Марта</option>
+												</select>
+											</div>
+											<div class="edit-info__select-container edit-info__select-container_year">
+												<select size="1" class="edit-info__select edit-info__select_year edit-select" name="year-birth">
+													<option disabled selected></option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+												</select>
+											</div>
+										</div>
+										<div class="edit-info__input-container">
+											<span class="edit-info__input-name">Отображать в профиле дату</span>
+											<div class="edit-info__select-container">
+												<select size="1" class="edit-info__select edit-select" name="show-data">
+													<option value="0" selected>Не показывать</option>
+													<option value="1">Показывать</option>
+												</select>
+											</div>
+										</div>
+										<p class="edit-info__warning">Если Вы захотите участвовать в <a href="#" class="edit-info__link">Конкурсах</a>, Розыгрышах призов, Тестах и других мероприятиях, Вам необходимо заполнить поле ниже и обязательно телефон на странице <a href="#" class="edit-info__link">Контакты</a></p>
+										<span class="edit-info__name-label">Ваши полные ФИО (как в паспорте)</span>
+										<input type="text" class="edit-info__name-input edit-input">
+										<div class="edit-info__save-btn-container">
+											<input type="submit" class="edit-info__save-btn" value="Сохранить">
+											<div class="edit-info__shadow"></div>
+										</div>
+										
+									</form>
 								</div>
 							</div>
-							<div class="groups-menu__item">
-								<div class="groups-menu__item-pic" style="background: url(images/cat.jpg) center / cover no-repeat"></div>
-								<div class="groups-menu__item-info">
-									<span class="groups-menu__item-name">Комнатные растения</span>
-									<span class="groups-menu__item-members"><span class="groups-menu__item-members-count">245 028 </span>участников</span>
-									<a href="#" class="groups-menu__item-join-btn">Присоединиться</a>
+						</div>	
+						<div class="myprofile-soc myprofile-section_disabled">
+							<div class="myprofile-soc__soc-container">
+								<h2 class="myprofile-soc__title">Социальные аккаунты</h2>
+								<p class="myprofile-soc__subtitle">Привязка учетных записей социальных сетей (можно сразу нескольких) 
+								к аккаунту позволит вам входить на Восадули.ру в один клик</p>
+								<div class="myprofile-soc__triggers">
+									<div class="myprofile-soc__trigger myprofile-soc__trigger_ok myprofile-soc__trigger_disabled">
+										<span class="myprofile-soc__trigger-icon myprofile-soc__trigger-icon_ok"></span>
+										<span class="myprofile-soc__trigger-trigger"></span>
+										<span class="myprofile-soc__trigger-label">Одноклассники<span class="myprofile-soc__trigger-state">не подключены</span></span>
+									</div>
+									<div class="myprofile-soc__trigger myprofile-soc__trigger_mir myprofile-soc__trigger_disabled">
+										<span class="myprofile-soc__trigger-icon myprofile-soc__trigger-icon_mir"></span>
+										<span class="myprofile-soc__trigger-trigger"></span>
+										<span class="myprofile-soc__trigger-label">Мир <span class="myprofile-soc__trigger-state">не подключен</span></span>
+									</div>
+									<div class="myprofile-soc__trigger myprofile-soc__trigger_facebook
+									myprofile-soc__trigger_disabled">
+									<span class="myprofile-soc__trigger-icon myprofile-soc__trigger-icon_facebook"></span>
+									<span class="myprofile-soc__trigger-trigger"></span>
+									<span class="myprofile-soc__trigger-label">Фейсбук<span class="myprofile-soc__trigger-state">не подключен</span></span>
 								</div>
-							</div>
-							<div class="groups-menu__item">
-								<div class="groups-menu__item-pic" style="background: url(images/cat.jpg) center / cover no-repeat"></div>
-								<div class="groups-menu__item-info">
-									<span class="groups-menu__item-name">Комнатные растения</span>
-									<span class="groups-menu__item-members"><span class="groups-menu__item-members-count">245 028 </span>участников</span>
-									<a href="#" class="groups-menu__item-join-btn">Присоединиться</a>
+								<div class="myprofile-soc__trigger myprofile-soc__trigger_vk myprofile-soc__trigger_disabled">
+									<span class="myprofile-soc__trigger-icon myprofile-soc__trigger-icon_vk"></span>
+									<span class="myprofile-soc__trigger-trigger"></span>
+									<span class="myprofile-soc__trigger-label">Вконтакте<span class="myprofile-soc__trigger-state">не подключен</span></span>
 								</div>
+
 							</div>
 						</div>
-						<div class="groups-menu__best-items groups-menu__items_disabled">
-							<div class="groups-menu__item">
-								<div class="groups-menu__item-pic" style="background: url(images/cat.jpg) center / cover no-repeat"></div>
-								<div class="groups-menu__item-info">
-									<span class="groups-menu__item-name">Комнатные растения</span>
-									<span class="groups-menu__item-members"><span class="groups-menu__item-members-count">245 028 </span>участников</span>
-									<a href="#" class="groups-menu__item-join-btn">Присоединиться</a>
-								</div>
+						<div class="myprofile-soc__stream">
+							<h2 class="myprofile-soc__stream-title">Автоматически транслировать:</h2>
+							<p class="myprofile-soc__stream-subtitle">После подключения соц. аккаунтов вы сможете автоматически транслировать
+							всю активность на Восадули.ру вашим подписчикам в соц. сетях!</p>
+							<form action="test.php" name="stream-checkboxes" class="myprofile-soc__stream-checkboxes">
+								<span class="myprofile-soc__stream-checkbox-container">
+									<input type="checkbox" id="newposts" class="myprofile-soc__stream-checkbox">
+									<label for="newposts" class="myprofile-soc__stream-checkbox-label">Мои новые публикации в журнале</label>
+								</span>
+								<span class="myprofile-soc__stream-checkbox-container">
+									<input type="checkbox" id="newfollowers" class="myprofile-soc__stream-checkbox">
+									<label for="newfollowers" class="myprofile-soc__stream-checkbox-label">Мои новые подписки</label>
+								</span>
+								<span class="myprofile-soc__stream-checkbox-container">
+									<input type="checkbox" id="newcontests" class="myprofile-soc__stream-checkbox">
+									<label for="newcontests" class="myprofile-soc__stream-checkbox-label">Мои участия в конкурсах</label>
+								</span>
+							</form>
+						</div>
+					</div>	
+					<div class="myprofile-contacts myprofile-section_disabled">
+						<h2 class="myprofile-contacts__title">Контактные данные</h2>
+						<div class="myprofile-contacts__contacts">
+							<div class="myprofile-contacts__contact myprofile-contacts__contact_address">
+								<span class="myprofile-contacts__contact-icon myprofile-contacts__contact-icon_address"></span>
+								<span class="myprofile-contacts__contact-label">Адрес: 
+									<span class="myprofile-contacts__contact-state">Не заполнено</span>
+								</span>
+							</div>
+							<div class="myprofile-contacts__contact myprofile-contacts__contact_phone">
+								<span class="myprofile-contacts__contact-icon myprofile-contacts__contact-icon_phone"></span>
+								<span class="myprofile-contacts__contact-label">Телефон: 
+									<span class="myprofile-contacts__contact-state">Не заполнено</span>
+								</span>
 							</div>
 						</div>
-						
+						<form action="test.php" name="contacts-form" class="myprofile-contacts__form">
+							<h2 class="myprofile-contacts__form-title">Адрес и телефон</h2>
+							<p class="myprofile-contacts__form-subtitle">Укажите свои контакты если участвуете в Конкурсе, Тестах или просто хотите 
+							чтобы другие участники смогли с вами связаться</p>
+							<div class="myprofile-contacts__form-inputs">
+								<div class="myprofile-contacts__form-input-container myprofile-contacts__form-input-container_postindex">
+									<span class="myprofile-contacts__form-input-label">
+										Почтовый индекс
+									</span>
+									<input type="text" name="postindex" class="myprofile-contacts__form-input myprofile-contacts__form-input_postindex">
+								</div>
+
+								<div class="myprofile-contacts__form-input-container myprofile-contacts__form-input-container_phone">
+									<span class="myprofile-contacts__form-input-label">
+										Номер телефона
+									</span>
+									<input type="text" placeholder="+7" name="phone" class="myprofile-contacts__form-input myprofile-contacts__form-input_phone">
+								</div>
+								<div class="myprofile-contacts__form-input-container myprofile-contacts__form-input-container_address">
+									<span class="myprofile-contacts__form-input-label">
+										Полный адрес (населеный пункт, улица, дом/квартира)
+									</span>
+									<textarea name="address" class="myprofile-contacts__form-input myprofile-contacts__form-input_address" ></textarea>
+								</div>
+								<div class="myprofile-contacts__form-input-container myprofile-contacts__form-input-container_show-btn">
+									<span class="myprofile-contacts__form-input-label">
+										Отображать в профиле
+									</span>
+									<div class="edit-info__select-container">
+										<select size="1" name="address" class="myprofile-contacts__form-input edit-select edit-info-select myprofile-contacts__form-input_show-btn">
+											<option value="Не показывать" selected>Не показывать</option>
+											<option value="Показывать">Показывать</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="myprofile-contacts__save-btn-container">
+								<input type="submit" class="edit-info__save-btn" value="Сохранить">
+								<div class="edit-info__shadow"></div>
+							</div>
+							<div class="myprofile-contacts__form-footer-container">
+								<p class="myprofile-contacts__form-footer">Ваши контакты никогда не будут переданы третьим лицам</p>
+							</div>
+							
+						</form>
+					</div>	
+
+				</div>
+
+			</div>
+			<div class="right-sidebar">
+				<a href="#" class="right-sidebar__ad">
+					<img src="images/ad.png" alt="" class="ad">
+				</a>
+				<div class="online-report">
+					<div class="online-report__header">
+						<span class="online-report__logo"></span>
+						<p class="online-report__title">Онлайн<br> отчёт</p>
+						<a href="#" class="online-report__info-btn"></a>
 					</div>
-					<div class="groups-menu__navigation">
-						<a href="#" class="groups-menu__prev groups-menu__prev_disabled">
+					<div class="online-report__triggers triggers">
+						<a href="#" class="online-report__trigger online-report__trigger_news button trigger">Мои новости</a>			
+						<a href="#" class="online-report__trigger online-report__trigger_events button trigger trigger_active">События</a>	
+					</div>
+					<div class="online-report__events-items">
+						<div class="online-report__items">
+							<a href="#" class="online-report__item">
+								<span class="online-report__item-icon online-report__item-icon_coins"></span>
+								<span class="online-report__item-text">Вам начислено 1000 монет за регистрацию</span>
+							</a>
+						</div>
+					</div>
+					<div class="online-report__news-items online-report__items_disabled">
+						<div class="online-report__items">
+							<a href="#" class="online-report__item">
+								<span class="online-report__item-icon online-report__item-icon_coins"></span>
+								<span class="online-report__item-text">Вам начислено 0 монет за регистрацию</span>
+							</a>
+						</div>
+					</div>
+					<div class="online-report__navigation">
+						<a href="#" class="online-report__prev online-report__prev_disabled">
 							<div class="svg" data-src="images/icons/arrow-sidbar-up.svg"></div>
 						</a>
-						<a href="#" class="groups-menu__next">
+						<a href="#" class="online-report__next">
 							<div class="svg" data-src="images/icons/arrow-sidbar-down.svg"></div>
 						</a>
 					</div>
 				</div>
 			</div>
-			
-			<div class="main-content">
-				<div class="myprofile">
-					<div class="myprofile__tabs">
-						<h2 class="myprofile__tabs-title">Мой профиль</h2>
-						<div class="myprofile__tabs-container triggers">
-							<a href="#" class="myprofile__tabs-tab myprofile__tabs-tab_main trigger trigger_active button">Основное</a>
-							<a href="#" class="myprofile__tabs-tab myprofile__tabs-tab_stats trigger button">Статистика</a>
-							<a href="#" class="myprofile__tabs-tab myprofile__tabs-tab_coins trigger button">Монеты</a>
-							<a href="#" class="myprofile__tabs-tab myprofile__tabs-tab_prizes trigger button">Награды</a>
-						</div>
-						<ul class="myprofile__submenu">
-							<li class="myprofile__submenu-item myprofile__submenu-item_aboutme myprofile__submenu-item_active">
-								<a href="#" class="myprofile__submenu-link">О себе</a>
-							</li>
-							<li class="myprofile__submenu-item myprofile__submenu-item_soc">
-								<a href="#" class="myprofile__submenu-link">Соцсети</a>
-							</li>
-							<li class="myprofile__submenu-item myprofile__submenu-item_contacts">
-								<a href="#" class="myprofile__submenu-link">Контакты</a>
-							</li>
-
-						</ul>
-					</div>
-					<div class="myprofile-content">
-						<div class="myprofile-cards">
-							<div class="myprofile-cards__container">
-								<div class="myprofile-cards__card myprofile-cards__card_rating">
-									<span class="myprofile-cards__card-title">Рейтинг</span>
-									<div class="myprofile-cards__card-value">-5</div>
-								</div>
-								<div class="myprofile-cards__card myprofile-cards__card_reputation">
-									<span class="myprofile-cards__card-title">Репутация</span>
-									<div class="myprofile-cards__card-value">27</div>
-								</div>
-								<div class="myprofile-cards__card myprofile-cards__card_prizes">
-									<span class="myprofile-cards__card-title">Награды</span>
-									<div class="myprofile-cards__card-value">0</div>
-								</div>
-								<div class="myprofile-cards__card myprofile-cards__card_posts">
-									<span class="myprofile-cards__card-title">Публикации</span>
-									<div class="myprofile-cards__card-value">21</div>
-								</div>
-							</div>
-							<div class="myprofile-cards__other-stats">
-								<div class="myprofile-cards__other-stats-item myprofile-cards__other-stats_likedpeople">
-									<span class="myprofile-cards__other-stats-icon"></span>
-									<span class="myprofile-cards__other-stats-value">0 человек</span>
-								</div>
-								<div class="myprofile-cards__other-stats-item myprofile-cards__other-stats_followedpeople">
-									<span class="myprofile-cards__other-stats-icon"></span>
-									<span class="myprofile-cards__other-stats-value">35 человек</span>
-								</div>
-								<div class="myprofile-cards__other-stats-item myprofile-cards__other-stats_coins">
-									<span class="myprofile-cards__other-stats-icon"></span>
-									<span class="myprofile-cards__other-stats-value">1000 монет</span>
-								</div>
-							</div>
-						</div>
-						<div class="myprofile-status">
-							<div class="myprofile-status__input-container">
-								<input type="text" placeholder="Напишите что-нибудь о себе" class="myprofile-status__input input">
-							</div>
-							<a href="#" class="myprofile-status__save-btn button_green">Сохранить</a>
-						</div>
-
-						<div class="edit-info">
-							<span class="edit-info__title">Персональная информация</span>
-							<div class="edit-info__adv-container">
-								<span class="edit-info__adv">Заполните все обязательные поля (помеченные звёздочкой) и получите 100 монет на свой счёт!</span>
-							</div>
-							<div class="edit-info__form-container">
-								<form class="edit-info__form" name="edit-info-form" action="">
-									<div class="edit-info__input-container">
-										<span class="edit-info__input-name">Страна проживания<sup class="edit-info__star star">*</sup></span>
-										<div class="edit-info__select-container">
-											<select size="1" class="edit-info__select edit-select" name="country">
-												<option disabled selected>Выберите страну</option>
-												<option value="Россия">Россия</option>
-												<option value="Украина">Украина</option>
-												<option value="Беларусь">Беларусь</option>
-											</select>
-										</div>
-									</div>
-									<div class="edit-info__input-container">
-										<span class="edit-info__input-name">Регион проживания<sup class="edit-info__star star">*</sup></span>
-										<div class="edit-info__select-container edit-select_disabled">
-											<select disabled size="1" class="edit-info__select edit-select" name="region">
-												<option disabled selected>Регион</option>
-												<option value="Московская обл.">Московская обл.</option>
-												<option value="Ленинградская обл.">Ленинградская обл.</option>
-												<option value="Краснодарский край.">Краснодарский край.</option>
-											</select>
-										</div>
-										
-									</div>
-									<div class="edit-info__input-container">
-										<span class="edit-info__input-name">Ваш пол<sup class="edit-info__star star">*</sup></span>
-										<div class="edit-info__select-container">
-											<select size="1" class="edit-info__select edit-select" name="gender">
-												<option disabled selected>Не выбрано</option>
-												<option value="Мужской">Мужской</option>
-												<option value="Женский">Женский</option>
-											</select>
-										</div>
-									</div>
-									<div class="edit-info__input-container">
-										<span class="edit-info__input-name">Ближайший районный центр<sup class="edit-info__star star">*</sup></span>
-										<div class="edit-info__select-container edit-select_disabled">
-											<select disabled size="1" class="edit-info__select edit-select" name="city">
-												<option disabled selected>Город</option>
-												<option value="Москва">Москва</option>
-												<option value="Санкт-Петербург">Санкт-Петербург</option>
-												<option value="Саратов">Саратов</option>
-											</select>
-										</div>
-									</div>
-									<div class="edit-info__input-container edit-info__input-container_date">
-										<span class="edit-info__input-name edit-info__input-name_date">Дата рождения<sup class="edit-info__star star">*</sup></span>
-										<div class="edit-info__select-container edit-info__select-container_day">
-											<select size="1" class="edit-info__select edit-info__select_day edit-select" name="day-birth">
-												<option disabled selected></option>
-												<option value="1">1</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-											</select>
-										</div>
-										<div class="edit-info__select-container edit-info__select-container_month">
-											<select size="1" class="edit-info__select edit-info__select_month edit-select" name="month-birth">
-												<option disabled selected></option>
-												<option value="Января">Января</option>
-												<option value="Февраля">Февраля</option>
-												<option value="Марта">Марта</option>
-											</select>
-										</div>
-										<div class="edit-info__select-container edit-info__select-container_year">
-											<select size="1" class="edit-info__select edit-info__select_year edit-select" name="year-birth">
-												<option disabled selected></option>
-												<option value="1">1</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-											</select>
-										</div>
-									</div>
-									<div class="edit-info__input-container">
-										<span class="edit-info__input-name">Отображать в профиле дату</span>
-										<div class="edit-info__select-container">
-											<select size="1" class="edit-info__select edit-select" name="show-data">
-												<option value="0" selected>Не показывать</option>
-												<option value="1">Показывать</option>
-											</select>
-										</div>
-									</div>
-									<p class="edit-info__warning">Если Вы захотите участвовать в <a href="#" class="edit-info__link">Конкурсах</a>, Розыгрышах призов, Тестах и других мероприятиях, Вам необходимо заполнить поле ниже и обязательно телефон на странице <a href="#" class="edit-info__link">Контакты</a></p>
-									<span class="edit-info__name-label">Ваши полные ФИО (как в паспорте)</span>
-									<input type="text" class="edit-info__name-input edit-input">
-									<div class="edit-info__save-btn-container">
-										<input type="submit" class="edit-info__save-btn" value="Сохранить">
-										<div class="edit-info__shadow"></div>
-									</div>
-									
-								</form>
-							</div>
-						</div>
-					</div>	
-					<div class="myprofile-soc myprofile-section_disabled">
-						<div class="myprofile-soc__soc-container">
-							<h2 class="myprofile-soc__title">Социальные аккаунты</h2>
-							<p class="myprofile-soc__subtitle">Привязка учетных записей социальных сетей (можно сразу нескольких) 
-							к аккаунту позволит вам входить на Восадули.ру в один клик</p>
-							<div class="myprofile-soc__triggers">
-								<div class="myprofile-soc__trigger myprofile-soc__trigger_ok myprofile-soc__trigger_disabled">
-									<span class="myprofile-soc__trigger-icon myprofile-soc__trigger-icon_ok"></span>
-									<span class="myprofile-soc__trigger-trigger"></span>
-									<span class="myprofile-soc__trigger-label">Одноклассники<span class="myprofile-soc__trigger-state">не подключены</span></span>
-								</div>
-								<div class="myprofile-soc__trigger myprofile-soc__trigger_mir myprofile-soc__trigger_disabled">
-									<span class="myprofile-soc__trigger-icon myprofile-soc__trigger-icon_mir"></span>
-									<span class="myprofile-soc__trigger-trigger"></span>
-									<span class="myprofile-soc__trigger-label">Мир <span class="myprofile-soc__trigger-state">не подключен</span></span>
-								</div>
-								<div class="myprofile-soc__trigger myprofile-soc__trigger_facebook
-								myprofile-soc__trigger_disabled">
-								<span class="myprofile-soc__trigger-icon myprofile-soc__trigger-icon_facebook"></span>
-								<span class="myprofile-soc__trigger-trigger"></span>
-								<span class="myprofile-soc__trigger-label">Фейсбук<span class="myprofile-soc__trigger-state">не подключен</span></span>
-							</div>
-							<div class="myprofile-soc__trigger myprofile-soc__trigger_vk myprofile-soc__trigger_disabled">
-								<span class="myprofile-soc__trigger-icon myprofile-soc__trigger-icon_vk"></span>
-								<span class="myprofile-soc__trigger-trigger"></span>
-								<span class="myprofile-soc__trigger-label">Вконтакте<span class="myprofile-soc__trigger-state">не подключен</span></span>
-							</div>
-
-						</div>
-					</div>
-					<div class="myprofile-soc__stream">
-						<h2 class="myprofile-soc__stream-title">Автоматически транслировать:</h2>
-						<p class="myprofile-soc__stream-subtitle">После подключения соц. аккаунтов вы сможете автоматически транслировать
-						всю активность на Восадули.ру вашим подписчикам в соц. сетях!</p>
-						<form action="" name="stream-checkboxes" class="myprofile-soc__stream-checkboxes">
-							<span class="myprofile-soc__stream-checkbox-container">
-								<input type="checkbox" id="newposts" class="myprofile-soc__stream-checkbox">
-								<label for="newposts" class="myprofile-soc__stream-checkbox-label">Мои новые публикации в журнале</span>
-								</span>
-								<span class="myprofile-soc__stream-checkbox-container">
-									<input type="checkbox" id="newfollowers" class="myprofile-soc__stream-checkbox">
-									<label for="newfollowers" class="myprofile-soc__stream-checkbox-label">Мои новые подписки</span>
-									</span>
-									<span class="myprofile-soc__stream-checkbox-container">
-										<input type="checkbox" id="newcontests" class="myprofile-soc__stream-checkbox">
-										<label for="newcontests" class="myprofile-soc__stream-checkbox-label">Мои участия в конкурсах</span>
-										</span>
-									</form>
-								</div>
-							</div>	
-							<div class="myprofile-contacts myprofile-section_disabled">
-								<h2 class="myprofile-contacts__title">Контактные данные</h2>
-								<div class="myprofile-contacts__contacts">
-									<div class="myprofile-contacts__contact myprofile-contacts__contact_address">
-										<span class="myprofile-contacts__contact-icon myprofile-contacts__contact-icon_address"></span>
-										<span class="myprofile-contacts__contact-label">Адрес: 
-											<span class="myprofile-contacts__contact-state">Не заполнено</span>
-										</span>
-									</div>
-									<div class="myprofile-contacts__contact myprofile-contacts__contact_phone">
-										<span class="myprofile-contacts__contact-icon myprofile-contacts__contact-icon_phone"></span>
-										<span class="myprofile-contacts__contact-label">Телефон: 
-											<span class="myprofile-contacts__contact-state">Не заполнено</span>
-										</span>
-									</div>
-								</div>
-								<form action="" name="contacts-form" class="myprofile-contacts__form">
-									<h2 class="myprofile-contacts__form-title">Адрес и телефон</h2>
-									<p class="myprofile-contacts__form-subtitle">Укажите свои контакты если участвуете в Конкурсе, Тестах или просто хотите 
-									чтобы другие участники смогли с вами связаться</p>
-									<div class="myprofile-contacts__form-inputs">
-										<div class="myprofile-contacts__form-input-container myprofile-contacts__form-input-container_postindex">
-											<span class="myprofile-contacts__form-input-label">
-												Почтовый индекс
-											</span>
-											<input type="text" name="postindex" class="myprofile-contacts__form-input myprofile-contacts__form-input_postindex">
-										</div>
-
-										<div class="myprofile-contacts__form-input-container myprofile-contacts__form-input-container_phone">
-											<span class="myprofile-contacts__form-input-label">
-												Номер телефона
-											</span>
-											<input type="text" name="phone" class="myprofile-contacts__form-input myprofile-contacts__form-input_phone">
-										</div>
-										<div class="myprofile-contacts__form-input-container myprofile-contacts__form-input-container_address">
-											<span class="myprofile-contacts__form-input-label">
-												Полный адрес (населеный пункт, улица, дом/квартира)
-											</span>
-											<textarea name="address" class="myprofile-contacts__form-input myprofile-contacts__form-input_address"></textarea>
-										</div>
-										<div class="myprofile-contacts__form-input-container myprofile-contacts__form-input-container_show-btn">
-											<span class="myprofile-contacts__form-input-label">
-												Отображать в профиле
-											</span>
-											<div class="edit-info__select-container">
-												<select size="1" name="address" class="myprofile-contacts__form-input edit-select edit-info-select myprofile-contacts__form-input_show-btn">
-													<option value="Не показывать" selected>Не показывать</option>
-													<option value="Показывать">Показывать</option>
-												</select>
-											</div>
-										</div>
-									</div>
-									<div class="myprofile-contacts__save-btn-container">
-										<input type="submit" class="edit-info__save-btn" value="Сохранить">
-										<div class="edit-info__shadow"></div>
-									</div>
-									<div class="myprofile-contacts__form-footer-container">
-										<p class="myprofile-contacts__form-footer">Ваши контакты никогда не будут переданы третьим лицам</p>
-									</div>
-									
-								</form>
-							</div>	
-
-						</div>
-
-					</div>
-					<div class="right-sidebar">
-						<a href="#" class="right-sidebar__ad">
-							<img src="images/ad.png" class="ad">
-						</a>
-						<div class="online-report">
-							<div class="online-report__header">
-								<span class="online-report__logo"></span>
-								<p class="online-report__title">Онлайн<br> отчёт</p>
-								<a href="#" class="online-report__info-btn"></a>
-							</div>
-							<div class="online-report__triggers triggers">
-								<a href="#" class="online-report__trigger online-report__trigger_news button trigger"></span>Мои новости</a>			
-								<a href="#" class="online-report__trigger online-report__trigger_events button trigger trigger_active">События</a>	
-							</div>
-							<div class="online-report__events-items">
-								<div class="online-report__items">
-									<a href="#" class="online-report__item">
-										<span class="online-report__item-icon online-report__item-icon_coins"></span>
-										<span class="online-report__item-text">Вам начислено 1000 монет за регистрацию</span>
-									</a>
-								</div>
-							</div>
-							<div class="online-report__news-items online-report__items_disabled">
-								<div class="online-report__items">
-									<a href="#" class="online-report__item">
-										<span class="online-report__item-icon online-report__item-icon_coins"></span>
-										<span class="online-report__item-text">Вам начислено 0 монет за регистрацию</span>
-									</a>
-								</div>
-							</div>
-							<div class="online-report__navigation">
-								<a href="#" class="online-report__prev online-report__prev_disabled">
-									<div class="svg" data-src="images/icons/arrow-sidbar-up.svg"></div>
-								</a>
-								<a href="#" class="online-report__next">
-									<div class="svg" data-src="images/icons/arrow-sidbar-down.svg"></div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-		<script src="vendors/js/jquery-3.4.1.min.js" type="text/javascript"></script>
-		<script src="vendors/js/easySVG.min.js" type="text/javascript"></script>
-		<script src="vendors/js/owl.carousel.min.js" type="text/javascript"></script>
-		<script src="js/scripts.js" type="text/javascript"></script>
-
-	</body>
-	</html>
+		</div>
+	</div>
+</main>
+<script src="vendors/js/jquery-3.4.1.min.js"></script>
+<script src="vendors/js/easySVG.min.js"></script>
+<script src="vendors/js/owl.carousel.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
