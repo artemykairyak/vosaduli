@@ -1,4 +1,7 @@
 $(function(){
+
+	// MYPROFILE
+
 	$('.profile-menu__item').on('click', function(e) {
 		if($(this).find('.profile-menu__submenu').length > 0) {
 			$(this).toggleClass('profile-menu__item_expand');
@@ -33,13 +36,28 @@ $(function(){
 			$('.myprofile-contacts').removeClass('myprofile-section_disabled')
 		}
 	});
+	
+	$('.edit-info__form').on('submit', function(e) {
+		e.preventDefault();
+		validationPersonalInfo($('.edit-info__form'));	
+	});
+
+	$('.myprofile-contacts__form').on('submit', function(e) {
+		e.preventDefault();
+		sendForm($(this), 'https://cors-anywhere.herokuapp.com/http://moduli-opencart.ru/users/145');
+		$('.myprofile-contacts__contact-state_address').text($(this).find('.myprofile-contacts__form-input_address').val());
+		$('.myprofile-contacts__contact-state_phone').text($(this).find('.myprofile-contacts__form-input_phone').val());
+
+	});
+
+	//MYPROFILE
 
 	$('.actions__add-friend').on('click', function(e) {
 		e.preventDefault();
 		$(this).toggleClass('actions__add-friend_sended');
 		$(this).hasClass('actions__add-friend_sended') ? 
 		$(this).text('Заявка отправлена') : $(this).text('Добавить в друзья');
-	})
+	});
 
 	$('.groups-menu__trigger').on('click', function(e) {
 		e.preventDefault();
@@ -269,6 +287,16 @@ $(function(){
 
 	//ADD ARTICLE
 
+	//FEED
+
+	if($('.feed__article-text').length > 0) {
+		console.log($('.feed__article-text').text().length);
+		cutText($('.feed__article-text'), 280);
+	}
+
+
+	//FEED
+
 	//MODALS
 
 	$('.sign-in-modal__show-pass, .sign-up-modal__show-pass').on('click', function() {
@@ -356,6 +384,42 @@ $(function(){
 
 	//MODALS
 });
+
+function sendForm(form, url) {
+	var formName = form.attr('name');
+	var $data = $(form).serialize() + '&' + formName + '=1';
+	console.log($data);
+		$.ajax({
+		  type: "POST",
+		  url: url,
+		  data: $data,
+		  dataType: 'json',
+		  success: function(msg){
+		  	  console.log('SUCCESS');
+		    console.log(msg);
+		  },
+		  error: function(msg){
+		  	  console.log('ERROR');
+		    console.log(msg);
+		  }
+		});
+}
+
+function validationPersonalInfo(form) {
+	let selects = $(form).find('select');
+	let ok = true;
+	selects.each(function(i, elem) {
+		if(!$(elem).val()) {
+			$(elem).closest('.edit-info__input-container').addClass('edit-info__input-container_error');
+			ok = false;
+		} else {
+			$(elem).closest('.edit-info__input-container').removeClass('edit-info__input-container_error');
+		}
+	});
+	if(ok) {
+		sendForm(form, 'https://cors-anywhere.herokuapp.com/http://moduli-opencart.ru/users/145');
+	}
+}
 
 
 function selectPeriod(month, firstMonth, secondMonth) {

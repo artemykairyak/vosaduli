@@ -3,10 +3,12 @@
 		<div class="logo__picture"></div>
 	</a>
 	<div class="search">
-		<input type="text" class="search-input" placeholder="Поиск по сайту">
-		<a href="#" class="search__button"></a>
-		<div class="search__shadow"></div>
-	</div> 
+		<form action="test.php" class="search-form" method="GET">
+			<input type="text" class="search-input" placeholder="Поиск по сайту">
+			<input type="submit" name="search-btn" class="search__button" value=""> 
+			<div class="search__shadow"></div>
+		</form>
+	</div>
 	<div class="icons-section">
 		<a href="#" class="icons-section__item icons-section__item_contests">
 			<div class="icons-section__icon icons-section__icon_contests"></div>

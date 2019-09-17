@@ -299,6 +299,7 @@
   margin-left: 30px;
   position: relative;
   z-index: 1;
+  padding: 0 18px;
 }
 
 .header-menu__item:first-child {
@@ -673,6 +674,10 @@
 .edit-info__input-container {
   width: 45%;
   text-align: left;
+}
+
+.edit-info__input-container_error .edit-info__input-name {
+  color: red;
 }
 
 .edit-info__input-container_date {

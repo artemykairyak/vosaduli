@@ -209,8 +209,7 @@
 		display: -ms-flex;
 		display: -o-flex;
 		display: flex;
-		justify-content: flex-end;
-		
+		justify-content: flex-end;	
 	}
 
 	&__nav-arrow {
@@ -229,6 +228,7 @@
 		margin-left: 30px;
 		position: relative;
 		z-index: 1;
+		padding: 0 18px;
 
 		&:first-child {
 			margin-left: 0;
@@ -606,6 +606,12 @@
 	&__input-container {
 		width: 45%;
 		text-align: left;
+
+		&_error {
+			.edit-info__input-name {
+				color: red;
+			}
+		}
 
 		&_date {
 			@include flex;

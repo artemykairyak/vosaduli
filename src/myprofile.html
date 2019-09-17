@@ -163,12 +163,14 @@
 				</div>	
 				<!-- <div class="main-menu">
 					<a href="/" class="logo">
-						<div class="logo__picture"></div>
+					A	<div class="logo__picture"></div>
 					</a>
 					<div class="search">
-						<input type="text" class="search-input" placeholder="Поиск по сайту">
-						<a href="#" class="search__button"></a>
-						<div class="search__shadow"></div>
+						<form action="test.php" class="search-form" method="GET">
+							<input type="text" class="search-input" placeholder="Поиск по сайту">
+							<input type="submit" name="search-btn" class="search__button" value=""> 
+							<div class="search__shadow"></div>
+						</form>
 					</div>
 					<div class="icons-section">
 						<a href="#" class="icons-section__item icons-section__item_contests">
@@ -203,10 +205,12 @@
 						<div class="logo__picture"></div>
 					</a>
 					<div class="search">
-						<input type="text" class="search-input" placeholder="Поиск по сайту">
-						<a href="#" class="search__button"></a>
-						<div class="search__shadow"></div>
-					</div> 
+						<form action="test.php" class="search-form" method="GET">
+							<input type="text" class="search-input" placeholder="Поиск по сайту">
+							<input type="submit" name="search-btn" class="search__button" value=""> 
+							<div class="search__shadow"></div>
+						</form>
+					</div>
 					<div class="icons-section">
 						<a href="#" class="icons-section__item icons-section__item_contests">
 							<div class="icons-section__icon icons-section__icon_contests"></div>
@@ -583,9 +587,9 @@
 											<div class="edit-info__select-container">
 												<select size="1" class="edit-info__select edit-select" name="country">
 													<option disabled selected>Выберите страну</option>
-													<option value="Россия">Россия</option>
-													<option value="Украина">Украина</option>
-													<option value="Беларусь">Беларусь</option>
+													<option value="11">Россия</option>
+													<option value="22">Украина</option>
+													<option value="33">Беларусь</option>
 												</select>
 											</div>
 										</div>
@@ -594,9 +598,9 @@
 											<div class="edit-info__select-container edit-select_disabled">
 												<select disabled size="1" class="edit-info__select edit-select" name="region">
 													<option disabled selected>Регион</option>
-													<option value="Московская обл.">Московская обл.</option>
-													<option value="Ленинградская обл.">Ленинградская обл.</option>
-													<option value="Краснодарский край.">Краснодарский край.</option>
+													<option value="111">Московская обл</option>
+													<option value="222">Ленинградская обл</option>
+													<option value="333">Краснодарский край</option>
 												</select>
 											</div>
 											
@@ -616,9 +620,9 @@
 											<div class="edit-info__select-container edit-select_disabled">
 												<select disabled size="1" class="edit-info__select edit-select" name="city">
 													<option disabled selected>Город</option>
-													<option value="Москва">Москва</option>
-													<option value="Санкт-Петербург">Санкт-Петербург</option>
-													<option value="Саратов">Саратов</option>
+													<option value="11">Москва</option>
+													<option value="222">Санкт-Петербург</option>
+													<option value="333">Саратов</option>
 												</select>
 											</div>
 										</div>
@@ -627,25 +631,25 @@
 											<div class="edit-info__select-container edit-info__select-container_day">
 												<select size="1" class="edit-info__select edit-info__select_day edit-select" name="day-birth">
 													<option value="" disabled selected> </option>
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
+													<option value="01">1</option>
+													<option value="02">2</option>
+													<option value="03">3</option>
 												</select>
 											</div>
 											<div class="edit-info__select-container edit-info__select-container_month">
 												<select size="1" class="edit-info__select edit-info__select_month edit-select" name="month-birth">
 													<option disabled selected></option>
-													<option value="Января">Января</option>
-													<option value="Февраля">Февраля</option>
-													<option value="Марта">Марта</option>
+													<option value="01">Января</option>
+													<option value="02">Февраля</option>
+													<option value="03">Марта</option>
 												</select>
 											</div>
 											<div class="edit-info__select-container edit-info__select-container_year">
 												<select size="1" class="edit-info__select edit-info__select_year edit-select" name="year-birth">
 													<option disabled selected></option>
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
+													<option value="1995">1995</option>
+													<option value="2002">2002</option>
+													<option value="2005">2005</option>
 												</select>
 											</div>
 										</div>
@@ -660,9 +664,9 @@
 										</div>
 										<p class="edit-info__warning">Если Вы захотите участвовать в <a href="#" class="edit-info__link">Конкурсах</a>, Розыгрышах призов, Тестах и других мероприятиях, Вам необходимо заполнить поле ниже и обязательно телефон на странице <a href="#" class="edit-info__link">Контакты</a></p>
 										<span class="edit-info__name-label">Ваши полные ФИО (как в паспорте)</span>
-										<input type="text" class="edit-info__name-input edit-input">
+										<input type="text" class="edit-info__name-input edit-input" name="fsl">
 										<div class="edit-info__save-btn-container">
-											<input type="submit" class="edit-info__save-btn" value="Сохранить">
+											<input type="submit" class="edit-info__save-btn" name="save-btn"  value="Сохранить">
 											<div class="edit-info__shadow"></div>
 										</div>
 										
@@ -726,13 +730,13 @@
 							<div class="myprofile-contacts__contact myprofile-contacts__contact_address">
 								<span class="myprofile-contacts__contact-icon myprofile-contacts__contact-icon_address"></span>
 								<span class="myprofile-contacts__contact-label">Адрес: 
-									<span class="myprofile-contacts__contact-state">Не заполнено</span>
+									<span class="myprofile-contacts__contact-state myprofile-contacts__contact-state_address">Не заполнено</span>
 								</span>
 							</div>
 							<div class="myprofile-contacts__contact myprofile-contacts__contact_phone">
 								<span class="myprofile-contacts__contact-icon myprofile-contacts__contact-icon_phone"></span>
 								<span class="myprofile-contacts__contact-label">Телефон: 
-									<span class="myprofile-contacts__contact-state">Не заполнено</span>
+									<span class="myprofile-contacts__contact-state myprofile-contacts__contact-state_phone">Не заполнено</span>
 								</span>
 							</div>
 						</div>
@@ -765,15 +769,15 @@
 										Отображать в профиле
 									</span>
 									<div class="edit-info__select-container">
-										<select size="1" name="address" class="myprofile-contacts__form-input edit-select edit-info-select myprofile-contacts__form-input_show-btn">
-											<option value="Не показывать" selected>Не показывать</option>
-											<option value="Показывать">Показывать</option>
+										<select size="1" name="is_contacts" class="myprofile-contacts__form-input edit-select edit-info-select myprofile-contacts__form-input_show-btn">
+											<option value="0" selected>Не показывать</option>
+											<option value="1">Показывать</option>
 										</select>
 									</div>
 								</div>
 							</div>
 							<div class="myprofile-contacts__save-btn-container">
-								<input type="submit" class="edit-info__save-btn" value="Сохранить">
+								<input type="submit" class="edit-info__save-btn" value="Сохранить" name="contacts-save-btn">
 								<div class="edit-info__shadow"></div>
 							</div>
 							<div class="myprofile-contacts__form-footer-container">

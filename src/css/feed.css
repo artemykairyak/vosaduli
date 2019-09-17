@@ -1,0 +1,193 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto.woff);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Robotobold.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Robotomedium.woff);
+  font-weight: 500;
+}
+
+/* CERAPRO */
+
+@font-face {
+  font-family: CeraPro;
+  src: url(../fonts/CeraPro/CeraPro-Regular.woff);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: CeraPro;
+  src: url(../fonts/CeraPro/CeraPro-Medium.woff);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: CeraPro;
+  src: url(../fonts/CeraPro/CeraPro-Bold.woff);
+  font-weight: bold;
+}
+
+/* MUSEO */
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoSansCyrl.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoCyrl-700.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoCyrl-900.woff);
+  font-weight: 900;
+}
+
+/* ALSSchlangeslab */
+
+@font-face {
+  font-family: ALS;
+  src: url(../fonts/ALSSchlangeslab/alsschlangebold.otf), url(../fonts/ALSSchlangeslab/alsschlangebold.eot), url(../fonts/ALSSchlangeslab/alsschlangebold.woff);
+  font-weight: bold;
+}
+
+.myprofile-content {
+  padding: 0 17px;
+}
+
+.feed__article {
+  width: 100%;
+  padding: 30px 0;
+}
+
+.feed__article-title {
+  font-family: ALS;
+  font-size: 26px;
+  font-weight: bold;
+  color: #21224e;
+}
+
+.feed__article-author {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.feed__article-author_verified {
+  width: 13px;
+  display: inline-block;
+  height: 13px;
+  background: url(../images/icons/confirmed-public-icon-user.svg) 0 0/contain no-repeat;
+}
+
+.feed__article-author-avatar {
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+  border: solid 3px #ffffff;
+  background-color: #d8d8d8;
+  border-radius: 100%;
+  margin-right: 16px;
+}
+
+.feed__article-author-avatarpic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.feed__article-author-bio {
+  font-size: 15px;
+  font-weight: 500;
+  color: #282829;
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.feed__article-author-bio:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  height: 18px;
+  width: 88%;
+  background: #f4f7fb;
+  z-index: -1;
+}
+
+.feed__article-author-pubinfo {
+  font-size: 14px;
+  font-weight: 500;
+  color: #5b5b5b;
+  display: block;
+}
+
+.feed__article-author-journal {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.feed__article-author-journal-cover {
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+
+.feed__article-author-journal-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.feed__article-author-journal-type {
+  font-size: 14px;
+  font-weight: 500;
+  color: #383aaa;
+}
+
+.feed__article-author-info {
+  margin-right: 8px;
+}
+
+.feed__article-text {
+  margin: 20px 0 0;
+  font-family: Roboto;
+  font-size: 17px;
+  line-height: 1.41;
+}
+
+.feed__article-picture {
+  margin: 24px 0 16px;
+}
+
+.feed__article-picture img {
+  width: 100%;
+  height: auto;
+}

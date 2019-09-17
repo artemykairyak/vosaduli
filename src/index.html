@@ -43,9 +43,11 @@
 						<div class="logo__picture"></div>
 					</a>
 					<div class="search">
-						<input type="text" class="search-input" placeholder="Поиск по сайту">
-						<a href="#" class="search__button"></a>
-						<div class="search__shadow"></div>
+						<form action="test.php" class="search-form" method="GET">
+							<input type="text" class="search-input" placeholder="Поиск по сайту">
+							<input type="submit" name="search-btn" class="search__button" value=""> 
+							<div class="search__shadow"></div>
+						</form>
 					</div>
 					<div class="icons-section">
 						<a href="#" class="icons-section__item icons-section__item_contests">
@@ -271,15 +273,15 @@
 								</div>
 								<div class="journal__article-footer">
 									<div class="journal__article-tags">
-										<a href="#" class="journal__article-tag">#пересадка</a>
-										<a href="#" class="journal__article-tag">#суккуленты</a>
-										<a href="#" class="journal__article-tag">#уход</a>
+										<a href="#" class="journal__article-tag tag">#пересадка</a>
+										<a href="#" class="journal__article-tag tag">#суккуленты</a>
+										<a href="#" class="journal__article-tag tag">#уход</a>
 									</div>
 									<div class="journal__article-controls journal-controls">
-										<a href="#" class="journal__article-read-more button_green">Читать далее</a>
-										<a href="#" class="journal__article-likes journal-likes">23</a>
-										<a href="#" class="journal__article-comments journal-comments">5</a>
-										<a href="#" class="journal__article-comment-btn button journal-comment-btn">Комментировать</a>
+										<a href="#" class="journal__article-read-more button_green read-more-btn">Читать далее</a>
+										<a href="#" class="journal__article-likes journal-likes likes-btn">23</a>
+										<a href="#" class="journal__article-comments journal-comments comments-btn">5</a>
+										<a href="#" class="journal__article-comment-btn button journal-comment-btn comment-btn">Комментировать</a>
 										<a href="#" class="journal__article-more journal-more button">...</a>
 									</div>
 								</div>
@@ -301,15 +303,15 @@
 								</div>
 								<div class="journal__article-footer">
 									<div class="journal__article-tags">
-										<a href="#" class="journal__article-tag">#пересадка</a>
-										<a href="#" class="journal__article-tag">#суккуленты</a>
-										<a href="#" class="journal__article-tag">#уход</a>
+										<a href="#" class="journal__article-tag tag">#пересадка</a>
+										<a href="#" class="journal__article-tag tag">#суккуленты</a>
+										<a href="#" class="journal__article-tag tag">#уход</a>
 									</div>
 									<div class="journal__article-controls journal-controls">
-										<a href="#" class="journal__article-read-more button_green">Читать далее</a>
-										<a href="#" class="journal__article-likes journal-likes">23</a>
-										<a href="#" class="journal__article-comments journal-comments">5</a>
-										<a href="#" class="journal__article-comment-btn button journal-comment-btn">Комментировать</a>
+										<a href="#" class="journal__article-read-more button_green read-moret-btn">Читать далее</a>
+										<a href="#" class="journal__article-likes journal-likes likes-btn">23</a>
+										<a href="#" class="journal__article-comments journal-comments comments-btn">5</a>
+										<a href="#" class="journal__article-comment-btn button journal-comment-btn comment-btn">Комментировать</a>
 										<a href="#" class="journal__article-more journal-more button">...</a>
 									</div>
 								</div>
@@ -347,9 +349,9 @@
 									</a>
 								</div>
 								<div class="journal-slider__controls journal-controls">
-									<a href="#" class="journal-slider__likes journal-likes">23</a>
-									<a href="#" class="journal-slider__comments journal-comments">5</a>
-									<a href="#" class="journal-slider__comment-btn button journal-comment-btn">Комментировать</a>
+									<a href="#" class="journal-slider__likes journal-likes likes-btn">23</a>
+									<a href="#" class="journal-slider__comments journal-comments comments-btn">5</a>
+									<a href="#" class="journal-slider__comment-btn button journal-comment-btn comment-btn">Комментировать</a>
 									<a href="#" class="journal-slider__more journal-more button">...</a>
 								</div>
 							</div>
@@ -380,27 +382,26 @@
 								</div>
 								<div class="journal__article-footer">
 									<div class="journal__article-controls journal-controls">
-										<a href="#" class="journal__article-read-more button_green">Читать далее</a>
-										<a href="#" class="journal__article-likes journal-likes">23</a>
-										<a href="#" class="journal__article-comments journal-comments">5</a>
-										<a href="#" class="journal__article-comment-btn button journal-comment-btn">Комментировать</a>
+										<a href="#" class="journal__article-read-more button_green read-more-btn">Читать далее</a>
+										<a href="#" class="journal__article-likes journal-likes likes-btn">23</a>
+										<a href="#" class="journal__article-comments journal-comments comments-btn">5</a>
+										<a href="#" class="journal__article-comment-btn button journal-comment-btn comment-btn">Комментировать</a>
 										<a href="#" class="journal__article-more journal-more button">...</a>
 									</div>
 								</div>
 							</div>
 						</div>
-
-						<div class="journal__navigation">
+						<div class="journal__navigation navigation">
 							<div class="journal__navigation-pages">
 								<a href="#" class="journal__navigation-page journal__navigation-page_selected">1</a>
-								<a href="#" class="journal__navigation-page">2</a>
-								<a href="#" class="journal__navigation-page">3</a>
-								<a href="#" class="journal__navigation-page">4</a>
-								<a href="#" class="journal__navigation-page">5</a>
-								<span class="journal__navigation-separator">из</span>
-								<a href="#" class="journal__navigation-page journal__navigation-total-page">57</a>
+								<a href="#" class="journal__navigation-page navigation-page">2</a>
+								<a href="#" class="journal__navigation-page navigation-page">3</a>
+								<a href="#" class="journal__navigation-page navigation-page">4</a>
+								<a href="#" class="journal__navigation-page navigation-page">5</a>
+								<span class="journal__navigation-separator navigation-separator">из</span>
+								<a href="#" class="journal__navigation-page journal__navigation-total-page navigation-total-pages">57</a>
 							</div>
-							<a href="#" class="journal__navigation-next-page">
+							<a href="#" class="journal__navigation-next-page navigation-next-page">
 								Следующая страница
 							</a>
 						</div>

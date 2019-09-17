@@ -650,7 +650,7 @@
 
   .journal__navigation-page:nth-child(3),
   .journal__navigation-page:nth-child(4) {
-    display: initial;
+    display: flex;
   }
 }
 
