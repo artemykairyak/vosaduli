@@ -110,8 +110,16 @@
 			text-align: center;
 			line-height: 37px;
 			color: $greyBlue;
+			font-family: CeraPRO;
 			font-size: 12px;
 			font-weight: bold;
+			border: none;
+			cursor: pointer;
+			transition: all 0.3s ease;
+
+			&:hover {
+				background: darken($cloudyBlue, 5%);
+			}
 		}
 	}
 
@@ -251,9 +259,11 @@
 			border: solid 2px #ffffff;
 			background-color: #d8d8d8;
 			position: absolute;
+			transition: transform 0.3s ease;
 			
 			&:hover {
 				z-index: 10 !important;
+				transform: scale(1.05);
 			}
 
 			&:first-child {
@@ -298,6 +308,18 @@
 			background: $paleGray;
 			border-radius: 5px;
 			height: 150px;
+
+
+			&:hover {
+				.journal-slider__photo-counter,
+				.journal-slider__photo-counter-count {
+					color: darken(#5e6d82, 10%);
+				}
+
+				.journal-slider__show-all {
+					transform: scale(1.05);
+				}
+			}
 		}
 
 		&__photo-counter {
@@ -314,9 +336,11 @@
 			font-size: 18px;
 			font-weight: 500;
 			margin-top: 25px;
+			transition: all 0.3s ease;
 
 			&-count {
 				font-size: 34px;
+				transition: all 0.3s ease;
 			}
 		}
 
@@ -332,6 +356,7 @@
 			display: block;
 			text-align: center;
 			margin: 16px auto 0;
+			transition: all 0.3s ease;
 		}
 
 		&__controls {
@@ -427,14 +452,20 @@
 			position: relative;
 			height: 44px;
 			padding: 12px 28px 14px 20px;
+			width: 190px;
 			font-size: 13px;
 			font-weight: bold;
 			color: $blue;
-			background: transparent;
 			z-index: 1;
-			background: $greyBlue;
 		}
 	}
+}
+
+@media screen and (max-width: 1180px) {
+	
+     .submenu__container {
+        width: 60%;
+    }   
 }
 
 @media screen and (max-width: 1050px) {
@@ -477,12 +508,15 @@
 	.journal-slider__photo:nth-child(6) {
 		display: none;
 	} 
+}
 
-	.journal__navigation-page:nth-child(4), 
-	.journal__navigation-page:nth-child(5) {
-		display: none;
+@media screen and (max-width:915px) {
+	.journal__navigation-pages {
+		margin: 0 auto;
 	}
 }
+
+
 
 @media screen and (max-width: 768px) {
     
@@ -577,20 +611,11 @@
 	.journal-slider__photo:nth-child(5) {
 		display: initial;
 	} 
-
-	.journal__navigation-page:nth-child(3), 
-	.journal__navigation-page:nth-child(4) {
-		display: flex;
-	}
 }
 
 
 
 @media screen and (max-width: 550px) {
-	.journal__navigation-page:nth-child(4), 
-	.journal__navigation-page:nth-child(5) {
-		display: none;
-	}
 
 	.journal-slider__photo:nth-child(5) {
 		display: none;
@@ -629,19 +654,6 @@
 	.journal__article-text {
 		font-size: 14px;
 		line-height: 1.6;
-	}
-
-	.journal__navigation-page {
-		width: 30px;
-		height: 30px;
-		line-height: 30px;
-		font-size: 12px;
-	}
-
-	.journal__navigation-next-page {
-		height: 30px;
-		font-size: 12px;
-		padding: 7px;
 	}
 
 	.journal-slider__photo:nth-child(4) {

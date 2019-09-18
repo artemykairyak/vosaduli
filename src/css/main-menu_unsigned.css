@@ -31,11 +31,24 @@
   font-weight: bold;
 }
 
+.sign-buttons__sign-up:hover {
+  color: #21224e;
+}
+
+.sign-buttons__sign-up:hover:before {
+  border: solid 1px #94acc4;
+}
+
+.sign-buttons__sign-up:hover:after {
+  background: #c4d2e1;
+}
+
 .sign-buttons__sign-in {
   background: #fdb62c;
   border: none;
   color: #884235;
   margin-left: 5px;
+  border: 1px solid transparent;
 }
 
 .sign-buttons__sign-in:before,

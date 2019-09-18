@@ -173,8 +173,16 @@
   text-align: center;
   line-height: 37px;
   color: #5e6d82;
+  font-family: CeraPRO;
   font-size: 12px;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.journal__search-button:hover {
+  background: #bac7d8;
 }
 
 .journal__search-title {
@@ -312,10 +320,12 @@
   border: solid 2px #ffffff;
   background-color: #d8d8d8;
   position: absolute;
+  transition: transform 0.3s ease;
 }
 
 .journal-slider__photo:hover {
   z-index: 10 !important;
+  transform: scale(1.05);
 }
 
 .journal-slider__photo:first-child {
@@ -361,6 +371,15 @@
   height: 150px;
 }
 
+.journal-slider__all-photos:hover .journal-slider__photo-counter,
+.journal-slider__all-photos:hover .journal-slider__photo-counter-count {
+  color: #495464;
+}
+
+.journal-slider__all-photos:hover .journal-slider__show-all {
+  transform: scale(1.05);
+}
+
 .journal-slider__photo-counter {
   display: -webkit-flex;
   display: -moz-flex;
@@ -375,10 +394,12 @@
   font-size: 18px;
   font-weight: 500;
   margin-top: 25px;
+  transition: all 0.3s ease;
 }
 
 .journal-slider__photo-counter-count {
   font-size: 34px;
+  transition: all 0.3s ease;
 }
 
 .journal-slider__show-all {
@@ -393,6 +414,7 @@
   display: block;
   text-align: center;
   margin: 16px auto 0;
+  transition: all 0.3s ease;
 }
 
 .journal-slider__controls {
@@ -504,12 +526,17 @@
   position: relative;
   height: 44px;
   padding: 12px 28px 14px 20px;
+  width: 190px;
   font-size: 13px;
   font-weight: bold;
   color: #21224e;
-  background: transparent;
   z-index: 1;
-  background: #5e6d82;
+}
+
+@media screen and (max-width: 1180px) {
+  .submenu__container {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 1050px) {
@@ -551,10 +578,11 @@
   .journal-slider__photo:nth-child(6) {
     display: none;
   }
+}
 
-  .journal__navigation-page:nth-child(4),
-  .journal__navigation-page:nth-child(5) {
-    display: none;
+@media screen and (max-width: 915px) {
+  .journal__navigation-pages {
+    margin: 0 auto;
   }
 }
 
@@ -647,19 +675,9 @@
   .journal-slider__photo:nth-child(5) {
     display: initial;
   }
-
-  .journal__navigation-page:nth-child(3),
-  .journal__navigation-page:nth-child(4) {
-    display: flex;
-  }
 }
 
 @media screen and (max-width: 550px) {
-  .journal__navigation-page:nth-child(4),
-  .journal__navigation-page:nth-child(5) {
-    display: none;
-  }
-
   .journal-slider__photo:nth-child(5) {
     display: none;
   }
@@ -696,19 +714,6 @@
   .journal__article-text {
     font-size: 14px;
     line-height: 1.6;
-  }
-
-  .journal__navigation-page {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    font-size: 12px;
-  }
-
-  .journal__navigation-next-page {
-    height: 30px;
-    font-size: 12px;
-    padding: 7px;
   }
 
   .journal-slider__photo:nth-child(4) {

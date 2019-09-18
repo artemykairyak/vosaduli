@@ -1,4 +1,5 @@
 @import 'vars.scss';
+@import 'mixins.scss';
 
 .search {
 	width: 65%;	
@@ -33,12 +34,16 @@
     font-weight: bold;
 }
 
+.sign-buttons__sign-up:hover {
+	@include bHover;
+}
+
 .sign-buttons__sign-in {
 	background: $mango;
 	border: none;
 	color: $dirtBrown;
 	margin-left: 5px;
-
+	border: 1px solid transparent;
 
 	&:before, &:after {
 		display: none;

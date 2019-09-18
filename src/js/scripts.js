@@ -31,6 +31,7 @@ $(function(){
 			$('.myprofile-soc').removeClass('myprofile-section_disabled');
 			$('.myprofile-contacts').addClass('myprofile-section_disabled')
 		} else if($(this).hasClass('myprofile__submenu-item_contacts')) {
+				$('select').trigger('refresh');
 			$('.myprofile-content').addClass('myprofile-section_disabled');
 			$('.myprofile-soc').addClass('myprofile-section_disabled');
 			$('.myprofile-contacts').removeClass('myprofile-section_disabled')
@@ -49,6 +50,21 @@ $(function(){
 		$('.myprofile-contacts__contact-state_phone').text($(this).find('.myprofile-contacts__form-input_phone').val());
 
 	});
+
+	if($('.edit-info__form').length > 0) {
+		$('select').styler();
+	}
+
+	$('select[name="country"]').on('change', function (e) {
+		$('select[name="region"]').removeAttr('disabled').parent().removeClass('edit-select_disabled');
+		$('select').trigger('refresh');
+	});
+
+	$('select[name="region"]').on('change', function (e) {
+		$('select[name="city"]').removeAttr('disabled').parent().removeClass('edit-select_disabled');
+		$('select').trigger('refresh');
+	});
+	
 
 	//MYPROFILE
 
@@ -89,14 +105,6 @@ $(function(){
 		$(this).addClass('friends__menu-item_active');
 		$(this).siblings().removeClass('friends__menu-item_active');
 		e.preventDefault();
-	});
-
-	$('select[name="country"]').on('change', function (e) {
-		$('select[name="region"]').removeAttr('disabled').parent().removeClass('edit-select_disabled');
-	});
-
-	$('select[name="region"]').on('change', function (e) {
-		$('select[name="city"]').removeAttr('disabled').parent().removeClass('edit-select_disabled');
 	});
 
 	$('.myprofile-soc__trigger-trigger').on('click', function() {
