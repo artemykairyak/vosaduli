@@ -1,167 +1,167 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Описание страницы для SEO и соцсетей">
-	<meta name="keywords" content="ключевые, слова, через, запятую">
-	<link rel="shortcut icon" type='image/png' href="images/icons/favicon.ico" />
-	<title>Лента</title>
-	<link rel="stylesheet" href="vendors/css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="vendors/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/main.css" type="text/css">	
-	<!-- <link rel="stylesheet" href="css/main-menu_signed.css" type="text/css"> -->
-	<link rel="icon" href="images/icons/favicon-96x96.png" type="image/png">
-	<link rel="stylesheet" href="css/main-menu_unsigned.css">
-	<link rel="stylesheet" href="css/myprofile.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Описание страницы для SEO и соцсетей">
+    <meta name="keywords" content="ключевые, слова, через, запятую">
+    <link rel="shortcut icon" type='image/png' href="images/icons/favicon.ico" />
+    <title>Лента</title>
+    <link rel="stylesheet" href="vendors/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="vendors/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <!-- <link rel="stylesheet" href="css/main-menu_signed.css" type="text/css"> -->
+    <link rel="icon" href="images/icons/favicon-96x96.png" type="image/png">
+    <link rel="stylesheet" href="css/main-menu_unsigned.css">
+    <link rel="stylesheet" href="css/myprofile.css" type="text/css">
 </head>
+
 <body>
-	<div class="overlay overlay_disabled"></div>
-	<div class="sign-in-modal modal modal_disabled">
-		<div class="sign-in-modal__close modal__close">
-			<span class="svg" data-src="images/icons/close-icon.svg"></span>
-		</div>
-		<h2 class="sign-in-modal__title modal__title">Вход</h2>
-		<div class="sign-in-modal__socials modal__socials">
-			<a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_vk modal__soc-icon">
-				<span class="svg" data-src="images/icons/vkontakte-icon.svg"></span>
-			</a>
-			<a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_ok modal__soc-icon">
-				<span class="svg" data-src="images/icons/odnoklassniki-icon.svg"></span>
-			</a>
-			<a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_fb modal__soc-icon">
-				<span class="svg" data-src="images/icons/facebook-icon.svg"></span>
-			</a>
-			<a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_yandex modal__soc-icon">
-				<span class="svg" data-src="images/icons/yandex-icon.svg"></span>
-			</a>
-			<a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_mailru modal__soc-icon">
-				<span class="svg" data-src="images/icons/mailru-icon.svg"></span>
-			</a>
-		</div>
-		<span class="sign-in-modal__separator modal__separator">или</span>
-		<form action="test.php" name="sign-in-form" class="sign-in-modal__form modal__form">
-			<div class="modal__input-container sign-in-modal__input-container sign-in-modal__input-container_email">
-				<p class="modal__label sign-in-modal__label sign-in-modal__label_email">
-					Введите ваш e-mail<sup class="star">*</sup>	
-				</p>
-				<div class="modal__input-wrapper sign-in-modal__input-wrapper">
-					<input type="text" name="email" class="modal__input sign-in-modal__input sign-in-modal__input_email">
-				</div>
-			</div>
-			<div class="modal__input-container sign-in-modal__input-container sign-in-modal__input-container_email">
-				<p class="modal__label sign-in-modal__label sign-in-modal__label_email">
-					Ваш пароль<sup class="star">*</sup>	
-				</p>
-				<div class="modal__input-wrapper sign-in-modal__input-wrapper">
-					<input type="password" name="password" class="modal__input sign-in-modal__input sign-in-modal__input_password">
-					<span class="sign-in-modal__show-pass">
-						<span class="svg" data-src="images/icons/invisible-pass-icon.svg"></span>
-					</span>
-				</div>
-				
-			</div>
-			<div class="sign-in-modal__bottom-inputs">
-				<div class="sign-in-modal__rememberme-container">
-					<input type="checkbox" checked id="rememberme" name="rememberme" class="sign-in-modal__rememberme-checkbox">
-					<label for="rememberme" class="sign-in-modal__rememberme-label">Запомнить меня</label>
-				</div>
-				<a href="#" class="sign-in-modal__forget-password">Забыли пароль?</a>
-			</div>
-			<div class="sign-in-modal__enter-btn-container">
-				<input type="submit" value="Войти" class="modal__btn sign-in-modal__enter-btn ">
-				<div class="modal__btn-shadow"></div>
-			</div>
-			
-		</form>
-		<a href="#" class="sign-in-modal__register-btn">Ещё нет аккаунта?</a>
-	</div>
-	<div class="sign-up-modal modal modal_disabled">
-		<div class="sign-up-modal__close modal__close">
-			<span class="svg" data-src="images/icons/close-icon.svg"></span>
-		</div>
-		<h2 class="sign-up-modal__title modal__title">Регистрация</h2>
-		<div class="sign-up-modal__socials modal__socials">
-			<a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_vk modal__soc-icon">
-				<span class="svg" data-src="images/icons/vkontakte-icon.svg"></span>
-			</a>
-			<a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_ok modal__soc-icon">
-				<span class="svg" data-src="images/icons/odnoklassniki-icon.svg"></span>
-			</a>
-			<a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_fb modal__soc-icon">
-				<span class="svg" data-src="images/icons/facebook-icon.svg"></span>
-			</a>
-			<a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_yandex modal__soc-icon">
-				<span class="svg" data-src="images/icons/yandex-icon.svg"></span>
-			</a>
-			<a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_mailru modal__soc-icon">
-				<span class="svg" data-src="images/icons/mailru-icon.svg"></span>
-			</a>
-		</div>
-		<span class="sign-up-modal__separator modal__separator">или</span>
-		<form action="test.php" name="sign-up-form" class="sign-up-modal__form modal__form">
-			<div class="modal__input-container sign-up-modal__input-container sign-up-modal__input-container_name">
-				<p class="modal__label sign-up-modal__label sign-up-modal__label_name">
-					Напишите своё имя<sup class="star">*</sup>	
-				</p>
-				<div class="modal__input-wrapper sign-up-modal__input-wrapper">
-					<input type="text" name="name" class="modal__input sign-up-modal__input sign-up-modal__input_name">
-				</div>
-			</div>
-			<div class="modal__input-container sign-up-modal__input-container sign-up-modal__input-container_email">
-				<p class="modal__label sign-up-modal__label sign-up-modal__label_email">
-					Ваша электронная почта<sup class="star">*</sup>	
-				</p>
-				<div class="modal__input-wrapper sign-up-modal__input-wrapper">
-					<input type="text" name="email" class="modal__input sign-up-modal__input sign-up-modal__input_email">
-				</div>
-			</div>
-			<div class="modal__input-container sign-up-modal__input-container sign-up-modal__input-container_email">
-				<p class="modal__label sign-up-modal__label sign-up-modal__label_email">
-					Придумайте пароль<sup class="star">*</sup>	
-				</p>
-				<div class="modal__input-wrapper sign-up-modal__input-wrapper">
-					<input type="password" name="password" class="modal__input sign-up-modal__input sign-up-modal__input_password">
-					<span class="sign-up-modal__show-pass">
-						<span class="svg" data-src="images/icons/invisible-pass-icon.svg"></span>
-					</span>
-				</div>
-			</div>
-			<div class="sign-up-modal__register-btn-container">
-				<input type="submit" value="Зарегистрироваться" class="modal__btn sign-up-modal__register-btn ">
-				<div class="modal__btn-shadow"></div>
-			</div>	
-			<a href="#" class="sign-up-modal__registered-btn">У меня уже есть аккаунт!</a>
-			<div class="sign-up-modal__policyaccept-container">
-				<input type="checkbox" checked id="policyaccept" name="policyaccept" class=" sign-up-modal__policyaccept-checkbox">
-				<label for="policyaccept" class="sign-up-modal__policyaccept-label">Выражаю согласие на обработку персональных данных ООО "Гугелот" в соответствии с <a href="#" class="sign-up-modal__policyaccept-temps">Условиями</a></label>
-			</div>
-		</form>
-	</div>
-	<main>
-		<div class="wrapper">
-			<header class="header">
-				<div class="submenu">
-					<ul class="submenu__container">
-						<li class="submenu__item">
-							<a href="" class="submenu__link">Вопросы и ответы</a>
-						</li>
-						<li class="submenu__item">
-							<a href="" class="submenu__link">Компании</a>
-						</li>
-						<li class="submenu__item">
-							<a href="" class="submenu__link">Садовые магазины</a>
-						</li>
-						<li class="submenu__item">
-							<a href="" class="submenu__link">Юристы</a>
-						</li>
-						<li class="submenu__item">
-							<a href="" class="submenu__link">Журналы</a>
-						</li>
-					</ul>
-				</div>	
-				<!-- <div class="main-menu">
+    <div class="overlay overlay_disabled"></div>
+    <div class="sign-in-modal modal modal_disabled">
+        <div class="sign-in-modal__close modal__close">
+            <span class="svg" data-src="images/icons/close-icon.svg"></span>
+        </div>
+        <h2 class="sign-in-modal__title modal__title">Вход</h2>
+        <div class="sign-in-modal__socials modal__socials">
+            <a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_vk modal__soc-icon">
+                <span class="svg" data-src="images/icons/vkontakte-icon.svg"></span>
+            </a>
+            <a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_ok modal__soc-icon">
+                <span class="svg" data-src="images/icons/odnoklassniki-icon.svg"></span>
+            </a>
+            <a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_fb modal__soc-icon">
+                <span class="svg" data-src="images/icons/facebook-icon.svg"></span>
+            </a>
+            <a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_yandex modal__soc-icon">
+                <span class="svg" data-src="images/icons/yandex-icon.svg"></span>
+            </a>
+            <a href="#" class="sign-in-modal__soc-icon sign-in-modal__soc-icon_mailru modal__soc-icon">
+                <span class="svg" data-src="images/icons/mailru-icon.svg"></span>
+            </a>
+        </div>
+        <span class="sign-in-modal__separator modal__separator">или</span>
+        <form action="test.php" name="sign-in-form" class="sign-in-modal__form modal__form">
+            <div class="modal__input-container sign-in-modal__input-container sign-in-modal__input-container_email">
+                <p class="modal__label sign-in-modal__label sign-in-modal__label_email">
+                    Введите ваш e-mail<sup class="star">*</sup>
+                </p>
+                <div class="modal__input-wrapper sign-in-modal__input-wrapper">
+                    <input type="text" name="email" class="modal__input sign-in-modal__input sign-in-modal__input_email">
+                </div>
+            </div>
+            <div class="modal__input-container sign-in-modal__input-container sign-in-modal__input-container_email">
+                <p class="modal__label sign-in-modal__label sign-in-modal__label_email">
+                    Ваш пароль<sup class="star">*</sup>
+                </p>
+                <div class="modal__input-wrapper sign-in-modal__input-wrapper">
+                    <input type="password" name="password" class="modal__input sign-in-modal__input sign-in-modal__input_password">
+                    <span class="sign-in-modal__show-pass">
+                        <span class="svg" data-src="images/icons/invisible-pass-icon.svg"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="sign-in-modal__bottom-inputs">
+                <div class="sign-in-modal__rememberme-container">
+                    <input type="checkbox" checked id="rememberme" name="rememberme" class="sign-in-modal__rememberme-checkbox">
+                    <label for="rememberme" class="sign-in-modal__rememberme-label">Запомнить меня</label>
+                </div>
+                <a href="#" class="sign-in-modal__forget-password">Забыли пароль?</a>
+            </div>
+            <div class="sign-in-modal__enter-btn-container">
+                <input type="submit" value="Войти" class="modal__btn sign-in-modal__enter-btn ">
+                <div class="modal__btn-shadow"></div>
+            </div>
+        </form>
+        <a href="#" class="sign-in-modal__register-btn">Ещё нет аккаунта?</a>
+    </div>
+    <div class="sign-up-modal modal modal_disabled">
+        <div class="sign-up-modal__close modal__close">
+            <span class="svg" data-src="images/icons/close-icon.svg"></span>
+        </div>
+        <h2 class="sign-up-modal__title modal__title">Регистрация</h2>
+        <div class="sign-up-modal__socials modal__socials">
+            <a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_vk modal__soc-icon">
+                <span class="svg" data-src="images/icons/vkontakte-icon.svg"></span>
+            </a>
+            <a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_ok modal__soc-icon">
+                <span class="svg" data-src="images/icons/odnoklassniki-icon.svg"></span>
+            </a>
+            <a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_fb modal__soc-icon">
+                <span class="svg" data-src="images/icons/facebook-icon.svg"></span>
+            </a>
+            <a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_yandex modal__soc-icon">
+                <span class="svg" data-src="images/icons/yandex-icon.svg"></span>
+            </a>
+            <a href="#" class="sign-up-modal__soc-icon sign-up-modal__soc-icon_mailru modal__soc-icon">
+                <span class="svg" data-src="images/icons/mailru-icon.svg"></span>
+            </a>
+        </div>
+        <span class="sign-up-modal__separator modal__separator">или</span>
+        <form action="test.php" name="sign-up-form" class="sign-up-modal__form modal__form">
+            <div class="modal__input-container sign-up-modal__input-container sign-up-modal__input-container_name">
+                <p class="modal__label sign-up-modal__label sign-up-modal__label_name">
+                    Напишите своё имя<sup class="star">*</sup>
+                </p>
+                <div class="modal__input-wrapper sign-up-modal__input-wrapper">
+                    <input type="text" name="name" class="modal__input sign-up-modal__input sign-up-modal__input_name">
+                </div>
+            </div>
+            <div class="modal__input-container sign-up-modal__input-container sign-up-modal__input-container_email">
+                <p class="modal__label sign-up-modal__label sign-up-modal__label_email">
+                    Ваша электронная почта<sup class="star">*</sup>
+                </p>
+                <div class="modal__input-wrapper sign-up-modal__input-wrapper">
+                    <input type="text" name="email" class="modal__input sign-up-modal__input sign-up-modal__input_email">
+                </div>
+            </div>
+            <div class="modal__input-container sign-up-modal__input-container sign-up-modal__input-container_email">
+                <p class="modal__label sign-up-modal__label sign-up-modal__label_email">
+                    Придумайте пароль<sup class="star">*</sup>
+                </p>
+                <div class="modal__input-wrapper sign-up-modal__input-wrapper">
+                    <input type="password" name="password" class="modal__input sign-up-modal__input sign-up-modal__input_password">
+                    <span class="sign-up-modal__show-pass">
+                        <span class="svg" data-src="images/icons/invisible-pass-icon.svg"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="sign-up-modal__register-btn-container">
+                <input type="submit" value="Зарегистрироваться" class="modal__btn sign-up-modal__register-btn ">
+                <div class="modal__btn-shadow"></div>
+            </div>
+            <a href="#" class="sign-up-modal__registered-btn">У меня уже есть аккаунт!</a>
+            <div class="sign-up-modal__policyaccept-container">
+                <input type="checkbox" checked id="policyaccept" name="policyaccept" class=" sign-up-modal__policyaccept-checkbox">
+                <label for="policyaccept" class="sign-up-modal__policyaccept-label">Выражаю согласие на обработку персональных данных ООО "Гугелот" в соответствии с <a href="#" class="sign-up-modal__policyaccept-temps">Условиями</a></label>
+            </div>
+        </form>
+    </div>
+    <main>
+        <div class="wrapper">
+            <header class="header">
+                <div class="submenu">
+                    <ul class="submenu__container">
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Вопросы и ответы</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Компании</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Садовые магазины</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Юристы</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Журналы</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="main-menu">
 					<a href="/" class="logo">
 					A	<div class="logo__picture"></div>
 					</a>
@@ -203,287 +203,731 @@
 						</a>
 					</div>
 				</div> -->
-				<div class="main-menu">
-					<a href="/" class="logo">
-						<div class="logo__picture"></div>
-					</a>
-					<div class="search">
-						<form action="test.php" class="search-form" method="GET">
-							<input type="text" class="search-input" placeholder="Поиск по сайту">
-							<span class="search-input-container">
-								<input type="submit" name="search-btn" class="search__button" value="">
-								<span class="svg" data-src="images/icons/search-icon.svg"></span>
-							</span>
-							<div class="search__shadow"></div>
-						</form>
-					</div>
-					<div class="icons-section">
-						<a href="#" class="icons-section__item icons-section__item_contests">
-							<div class="icons-section__icon icons-section__icon_contests"></div>
-							<span class="icons-section__label">Конкурсы</span>
-						</a>
-						<a href="#" class="icons-section__item icons-section__item_podcasts">
-							<div class="icons-section__icon icons-section__icon_podcasts"></div>
-							<span class="icons-section__label icons-section__label_podcasts">Экспертное<br> мнение</span>
-						</a>
-						<a href="#" class="icons-section__item icons-section__item_money">
-							<div class="icons-section__icon icons-section__icon_money"></div>
-							<span class="icons-section__label icons-section__label_money">+1000</span>
-						</a>
-					</div>
-					<div class="sign-buttons">
-						<a href="#" class="sign-buttons__sign-up button">Регистрация</a>
-						<a href="#" class="sign-buttons__sign-in button">Войти</a>
-					</div>
-				</div>
-				<div class="mobile-nav-menu">
-					<div class="mobile-nav-menu__burger">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<ul class="mobile-nav-menu__items">
-						<li class="mobile-nav-menu__item mobile-nav-menu__item_search">
-							<a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_search"></a>
-						</li>
-						<li class="mobile-nav-menu__item mobile-nav-menu__item_tags">
-							<a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_tags"></a>
-						</li>
-						<li class="mobile-nav-menu__item mobile-nav-menu__item_bookmarks">
-							<a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_bookmarks"></a>
-						</li>
-						<li class="mobile-nav-menu__item mobile-nav-menu__item_tridot"></li>
-						<li class="mobile-nav-menu__item mobile-nav-menu__item_add-photo">
-							<a href="#" class="mobile-nav-menu__link_add-photo-icon"></a>
-							<a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_add-photo">Добавить пост</a>
-						</li>
-					</ul>
-				</div>
-				<div class="nav-menu">
-					<ul class="nav-menu__container">
-						<li class="nav-menu__item">
-							<a href="#" class="nav-menu__link">Сад</a>
-						</li>
-						<li class="nav-menu__separator"></li>
-						<li class="nav-menu__item">
-							<a href="#" class="nav-menu__link">Огород</a>
-						</li>
-						<li class="nav-menu__separator"></li>
-						<li class="nav-menu__item">
-							<a href="#" class="nav-menu__link">Цветы и растения</a>
-						</li>
-						<li class="nav-menu__separator"></li>
-						<li class="nav-menu__item">
-							<a href="#" class="nav-menu__link">Ландшафт</a>
-						</li>
-						<li class="nav-menu__separator"></li>
-						<li class="nav-menu__item">
-							<a href="#" class="nav-menu__link">Стройка</a>
-						</li>
-						<li class="nav-menu__separator"></li>
-						<li class="nav-menu__item">
-							<a href="#" class="nav-menu__link">Заготовки</a>
-						</li>
-						<li class="nav-menu__separator"></li>
-						<li class="nav-menu__item nav-menu__item_relax">
-							<a href="#" class="nav-menu__link">Отдых</a>
-						</li>
-						<li class="nav-menu__item nav-menu__item_shop">
-							<span class="nav-menu__item-shop-icon">
-								<span class="svg" data-src="images/icons/shop-icon.svg"></span>
-							</span>
-							<a href="#" class="nav-menu__link">Магазин</a>
-						</li>
-						<li class="nav-menu__tridot"></li>
-						<li class="nav-menu__item nav-menu__item_add-photo">
-							<a href="#" class="nav-menu__link nav-menu__link_add-photo">Добавить пост</a>
-						</li>
-					</ul>
-				</div>
-				<div class="mobile-profile-menu">
-					<ul class="mobile-profile-menu__container">
-						<li class="mobile-profile-menu__item mobile-profile-menu__item_profile">
-							<a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_profile">
-								<span class="svg" data-src="images/icons/nickname-user-icon-none.svg"></span>
-							</a>
-						</li>
-						<li class="mobile-profile-menu__item mobile-profile-menu__item_subscriptions">
-							<a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_subscriptions">
-								<span class="svg" data-src="images/icons/folow-user-icon-none.svg"></span>
-							</a>
-						</li>
-						<li class="mobile-profile-menu__item mobile-profile-menu__item_friends">
-							<a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_friends">
-								<span class="svg" data-src="images/icons/friends-user-icon-none.svg"></span>
-							</a>
-						</li>
-						<li class="mobile-profile-menu__item mobile-profile-menu__item_photoalbums">
-							<a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_photoalbums">
-								<span class="svg" data-src="images/icons/photoalbum-user-icon-none.svg"></span>
-							</a>
-						</li>
-						<li class="mobile-profile-menu__item mobile-profile-menu__item_drafts">
-							<a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_drafts">
-								<span class="svg" data-src="images/icons/dnevnik.svg"></span>
-							</a>
-						</li>
-						<li class="mobile-profile-menu__item mobile-profile-menu__item_settings">
-							<a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_settings">
-								<span class="svg" data-src="images/icons/settings-icon-user-none.svg"></span>
-							</a>
-						</li>
-						<li class="mobile-profile-menu__item mobile-profile-menu__item_exit">
-							<a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_exit">
-								<span class="svg" data-src="images/icons/exit-user-icon-none.svg"></span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="user-data user-data_mt20px user-data_mb20px user-data_m15px" style="background: url(images/bg.jpg) center / cover no-repeat;">
-					<div class="user-data__info">
-						<span class="user-data__avatar-changephoto user-data__avatar-changephoto_header">
-							<span class="svg" data-src="images/icons/camera-icon.svg"></span>
-						</span>
-						<a href="#" class="user-data__avatar">
-							<img src="images/avatar.jpg" alt="" class="user-data__avatar-picture">
-							<span class="user-data__avatar-changephoto">
-								<span class="svg" data-src="images/icons/camera-icon.svg"></span>
-							</span>
-						</a>
-						<div class="user-data__text">
-							<h1 class="user-data__username">Елена Старовойтова</h1>
-							<p class="user-data__bio">@helenayagodka / теоретик</p>
-						</div>
-					</div>
-				</div>
-				<div class="header-menu">
-					<span class="header-menu__nav-arrow header-menu__nav-arrow_prev header-menu__nav-arrow_disabled">
-						<span class="svg" data-src="images/icons/arrow-prev-btn.svg">
-						</span>
-					</span>
-					<ul class="header-menu__container owl-carousel owl-theme">
-						
-						<li class="header-menu__item header-menu__item_profile">
-							<a href="#" class="header-menu__link header-menu__link_profile">Профиль</a>
-						</li>
-						<li class="header-menu__item header-menu__item_feed header-menu__item_active">
-							<a href="#" class="header-menu__link header-menu__link_feed">Лента</a>
-						</li>
-						<li class="header-menu__item header-menu__item_friends">
-							<a href="#" class="header-menu__link header-menu__link_friends">Друзья</a>
-						</li>
-						<li class="header-menu__item header-menu__item_bookmarks">
-							<a href="#" class="header-menu__link header-menu__link_bookmarks">Закладки</a>
-						</li>
-						
-					</ul>
-					<span class="header-menu__nav-arrow header-menu__nav-arrow_next">
-						<span class="svg" data-src="images/icons/arrow-next-btn.svg"></span>
-					</span>
-				</div>
-			</header>			
-			<div class="content content_mt15px">
-				<div class="left-sidebar">
-					
-				</div>
-				
-				<div class="main-content">
-					<div class="myprofile myprofile-feed">
-						<div class="myprofile__tabs">
-							<h2 class="myprofile__tabs-title">Лента записей</h2>
-							<div class="myprofile__tabs-container triggers">
-								<a href="#" class="myprofile__tabs-tab feed__tabs-tab_allfeed trigger trigger_active button">Общая лента</a>
-								<a href="#" class="myprofile__tabs-tab feed__tabs-tab__myfeed trigger button">Моя лента</a>
-							</div>
-							<ul class="myprofile__submenu">
-								<li class="myprofile__submenu-item feed__submenu-item_datefilter myprofile__submenu-item_active">
-									<a href="#" class="myprofile__submenu-link">По дате</a>
-								</li>
-								<li class="myprofile__submenu-item feed__submenu-item_interestingfilter">
-									<a href="#" class="myprofile__submenu-link">Самое интересное</a>
-								</li>
-								<li class="myprofile__submenu-item feed__submenu-item_discussfilter">
-									<a href="#" class="myprofile__submenu-link">Самое обсуждаемое</a>
-								</li>
-							</ul>
-						</div>
-						<div class="myprofile-content">
-							<div class="feed">
-								<div class="feed__article">
-									<p class="feed__article-title">Всё, что нужно знать о пересадке чудного цветка из африканских широт — зигокактуса</p>
-									<div class="feed__article-author">
-										<div class="feed__article-author-avatar">
-											<img src="images/avatar.jpg" alt="" class="feed__article-author-avatarpic">
-										</div>
-										<div class="feed__article-author-info">
-											<div class="feed__article-author-bio">
-												<span class="feed__article-author-username">@katco</span> / <span class="feed__article-author-rank">начинающий</span>
-												<span class="feed__article-author_verified"></span>
-											</div>
-											<div class="feed__article-author-pubinfo">
-												<span class="feed__article-author-name">Катерина Сумина</span>
-												<span class="feed__article-author-pubdate"><span class="feed__article-author-date">24.03.18</span> в <span class="feed__article-author-time">14:38</span></span>
-											</div>		
-										</div>
-										<div class="feed__article-author-journal">
-											<a href="" class="feed__article-author-journal-cover">
-												<img src="images/cat6.jpg" alt="" class="feed__article-author-journal-img">
-											</a>
-											<a href="" class="feed__article-author-journal-type feed__article-author-journal-type_private">Личный журнал</a>
-										</div>
-									</div>
-									<p class="feed__article-text">
-										Зигокактус или рождественник – одно из самых популярных комнатных растений, которое часто можно встретить на подоконниках. Благодаря своему неприхотливому характеру цветок способен расти практически в любых условиях и каждую зиму радовать обильным цветением.
-									</p>
-									<div class="feed__article-picture">
-										<img src="images/cat5.jpg" alt="">
-									</div>
-									<div class="feed__article-footer">
-										<div class="feed__article-tags tags">
-											<a href="#" class="feed__article-tag tag">#пересадка</a>
-											<a href="#" class="feed__article-tag tag">#суккуленты</a>
-											<a href="#" class="feed__article-tag tag">#уход</a>
-										</div>
-										<div class="feed__article-controls controls">
-											<a href="#" class="feed__article-read-more read-more-btn button_green">Читать далее</a>
-											<a href="#" class="feed__article-likes likes-btn">23</a>
-											<a href="#" class="feed__article-comments comments-btn">5</a>
-											<a href="#" class="feed__article-comment-btn comment-btn button">Комментировать</a>
-											<a href="#" class="feed__article-report report-btn">
-												<span class="svg" data-src="images/icons/abuze-icon-copy.svg"></span>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="feed__navigation navigation">
-								<div class="feed__navigation-pages navigation">
-									<a href="#" class="feed__navigation-page feed__navigation-page_selected navigation-page navigation-page_selected">1</a>
-									<a href="#" class="feed__navigation-page navigation-page">2</a>
-									<a href="#" class="feed__navigation-page navigation-page">3</a>
-									<a href="#" class="feed__navigation-page navigation-page">4</a>
-									<a href="#" class="feed__navigation-page navigation-page">5</a>
-									<span class="feed__navigation-separator navigation-separator">из</span>
-									<a href="#" class="feed__navigation-page feed__navigation-total-page navigation-totalpages">57</a>
-								</div>
-								<a href="#" class="feed__navigation-next-page navigation-next-page">
-									Следующая страница
-								</a>
-							</div>
-						</div>
-
-					</div>
-					
-				</div>
-				<div class="right-sidebar">
-
-				</div>
-			</div>
-		</div>
-	</main>
-	<script src="vendors/js/jquery-3.4.1.min.js"></script>
-	<script src="vendors/js/easySVG.min.js"></script>
-	<script src="vendors/js/owl.carousel.min.js"></script>
-	<script src="js/scripts.js"></script>
+                <div class="main-menu">
+                    <a href="/" class="logo">
+                        <div class="logo__picture"></div>
+                    </a>
+                    <div class="search">
+                        <form action="test.php" class="search-form" method="GET">
+                            <input type="text" class="search-input" placeholder="Поиск по сайту">
+                            <span class="search-input-container">
+                                <input type="submit" name="search-btn" class="search__button" value="">
+                                <span class="svg" data-src="images/icons/search-icon.svg"></span>
+                            </span>
+                            <div class="search__shadow"></div>
+                        </form>
+                    </div>
+                    <div class="icons-section">
+                        <a href="#" class="icons-section__item icons-section__item_contests">
+                            <div class="icons-section__icon icons-section__icon_contests"></div>
+                            <span class="icons-section__label">Конкурсы</span>
+                        </a>
+                        <a href="#" class="icons-section__item icons-section__item_podcasts">
+                            <div class="icons-section__icon icons-section__icon_podcasts"></div>
+                            <span class="icons-section__label icons-section__label_podcasts">Экспертное<br> мнение</span>
+                        </a>
+                        <a href="#" class="icons-section__item icons-section__item_money">
+                            <div class="icons-section__icon icons-section__icon_money"></div>
+                            <span class="icons-section__label icons-section__label_money">+1000</span>
+                        </a>
+                    </div>
+                    <div class="sign-buttons">
+                        <a href="#" class="sign-buttons__sign-up button">Регистрация</a>
+                        <a href="#" class="sign-buttons__sign-in button">Войти</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-menu">
+                    <div class="mobile-nav-menu__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="mobile-nav-menu__items">
+                        <li class="mobile-nav-menu__item mobile-nav-menu__item_search">
+                            <a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_search"></a>
+                        </li>
+                        <li class="mobile-nav-menu__item mobile-nav-menu__item_tags">
+                            <a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_tags"></a>
+                        </li>
+                        <li class="mobile-nav-menu__item mobile-nav-menu__item_bookmarks">
+                            <a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_bookmarks"></a>
+                        </li>
+                        <li class="mobile-nav-menu__item mobile-nav-menu__item_tridot"></li>
+                        <li class="mobile-nav-menu__item mobile-nav-menu__item_add-photo">
+                            <a href="#" class="mobile-nav-menu__link_add-photo-icon"></a>
+                            <a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_add-photo">Добавить пост</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-menu">
+                    <ul class="nav-menu__container">
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Сад</a>
+                        </li>
+                        <li class="nav-menu__separator"></li>
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Огород</a>
+                        </li>
+                        <li class="nav-menu__separator"></li>
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Цветы и растения</a>
+                        </li>
+                        <li class="nav-menu__separator"></li>
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Ландшафт</a>
+                        </li>
+                        <li class="nav-menu__separator"></li>
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Стройка</a>
+                        </li>
+                        <li class="nav-menu__separator"></li>
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Заготовки</a>
+                        </li>
+                        <li class="nav-menu__separator"></li>
+                        <li class="nav-menu__item nav-menu__item_relax">
+                            <a href="#" class="nav-menu__link">Отдых</a>
+                        </li>
+                        <li class="nav-menu__item nav-menu__item_shop">
+                            <span class="nav-menu__item-shop-icon">
+                                <span class="svg" data-src="images/icons/shop-icon.svg"></span>
+                            </span>
+                            <a href="#" class="nav-menu__link">Магазин</a>
+                        </li>
+                        <li class="nav-menu__tridot"></li>
+                        <li class="nav-menu__item nav-menu__item_add-photo">
+                            <a href="#" class="nav-menu__link nav-menu__link_add-photo">Добавить пост</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile-profile-menu">
+                    <ul class="mobile-profile-menu__container">
+                        <li class="mobile-profile-menu__item mobile-profile-menu__item_profile">
+                            <a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_profile">
+                                <span class="svg" data-src="images/icons/nickname-user-icon-none.svg"></span>
+                            </a>
+                        </li>
+                        <li class="mobile-profile-menu__item mobile-profile-menu__item_subscriptions">
+                            <a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_subscriptions">
+                                <span class="svg" data-src="images/icons/folow-user-icon-none.svg"></span>
+                            </a>
+                        </li>
+                        <li class="mobile-profile-menu__item mobile-profile-menu__item_friends">
+                            <a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_friends">
+                                <span class="svg" data-src="images/icons/friends-user-icon-none.svg"></span>
+                            </a>
+                        </li>
+                        <li class="mobile-profile-menu__item mobile-profile-menu__item_photoalbums">
+                            <a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_photoalbums">
+                                <span class="svg" data-src="images/icons/photoalbum-user-icon-none.svg"></span>
+                            </a>
+                        </li>
+                        <li class="mobile-profile-menu__item mobile-profile-menu__item_drafts">
+                            <a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_drafts">
+                                <span class="svg" data-src="images/icons/dnevnik.svg"></span>
+                            </a>
+                        </li>
+                        <li class="mobile-profile-menu__item mobile-profile-menu__item_settings">
+                            <a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_settings">
+                                <span class="svg" data-src="images/icons/settings-icon-user-none.svg"></span>
+                            </a>
+                        </li>
+                        <li class="mobile-profile-menu__item mobile-profile-menu__item_exit">
+                            <a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_exit">
+                                <span class="svg" data-src="images/icons/exit-user-icon-none.svg"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user-data user-data_mt20px user-data_mb20px user-data_m15px" style="background: url(images/bg.jpg) center / cover no-repeat;">
+                    <div class="user-data__info">
+                        <span class="user-data__avatar-changephoto user-data__avatar-changephoto_header">
+                            <span class="svg" data-src="images/icons/camera-icon.svg"></span>
+                        </span>
+                        <a href="#" class="user-data__avatar">
+                            <img src="images/avatar.jpg" alt="" class="user-data__avatar-picture">
+                            <span class="user-data__avatar-changephoto">
+                                <span class="svg" data-src="images/icons/camera-icon.svg"></span>
+                            </span>
+                        </a>
+                        <div class="user-data__text">
+                            <h1 class="user-data__username">Елена Старовойтова</h1>
+                            <p class="user-data__bio">@helenayagodka / теоретик</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-menu">
+                    <span class="header-menu__nav-arrow header-menu__nav-arrow_prev header-menu__nav-arrow_disabled">
+                        <span class="svg" data-src="images/icons/arrow-prev-btn.svg">
+                        </span>
+                    </span>
+                    <ul class="header-menu__container owl-carousel owl-theme">
+                        <li class="header-menu__item header-menu__item_profile">
+                            <a href="#" class="header-menu__link header-menu__link_profile">Профиль</a>
+                        </li>
+                        <li class="header-menu__item header-menu__item_feed header-menu__item_active">
+                            <a href="#" class="header-menu__link header-menu__link_feed">Лента</a>
+                        </li>
+                        <li class="header-menu__item header-menu__item_friends">
+                            <a href="#" class="header-menu__link header-menu__link_friends">Друзья</a>
+                        </li>
+                        <li class="header-menu__item header-menu__item_bookmarks">
+                            <a href="#" class="header-menu__link header-menu__link_bookmarks">Закладки</a>
+                        </li>
+                    </ul>
+                    <span class="header-menu__nav-arrow header-menu__nav-arrow_next">
+                        <span class="svg" data-src="images/icons/arrow-next-btn.svg"></span>
+                    </span>
+                </div>
+            </header>
+            <div class="content content_mt15px">
+                <div class="left-sidebar left-sidebar_border">
+                    <a href="#" class="ad">
+                        <img src="images/ad.png" alt="">
+                    </a>
+                    <div class="questions questions_mt15px">
+                        <div class="questions__header">
+                            <span class="questions__logo"></span>
+                            <p class="questions__title">Вопросы читателей</p>
+                            <a href="#" class="questions__add-post"></a>
+                        </div>
+                        <div class="questions__triggers triggers">
+                            <a href="#" class="bquestions__trigger questions__trigger_new button trigger trigger_active">Новое</a>
+                            <a href="#" class="questions__trigger questions__trigger_best trigger button">Лучшее</a>
+                            <a href="#" class="questions__trigger questions__trigger_best trigger button">Без ответа</a>
+                        </div>
+                    </div>
+                    <div class="questions__items">
+                        <div class="questions__item">
+                            <div class="questions__item-header">
+                                <a href="#" class="questions__item-category">Плодовые деревья</a>
+                                <a href="#" class="questions__item-date">Сегодня</a>
+                            </div>
+                            <div class="questions__item-content">Высаживаю весной и собираю летом томат «Столичный F1»</div>
+                            <div class="questions__item-footer">
+                                <span class="questions__item-likes">23</span>
+                                <span class="questions__item-comments">14</span>
+                                <span class="questions__item-bookmarks">8</span>
+                            </div>
+                        </div>
+                        <div class="questions__item">
+                            <div class="questions__item-header">
+                                <a href="#" class="questions__item-category">Плодовые деревья</a>
+                                <a href="#" class="questions__item-date">Сегодня</a>
+                            </div>
+                            <div class="questions__item-content">Высаживаю весной и собираю летом томат «Столичный F1»</div>
+                            <div class="questions__item-footer">
+                                <span class="questions__item-likes">23</span>
+                                <span class="questions__item-comments">14</span>
+                                <span class="questions__item-bookmarks">8</span>
+                            </div>
+                        </div>
+                        <div class="questions__item">
+                            <div class="questions__item-header">
+                                <a href="#" class="questions__item-category">Плодовые деревья</a>
+                                <a href="#" class="questions__item-date">Сегодня</a>
+                            </div>
+                            <div class="questions__item-content">Высаживаю весной и собираю летом томат «Столичный F1»</div>
+                            <div class="questions__item-footer">
+                                <span class="questions__item-likes">23</span>
+                                <span class="questions__item-comments">14</span>
+                                <span class="questions__item-bookmarks">8</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questions__navigation">
+                        <a href="#" class="questions__prev questions__prev_disabled">
+                            <div class="svg" data-src="images/icons/arrow-sidbar-up.svg"></div>
+                        </a>
+                        <a href="#" class="questions__all-questions">Все вопросы</a>
+                        <a href="#" class="questions__next">
+                            <div class="svg" data-src="images/icons/arrow-sidbar-down.svg"></div>
+                        </a>
+                    </div>
+                    <a href="#" class="questions__add-button button">Задать вопрос</a>
+                </div>
+                <div class="main-content">
+                    <div class="myprofile myprofile-feed">
+                        <div class="myprofile__tabs">
+                            <h2 class="myprofile__tabs-title">Лента записей</h2>
+                            <div class="myprofile__tabs-container triggers">
+                                <a href="#" class="myprofile__tabs-tab feed__tabs-tab_allfeed trigger trigger_active button">Общая лента</a>
+                                <a href="#" class="myprofile__tabs-tab feed__tabs-tab__myfeed trigger button">Моя лента</a>
+                            </div>
+                            <ul class="myprofile__submenu">
+                                <li class="myprofile__submenu-item feed__submenu-item_datefilter myprofile__submenu-item_active">
+                                    <a href="#" class="myprofile__submenu-link">По дате</a>
+                                </li>
+                                <li class="myprofile__submenu-item feed__submenu-item_interestingfilter">
+                                    <a href="#" class="myprofile__submenu-link">Самое интересное</a>
+                                </li>
+                                <li class="myprofile__submenu-item feed__submenu-item_discussfilter">
+                                    <a href="#" class="myprofile__submenu-link">Самое обсуждаемое</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="myprofile-content">
+                            <div class="feed">
+                                <div class="feed__article">
+                                    <p class="feed__article-title">Всё, что нужно знать о пересадке чудного цветка из африканских широт — зигокактуса</p>
+                                    <div class="feed__article-author">
+                                        <div class="feed__article-author-avatar">
+                                            <img src="images/avatar.jpg" alt="" class="feed__article-author-avatarpic">
+                                        </div>
+                                        <div class="feed__article-author-info">
+                                            <div class="feed__article-author-bio">
+                                                <span class="feed__article-author-username">@katco</span> / <span class="feed__article-author-rank">начинающий</span>
+                                                <span class="feed__article-author_verified"></span>
+                                            </div>
+                                            <div class="feed__article-author-pubinfo">
+                                                <a href="#" class="feed__article-author-name">Катерина Сумина</a>
+                                                <span class="feed__article-author-pubdate"><span class="feed__article-author-date">24.03.18</span> в <span class="feed__article-author-time">14:38</span></span>
+                                            </div>
+                                        </div>
+                                        <a href="" class="feed__article-author-journal">
+                                            <span class="feed__article-author-journal-cover">
+                                                <img src="images/cat6.jpg" alt="" class="feed__article-author-journal-img">
+                                            </span>
+                                            <span class="feed__article-author-journal-type feed__article-author-journal-type_private">Личный журнал</span>
+                                        </a>
+                                    </div>
+                                    <p class="feed__article-text">
+                                        Зигокактус или рождественник – одно из самых популярных комнатных растений, которое часто можно встретить на подоконниках. Благодаря своему неприхотливому характеру цветок способен расти практически в любых условиях и каждую зиму радовать обильным цветением.
+                                    </p>
+                                    <div class="feed__article-picture">
+                                        <img src="images/cat5.jpg" alt="">
+                                    </div>
+                                    <div class="feed__article-footer">
+                                        <div class="feed__article-tags tags">
+                                            <a href="#" class="feed__article-tag tag">#пересадка</a>
+                                            <a href="#" class="feed__article-tag tag">#суккуленты</a>
+                                            <a href="#" class="feed__article-tag tag">#уход</a>
+                                        </div>
+                                        <div class="feed__article-controls controls">
+                                            <a href="#" class="feed__article-read-more read-more-btn button_green">Читать далее</a>
+                                            <a href="#" class="feed__article-likes likes-btn">23</a>
+                                            <a href="#" class="feed__article-comments comments-btn">5</a>
+                                            <a href="#" class="feed__article-comment-btn comment-btn button">Комментировать</a>
+                                            <a href="#" class="feed__article-report report-btn">
+                                                <span class="svg" data-src="images/icons/abuze-icon-copy.svg"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feed__article">
+                                    <p class="feed__article-title">Всё, что нужно знать о пересадке чудного цветка из африканских широт — зигокактуса</p>
+                                    <div class="feed__article-author">
+                                        <div class="feed__article-author-avatar">
+                                            <img src="images/avatar.jpg" alt="" class="feed__article-author-avatarpic">
+                                        </div>
+                                        <div class="feed__article-author-info">
+                                            <div class="feed__article-author-bio">
+                                                <span class="feed__article-author-username">@katco</span> / <span class="feed__article-author-rank">начинающий</span>
+                                                <span class="feed__article-author_verified"></span>
+                                            </div>
+                                            <div class="feed__article-author-pubinfo">
+                                                <a href="#" class="feed__article-author-name">Катерина Сумина</a>
+                                                <span class="feed__article-author-pubdate"><span class="feed__article-author-date">24.03.18</span> в <span class="feed__article-author-time">14:38</span></span>
+                                            </div>
+                                        </div>
+                                        <a href="" class="feed__article-author-journal">
+                                            <span class="feed__article-author-journal-cover">
+                                                <img src="images/cat6.jpg" alt="" class="feed__article-author-journal-img">
+                                            </span>
+                                            <span class="feed__article-author-journal-type feed__article-author-journal-type_private">Личный журнал</span>
+                                        </a>
+                                    </div>
+                                    <p class="feed__article-text">
+                                        Зигокактус или рождественник – одно из самых популярных комнатных растений, которое часто можно встретить на подоконниках. Благодаря своему неприхотливому характеру цветок способен расти практически в любых условиях и каждую зиму радовать обильным цветением.
+                                    </p>
+                                    <div class="feed__article-picture">
+                                        <img src="images/cat5.jpg" alt="">
+                                    </div>
+                                    <div class="feed__article-footer">
+                                        <div class="feed__article-tags tags">
+                                            <a href="#" class="feed__article-tag tag">#пересадка</a>
+                                            <a href="#" class="feed__article-tag tag">#суккуленты</a>
+                                            <a href="#" class="feed__article-tag tag">#уход</a>
+                                        </div>
+                                        <div class="feed__article-controls controls">
+                                            <a href="#" class="feed__article-read-more read-more-btn button_green">Читать далее</a>
+                                            <a href="#" class="feed__article-likes likes-btn">23</a>
+                                            <a href="#" class="feed__article-comments comments-btn">5</a>
+                                            <a href="#" class="feed__article-comment-btn comment-btn button">Комментировать</a>
+                                            <a href="#" class="feed__article-report report-btn">
+                                                <span class="svg" data-src="images/icons/abuze-icon-copy.svg"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feed__article">
+                                    <p class="feed__article-title">Всё, что нужно знать о пересадке чудного цветка из африканских широт — зигокактуса</p>
+                                    <div class="feed__article-author">
+                                        <div class="feed__article-author-avatar">
+                                            <img src="images/avatar.jpg" alt="" class="feed__article-author-avatarpic">
+                                        </div>
+                                        <div class="feed__article-author-info">
+                                            <div class="feed__article-author-bio">
+                                                <span class="feed__article-author-username">@katco</span> / <span class="feed__article-author-rank">начинающий</span>
+                                                <span class="feed__article-author_verified"></span>
+                                            </div>
+                                            <div class="feed__article-author-pubinfo">
+                                                <a href="#" class="feed__article-author-name">Катерина Сумина</a>
+                                                <span class="feed__article-author-pubdate"><span class="feed__article-author-date">24.03.18</span> в <span class="feed__article-author-time">14:38</span></span>
+                                            </div>
+                                        </div>
+                                        <a href="" class="feed__article-author-journal">
+                                            <span class="feed__article-author-journal-cover">
+                                                <img src="images/cat6.jpg" alt="" class="feed__article-author-journal-img">
+                                            </span>
+                                            <span class="feed__article-author-journal-type feed__article-author-journal-type_private">Личный журнал</span>
+                                        </a>
+                                    </div>
+                                    <p class="feed__article-text">
+                                        Зигокактус или рождественник – одно из самых популярных комнатных растений, которое часто можно встретить на подоконниках. Благодаря своему неприхотливому характеру цветок способен расти практически в любых условиях и каждую зиму радовать обильным цветением.
+                                    </p>
+                                    <div class="feed__article-picture">
+                                        <img src="images/cat5.jpg" alt="">
+                                    </div>
+                                    <div class="feed__article-footer">
+                                        <div class="feed__article-tags tags">
+                                            <a href="#" class="feed__article-tag tag">#пересадка</a>
+                                            <a href="#" class="feed__article-tag tag">#суккуленты</a>
+                                            <a href="#" class="feed__article-tag tag">#уход</a>
+                                        </div>
+                                        <div class="feed__article-controls controls">
+                                            <a href="#" class="feed__article-read-more read-more-btn button_green">Читать далее</a>
+                                            <a href="#" class="feed__article-likes likes-btn">23</a>
+                                            <a href="#" class="feed__article-comments comments-btn">5</a>
+                                            <a href="#" class="feed__article-comment-btn comment-btn button">Комментировать</a>
+                                            <a href="#" class="feed__article-report report-btn">
+                                                <span class="svg" data-src="images/icons/abuze-icon-copy.svg"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feed__navigation navigation">
+                                <div class="feed__navigation-pages navigation">
+                                    <a href="#" class="feed__navigation-page feed__navigation-page_selected navigation-page navigation-page_selected">1</a>
+                                    <a href="#" class="feed__navigation-page navigation-page">2</a>
+                                    <a href="#" class="feed__navigation-page navigation-page">3</a>
+                                    <a href="#" class="feed__navigation-page navigation-page">4</a>
+                                    <a href="#" class="feed__navigation-page navigation-page">5</a>
+                                    <span class="feed__navigation-separator navigation-separator">из</span>
+                                    <a href="#" class="feed__navigation-page feed__navigation-total-page navigation-totalpages">57</a>
+                                </div>
+                                <a href="#" class="feed__navigation-next-page navigation-next-page">
+                                    Следующая страница
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-sidebar">
+                    <a href="#" class="ad">
+                        <img src="images/ad.png" alt="">
+                    </a>
+                    <div class="authors">
+                        <div class="authors__header">
+                            <span class="authors__logo"></span>
+                            <p class="authors__title">Лучшие<br>авторы</p>
+                            <a href="#" class="authors__info-btn">
+                                <span class="svg" data-src="images/icons/information-icon.svg"></span>
+                            </a>
+                        </div>
+                        <div class="authors__triggers triggers">
+                            <a href="#" class="authors__trigger authors__trigger_news button trigger trigger_active">Статей</a>
+                            <a href="#" class="authors__trigger authors__trigger_events button trigger">Комментариев</a>
+                        </div>
+                        <div class="authors__items">
+                            <a href="#" class="authors__item">
+                                <div class="authors__item-avatar">
+                                    <img src="images/avatar.jpg" alt="" class="authors__item-avatar-picture avatar">
+                                </div>
+                                <div class="authors__item-info">
+                                    <div class="authors__item-header">
+                                        <span class="authors__item-name">Катерина</span>
+                                        <span class="authors__item-location">Саратовская обл.</span>
+                                    </div>
+                                    <div class="authors__item-stats">
+                                        <span class="authors__item-articles">
+                                            <span class="authors__item-count">23</span>
+                                            <span class="authors__item-text">статьи</span>
+                                        </span>
+                                        <span class="authors__item-rating">
+                                            <span class="authors__item-count">5640</span>
+                                            <span class="authors__item-text">рейтинг</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="authors__item">
+                                <div class="authors__item-avatar">
+                                    <img src="images/avatar.jpg" alt="" class="authors__item-avatar-picture avatar">
+                                </div>
+                                <div class="authors__item-info">
+                                    <div class="authors__item-header">
+                                        <span class="authors__item-name">Катерина</span>
+                                        <span class="authors__item-location">Саратовская обл.</span>
+                                    </div>
+                                    <div class="authors__item-stats">
+                                        <span class="authors__item-articles">
+                                            <span class="authors__item-count">23</span>
+                                            <span class="authors__item-text">статьи</span>
+                                        </span>
+                                        <span class="authors__item-rating">
+                                            <span class="authors__item-count">5640</span>
+                                            <span class="authors__item-text">рейтинг</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="authors__item">
+                                <div class="authors__item-avatar">
+                                    <img src="images/avatar.jpg" alt="" class="authors__item-avatar-picture avatar">
+                                </div>
+                                <div class="authors__item-info">
+                                    <div class="authors__item-header">
+                                        <span class="authors__item-name">Катерина</span>
+                                        <span class="authors__item-location">Саратовская обл.</span>
+                                    </div>
+                                    <div class="authors__item-stats">
+                                        <span class="authors__item-articles">
+                                            <span class="authors__item-count">23</span>
+                                            <span class="authors__item-text">статьи</span>
+                                        </span>
+                                        <span class="authors__item-rating">
+                                            <span class="authors__item-count">5640</span>
+                                            <span class="authors__item-text">рейтинг</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="authors__navigation">
+                            <a href="#" class="authors__prev authors__prev_disabled">
+                                <div class="svg" data-src="images/icons/arrow-sidbar-up.svg"></div>
+                            </a>
+                            <a href="#" class="authors__all-authors">Все авторы</a>
+                            <a href="#" class="authors__next">
+                                <div class="svg" data-src="images/icons/arrow-sidbar-down.svg"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer__wrapper">
+                    <div class="footer__top">
+                        <div class="footer__firstcol">
+                            <a href="/" class="footer-logo-pic">
+                                <span class="svg" data-src="images/icons/logo-footer-copy-2.svg"></span>
+                            </a>
+                        </div>
+                        <div class="footer__secondcol">
+                            <div class="footer__address-wrapper">
+                                <p class="footer__company">
+                                    ООО «Гутелот»
+                                </p>
+                                <p class="footer__requisites">
+                                    ИНН: 7734569386 ОГРН: 1077760027311
+                                </p>
+                                <p class="footer__address">
+                                    г. Москва, ул. Маршала Катукова, д.20
+                                </p>
+                            </div>
+                            <ul class="footer__icons">
+                                <li class="footer__icons-icon footer__icons-icon_ok">
+                                    <a href="https://www.ok.ru/vosaduly" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                        <span class="svg" data-src="images/icons/ok-icon-copy.svg"></span>
+                                    </a>
+                                </li>
+                                <li class="footer__icons-icon footer__icons-icon_vk">
+                                    <a href="https://vk.com/vosadulyclub" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                        <span class="svg" data-src="images/icons/vk-icon-copy.svg"></span>
+                                    </a>
+                                </li>
+                                <li class="footer__icons-icon footer__icons-icon_fb">
+                                    <a href="https://www.facebook.com/vosaduly.ru" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                        <span class="svg" data-src="images/icons/fb-icon-copy.svg"></span>
+                                    </a>
+                                </li>
+                                <li class="footer__icons-icon footer__icons-icon_insta">
+                                    <a href="https://www.instagram.com/vosaduly.ru" rel="nofollow noopener" target="_blank" class="footer__icons-link">
+                                        <span class="svg" data-src="images/icons/insta-icon-copy.svg"></span>
+                                    </a>
+                                </li>
+                                <li class="footer__icons-icon footer__icons-icon_twi">
+                                    <a href="https://twitter.com/vosaduly" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                        <span class="svg" data-src="images/icons/twi-icon-copy.svg"></span>
+                                    </a>
+                                </li>
+                                <li class="footer__icons-icon footer__icons-icon_tg">
+                                    <a href="https://t.me/vosaduly" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                        <span class="svg" data-src="images/icons/tg-icon-copy.svg"></span>
+                                    </a>
+                                </li>
+                                <li class="footer__icons-icon footer__icons-icon_youtube">
+                                    <a href="https://www.youtube.com/channel/UCqgbH9G1FrtTbBeBy4KKH7w" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                        <span class="svg" data-src="images/icons/youtube-icon-copy.svg"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__thirdcol">
+                            <p class="footer__contacts">
+                                <a href="mailto:glavred@vosaduly.ru" class="footer__email">glavred@vosaduly.ru</a>
+                                <a href="tel:+74953690680" class="footer__phone">+7 (495) 369-06-80</a>
+                            </p>
+                        </div>
+                        <ul class="footer__fourthcol">
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">О проекте</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">Рекламодателям</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">Правообладателям</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">Правила сайта</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="footer__ask-btn">Задать вопрос</a>
+                    </div>
+                    <div class="footer__bottom">
+                        <p class="footer__copyright">2016-2019 © ООО «Гутелот» Все права защищены</p>
+                        <p class="footer__notification-alert">Перепечатка любых материалов без согласования запрещена</p>
+                        <a href="#" class="footer__policy">Политика конфиденциальности</a>
+                    </div>
+                    <div class="footer__top_tablet">
+                        <div class="footer__logo">
+                            <a href="/" class="footer-logo-pic">
+                                <span class="svg" data-src="images/icons/logo-footer-copy-2.svg"></span>
+                            </a>
+                        </div>
+                        <p class="footer__copyright">
+                            Восадули.ру
+                        </p>
+                    </div>
+                    <div class="footer__middle_tablet">
+                        <ul class="footer__icons">
+                            <li class="footer__icons-icon footer__icons-icon_ok">
+                                <a href="https://www.ok.ru/vosaduly" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                    <span class="svg" data-src="images/icons/ok-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_vk">
+                                <a href="https://vk.com/vosadulyclub" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                    <span class="svg" data-src="images/icons/vk-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_fb">
+                                <a href="https://www.facebook.com/vosaduly.ru" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                    <span class="svg" data-src="images/icons/fb-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_insta">
+                                <a href="https://www.instagram.com/vosaduly.ru" rel="nofollow noopener" target="_blank" class="footer__icons-link">
+                                    <span class="svg" data-src="images/icons/insta-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_twi">
+                                <a href="https://twitter.com/vosaduly" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                    <span class="svg" data-src="images/icons/twi-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_tg">
+                                <a href="https://t.me/vosaduly" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                    <span class="svg" data-src="images/icons/tg-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_youtube">
+                                <a href="https://www.youtube.com/channel/UCqgbH9G1FrtTbBeBy4KKH7w" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                    <span class="svg" data-src="images/icons/youtube-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__bottom_tablet">
+                        <div class="footer__email">
+                            <span class="svg" data-src="images/icons/mail-icon.svg"></span>
+                            <a href="mailto:glavred@vosaduly.ru" class="footer__email-link">glavred@vosaduly.ru</a>
+                        </div>
+                        <ul class="footer__menu">
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">Условия использования</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">Обратная связь</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">Рекламодателям</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">Карта сайта</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__top_mobile">
+                        <div class="footer__logo">
+                            <a href="/" class="footer-logo-pic">
+                                <span class="svg" data-src="images/icons/logo-footer-copy-2.svg"></span>
+                            </a>
+                        </div>
+                        <p class="footer__copyright">
+                            2016-2019 © ООО «Гутелот»
+                        </p>
+                    </div>
+                    <div class="footer__bottom_mobile">
+                        <ul class="footer__icons">
+                            <li class="footer__icons-icon footer__icons-icon_ok">
+                                <a href="https://www.ok.ru/vosaduly" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                    <span class="svg" data-src="images/icons/ok-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_vk">
+                                <a href="https://vk.com/vosadulyclub" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                    <span class="svg" data-src="images/icons/vk-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_fb">
+                                <a href="https://www.facebook.com/vosaduly.ru" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                    <span class="svg" data-src="images/icons/fb-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_insta">
+                                <a href="https://www.instagram.com/vosaduly.ru" rel="nofollow noopener" target="_blank" class="footer__icons-link">
+                                    <span class="svg" data-src="images/icons/insta-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_twi">
+                                <a href="https://twitter.com/vosaduly" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                    <span class="svg" data-src="images/icons/twi-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_tg">
+                                <a href="https://t.me/vosaduly" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                    <span class="svg" data-src="images/icons/tg-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_youtube">
+                                <a href="https://www.youtube.com/channel/UCqgbH9G1FrtTbBeBy4KKH7w" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                    <span class="svg" data-src="images/icons/youtube-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="vendors/js/jquery-3.4.1.min.js"></script>
+    <script src="vendors/js/easySVG.min.js"></script>
+    <script src="vendors/js/owl.carousel.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
+
 </html>

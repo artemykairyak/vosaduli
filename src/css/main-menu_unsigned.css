@@ -49,11 +49,16 @@
   color: #884235;
   margin-left: 5px;
   border: 1px solid transparent;
+  padding: 0 28px;
 }
 
 .sign-buttons__sign-in:before,
 .sign-buttons__sign-in:after {
   display: none;
+}
+
+.sign-buttons__sign-up {
+  padding: 0 28px;
 }
 
 @media screen and (max-width: 1226px) {

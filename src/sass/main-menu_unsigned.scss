@@ -44,10 +44,15 @@
 	color: $dirtBrown;
 	margin-left: 5px;
 	border: 1px solid transparent;
+	padding: 0 28px;
 
 	&:before, &:after {
 		display: none;
 	}
+}
+
+.sign-buttons__sign-up {
+	padding: 0 28px;
 }
 
 @media screen and (max-width: 1226px) {

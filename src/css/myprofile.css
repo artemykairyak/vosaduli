@@ -113,26 +113,6 @@
 
 /* HIDDEN ITEMS */
 
-.left-sidebar {
-  width: 23.5%;
-  position: sticky;
-  top: 17px;
-  max-height: 100vh;
-  overflow-y: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  box-sizing: content-box;
-}
-
-.left-sidebar > * {
-  width: 100%;
-  position: static;
-}
-
-.left-sidebar::-webkit-scrollbar {
-  display: none;
-}
-
 .groups-menu__navigation,
 .online-report__navigation {
   border: 1px solid #e5e5e5;
@@ -1145,7 +1125,10 @@
 .online-report__info-btn {
   width: 22px;
   height: 22px;
-  background: url(../images/icons/information-icon.svg) 0 0/contain no-repeat;
+}
+
+.online-report__info-btn:hover svg path {
+  fill: #afabab;
 }
 
 .online-report__items_disabled {
