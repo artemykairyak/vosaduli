@@ -119,8 +119,29 @@
   display: inline-block;
 }
 
+.moderation-header__tab {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  height: 37px;
+}
+
+.moderation-header__tab_magazines {
+  display: none;
+}
+
+.moderation-header__tab:not(.tab_selected):hover {
+  border: 1px solid #94acc4;
+}
+
 .moderation-header__tab-count {
   color: #fb3647;
+  top: -18px;
+  right: -12px;
 }
 
 .moderation-list {

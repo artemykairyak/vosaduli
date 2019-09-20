@@ -186,7 +186,7 @@
 				</div>
 			</header>
 			<div class="actions">
-				<a href="#" class="actions__add-friend button">Заявка отправлена</a>
+				<a href="#" class="actions__add-friend button">Добавить в друзья</a>
 				<a href="#" class="actions__write-message button">Написать сообщение</a>
 				<a href="#" class="actions__more button">...</a>
 			</div>
@@ -255,15 +255,15 @@
 					<div class="friends">
 						<div class="friends__menu">
 							<ul class="friends__menu-items">
-								<li class="friends__menu-item friends__menu-item_active">
+								<li class="friends__menu-item friends__menu-item_friends friends__menu-item_active">
 									<span class="friends__menu-count">4</span>
 									<a href="#" class="friends__menu-link">Друзья</a>
 								</li>
-								<li class="friends__menu-item">
+								<li class="friends__menu-item friends__menu-item_followers">
 									<span class="friends__menu-count">13</span>
 									<a href="#" class="friends__menu-link">Подписчики</a>
 								</li>
-								<li class="friends__menu-item">
+								<li class="friends__menu-item friends__menu-item_follows">
 									<span class="friends__menu-count">5</span>
 									<a href="#" class="friends__menu-link">Подписки</a>
 								</li>
@@ -312,6 +312,37 @@
 								</div>
 							</a>
 						</div>
+						<div class="friends__followers-list list_disabled">
+							<a href="#" class="friend">
+								<div class="friend__avatar" style="background: url(images/friend1.png) center / cover no-repeat;">
+								</div>
+								<div class="friend__info">
+									<span class="friend__name">Кристина Воложина</span>
+									<span class="friend__address"><span class="friend__region">Вологодская обл.</span> <span class="friend__city">Киров</span>, <span class="friend__country">Россия</span></span>
+									<span class="friend__write-btn">Написать сообщение</span>
+								</div>
+							</a>
+						</div>
+						<div class="friends__follows-list list_disabled">
+							<a href="#" class="friend">
+								<div class="friend__avatar" style="background: url(images/friend2.png) center / cover no-repeat;">
+								</div>
+								<div class="friend__info">
+									<span class="friend__name">Кристина Воложина</span>
+									<span class="friend__address"><span class="friend__region">Вологодская обл.</span> <span class="friend__city">Киров</span>, <span class="friend__country">Россия</span></span>
+									<span class="friend__write-btn">Написать сообщение</span>
+								</div>
+							</a>
+							<a href="#" class="friend">
+								<div class="friend__avatar" style="background: url(images/friend4.png) center / cover no-repeat;">
+								</div>
+								<div class="friend__info">
+									<span class="friend__name">Кристина Воложина</span>
+									<span class="friend__address"><span class="friend__region">Вологодская обл.</span> <span class="friend__city">Киров</span>, <span class="friend__country">Россия</span></span>
+									<span class="friend__write-btn">Написать сообщение</span>
+								</div>
+							</a>
+						</div>
 					</div>
 				</div>
 				<div class="blogs-menu">
@@ -321,8 +352,8 @@
 						<a href="#" class="blogs-menu__add-post"></a>
 					</div>
 					<div class="blogs-menu__triggers triggers">
-						<a href="#" class="blogs-menu__trigger blogs-menu__trigger_new button trigger trigger_active">Новое</a>			
-						<a href="#" class="blogs-menu__trigger blogs-menu__trigger_best trigger button">Лучшее</a>			
+						<a href="#" class="blogs-menu__trigger blogs-menu__trigger_new trigger trigger_active">Новое</a>			
+						<a href="#" class="blogs-menu__trigger blogs-menu__trigger_best trigger">Лучшее</a>			
 					</div>
 					<a href="" class="blogs-menu__item">
 						<div class="blogs-menu__item-avatar">

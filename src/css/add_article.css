@@ -489,6 +489,7 @@ textarea {
   background-color: #f4f7fb;
   padding: 20px 15px 24px;
   text-align: left;
+  border: none;
 }
 
 .pub-rules__title {
@@ -658,6 +659,7 @@ textarea {
   position: relative;
   width: 60%;
   height: 37px;
+  border: none;
 }
 
 .publish-btn__input {
@@ -676,6 +678,8 @@ textarea {
   width: 100%;
   border: 1px solid #90c952;
   cursor: pointer;
+  font-family: CeraPro;
+  font-size: 13px;
 }
 
 .publish-btn__shadow {
@@ -689,6 +693,18 @@ textarea {
   background: #c4dfa5;
   height: 37px;
   border-radius: 18.5px;
+  transition: all .3s ease;
+}
+
+.publish-btn:hover .publish-btn__input {
+  color: #416b16;
+  border: solid 1px #77b137;
+}
+
+.publish-btn:hover .publish-btn__shadow {
+  top: 0;
+  left: 0;
+  background: #b8d892;
 }
 
 .period-modal {
@@ -748,4 +764,8 @@ textarea {
 .period-modal__period-table-item_disabled {
   color: #e5e5e5;
   cursor: default;
+}
+
+.period-modal__enter-btn {
+  padding: 0 53px;
 }

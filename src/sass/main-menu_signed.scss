@@ -6,13 +6,30 @@
 }
 
 .icons-section {
-	width: auto;
+	width: 17%;
 	display: flex;
 
 	&__item {
-		&_contests, &_events, &_messages {
+		&_contests, &_messages {
 			display: none;
 		}
+
+		&:hover {
+			.icons-section__label {
+				color: #1e5cd6;
+
+				& > * {
+					color: #f8454b;
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+
+	&__counter {
+		color: #f8454b;
+		font-weight: bold;
+		display: inline-block;
 	}
 }
 
@@ -52,8 +69,8 @@
 
 @media screen and (max-width: 1226px) {
 	.logo__picture {
-	    width: 100px;
-	    height: 30px;
+		width: 100px;
+		height: 30px;
 	}
 
 	.main-menu {
@@ -66,49 +83,57 @@
 }
 
 @media screen and (max-width: 1180px) {
-	/*.search {
-		width: 40%;
-	}*/
+	.search {
+		width: 55%;
+	}
+
+	.icons-section {
+		width: 23%;
+	}
 }
 
 @media screen and (max-width: 990px) {
-	 .user-info__text {
-        display: none;
-    }
+	.user-info__text {
+		display: none;
+	}
 
-   .user-info__avatar {
-   		transform: none;
-   }
+	.user-info__avatar {
+		transform: none;
+	}
 
-   .logo__picture-container {
-        margin-top: 0;
-    }
+	.logo__picture-container {
+		margin-top: 0;
+	}
 
-    .search {
-    	width: 50%;
-    }
+	.search {
+		width: 48%;
+	}
+
+	.icons-section {
+		width: 27%;
+	}
 } 
 
 @media screen and (max-width: 768px) {
 
-    .icons-section {
-    	width: auto;
-    	justify-content: flex-end;
-    	align-items: center;
-    	width: 65%;
+	.icons-section {
+		width: auto;
+		justify-content: flex-end;
+		align-items: center;
+		width: 65%;
 
-    	&__item:last-child {
-    		.icons-section__icon {
-    			margin-right: 0;
-    		}
-    	}
-    }
+		&__item:last-child {
+			.icons-section__icon {
+				margin-right: 0;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 480px) {
-    .icons-section {
-        width: 45%;
-    }
+	.icons-section {
+		width: 45%;
+	}
 }
 
 @media screen and (max-width: 440px) {

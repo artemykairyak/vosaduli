@@ -423,6 +423,7 @@ textarea {
 	background-color: $paleGray;
 	padding: 20px 15px 24px;
 	text-align: left;
+	border: none;
 
 	&__title {
 		@include flex;
@@ -593,6 +594,7 @@ textarea {
 	position: relative;
 	width: 60%;
 	height: 37px;
+	border: none;
 
 
 	&__input {
@@ -611,6 +613,8 @@ textarea {
 		width: 100%;
 		border: 1px solid #90c952;
 		cursor: pointer;
+		font-family: CeraPro;
+  		font-size: 13px;
 	}
 
 	&__shadow {
@@ -624,6 +628,20 @@ textarea {
 		background: #c4dfa5;
 		height: 37px;
 		border-radius: 18.5px;
+		transition: all .3s ease;
+	}
+
+	&:hover {
+		.publish-btn__input {
+			color: darken(#4e801a, 5%);
+			border: solid 1px darken(#90c952, 10%);
+		}
+
+		.publish-btn__shadow {
+			top: 0;
+			left: 0;
+			background: darken(#c4dfa5, 5%);
+		}		
 	}
 }
 
@@ -685,7 +703,9 @@ textarea {
 				cursor: default;
 			}
 		}
+	}
 
-
+	&__enter-btn {
+		padding: 0 53px;
 	}
 }

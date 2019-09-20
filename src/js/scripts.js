@@ -13,11 +13,6 @@ $(function() {
         scrollPos = st;
     });
 
-    // $(window).on('scroll', function(e) {
-    //     console.log(e);
-    // });
-
-
     //BASE END
 
     // MYPROFILE
@@ -100,14 +95,13 @@ $(function() {
         }, 100);
     });
 
-    //MYPROFILE
+    //MYPROFILE END
 
-    $('.actions__add-friend').on('click', function(e) {
-        e.preventDefault();
-        $(this).toggleClass('actions__add-friend_sended');
-        $(this).hasClass('actions__add-friend_sended') ?
-            $(this).text('Заявка отправлена') : $(this).text('Добавить в друзья');
-    });
+    if($('.actions__add-friend').hasClass('actions__add-friend_sended')) {
+        $('.actions__add-friend').text('Заявка отправлена');
+    } else if($('.actions__add-friend').hasClass('actions__add-friend_added')) {
+         $('.actions__add-friend').text('Удалить из друзей');
+    }
 
     $('.groups-menu__trigger').on('click', function(e) {
         e.preventDefault();
@@ -138,6 +132,16 @@ $(function() {
     $('.friends__menu-item').on('click', function(e) {
         $(this).addClass('friends__menu-item_active');
         $(this).siblings().removeClass('friends__menu-item_active');
+        if($(this).hasClass('friends__menu-item_friends')) {
+            $('.friends__friends-list').removeClass('list_disabled');
+            $('.friends__followers-list, .friends__follows-list').addClass('list_disabled');
+        } else if ($(this).hasClass('friends__menu-item_followers')) {
+            $('.friends__friends-list, .friends__follows-list').addClass('list_disabled');
+            $('.friends__followers-list').removeClass('list_disabled');
+        } else if ($(this).hasClass('friends__menu-item_follows')) {
+            $('.friends__friends-list, .friends__followers-list').addClass('list_disabled');
+            $('.friends__follows-list').removeClass('list_disabled');
+        }
         e.preventDefault();
     });
 

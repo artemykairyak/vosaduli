@@ -33,8 +33,7 @@
 				display: inline-block;
 				width: 6px;
 				height: 13px;
-				margin-bottom: 3px;
-				
+				margin-bottom: 3px;				
 			}		
 
 			&:before {
@@ -57,8 +56,30 @@
 			display: inline-block;
 		}
 
+		&__tab {
+
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: center;
+			border: 1px solid transparent;
+			height: 37px;
+
+			&_magazines {
+				display: none;
+			}
+		}
+
+		&__tab:not(.tab_selected):hover {
+			border: 1px solid #94acc4;
+		}
+
 		&__tab-count {
 			color: #fb3647;
+			top: -18px;
+			right: -12px;
 		}
 	}
 
