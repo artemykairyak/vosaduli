@@ -8,9 +8,38 @@ $(function() {
         if (st > scrollPos) {
             $('.mobile-nav-menu').addClass('mobile-nav-menu_hidden');
         } else {
-             $('.mobile-nav-menu').removeClass('mobile-nav-menu_hidden');
+            $('.mobile-nav-menu').removeClass('mobile-nav-menu_hidden');
         }
         scrollPos = st;
+    });
+
+    $(window).on('scroll', function() {
+        var st = $(this).scrollTop();
+       
+        if (st > scrollPos) {
+            $('.nav-menu').addClass('nav-menu_hidden');
+        } else {
+             $('.nav-menu').removeClass('nav-menu_hidden');
+        }
+        scrollPos = st;
+    });
+
+    $(window).on('scroll', function() {
+        if ($('.main-menu').offset().top > 33) {
+            $('.main-menu').addClass('main-menu_scrolled');
+        } else {
+             $('.main-menu').removeClass('main-menu_scrolled');
+        }
+    });
+
+    $('.nav-menu__item').on('mouseenter', function() {
+        $(this).find('.child-list').addClass('enable');
+    });
+
+    $('.nav-menu__item').on('mouseover', function(e) {
+        if($(e.currentTarget) !== $(this) || $(e.currentTarget) !== $(this).find('.child-list')) {
+            $(this).find('.child-list').removeClass('enable');
+        }
     });
 
     //BASE END
@@ -336,7 +365,6 @@ $(function() {
     //FEED
 
     if ($('.feed__article-text').length > 0) {
-        console.log($('.feed__article-text').text().length);
         cutText($('.feed__article-text'), 280);
     }
 
@@ -434,20 +462,11 @@ $(function() {
 function sendForm(form, url) {
     var formName = form.attr('name');
     var $data = $(form).serialize() + '&' + formName + '=1';
-    console.log($data);
     $.ajax({
         type: "POST",
         url: url,
         data: $data,
-        dataType: 'json',
-        success: function(msg) {
-            console.log('SUCCESS');
-            console.log(msg);
-        },
-        error: function(msg) {
-            console.log('ERROR');
-            console.log(msg);
-        }
+        dataType: 'json'
     });
 }
 

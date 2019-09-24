@@ -7,6 +7,10 @@
   display: flex;
 }
 
+.icons-section__item {
+  position: relative;
+}
+
 .icons-section__item_contests,
 .icons-section__item_messages {
   display: none;
@@ -16,7 +20,7 @@
   color: #1e5cd6;
 }
 
-.icons-section__item:hover .icons-section__label > * {
+.icons-section__item:hover .icons-section__counter {
   color: #f8454b;
   transform: scale(1.1);
 }
@@ -25,6 +29,9 @@
   color: #f8454b;
   font-weight: bold;
   display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -7px;
 }
 
 .user-info__text {
@@ -120,6 +127,11 @@
 
   .icons-section__item:last-child .icons-section__icon {
     margin-right: 0;
+  }
+
+  .icons-section__counter {
+    right: 7px;
+    top: -7px;
   }
 }
 

@@ -40,6 +40,12 @@
 
 @font-face {
   font-family: MuseoCyrl;
+  src: url(../fonts/Museo/MuseoSansCyrl.woff);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: MuseoCyrl;
   src: url(../fonts/Museo/MuseoSansCyrl.otf);
   font-weight: normal;
 }
@@ -60,7 +66,7 @@
 
 @font-face {
   font-family: ALS;
-  src: url(../fonts/ALSSchlangeslab/alsschlangebold.otf), url(../fonts/ALSSchlangeslab/alsschlangebold.eot), url(../fonts/ALSSchlangeslab/alsschlangebold.woff);
+  src: url(../fonts/ALSSchlangeslab/alsschlangebold.woff), url(../fonts/ALSSchlangeslab/alsschlangebold.otf), url(../fonts/ALSSchlangeslab/alsschlangebold.eot);
   font-weight: bold;
 }
 
@@ -84,11 +90,11 @@ textarea {
 }
 
 .main-content {
-  width: 55.5%;
+  width: 57.5%;
 }
 
 .right-sidebar {
-  width: 24.5%;
+  width: 23.5%;
 }
 
 .star {
@@ -768,4 +774,161 @@ textarea {
 
 .period-modal__enter-btn {
   padding: 0 53px;
+}
+
+@media screen and (max-width: 1180px) {
+  .pub-maininfo {
+    padding: 30px 15px 0;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .left-sidebar {
+    display: block;
+    width: 30%;
+    /*top: 70px;*/
+    position: relative;
+    overflow-y: visible;
+  }
+
+  .addarticle-form {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .main-content {
+    width: 70%;
+  }
+
+  .right-sidebar {
+    width: 100%;
+    position: static;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-height: initial;
+    overflow-y: visible;
+  }
+
+  .pub-rules {
+    width: 55%;
+  }
+
+  .pub-controls {
+    width: 45%;
+    margin: 0;
+    border: none;
+  }
+
+  .publish-btn {
+    width: 30%;
+    margin: 0;
+    transform: translate(-25%, -50px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pub-maininfo__maintitle {
+    font-size: 24px;
+  }
+
+  .pub-maininfo__category-secoundary-inputs-container {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .pub-maininfo__category-secoundary-inputs-container:last-child {
+    margin-bottom: 0;
+  }
+
+  .pub-maininfo__content-input {
+    height: 300px;
+  }
+
+  .pub-rules__rule-text {
+    font-size: 14px;
+  }
+
+  .pub-period__period-btn {
+    padding: 0 10px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .addarticle-form {
+    padding: 0 0 30px;
+  }
+
+  .left-sidebar {
+    width: 100%;
+    max-height: initial;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 30px 0 0;
+  }
+
+  .pub-thumbnail__image {
+    width: 50%;
+    padding-bottom: 50%;
+    margin: 0 auto;
+  }
+
+  .pub-period__period-btn {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .pub-rules {
+    width: 100%;
+  }
+
+  .pub-rules__rule {
+    align-items: center;
+  }
+
+  .pub-rules__rule:first-child {
+    padding: 15px 0;
+  }
+
+  .pub-rules__rule-text {
+    line-height: 1.5;
+  }
+
+  .pub-controls {
+    width: 100%;
+  }
+
+  .publish-btn {
+    transform: none;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .pub-controls__link {
+    width: 80%;
+  }
+
+  .pub-theme__footer {
+    padding: 0	15px;
+  }
+
+  .pub-theme {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .pub-maininfo__maintitle {
+    font-size: 22px;
+  }
 }

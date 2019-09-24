@@ -2,141 +2,148 @@
 @import 'mixins.scss';
 
 .search {
-	width: 63%;
+    width: 63%;
 }
 
 .icons-section {
-	width: 17%;
-	display: flex;
+    width: 17%;
+    display: flex;
 
-	&__item {
-		&_contests, &_messages {
-			display: none;
-		}
+    &__item {
+        position: relative;
 
-		&:hover {
-			.icons-section__label {
-				color: #1e5cd6;
+        &_contests,
+        &_messages {
+            display: none;
+        }
 
-				& > * {
-					color: #f8454b;
-					transform: scale(1.1);
-				}
-			}
-		}
-	}
+        &:hover {
+            .icons-section__label {
+                color: #1e5cd6;
 
-	&__counter {
-		color: #f8454b;
-		font-weight: bold;
-		display: inline-block;
-	}
+            }
+
+            .icons-section__counter {
+                color: #f8454b;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__counter {
+        color: #f8454b;
+        font-weight: bold;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: -7px;
+    }
 }
 
 .user-info {
-	&__text {
-		display: inline-block;
-		margin-right: 10px;
-		display: none;
-	}
+    &__text {
+        display: inline-block;
+        margin-right: 10px;
+        display: none;
+    }
 
-	&__greeting {
-		font-size: 12px;
-		font-weight: 500;
-		color: #a1a1a1;
-		text-align: right;
-		display: inline-block;
-		width: 100%;
-	}
+    &__greeting {
+        font-size: 12px;
+        font-weight: 500;
+        color: #a1a1a1;
+        text-align: right;
+        display: inline-block;
+        width: 100%;
+    }
 
-	&__username {
-		font-size: 13px;
-		font-weight: 500;
-		color: $blue;
-		display: block;
+    &__username {
+        font-size: 13px;
+        font-weight: 500;
+        color: $blue;
+        display: block;
 
-		&:before {
-			@include pseudo('../images/icons/blue-arrow-down.svg', 7px, 5px);
-			margin-right: 9px;
-			transform: translateY(-30%);
-		}
-	}
+        &:before {
+            @include pseudo('../images/icons/blue-arrow-down.svg', 7px, 5px);
+            margin-right: 9px;
+            transform: translateY(-30%);
+        }
+    }
 
-	&__avatar {
-		transform: translateY(5px);
-	}
+    &__avatar {
+        transform: translateY(5px);
+    }
 }
 
 @media screen and (max-width: 1226px) {
-	.logo__picture {
-		width: 100px;
-		height: 30px;
-	}
+    .logo__picture {
+        width: 100px;
+        height: 30px;
+    }
 
-	.main-menu {
-		padding: 13px 15px; 
-	}
+    .main-menu {
+        padding: 13px 15px;
+    }
 
-	.user-info {
-		padding-right: 0;
-	}
+    .user-info {
+        padding-right: 0;
+    }
 }
 
 @media screen and (max-width: 1180px) {
-	.search {
-		width: 55%;
-	}
+    .search {
+        width: 55%;
+    }
 
-	.icons-section {
-		width: 23%;
-	}
+    .icons-section {
+        width: 23%;
+    }
 }
 
 @media screen and (max-width: 990px) {
-	.user-info__text {
-		display: none;
-	}
+    .user-info__text {
+        display: none;
+    }
 
-	.user-info__avatar {
-		transform: none;
-	}
+    .user-info__avatar {
+        transform: none;
+    }
 
-	.logo__picture-container {
-		margin-top: 0;
-	}
+    .logo__picture-container {
+        margin-top: 0;
+    }
 
-	.search {
-		width: 48%;
-	}
+    .search {
+        width: 48%;
+    }
 
-	.icons-section {
-		width: 27%;
-	}
-} 
+    .icons-section {
+        width: 27%;
+    }
+}
 
 @media screen and (max-width: 768px) {
 
-	.icons-section {
-		width: auto;
-		justify-content: flex-end;
-		align-items: center;
-		width: 65%;
+    .icons-section {
+        width: auto;
+        justify-content: flex-end;
+        align-items: center;
+        width: 65%;
 
-		&__item:last-child {
-			.icons-section__icon {
-				margin-right: 0;
-			}
-		}
-	}
+        &__item:last-child {
+            .icons-section__icon {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .icons-section__counter {
+    	right: 7px;
+    	top: -7px;
+    }
 }
 
 @media screen and (max-width: 480px) {
-	.icons-section {
-		width: 45%;
-	}
+    .icons-section {
+        width: 45%;
+    }
 }
-
-@media screen and (max-width: 440px) {
-
-}
-
