@@ -104,23 +104,6 @@
   align-items: center;
 }
 
-.journal-likes:before,
-.journal-comments:before {
-  content: '';
-  display: inline-block;
-  margin-right: 4px;
-  width: 25px;
-  height: 20px;
-}
-
-.journal-likes:before {
-  background: url(../images/icons/lovers-icon-copy.svg) 0 0/contain no-repeat;
-}
-
-.journal-comments:before {
-  background: url(../images/icons/comment-anons-icon-copy.svg) 0 0/contain no-repeat;
-}
-
 .journal-more {
   border: 1px solid #e5e5e5;
   width: 38px;
@@ -145,6 +128,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.journal-controls * {
+  transition: all .3s ease;
 }
 
 .journal__search {

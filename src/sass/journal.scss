@@ -32,26 +32,6 @@
 		display: -o-flex;
 		display: flex;
 		align-items: center;
-
-		&:before {
-			content:'';
-			display: inline-block;
-			margin-right: 4px;
-			width: 25px;
-			height: 20px;
-		}
-	}
-
-	&-likes {
-		&:before {
-			background: url(../images/icons/lovers-icon-copy.svg) 0 0 / contain no-repeat;
-		}
-	}
-
-	&-comments {
-		&:before {
-			background: url(../images/icons/comment-anons-icon-copy.svg) 0 0 / contain no-repeat;	
-		}
 	}
 
 	&-more {
@@ -77,6 +57,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		& * {
+			transition: all .3s ease;
+		}
 	}
 
 	&__search {
@@ -516,11 +500,7 @@
 	}
 }
 
-
-
 @media screen and (max-width: 768px) {
-    
-
 	.journal__article-likes {
 		width: auto;
 		margin-right: 10px;

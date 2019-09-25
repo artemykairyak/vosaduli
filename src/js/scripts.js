@@ -7,19 +7,16 @@ $(function() {
         var st = $(this).scrollTop();
         if (st > scrollPos) {
             $('.mobile-nav-menu').addClass('mobile-nav-menu_hidden');
+            $('.nav-menu').addClass('nav-menu_hidden');
+            $('.nav-menu').removeClass('nav-menu_showed');
         } else {
             $('.mobile-nav-menu').removeClass('mobile-nav-menu_hidden');
-        }
-        scrollPos = st;
-    });
-
-    $(window).on('scroll', function() {
-        var st = $(this).scrollTop();
-       
-        if (st > scrollPos) {
-            $('.nav-menu').addClass('nav-menu_hidden');
-        } else {
-             $('.nav-menu').removeClass('nav-menu_hidden');
+            if ($('.nav-menu').offset().top > 66) {
+                $('.nav-menu').removeClass('nav-menu_hidden');
+                $('.nav-menu').addClass('nav-menu_showed');
+            } else {
+                $('.nav-menu').removeClass('nav-menu_showed');
+            }
         }
         scrollPos = st;
     });
@@ -28,19 +25,25 @@ $(function() {
         if ($('.main-menu').offset().top > 33) {
             $('.main-menu').addClass('main-menu_scrolled');
         } else {
-             $('.main-menu').removeClass('main-menu_scrolled');
+            $('.main-menu').removeClass('main-menu_scrolled');
         }
     });
 
-    $('.nav-menu__item').on('mouseenter', function() {
+    $('.nav-menu__item').on('mouseover', function() {
         $(this).find('.child-list').addClass('enable');
     });
 
-    $('.nav-menu__item').on('mouseover', function(e) {
-        if($(e.currentTarget) !== $(this) || $(e.currentTarget) !== $(this).find('.child-list')) {
+    $('.nav-menu__item').on('mouseout', function(e) {
+        if ($(e.currentTarget) !== $(this)) {
             $(this).find('.child-list').removeClass('enable');
         }
     });
+
+    $('.likes-btn').on('click', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('likes-btn_liked-anim');
+        $(this).toggleClass('likes-btn_liked');
+    })
 
     //BASE END
 
@@ -126,10 +129,10 @@ $(function() {
 
     //MYPROFILE END
 
-    if($('.actions__add-friend').hasClass('actions__add-friend_sended')) {
+    if ($('.actions__add-friend').hasClass('actions__add-friend_sended')) {
         $('.actions__add-friend').text('Заявка отправлена');
-    } else if($('.actions__add-friend').hasClass('actions__add-friend_added')) {
-         $('.actions__add-friend').text('Удалить из друзей');
+    } else if ($('.actions__add-friend').hasClass('actions__add-friend_added')) {
+        $('.actions__add-friend').text('Удалить из друзей');
     }
 
     $('.groups-menu__trigger').on('click', function(e) {
@@ -161,7 +164,7 @@ $(function() {
     $('.friends__menu-item').on('click', function(e) {
         $(this).addClass('friends__menu-item_active');
         $(this).siblings().removeClass('friends__menu-item_active');
-        if($(this).hasClass('friends__menu-item_friends')) {
+        if ($(this).hasClass('friends__menu-item_friends')) {
             $('.friends__friends-list').removeClass('list_disabled');
             $('.friends__followers-list, .friends__follows-list').addClass('list_disabled');
         } else if ($(this).hasClass('friends__menu-item_followers')) {
@@ -179,7 +182,7 @@ $(function() {
     });
 
     // if($('.myprofile-contacts__form').length > 0) {
-    // 	$('myprofile-contacts__form-input').val($('myprofile-contacts__form-input').val)
+    //  $('myprofile-contacts__form-input').val($('myprofile-contacts__form-input').val)
     // }
 
     if ($('.header-menu__container').length > 0 && $(window).width() < 1050) {
@@ -221,18 +224,20 @@ $(function() {
     }
 
     // if($('.myprofile-contacts__form-input_phone').length > 0) {
-    // 	$('.myprofile-contacts__form-input_phone').val('+7');
-    // 	$('.myprofile-contacts__form-input_phone').on('keyup', function() {
-    // 		if($(this).val().length < 2 || !$(this).val().startsWith('+7')) {
-    // 			$(this).val('+7');
-    // 		}
-    // 	})
+    //  $('.myprofile-contacts__form-input_phone').val('+7');
+    //  $('.myprofile-contacts__form-input_phone').on('keyup', function() {
+    //      if($(this).val().length < 2 || !$(this).val().startsWith('+7')) {
+    //          $(this).val('+7');
+    //      }
+    //  })
     // }
 
     $('.blogs-menu__trigger').on('click', function(e) {
         e.preventDefault();
         onTriggerClick($(this));
     });
+
+    cutText($('.journal__article-text'), 550);
 
     //MODERATION
 

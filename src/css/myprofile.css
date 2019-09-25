@@ -1107,9 +1107,34 @@
   z-index: 20;
 }
 
+.user-data__avatar-changephoto input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: .1px;
+  height: .1px;
+  opacity: 0;
+  z-index: -2;
+}
+
+.user-data__avatar-changephoto label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  right: 0;
+  bottom: 0;
+  z-index: 210;
+  cursor: pointer;
+}
+
 .user-data__avatar-changephoto svg {
   width: 22px;
   height: 19px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .user-data__avatar-changephoto_header {
@@ -1117,8 +1142,46 @@
   right: 18px;
 }
 
+.user-data__avatar-changephoto_header input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: .1px;
+  height: .1px;
+  opacity: 0;
+  z-index: -2;
+}
+
+.user-data__avatar-changephoto_header label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  right: 0;
+  bottom: 0;
+  z-index: 210;
+  cursor: pointer;
+}
+
+.user-data__avatar-changephoto_header svg {
+  width: 22px;
+  height: 19px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .user-data__avatar-changephoto:hover svg path {
   fill: #f19757;
+}
+
+.right-sidebar {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.right-sidebar_feed {
+  border-bottom: none;
 }
 
 .online-report__header {
@@ -1748,6 +1811,10 @@
   .myprofile-soc__trigger-icon {
     margin-right: 12px;
   }
+
+  .myprofile__submenu {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 1180px) {
@@ -1810,6 +1877,10 @@
   .myprofile__submenu-item {
     padding: 0 15px;
   }
+
+  .header-menu__item {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 915px) {
@@ -1831,6 +1902,41 @@
 
   .myprofile-contacts__form {
     padding: 23px 50px 26px;
+  }
+
+  .feed__article-controls {
+    flex-wrap: wrap;
+  }
+
+  .feed__article-likes {
+    width: 20%;
+    order: 1;
+  }
+
+  .feed__article-comments {
+    width: 80%;
+    order: 2;
+  }
+
+  .feed__article-read-more {
+    margin-top: 20px;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+
+  .feed__article-comment-btn {
+    margin-top: 20px;
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
+    order: 4;
+  }
+
+  .feed__article-report {
+    margin-top: 20px;
+    -webkit-box-ordinal-group: 6;
+    -ms-flex-order: 5;
+    order: 5;
   }
 }
 
@@ -1892,6 +1998,43 @@
   .myprofile-contacts__form-footer {
     font-size: 12px;
   }
+
+  .myprofile__submenu {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .feed__submenu-item_datefilter,
+  .feed__submenu-item_interestingfilter,
+  .feed__submenu-item_discussfilter {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+
+  .feed__submenu-item_datefilter:last-child,
+  .feed__submenu-item_interestingfilter:last-child,
+  .feed__submenu-item_discussfilter:last-child {
+    margin-bottom: 0;
+  }
+
+  .feed__article-title {
+    font-size: 24px;
+  }
+
+  .feed__article-author {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .feed__article-author-journal {
+    justify-content: flex-end;
+    width: auto;
+    margin-left: auto;
+  }
 }
 
 @media screen and (max-width: 690px) {
@@ -1943,6 +2086,104 @@
 
   .myprofile-contacts__form-input-container_show-btn {
     width: 80%;
+  }
+
+  .feed__article-text {
+    font-size: 16px;
+  }
+
+  .feed__article-title {
+    font-size: 22px;
+  }
+
+  .feed__article-likes {
+    width: auto;
+    margin-right: 10px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .feed__article-comments {
+    width: auto;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .feed__article-read-more {
+    width: 100%;
+    margin-top: 15px;
+    order: 4;
+  }
+
+  .feed__article-comment-btn {
+    width: 100%;
+    margin-top: 15px;
+    order: 5;
+  }
+
+  .feed__article-report {
+    margin-top: 0;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+    margin-left: auto;
+  }
+
+  .feed__submenu-item_datefilter,
+  .feed__submenu-item_discussfilter,
+  .feed__submenu-item_interestingfilter {
+    width: 94%;
+  }
+
+  .myprofile__tabs-container {
+    margin: 22px 0 0;
+  }
+
+  .myprofile__tabs-tab {
+    padding: auto;
+  }
+
+  .feed__article-author-avatar {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  .feed__article-author-bio {
+    font-size: 13px;
+  }
+
+  .feed__article-author-bio:after {
+    height: 15px;
+  }
+
+  .feed__article-author-pubinfo {
+    font-size: 13px;
+  }
+
+  .feed__article-author-journal {
+    margin-top: 5px;
+  }
+
+  .feed__article-text {
+    font-size: 14px;
+    margin: 15px 0 0;
+    line-height: 1.6;
+  }
+
+  .feed__article-author-journal-type {
+    font-size: 13px;
+  }
+
+  .feed__article-author-journal-cover {
+    height: 24px;
+    width: 24px;
+  }
+
+  .feed__article-author-info {
+    margin-right: 0;
   }
 }
 

@@ -339,17 +339,19 @@
                         </li>
                     </ul>
                 </div>
-                <div class="user-data user-data_mt20px user-data_mb20px user-data_m15px" style="background: url(images/bg.jpg) center / cover no-repeat;">
+                <div class="user-data user-data_mt user-data_mb user-data_m" style="background: url(images/bg.jpg) center / cover no-repeat;">
                     <div class="user-data__info">
                         <span class="user-data__avatar-changephoto user-data__avatar-changephoto_header">
-                            <span class="svg" data-src="images/icons/camera-icon.svg"></span>
+                            <label for="change-bg"><span class="svg" data-src="images/icons/camera-icon.svg"></span></label>
+                            <input type="file" name="change-bg" id="change-bg" class="user-data__avatar-changebg-input">
                         </span>
-                        <a href="#" class="user-data__avatar">
+                        <span class="user-data__avatar">
                             <img src="images/avatar.jpg" alt="" class="user-data__avatar-picture">
-                            <span class="user-data__avatar-changephoto">
-                                <span class="svg" data-src="images/icons/camera-icon.svg"></span>
+                            <span class="user-data__avatar-changephoto">    
+                                <label for="change-avatar"><span class="svg" data-src="images/icons/camera-icon.svg"></span></label>
+                                 <input type="file" name="change-avatar" id="change-avatar" class="user-data__avatar-changeavatar-input">
                             </span>
-                        </a>
+                        </span>
                         <div class="user-data__text">
                             <h1 class="user-data__username">Елена Старовойтова</h1>
                             <p class="user-data__bio">@helenayagodka / теоретик</p>
@@ -383,7 +385,7 @@
             <div class="content content_mt15px">
                 <div class="left-sidebar left-sidebar_border">
                     <a href="#" class="ad">
-                        <img src="images/ad.png" alt="">
+                        <img src="images/ad.png" loading="lazy" alt="">
                     </a>
                     <div class="questions questions_mt15px">
                         <div class="questions__header">
@@ -505,8 +507,13 @@
                                         </div>
                                         <div class="feed__article-controls controls">
                                             <a href="#" class="feed__article-read-more read-more-btn button_green">Читать далее</a>
-                                            <a href="#" class="feed__article-likes likes-btn">23</a>
-                                            <a href="#" class="feed__article-comments comments-btn">5</a>
+                                            <a href="#" class="feed__article-likes likes-btn"><span class="likes-btn__icon">
+                                                    <span class="svg" data-src="images/icons/lovers-icon-copy.svg"></span>
+                                                </span>23</a>
+                                            <a href="#" class="feed__article-comments comments-btn">
+                                                <span class="comments-btn__icon">
+                                                    <span class="svg" data-src="images/icons/comment-anons-icon-copy.svg"></span>
+                                                </span>5</a>
                                             <a href="#" class="feed__article-comment-btn comment-btn button">Комментировать</a>
                                             <a href="#" class="feed__article-report report-btn">
                                                 <span class="svg" data-src="images/icons/abuze-icon-copy.svg"></span>
@@ -551,8 +558,13 @@
                                         </div>
                                         <div class="feed__article-controls controls">
                                             <a href="#" class="feed__article-read-more read-more-btn button_green">Читать далее</a>
-                                            <a href="#" class="feed__article-likes likes-btn">23</a>
-                                            <a href="#" class="feed__article-comments comments-btn">5</a>
+                                            <a href="#" class="feed__article-likes likes-btn"><span class="likes-btn__icon">
+                                                    <span class="svg" data-src="images/icons/lovers-icon-copy.svg"></span>
+                                                </span>23</a>
+                                            <a href="#" class="feed__article-comments comments-btn">
+                                                <span class="comments-btn__icon">
+                                                    <span class="svg" data-src="images/icons/comment-anons-icon-copy.svg"></span>
+                                                </span>5</a>
                                             <a href="#" class="feed__article-comment-btn comment-btn button">Комментировать</a>
                                             <a href="#" class="feed__article-report report-btn">
                                                 <span class="svg" data-src="images/icons/abuze-icon-copy.svg"></span>
@@ -597,8 +609,13 @@
                                         </div>
                                         <div class="feed__article-controls controls">
                                             <a href="#" class="feed__article-read-more read-more-btn button_green">Читать далее</a>
-                                            <a href="#" class="feed__article-likes likes-btn">23</a>
-                                            <a href="#" class="feed__article-comments comments-btn">5</a>
+                                            <a href="#" class="feed__article-likes likes-btn"><span class="likes-btn__icon">
+                                                    <span class="svg" data-src="images/icons/lovers-icon-copy.svg"></span>
+                                                </span>23</a>
+                                            <a href="#" class="feed__article-comments comments-btn">
+                                                <span class="comments-btn__icon">
+                                                    <span class="svg" data-src="images/icons/comment-anons-icon-copy.svg"></span>
+                                                </span>5</a>
                                             <a href="#" class="feed__article-comment-btn comment-btn button">Комментировать</a>
                                             <a href="#" class="feed__article-report report-btn">
                                                 <span class="svg" data-src="images/icons/abuze-icon-copy.svg"></span>
@@ -626,7 +643,7 @@
                 </div>
                 <div class="right-sidebar right-sidebar_feed">
                     <a href="#" class="ad">
-                        <img src="images/ad.png" alt="">
+                        <img src="images/ad.png" loading="lazy" alt="">
                     </a>
                     <div class="authors">
                         <div class="authors__header">
@@ -726,7 +743,7 @@
                         </a>
                     </div>
                     <a href="#" class="ad">
-                        <img src="images/ad.png" alt="">
+                        <img src="images/ad.png" loading="lazy" alt="">
                     </a>
                     <div class="experience">
                         <div class="experience__header">
@@ -747,7 +764,7 @@
                                     <div class="experience__item-text">Покупаю этот сорт второй год подряд. Всхожесть просто отличная</div>
                                 </div>
                             </div>
-                             <div class="experience__item">
+                            <div class="experience__item">
                                 <div class="experience__item-avatar">
                                     <img src="images/avatar.jpg" alt="">
                                 </div>
@@ -759,7 +776,7 @@
                                     <div class="experience__item-text">Покупаю этот сорт второй год подряд. Всхожесть просто отличная</div>
                                 </div>
                             </div>
-                             <div class="experience__item">
+                            <div class="experience__item">
                                 <div class="experience__item-avatar">
                                     <img src="images/avatar.jpg" alt="">
                                 </div>
@@ -771,7 +788,7 @@
                                     <div class="experience__item-text">Покупаю этот сорт второй год подряд. Всхожесть просто отличная</div>
                                 </div>
                             </div>
-                             <div class="experience__item">
+                            <div class="experience__item">
                                 <div class="experience__item-avatar">
                                     <img src="images/avatar.jpg" alt="">
                                 </div>
@@ -795,7 +812,7 @@
                         <a href="#" class="experience__add-button button">Поделиться опытом</a>
                     </div>
                     <a href="#" class="ad ad_feed-last">
-                        <img src="images/ad.png" alt="">
+                        <img src="images/ad.png" loading="lazy" alt="">
                     </a>
                 </div>
             </div>

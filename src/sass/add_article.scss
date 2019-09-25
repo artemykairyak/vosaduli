@@ -11,12 +11,15 @@ textarea {
 	align-items: flex-start;
 	padding: 32px 0 40px;
 	@include borderBottom;
+
+	&_mt {
+		margin-top: 60px;
+	}
 }
 
 .left-sidebar {
 	width: 19%;
 	position: sticky;
-	top: 15px;
 }
 
 .main-content {
@@ -151,12 +154,13 @@ textarea {
 		}
 
 		&-radio {
-			width: 100%;
+			width: 0.1;
 			left: 0;
+			opacity: 0;
 			top: 0;
 			z-index: -1;
 			position: absolute;
-			height: 37px;
+			height: 0.1;
 			outline: none;
 		}
 	}
@@ -710,6 +714,17 @@ textarea {
 	}
 }
 
+@media screen and (max-width: 1226px) {
+	.addarticle-form_mt {
+		margin-top: 110px;
+	}
+
+	.left-sidebar, .right-sidebar {
+		top: 74px;
+	}
+}
+
+
 @media screen and (max-width: 1180px) {
 	.pub-maininfo {
 		padding: 30px 15px 0;
@@ -731,6 +746,11 @@ textarea {
 		-ms-flex-wrap: wrap;
 		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
+		padding: 0 0 40px;
+	}
+
+	.addarticle-form_mt {
+		margin-top: 0;
 	}
 
 	.main-content {
@@ -808,6 +828,7 @@ textarea {
 	.left-sidebar {
 		width: 100%;
 		max-height: initial;
+		top: 10px;
 	}
 
 	.main-content {

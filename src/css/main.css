@@ -384,6 +384,11 @@ option {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  transition: all .3s ease;
+}
+
+.controls * {
+  transition: all .3s ease;
 }
 
 .likes-btn,
@@ -403,21 +408,59 @@ option {
   align-items: center;
 }
 
-.likes-btn:before,
-.comments-btn:before {
-  content: '';
+.likes-btn__icon,
+.comments-btn__icon {
   display: inline-block;
   margin-right: 4px;
   width: 25px;
   height: 20px;
 }
 
-.likes-btn:before {
-  background: url(../images/icons/lovers-icon-copy.svg) 0 0/contain no-repeat;
+.likes-btn__icon *,
+.comments-btn__icon * {
+  transition: all .1s ease;
 }
 
-.comments-btn:before {
-  background: url(../images/icons/comment-anons-icon-copy.svg) 0 0/contain no-repeat;
+.likes-btn:not(.likes-btn_liked):hover .likes-btn__icon svg path:last-child {
+  fill: #b6b8be;
+}
+
+.likes-btn:not(.likes-btn_liked):hover .likes-btn__icon svg path:first-child {
+  fill: #dae4f1;
+}
+
+.likes-btn_liked .likes-btn__icon svg path:last-child {
+  fill: #f8454b;
+}
+
+.likes-btn_liked .likes-btn__icon svg path:first-child {
+  fill: #fca7aa;
+}
+
+.likes-btn_liked-anim .likes-btn__icon {
+  animation: like 0.3s ease 1;
+}
+
+@keyframes like {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.comments-btn:hover .comments-btn__icon svg path:last-child {
+  fill: #b6b8be;
+}
+
+.comments-btn:hover .comments-btn__icon svg path:first-child {
+  fill: #dae4f1;
 }
 
 .report-btn:hover svg path {
@@ -548,6 +591,14 @@ option {
   margin: 25px auto;
 }
 
+.modal__soc-icon {
+  transition: all .3s ease;
+}
+
+.modal__soc-icon:hover {
+  transform: scale(1.05);
+}
+
 .modal__soc-icon svg {
   width: 35px;
   height: 35px;
@@ -615,7 +666,6 @@ option {
   width: 100%;
   padding: 0 15px;
   text-align: center;
-  outline: none;
   font-family: Roboto;
   font-size: 17px;
   font-weight: 500;
@@ -714,6 +764,14 @@ option {
   font-weight: 500;
   color: #5b5b5b;
   cursor: pointer;
+  transition: all .3s ease;
+}
+
+.sign-in-modal__rememberme-label:hover,
+.sign-in-modal__forget-password:hover,
+.sign-up-modal__rememberme-label:hover,
+.sign-up-modal__forget-password:hover {
+  color: #282828;
 }
 
 .sign-in-modal__enter-btn-container,
@@ -725,11 +783,28 @@ option {
   margin-top: 12px;
 }
 
+.sign-in-modal__enter-btn-container *,
+.sign-up-modal__enter-btn-container * {
+  transition: all .3s ease;
+}
+
+.sign-in-modal__enter-btn-container:hover .modal__btn-shadow,
+.sign-up-modal__enter-btn-container:hover .modal__btn-shadow {
+  top: 0;
+  left: 0;
+}
+
 .sign-in-modal__register-btn,
 .sign-up-modal__register-btn {
   font-size: 12px;
   font-weight: 500;
   color: #45aaf2;
+  transition: all .3s ease;
+}
+
+.sign-in-modal__register-btn:hover,
+.sign-up-modal__register-btn:hover {
+  color: #0e78c3;
 }
 
 .sign-up-modal__form {
@@ -744,6 +819,15 @@ option {
   margin-top: 12px;
 }
 
+.sign-up-modal__register-btn-container * {
+  transition: all .3s ease;
+}
+
+.sign-up-modal__register-btn-container:hover .modal__btn-shadow {
+  top: 0;
+  left: 0;
+}
+
 .sign-up-modal__register-btn {
   color: #4e801a;
   font-size: 19px;
@@ -756,6 +840,11 @@ option {
   color: #45aaf2;
   margin-top: 25px;
   margin-bottom: 21px;
+  transition: all .3s ease;
+}
+
+.sign-up-modal__registered-btn:hover {
+  color: #0e78c3;
 }
 
 .sign-up-modal__policyaccept-checkbox {
@@ -788,7 +877,7 @@ option {
 }
 
 .header {
-  padding-top: 55px;
+  /*padding-top: 55px;*/
 }
 
 .search-input {
@@ -844,7 +933,7 @@ option {
   align-items: center;
   position: fixed;
   top: 31px;
-  width: 81.2%;
+  width: 1280px;
   border-top: 1px solid #e5e5e5;
   z-index: 50;
   background: #fff;
@@ -986,15 +1075,20 @@ option {
 }
 
 .nav-menu {
-  width: 100%;
   top: 100px;
-  width: 81.2%;
+  width: 1280px;
+  margin: 0 auto;
   z-index: 49;
   position: fixed;
+  transition: all .3s ease;
 }
 
 .nav-menu_hidden {
-  top: 0;
+  top: 0 !important;
+}
+
+.nav-menu_showed {
+  top: 66px;
 }
 
 .nav-menu__container {
@@ -1021,6 +1115,10 @@ option {
   display: inline-block;
   margin-right: 18px;
   margin-left: 18px;
+}
+
+.nav-menu__item {
+  padding: 16px 0;
 }
 
 .nav-menu__item * {
@@ -1114,7 +1212,7 @@ option {
 }
 
 .mobile-nav-menu_hidden {
-  top: 0;
+  top: 0 !important;
 }
 
 .mobile-nav-menu__burger {
@@ -1219,11 +1317,11 @@ option {
   background-color: #ffffff;
 }
 
-.user-data_mt20px {
-  margin-top: 20px;
+.user-data_mt {
+  margin-top: 75px;
 }
 
-.user-data_mb20px {
+.user-data_mb {
   margin-bottom: 20px;
 }
 
@@ -1409,11 +1507,7 @@ option {
   padding: 26px 11px 28px 15px;
   transition: all 0.3s ease;
   position: sticky;
-  top: 17px;
-}
-
-.profile-menu svg {
-  width: 27px;
+  top: 83px;
 }
 
 .profile-menu__container {
@@ -1497,6 +1591,30 @@ option {
   display: flex;
 }
 
+.profile-menu__item svg {
+  width: 27px;
+}
+
+.profile-menu__item_profile svg {
+  height: 22px;
+}
+
+.profile-menu__item_journal svg {
+  height: 25px;
+}
+
+.profile-menu__item_friends svg {
+  height: 20px;
+}
+
+.profile-menu__item_categories svg {
+  height: 21px;
+}
+
+.profile-menu__item_archive svg {
+  height: 24px;
+}
+
 .profile-menu__item-text {
   display: inline-block;
   font-size: 16px;
@@ -1575,7 +1693,8 @@ option {
 }
 
 .mobile-profile-menu {
-  padding: 19px 17px;
+  /*padding: 19px 17px;*/
+  margin-top: 120px;
   display: none;
 }
 
@@ -1589,6 +1708,10 @@ option {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.mobile-profile-menu__item {
+  padding: 15px 0;
 }
 
 .mobile-profile-menu__link {
@@ -1677,8 +1800,9 @@ option {
 .left-sidebar {
   width: 23.5%;
   position: sticky;
-  top: 17px;
-  max-height: 100vh;
+  /*top: 17px;*/
+  top: 83px;
+  max-height: 90vh;
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -1700,10 +1824,6 @@ option {
   display: none;
 }
 
-.right-sidebar::-webkit-scrollbar {
-  display: none;
-}
-
 .right-sidebar {
   width: 23.5%;
   border-radius: 2px;
@@ -1711,8 +1831,9 @@ option {
   background: #ffffff;
   /*padding: 21px 16px 25px;*/
   position: sticky;
-  top: 17px;
-  max-height: 100vh;
+  /*top: 17px;*/
+  top: 83px;
+  max-height: 90vh;
   overflow-y: auto;
   box-sizing: border-box;
 }
@@ -1734,6 +1855,10 @@ option {
 
 .right-sidebar .ad > * {
   border: solid 1px #e6e9f1;
+}
+
+.right-sidebar::-webkit-scrollbar {
+  display: none;
 }
 
 .questions *,
@@ -1999,7 +2124,7 @@ option {
   background: #ffffff;
   padding: 21px 16px 25px;
   position: sticky;
-  top: 17px;
+  top: 83px;
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -2571,6 +2696,46 @@ option {
   fill: #1e5cd6;
 }
 
+.footer__icons-icon_ok svg {
+  width: 11px;
+  height: 17px;
+}
+
+.footer__icons-icon_vk svg {
+  width: 18px;
+  height: 10px;
+}
+
+.footer__icons-icon_fb svg {
+  width: 7px;
+  height: 14px;
+}
+
+.footer__icons-icon_insta svg {
+  width: 15px;
+  height: 15px;
+}
+
+.footer__icons-icon_twi svg {
+  width: 14px;
+  height: 18px;
+}
+
+.footer__icons-icon_tg svg {
+  width: 18px;
+  height: 15px;
+}
+
+.footer__icons-icon_youtube svg {
+  width: 21px;
+  height: 14px;
+}
+
+.footer-logo-pic svg {
+  width: 120px;
+  height: 32px;
+}
+
 .footer__menu-item {
   display: block;
 }
@@ -2608,6 +2773,7 @@ option {
   color: #21224e;
   background: 0 0;
   transition: .5s;
+  cursor: pointer;
 }
 
 .footer__ask-btn:hover {
@@ -2617,6 +2783,13 @@ option {
 
 .footer__policy:hover {
   opacity: .6;
+}
+
+@media screen and (max-width: 1280px) {
+  .nav-menu,
+  .main-menu {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1226px) {
@@ -2639,16 +2812,17 @@ option {
     display: flex;
   }
 
+  .user-data_mt {
+    margin-top: 120px;
+  }
+
   .main-menu {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 50;
     background: #fff;
-  }
-
-  main {
-    padding-top: 119px;
+    width: 100%;
   }
 }
 
@@ -2709,7 +2883,7 @@ option {
     width: 60%;
   }
 
-  .user-data_mt20px {
+  .user-data_mt {
     margin-top: 0;
   }
 
@@ -2854,7 +3028,7 @@ option {
     display: none;
   }
 
-  .user-data_m15px {
+  .user-data_m {
     margin: 0 15px 20px;
   }
 
@@ -3000,7 +3174,7 @@ option {
 
 @media screen and (max-width: 480px) {
   .mobile-profile-menu {
-    padding: 19px 20px 19px 26px;
+    padding: 0 20px 0 26px;
   }
 
   .mobile-profile-menu__container {
@@ -3115,6 +3289,10 @@ option {
 
   .navigation-separator {
     font-size: 13px !important;
+  }
+
+  .mobile-nav-menu {
+    top: 56px;
   }
 }
 

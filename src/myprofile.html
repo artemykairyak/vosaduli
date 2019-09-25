@@ -342,17 +342,19 @@
                         </li>
                     </ul>
                 </div>
-                <div class="user-data user-data_mt20px user-data_mb20px user-data_m15px" style="background: url(images/bg.jpg) center / cover no-repeat;">
+                <div class="user-data user-data_mt user-data_mb user-data_m" style="background: url(images/bg.jpg) center / cover no-repeat;">
                     <div class="user-data__info">
                         <span class="user-data__avatar-changephoto user-data__avatar-changephoto_header">
-                            <span class="svg" data-src="images/icons/camera-icon.svg"></span>
+                            <label for="change-bg"><span class="svg" data-src="images/icons/camera-icon.svg"></span></label>
+                            <input type="file" name="change-bg" id="change-bg" class="user-data__avatar-changebg-input">
                         </span>
-                        <a href="#" class="user-data__avatar">
+                        <span class="user-data__avatar">
                             <img src="images/avatar.jpg" alt="" class="user-data__avatar-picture">
-                            <span class="user-data__avatar-changephoto">
-                                <span class="svg" data-src="images/icons/camera-icon.svg"></span>
+                            <span class="user-data__avatar-changephoto">    
+                                <label for="change-avatar"><span class="svg" data-src="images/icons/camera-icon.svg"></span></label>
+                                 <input type="file" name="change-avatar" id="change-avatar" class="user-data__avatar-changeavatar-input">
                             </span>
-                        </a>
+                        </span>
                         <div class="user-data__text">
                             <h1 class="user-data__username">Елена Старовойтова</h1>
                             <p class="user-data__bio">@helenayagodka / теоретик</p>
@@ -794,7 +796,7 @@
                 </div>
                 <div class="right-sidebar">
                     <a href="#" class="ad">
-                        <img src="images/ad.png" alt="">
+                        <img src="images/ad.png" loading="lazy" alt="">
                     </a>
                     <div class="online-report">
                         <div class="online-report__header">
