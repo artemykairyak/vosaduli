@@ -1075,7 +1075,7 @@ option {
 }
 
 .nav-menu {
-  top: 100px;
+  top: 98px;
   width: 1280px;
   margin: 0 auto;
   z-index: 49;
@@ -1952,7 +1952,6 @@ option {
   display: -o-flex;
   display: flex;
   border: solid 1px #e5e5e5;
-  border-top: none;
   height: 37px;
   align-items: center;
   position: relative;
@@ -2141,6 +2140,16 @@ option {
   background: url(../images/icons/blogs-icon-left-sidebar.svg) 0 0/contain no-repeat;
 }
 
+.blogs-menu__track {
+  max-height: 600px;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+.blogs-menu_hidden {
+  display: none;
+}
+
 .blogs-menu__item {
   display: -webkit-flex;
   display: -moz-flex;
@@ -2151,6 +2160,7 @@ option {
   margin-top: 20px;
   padding-bottom: 21px;
   border-bottom: 1px solid #e5e5e5;
+  height: 130px;
 }
 
 .blogs-menu__item:last-child {

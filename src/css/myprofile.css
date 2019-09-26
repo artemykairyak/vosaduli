@@ -1086,7 +1086,8 @@
   color: #FFF;
 }
 
-.user-data__avatar-changephoto {
+.user-data__avatar-changephoto,
+.user-data__avatar-changebg {
   width: 40px;
   height: 40px;
   background: #fff;
@@ -1107,7 +1108,8 @@
   z-index: 20;
 }
 
-.user-data__avatar-changephoto input[type="file"] {
+.user-data__avatar-changephoto input[type="file"],
+.user-data__avatar-changebg input[type="file"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -1117,7 +1119,8 @@
   z-index: -2;
 }
 
-.user-data__avatar-changephoto label {
+.user-data__avatar-changephoto label,
+.user-data__avatar-changebg label {
   position: absolute;
   top: 0;
   left: 0;
@@ -1128,7 +1131,8 @@
   cursor: pointer;
 }
 
-.user-data__avatar-changephoto svg {
+.user-data__avatar-changephoto svg,
+.user-data__avatar-changebg svg {
   width: 22px;
   height: 19px;
   position: absolute;
@@ -1137,42 +1141,16 @@
   transform: translate(-50%, -50%);
 }
 
-.user-data__avatar-changephoto_header {
+.user-data__avatar-changephoto_header,
+.user-data__avatar-changebg_header {
   top: 18px;
   right: 18px;
 }
 
-.user-data__avatar-changephoto_header input[type="file"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: .1px;
-  height: .1px;
-  opacity: 0;
-  z-index: -2;
-}
-
-.user-data__avatar-changephoto_header label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  right: 0;
-  bottom: 0;
-  z-index: 210;
-  cursor: pointer;
-}
-
-.user-data__avatar-changephoto_header svg {
-  width: 22px;
-  height: 19px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.user-data__avatar-changephoto:hover svg path {
+.user-data__avatar-changephoto:hover svg path,
+.user-data__avatar-changephoto_focus svg path,
+.user-data__avatar-changebg:hover svg path,
+.user-data__avatar-changebg_focus svg path {
   fill: #f19757;
 }
 
