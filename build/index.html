@@ -45,7 +45,7 @@
                     </a>
                     <div class="search">
                         <form action="test.php" class="search-form" method="GET">
-                            <input type="text" class="search-input" placeholder="Поиск по сайту">
+                            <input type="text" class="search-input" placeholder="Поиск по сайту" name="search">
                             <span class="search-input-container">
                                 <input type="submit" name="search-btn" class="search__button" value="">
                                 <span class="svg" data-src="images/icons/search-icon.svg"></span>
@@ -83,7 +83,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="mobile-nav-menu">
+                <div class="mobile-nav-menu mobile-nav-menu_opensearch">
                     <div class="mobile-nav-menu__burger">
                         <span></span>
                         <span></span>
@@ -105,6 +105,15 @@
                             <a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_add-photo">Добавить пост</a>
                         </li>
                     </ul>
+                    <div class="mobile-nav-menu__search">
+                        <form action="test.php" name="mobile-nav-menu__search-form">
+                                <div class="mobile-nav-menu__search-container">
+                                    <input type="text" class="mobile-nav-menu__search-input search-input" placeholder="Поиск по сайту" name="search">
+                                    <input type="submit" name="search-btn" class="mobile-nav-menu__search-button" value="Найти">
+                                    <div class="search__shadow"></div>
+                                </div>
+                            </form>
+                    </div>
                 </div>
                 <div class="nav-menu">
                     <ul class="nav-menu__container">
@@ -451,40 +460,6 @@
                     </div>
                     <div class="blogs-menu__new blogs-menu__container" data-page="1">
                         <div class="blogs-menu__track blogs-menu__track_new">
-                            <a href="" class="blogs-menu__item">
-                                <div class="blogs-menu__item-avatar">
-                                    <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
-                                </div>
-                                <div class="blogs-menu__item-info">
-                                    <div class="blogs-menu__item-header">
-                                        <span class="blogs-menu__item-name">Катерина</span>
-                                        <span class="blogs-menu__item-date">Сегодня</span>
-                                    </div>
-                                    <p class="blogs-menu__item-text">Высаживаю весной и собираю летом томат «Столичный F1»</p>
-                                    <div class="blogs-menu__item-footer">
-                                        <span class="blogs-menu__item-likes">23</span>
-                                        <span class="blogs-menu__item-comments">14</span>
-                                        <span class="blogs-menu__item-bookmarks">8</span>
-                                    </div>
-                                </div>
-                            </a>
-                             <a href="" class="blogs-menu__item">
-                                <div class="blogs-menu__item-avatar">
-                                    <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
-                                </div>
-                                <div class="blogs-menu__item-info">
-                                    <div class="blogs-menu__item-header">
-                                        <span class="blogs-menu__item-name">Катерина</span>
-                                        <span class="blogs-menu__item-date">Сегодня</span>
-                                    </div>
-                                    <p class="blogs-menu__item-text">Высаживаю весной и собираю летом томат «Столичный F1»</p>
-                                    <div class="blogs-menu__item-footer">
-                                        <span class="blogs-menu__item-likes">23</span>
-                                        <span class="blogs-menu__item-comments">14</span>
-                                        <span class="blogs-menu__item-bookmarks">8</span>
-                                    </div>
-                                </div>
-                            </a>
                              <a href="" class="blogs-menu__item">
                                 <div class="blogs-menu__item-avatar">
                                     <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">

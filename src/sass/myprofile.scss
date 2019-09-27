@@ -433,6 +433,10 @@
         margin-top: 25px;
         position: relative;
 
+        &_hidden {
+            display: none;
+        }
+
         &-item {
             background: 0 0;
             height: 37px;
@@ -1046,7 +1050,8 @@
     color: #FFF;
 }
 
-.user-data__avatar-changephoto, .user-data__avatar-changebg {
+.user-data__avatar-changephoto,
+.user-data__avatar-changebg {
     width: 40px;
     height: 40px;
     background: #fff;
@@ -1098,10 +1103,11 @@
 
     &_header {
         top: 18px;
-        right: 18px;      
+        right: 18px;
     }
 
-    &:hover, &_focus {
+    &:hover,
+    &_focus {
         svg path {
             fill: #f19757;
         }
@@ -1112,7 +1118,7 @@
     @include borderBottom;
 
     &_feed {
-    	border-bottom: none;
+        border-bottom: none;
     }
 }
 
@@ -1582,6 +1588,10 @@
 }
 
 .feed {
+    &_hidden {
+        display: none;
+    }
+
     &__article {
         width: 100%;
         padding: 30px 0;
@@ -1941,7 +1951,11 @@
 
     .feed__submenu-item_datefilter,
     .feed__submenu-item_interestingfilter,
-    .feed__submenu-item_discussfilter {
+    .feed__submenu-item_discussfilter,
+    .feed__submenu-item_allfilter,
+    .feed__submenu-item_articlesfilter,
+    .feed__submenu-item_groupsfilter,
+    .feed__submenu-item_recommendationsfilter {
         width: 60%;
         margin-bottom: 10px;
 
@@ -2063,57 +2077,63 @@
         margin-left: auto;
     }
 
-    .feed__submenu-item_datefilter, .feed__submenu-item_discussfilter, .feed__submenu-item_interestingfilter {
-    	width: 94%;
+    .feed__submenu-item_datefilter,
+    .feed__submenu-item_interestingfilter,
+    .feed__submenu-item_discussfilter,
+    .feed__submenu-item_allfilter,
+    .feed__submenu-item_articlesfilter,
+    .feed__submenu-item_groupsfilter,
+    .feed__submenu-item_recommendationsfilter {
+        width: 94%;
     }
 
     .myprofile__tabs-container {
-    	    margin: 22px 0 0;
+        margin: 22px 0 0;
     }
 
     .myprofile__tabs-tab {
-    	padding: auto;
+        padding: auto;
     }
 
     .feed__article-author-avatar {
-    	height: 40px;
-    	width: 40px;
-    	margin-right: 10px;
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
     }
 
     .feed__article-author-bio {
-    	font-size: 13px;
+        font-size: 13px;
     }
 
     .feed__article-author-bio:after {
-    	height: 15px;
+        height: 15px;
     }
 
     .feed__article-author-pubinfo {
-    	font-size: 13px;
+        font-size: 13px;
     }
 
     .feed__article-author-journal {
-    	margin-top: 5px;
+        margin-top: 5px;
     }
 
     .feed__article-text {
-    	font-size: 14px;
-    	margin: 15px 0 0;
-    	line-height: 1.6;
+        font-size: 14px;
+        margin: 15px 0 0;
+        line-height: 1.6;
     }
 
     .feed__article-author-journal-type {
-    	font-size: 13px;
+        font-size: 13px;
     }
 
     .feed__article-author-journal-cover {
-    	height: 24px;
-    	width: 24px;
+        height: 24px;
+        width: 24px;
     }
 
     .feed__article-author-info {
-    	margin-right: 0;
+        margin-right: 0;
     }
 
 

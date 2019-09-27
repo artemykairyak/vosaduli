@@ -476,6 +476,10 @@
   position: relative;
 }
 
+.myprofile__submenu_hidden {
+  display: none;
+}
+
 .myprofile__submenu-item {
   background: 0 0;
   height: 37px;
@@ -1627,6 +1631,10 @@
   padding: 0 17px;
 }
 
+.feed_hidden {
+  display: none;
+}
+
 .feed__article {
   width: 100%;
   padding: 30px 0;
@@ -1985,14 +1993,22 @@
 
   .feed__submenu-item_datefilter,
   .feed__submenu-item_interestingfilter,
-  .feed__submenu-item_discussfilter {
+  .feed__submenu-item_discussfilter,
+  .feed__submenu-item_allfilter,
+  .feed__submenu-item_articlesfilter,
+  .feed__submenu-item_groupsfilter,
+  .feed__submenu-item_recommendationsfilter {
     width: 60%;
     margin-bottom: 10px;
   }
 
   .feed__submenu-item_datefilter:last-child,
   .feed__submenu-item_interestingfilter:last-child,
-  .feed__submenu-item_discussfilter:last-child {
+  .feed__submenu-item_discussfilter:last-child,
+  .feed__submenu-item_allfilter:last-child,
+  .feed__submenu-item_articlesfilter:last-child,
+  .feed__submenu-item_groupsfilter:last-child,
+  .feed__submenu-item_recommendationsfilter:last-child {
     margin-bottom: 0;
   }
 
@@ -2110,8 +2126,12 @@
   }
 
   .feed__submenu-item_datefilter,
+  .feed__submenu-item_interestingfilter,
   .feed__submenu-item_discussfilter,
-  .feed__submenu-item_interestingfilter {
+  .feed__submenu-item_allfilter,
+  .feed__submenu-item_articlesfilter,
+  .feed__submenu-item_groupsfilter,
+  .feed__submenu-item_recommendationsfilter {
     width: 94%;
   }
 

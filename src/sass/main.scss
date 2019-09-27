@@ -1152,6 +1152,19 @@ option {
         top: 0 !important;
     }
 
+    &_opensearch {
+        height: auto;
+
+       .mobile-nav-menu__search {
+            display: block;
+        }
+    }
+
+    &__search {
+        display: none;
+        width: 100%;
+    }
+
     &__burger {
         transition: all 0.3s ease;
         display: inline-block;
@@ -1889,6 +1902,14 @@ option {
                 }
             }
         }
+
+        &-text {
+            color: #282829;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
     }
 
     &__navigation {
@@ -1990,9 +2011,23 @@ option {
         margin-top: 15px;
     }
 
+    &__items {
+        &_hidden {
+            display: none;
+        }
+    }
+
+    &__track {
+        overflow-y: hidden;
+        box-sizing: border-box;
+        height: 660px;
+    }
+
     &__item {
         padding: 13px 0 18px;
         @include borderBottom;
+        height: 132px;
+        box-sizing: border-box;
 
         &-category {
             font-size: 12px;
@@ -2055,14 +2090,9 @@ option {
         background: url(../images/icons/blogs-icon-left-sidebar.svg) 0 0 / contain no-repeat;
     }
 
-    &__container {
-       
-       
-    }
-
     &__track {
-         max-height: 600px;
-         overflow-y: hidden; 
+        height: 600px;
+        overflow-y: hidden;
         box-sizing: border-box;
     }
 
@@ -2081,6 +2111,7 @@ option {
         padding-bottom: 21px;
         @include borderBottom;
         height: 130px;
+        padding-left: 3px;
 
         &:last-child {
             border-bottom: none;
@@ -2097,7 +2128,6 @@ option {
 
         &-info {
             color: $darkGray;
-
         }
 
         &-header {
@@ -2148,6 +2178,12 @@ option {
         margin-bottom: 5px;
     }
 
+    &__track {
+        overflow-y: hidden;
+        box-sizing: border-box;
+        height: 670px;
+    }
+
     &__item {
         display: -webkit-flex;
         display: -moz-flex;
@@ -2156,6 +2192,8 @@ option {
         display: flex;
         padding: 15px 0 20px;
         @include borderBottom;
+        height: 111px;
+        padding-left: 3px;
 
         &-avatar {
             width: 55px;
@@ -2209,7 +2247,7 @@ option {
         }
     }
 
-    &__next:not(.experience__prev_disabled):hover {
+    &__next:not(.experience__next_disabled):hover {
         svg path {
             fill: $lightBlue;
         }
@@ -2429,6 +2467,18 @@ option {
         }
     }
 
+    &__items {
+        &_hidden {
+            display: none;
+        }
+    }
+
+    &__track {
+        height: 480px;
+        overflow-y: hidden;
+        box-sizing: border-box;
+    }
+
     &__item {
         display: -webkit-flex;
         display: -moz-flex;
@@ -2439,6 +2489,12 @@ option {
         margin-top: 16px;
         padding-bottom: 20px;
         @include borderBottom;
+        height: 80px;
+        padding-left: 3px;
+
+        &:last-child {
+            border-bottom: none;
+        }
 
         &-avatar {
             margin-right: 20px;
@@ -2496,7 +2552,6 @@ option {
         display: -o-flex;
         display: flex;
         border: solid 1px $lightGray;
-        border-top: none;
         height: 37px;
         align-items: center;
         position: relative;
@@ -2760,6 +2815,7 @@ option {
 
     .mobile-nav-menu {
         display: flex;
+        flex-wrap: wrap;
     }
 
     .user-data_mt {
