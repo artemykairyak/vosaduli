@@ -83,7 +83,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="mobile-nav-menu mobile-nav-menu_opensearch">
+                <div class="mobile-nav-menu">
                     <div class="mobile-nav-menu__burger">
                         <span></span>
                         <span></span>
@@ -105,14 +105,16 @@
                             <a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_add-photo">Добавить пост</a>
                         </li>
                     </ul>
-                    <div class="mobile-nav-menu__search">
-                        <form action="test.php" name="mobile-nav-menu__search-form">
-                                <div class="mobile-nav-menu__search-container">
-                                    <input type="text" class="mobile-nav-menu__search-input search-input" placeholder="Поиск по сайту" name="search">
-                                    <input type="submit" name="search-btn" class="mobile-nav-menu__search-button" value="Найти">
-                                    <div class="search__shadow"></div>
-                                </div>
-                            </form>
+                    <div class="mobile-search mobile-search_hidden">
+                        <form action="test.php" method="GET" name="mobile-search__form">
+                            <div class="mobile-search__container">
+                                <input type="text" class="mobile-search__input search-input" placeholder="Поиск по сайту" name="search">
+                                <span class="mobile-search__input-container">
+                                    <input type="submit" name="search-btn" class="search__button" value="">
+                                    <span class="svg" data-src="images/icons/search-icon.svg"></span>
+                                </span>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div class="nav-menu">
@@ -460,7 +462,7 @@
                     </div>
                     <div class="blogs-menu__new blogs-menu__container" data-page="1">
                         <div class="blogs-menu__track blogs-menu__track_new">
-                             <a href="" class="blogs-menu__item">
+                            <a href="" class="blogs-menu__item">
                                 <div class="blogs-menu__item-avatar">
                                     <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
                                 </div>
@@ -477,7 +479,7 @@
                                     </div>
                                 </div>
                             </a>
-                             <a href="" class="blogs-menu__item">
+                            <a href="" class="blogs-menu__item">
                                 <div class="blogs-menu__item-avatar">
                                     <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
                                 </div>
@@ -494,7 +496,7 @@
                                     </div>
                                 </div>
                             </a>
-                             <a href="" class="blogs-menu__item">
+                            <a href="" class="blogs-menu__item">
                                 <div class="blogs-menu__item-avatar">
                                     <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
                                 </div>
@@ -511,7 +513,7 @@
                                     </div>
                                 </div>
                             </a>
-                             <a href="" class="blogs-menu__item">
+                            <a href="" class="blogs-menu__item">
                                 <div class="blogs-menu__item-avatar">
                                     <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
                                 </div>
@@ -528,7 +530,7 @@
                                     </div>
                                 </div>
                             </a>
-                             <a href="" class="blogs-menu__item">
+                            <a href="" class="blogs-menu__item">
                                 <div class="blogs-menu__item-avatar">
                                     <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
                                 </div>
@@ -549,7 +551,6 @@
                     </div>
                     <div class="blogs-menu__best blogs-menu__container blogs-menu_hidden" data-page="1">
                         <div class="blogs-menu__track blogs-menu__track_best">
-                           
                             <a href="#" class="blogs-menu__item">
                                 <div class="blogs-menu__item-avatar">
                                     <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
