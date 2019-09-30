@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="21" height="14" viewBox="0 0 21 14">
-    <path fill="#AFBBCA" fill-rule="nonzero" d="M18.795 14H2.1C.945 14 0 13.1 0 12V2C0 .9.945 0 2.1 0h16.8c1.155 0 2.1.9 2.1 2v10c-.105 1.1-1.05 2-2.205 2zm-10.5-3.8L14.7 7 8.295 3.8v6.4z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 14"><path fill="#AFBBCA" d="M18.795 14H2.1C.945 14 0 13.1 0 12V2C0 .9.945 0 2.1 0h16.8c1.155 0 2.1.9 2.1 2v10c-.105 1.1-1.05 2-2.205 2zm-10.5-3.8L14.7 7 8.295 3.8v6.4z"/></svg>

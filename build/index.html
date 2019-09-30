@@ -15,9 +15,34 @@
     <!-- <link rel="stylesheet" href="css/main-menu_unsigned.css"> -->
     <link rel="stylesheet" href="css/journal.css" type="text/css">
 </head>
-
 <body>
+    <div class="overlay overlay_disabled"></div>
+    <div class="mobile-menu mobile-menu_disabled">
+       <div class="mobile-menu__header">
+         <a href="#" tabindex="-1" class="mobile-menu__sign-in button">Войти</a>
+            <a href="#" tabindex="-1" class="mobile-menu__sign-up button">Регистрация</a> 
+       </div> 
+        <div class="mobile-menu__header">
+         <a href="#" tabindex="-1" class="mobile-menu__avatar">
+             <img class="mobile-menu__avatar-pic" src="images/avatar.jpg" alt="">
+         </a>
+       </div>
+       <ul class="mobile-menu__items">
+           <li class="mobile-menu__item mobile-menu__item_mainpage"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_mainpage">Главная страница</a></li>
+           <li class="mobile-menu__item mobile-menu__item_groups"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_groups">Общаться в сообществах</a></li>
+           <li class="mobile-menu__item mobile-menu__item_ask"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_ask">Задать вопрос</a></li>
+           <li class="mobile-menu__item mobile-menu__item_adv"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_adv">Подать объявление</a></li>
+           <!--  <li class="mobile-menu__item mobile-menu__item_addpost"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_addpost">Написать пост</a></li> -->
+           <li class="mobile-menu__item mobile-menu__item_garden"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_garden">Сад и участок</a></li>
+           <li class="mobile-menu__item mobile-menu__item_kailyard"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_kailyard">Огород</a></li>
+           <li class="mobile-menu__item mobile-menu__item_flowers"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_flowers">Цветы и растения</a></li>
+           <li class="mobile-menu__item mobile-menu__item_design"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_design">Ландшафтный дизайн</a></li>
+           <li class="mobile-menu__item mobile-menu__item_building"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_building">Стройка</a></li>
+           <li class="mobile-menu__item mobile-menu__item_relax"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_relax">Отдых</a></li>
+       </ul>
+    </div>
     <main>
+        <div class="mobile-overlay overlay_disabled"></div>
         <div class="wrapper">
             <header class="header">
                 <div class="submenu">
@@ -84,7 +109,7 @@
                     </div>
                 </div>
                 <div class="mobile-nav-menu">
-                    <div class="mobile-nav-menu__burger">
+                    <div class="mobile-nav-menu__burger mobile-nav-menu__burger">
                         <span></span>
                         <span></span>
                         <span></span>

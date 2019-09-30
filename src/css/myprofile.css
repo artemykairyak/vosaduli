@@ -873,6 +873,10 @@
   line-height: 40px;
 }
 
+.jq-selectbox__select.select_focused {
+  background: #ededed;
+}
+
 .jq-selectbox.disabled .jq-selectbox__select .jq-selectbox__trigger {
   position: absolute;
   right: 10px;
@@ -2224,6 +2228,7 @@
 
   .myprofile__submenu {
     width: 90%;
+    justify-content: space-between;
   }
 
   .edit-info {

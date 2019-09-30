@@ -22,6 +22,30 @@
 </head>
 
 <body>
+   <div class="mobile-menu mobile-menu_disabled">
+       <div class="mobile-menu__header">
+         <a href="#" tabindex="-1" class="mobile-menu__sign-in button">Войти</a>
+            <a href="#" tabindex="-1" class="mobile-menu__sign-up button">Регистрация</a> 
+       </div> 
+        <div class="mobile-menu__header">
+         <a href="#" tabindex="-1" class="mobile-menu__avatar">
+             <img class="mobile-menu__avatar-pic" src="images/avatar.jpg" alt="">
+         </a>
+       </div>
+       <ul class="mobile-menu__items">
+           <li class="mobile-menu__item mobile-menu__item_mainpage"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_mainpage">Главная страница</a></li>
+           <li class="mobile-menu__item mobile-menu__item_groups"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_groups">Общаться в сообществах</a></li>
+           <li class="mobile-menu__item mobile-menu__item_ask"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_ask">Задать вопрос</a></li>
+           <li class="mobile-menu__item mobile-menu__item_adv"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_adv">Подать объявление</a></li>
+           <!--  <li class="mobile-menu__item mobile-menu__item_addpost"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_addpost">Написать пост</a></li> -->
+           <li class="mobile-menu__item mobile-menu__item_garden"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_garden">Сад и участок</a></li>
+           <li class="mobile-menu__item mobile-menu__item_kailyard"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_kailyard">Огород</a></li>
+           <li class="mobile-menu__item mobile-menu__item_flowers"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_flowers">Цветы и растения</a></li>
+           <li class="mobile-menu__item mobile-menu__item_design"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_design">Ландшафтный дизайн</a></li>
+           <li class="mobile-menu__item mobile-menu__item_building"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_building">Стройка</a></li>
+           <li class="mobile-menu__item mobile-menu__item_relax"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_relax">Отдых</a></li>
+       </ul>
+    </div>
     <div class="overlay overlay_disabled"></div>
     <div class="sign-in-modal modal modal_disabled">
         <div class="sign-in-modal__close modal__close">
@@ -143,6 +167,7 @@
         </form>
     </div>
     <main>
+         <div class="mobile-overlay overlay_disabled"></div>
         <div class="wrapper">
             <header class="header">
                 <div class="submenu">
@@ -261,6 +286,17 @@
                             <a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_add-photo">Добавить пост</a>
                         </li>
                     </ul>
+                    <div class="mobile-search mobile-search_hidden">
+                        <form action="test.php" method="GET" name="mobile-search__form">
+                            <div class="mobile-search__container">
+                                <input type="text" class="mobile-search__input search-input" placeholder="Поиск по сайту" name="search">
+                                <span class="mobile-search__input-container">
+                                    <input type="submit" name="search-btn" class="search__button" value="">
+                                    <span class="svg" data-src="images/icons/search-icon.svg"></span>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <div class="nav-menu">
                     <ul class="nav-menu__container">

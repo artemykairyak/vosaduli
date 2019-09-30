@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
-    <g fill="none" fill-rule="evenodd">
-        <circle cx="17" cy="17" r="17" fill="#808AEA"/>
-        <path fill="#FFF" fill-rule="nonzero" d="M18.2 12.4h1.7V10h-2.3c-2.5 0-3.1 1.8-3.1 2.9v1.6H13V17h1.5v7h3.1v-7h2.1l.3-2.5h-2.3v-1.4c-.2-.6.2-.7.5-.7"/>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><g fill="none" fill-rule="evenodd"><circle cx="17" cy="17" r="17" fill="#808AEA"/><path fill="#FFF" fill-rule="nonzero" d="M18.2 12.4h1.7V10h-2.3c-2.5 0-3.1 1.8-3.1 2.9v1.6H13V17h1.5v7h3.1v-7h2.1l.3-2.5h-2.3v-1.4c-.2-.6.2-.7.5-.7"/></g></svg>
