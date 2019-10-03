@@ -1566,6 +1566,17 @@ option {
   position: relative;
 }
 
+.user-data__avatar:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../images/icons/bg_avatar-stroke.svg) 0 0 contain no-repeat;
+}
+
 .user-data__avatar_online:before {
   content: '';
   background: #8dbc24;
@@ -1585,6 +1596,8 @@ option {
   object-fit: cover;
   mask-image: url(../images/icons/bg_avatar.svg);
   mask-size: 100%;
+  position: relative;
+  display: inline-block;
 }
 
 .user-data__text {

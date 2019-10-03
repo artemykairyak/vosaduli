@@ -480,6 +480,10 @@
   display: none;
 }
 
+.myprofile__submenu_myfeed {
+  visibility: hidden;
+}
+
 .myprofile__submenu-item {
   background: 0 0;
   height: 37px;
@@ -1725,6 +1729,7 @@
   display: flex;
   align-items: center;
   align-self: flex-end;
+  display: none;
 }
 
 .feed__article-author-journal-cover {

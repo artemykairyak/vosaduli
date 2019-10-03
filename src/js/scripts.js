@@ -2,6 +2,20 @@ $(function() {
 
     //BASE
 
+    // $.ajax({
+    //     type: "GET",
+    //     dataType: 'json',
+    //     url: 'https://cors-anywhere.herokuapp.com/moduli-opencart.ru/users/150/activity',
+    //     error: function(error) {
+    //        console.log('error', error.responseText);
+    //         $('main').append(error.responseText);
+    //     },
+
+    //     success: function(data) {
+    //         console.log('success', data.responseText);
+    //     }
+    // });
+
     var scrollPos = 0;
     $(window).on('scroll', function(e) {
         var st = $(this).scrollTop();
