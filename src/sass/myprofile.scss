@@ -2181,6 +2181,10 @@
             height: 14px;
         }
     }
+    .user-data__avatar-changephoto:not(.user-data__avatar-changephoto_header) {
+        top: -8px;
+        right: 0;
+    }
 
     .header-menu__container {
         width: 90%;

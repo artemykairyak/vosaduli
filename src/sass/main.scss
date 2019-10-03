@@ -1517,9 +1517,10 @@ option {
                 height: 12px;
                 border: solid 2px #ffffff;
                 position: absolute;
-                left: 40px;
+                left: 25px;
                 top: 13px;
                 border-radius: 100%;
+                z-index: 5;
             }
         }
     }
@@ -1527,11 +1528,9 @@ option {
     &__avatar-picture {
         width: 254px;
         height: 254px;
-        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
-        border: solid 2px #e6e9f1;
-        background-color: #ffffff;
-        border-radius: 43%;
         object-fit: cover;
+        mask-image: url(../images/icons/bg_avatar.svg);     
+        mask-size: 100%;
     }
 
     &__text {
@@ -3303,8 +3302,8 @@ option {
     .user-data__avatar {
         &_online {
             &:before {
-                left: 25px;
-                top: 7px;
+                left: 23px;
+                top: 3px;
             }
         }
     }

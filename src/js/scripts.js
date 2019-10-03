@@ -465,6 +465,24 @@ $(function() {
 
     $('.pub-maininfo__content-input').val('');
 
+    if ($('.addarticle-select').length > 0) {
+        $('select').styler();
+    }
+
+    $('select.addarticle-select').on('focus', function() {
+        $(this).closest('.jq-selectbox').find('.jq-selectbox__select').addClass('addarticle-select_focused');
+    });
+
+    $('select.addarticle-select').on('blur', function() {
+        $(this).closest('.jq-selectbox').find('.jq-selectbox__select').removeClass('addarticle-select_focused');
+    });
+
+    $('.pub-rules__title').on('click', function() {
+        if ($(window).width() < 576) {
+            $(this).parent().toggleClass('pub-rules_showed');
+        }
+    })
+
     //ADD ARTICLE END
 
     //FEED
