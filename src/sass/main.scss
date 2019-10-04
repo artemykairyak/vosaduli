@@ -1509,7 +1509,7 @@ option {
         transform: translateY(35%);
         position: relative;
 
-        &:after {
+        /*&:after {
             content: '';
             display: block;
             position: absolute;
@@ -1519,7 +1519,7 @@ option {
             bottom: 0;
             background: url(../images/icons/bg_avatar-stroke.svg) 0 0 contain no-repeat;
            
-        }
+        }*/
 
         &_online {
             &:before {

@@ -177,10 +177,20 @@
                     </ul>
                 </div>
             </header>
-            <form action="test.php" method="POST" enctype="multipart/form-data" name="addarticle" id="addarticle" class="addarticle-form addarticle-form_mt">
+            <form action="test.php" method="POST" enctype="multipart/form-data" name="addpost" id="addpost" class="addarticle-form addarticle-form_mt">
                 <div class="left-sidebar">
+                    <div class="addpost-userdata">
+                        <span class="addpost-userdata__avatar">
+                            <img src="images/avatar.jpg" alt="" class="addpost-userdata__avatar-picture">
+                        </span>
+                        <div class="addpost-userdata__userinfo">
+                            <span class="addpost-userdata__name">Елена Старовойтова</span>
+                            <p class="addpost-userdata__bio">@helenayagodka / теоретик</p>
+                        </div>
+                    </div>
+                    <a href="#" class="addpost-tojournal"><span class="svg" data-src="images/icons/arrow-h-2-category-copy-7.svg"></span>Перейти в журнал</a>
                 </div>
-                <div class="main-content pub-maininfo">
+                <div class="main-content pub-maininfo post-maininfo">
                     <h1 class="pub-maininfo__maintitle">Добавляем запись в журнал</h1>
                     <div class="pub-maininfo__name">
                         <p class="pub-maininfo__name-title pub-maininfo__title">Заголовок <sup class="star">*</sup></p>
@@ -210,17 +220,56 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pub-maininfo__SEO-title">
-                        <p class="pub-maininfo__SEO-title-title pub-maininfo__title">SEO title <sup class="star">*</sup></p>
-                        <div class="pub-maininfo__SEO-title-inputs-container pub-maininfo__inputs-container">
-                            <input type="text" name="SEO-title" id="SEO-title" placeholder="Напишите SEO заголовок" class="pub-maininfo__input pub-maininfo__SEO-title-input">
+                    <div class="pub-maininfo__folder">
+                        <div class="pub-maininfo__folder-input_folder-container">
+                            <p class="pub-maininfo__folder-label pub-maininfo__folder-folder-label" for="folder-name pub-maininfo__folder-label">Поместить в папку</p>
+                            <div class="pub-maininfo__folder-row pub-maininfo__folder-row_folder">
+                                <select name="folder-name" id="folder-name" class="pub-maininfo__input pub-maininfo__folder-input addarticle-select">
+                                    <option disabled selected>Безымянная</option>
+                                    <option value="1">Папка 1</option>
+                                    </option>
+                                    <option value="2">Папка 2</option>
+                                    </option>
+                                    <option value="3">Папка 3</option>
+                                </select>
+                                <div class="pub-maininfo__folder-newfolder">
+                                    <span class="pub-maininfo__folder-newfolder-icon"></span>
+                                    <p class="pub-maininfo__folder-newfolder-label">Создать новую папку</p>
+                                </div>
+                            </div>
+                            <div class="pub-maininfo__folder-row pub-maininfo__folder-row_access">
+                                <p class="pub-maininfo__folder-access-label pub-maininfo__folder-label">Читать могут:</p>
+                                <span class="pub-maininfo__folder-checkbox-container">
+                                    <input name="access" type="radio" id="allaccess" class="pub-maininfo__folder-checkbox">
+                                    <label for="allaccess" class="pub-maininfo__folder-checkbox-label">Все</label>
+                                </span>
+                                <span class="pub-maininfo__folder-checkbox-container">
+                                    <input type="radio"  name="access" id="myselfaccess" class="pub-maininfo__folder-checkbox">
+                                    <label for="myselfaccess" class="pub-maininfo__folder-checkbox-label">Только я</label>
+                                </span>
+                                <span class="pub-maininfo__folder-checkbox-container">
+                                    <input type="radio" name="access" id="friendsaccess" class="pub-maininfo__folder-checkbox">
+                                    <label for="friendsaccess" class="pub-maininfo__folder-checkbox-label">Только друзья</label>
+                                </span>
+                            </div>
+                            <div class="pub-maininfo__folder-row pub-maininfo__folder-row_timer">
+                                <div class="pub-maininfo__folder-timer-container">
+                                    <span class="pub-maininfo__folder-timer-label">Таймер</span>
+                                    <span class="pub-maininfo__folder-timer-icon">
+                                        <span class="svg" data-src="images/icons/timer-posting-icon.svg"></span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="pub-maininfo__SEO-description">
-                        <p class="pub-maininfo__SEO-description-title pub-maininfo__title">SEO description <sup class="star">*</sup></p>
-                        <div class="pub-maininfo__SEO-description-inputs-container pub-maininfo__inputs-container">
-                            <textarea name="SEO-description" id="SEO-description" placeholder="Напишите SEO описание" class="pub-maininfo__input pub-maininfo__SEO-description-input"></textarea>
+                    <div class="pub-maininfo__themes">
+                        <div class="pub-maininfo__folder-input_themes-container">
+                            <p class="pub-maininfo__themes-title pub-maininfo__title">Темы записи<sup class="star">*</sup></p>
+                            <div class="pub-maininfo__themes-inputs-container pub-maininfo__inputs-container">
+                                <input type="text" name="themes" id="themes" class="pub-maininfo__input pub-maininfo__themes-input">
+                            </div>
                         </div>
+                        <p class="pub-maininfo__folder-footer">Темы необходимо разделять запятой. Например: семья, отдых, лето, природа, деревня</p>
                     </div>
                 </div>
                 <div class="right-sidebar">
@@ -474,7 +523,7 @@
         </div>
     </main>
     <script src="vendors/js/jquery-3.4.1.min.js"></script>
-    <script src="vendors/js/easySVG.min.js"></script>
+    <script src="vendors/js/easySVG.js"></script>
     <script src="vendors/js/jquery.formstyler.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>

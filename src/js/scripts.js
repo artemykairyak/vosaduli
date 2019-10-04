@@ -495,7 +495,7 @@ $(function() {
         if ($(window).width() < 576) {
             $(this).parent().toggleClass('pub-rules_showed');
         }
-    })
+    });
 
     //ADD ARTICLE END
 

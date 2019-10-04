@@ -1564,17 +1564,17 @@ option {
   display: inline-block;
   transform: translateY(35%);
   position: relative;
-}
-
-.user-data__avatar:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url(../images/icons/bg_avatar-stroke.svg) 0 0 contain no-repeat;
+  /*&:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url(../images/icons/bg_avatar-stroke.svg) 0 0 contain no-repeat;
+           
+        }*/
 }
 
 .user-data__avatar_online:before {
