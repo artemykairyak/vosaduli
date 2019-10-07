@@ -2,6 +2,15 @@
 @import "fonts.scss";
 @import "mixins.scss";
 
+
+/* HIDDEN ITEMS */
+
+.profile-menu__item_archive {
+    display: none;
+}
+
+/* END HIDDEN ITEMS */
+
 html,
 body {
     font-family: CeraPro;
@@ -17,6 +26,10 @@ body {
 
 body {
     overflow-x: hidden;
+}
+
+body.hidden {
+    overflow: hidden;
 }
 
 body * {
@@ -1164,6 +1177,7 @@ option {
     width: 50%;
     transition: all .3s ease;
     z-index: 98;
+    height: 100vh;
 
     &_disabled {
         left: -50%;
@@ -1509,7 +1523,7 @@ option {
         transform: translateY(35%);
         position: relative;
 
-        /*&:after {
+       /* &:after {
             content: '';
             display: block;
             position: absolute;
@@ -1724,7 +1738,7 @@ option {
                 transition: all 0.3s ease;
                 fill: $violet;
             }
-        }
+        }  
     }
 
     &__item {
@@ -1739,6 +1753,13 @@ option {
             height: 1px;
             @include borderBottom;
             width: 83%;
+        }
+
+        &_categories {
+            &:after {
+                 border-bottom: none;
+            }
+           
         }
 
         &:hover {
@@ -2600,7 +2621,19 @@ option {
 
 .navigation {
     @include flex;
-    justify-content: center;
+    justify-content: space-between;
+
+    &-pages {
+        display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-items: center;
+            position: relative;
+        justify-content: space-between;
+        width: 37%;
+    }
 
     &-page,
     &-totalpages {
@@ -2628,10 +2661,8 @@ option {
         }
     }
 
-
-
     &-page {
-        margin-right: 12px;
+        /*margin-right: 12px;*/
 
         &_selected {
             background: #c4d2e1;
@@ -2642,14 +2673,14 @@ option {
     &-separator {
         font-size: 16px;
         font-weight: 500;
-        margin-right: 12px;
+        /*margin-right: 12px;*/
     }
 
-    &-next-page {
+    &-next-page, &-prev-page {
         background: url(../images/icons/arrow-next-nav.svg) 0 0 / contain no-repeat;
         position: relative;
         height: 44px;
-        padding: 12px 28px 14px 20px;
+        padding: 12px 15px 14px 15px;
         width: 190px;
         font-size: 13px;
         font-weight: bold;
@@ -3075,6 +3106,32 @@ option {
         width: 100%;
         border-top: 1px solid #fff;
     }
+
+    .navigation {
+        margin: 0 auto;
+    }
+
+    .navigation-next-page, .navigation-prev-page {
+        display: none;
+    }
+
+    .navigation-pages {
+        margin: 0 auto;
+        justify-content: center;
+        width: auto;
+
+    }
+
+    .navigation-page {
+        margin-right: 12px;
+    }
+
+    .navigation-separator {
+        margin-right: 12px;
+    }
+
+
+
 }
 
 @media screen and (max-width: 1180px) {

@@ -392,13 +392,7 @@
 		justify-content: space-between;
 
 		&-pages {
-			display: -webkit-flex;
-			display: -moz-flex;
-			display: -ms-flex;
-			display: -o-flex;
-			display: flex;
-			align-items: center;
-			position: relative;
+			
 		}
 
 		&-page {
@@ -410,7 +404,7 @@
 			font-size: 16px;
 			font-weight: 500;
 			color: #2e2e2e;
-			margin-right: 12px;
+			/*margin-right: 12px;*/
 			display: -webkit-flex;
 			display: -moz-flex;
 			display: -ms-flex;
@@ -426,7 +420,7 @@
 		}
 
 		&-separator {
-			margin-right: 12px;
+			/*margin-right: 12px;*/
 			font-size: 16px;
 			color: #2e2e2e;
 			font-weight: 500;

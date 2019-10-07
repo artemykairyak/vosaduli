@@ -70,6 +70,14 @@
   font-weight: bold;
 }
 
+/* HIDDEN ITEMS */
+
+.profile-menu__item_archive {
+  display: none;
+}
+
+/* END HIDDEN ITEMS */
+
 html,
 body {
   font-family: CeraPro;
@@ -85,6 +93,10 @@ body {
 
 body {
   overflow-x: hidden;
+}
+
+body.hidden {
+  overflow: hidden;
 }
 
 body * {
@@ -1227,6 +1239,7 @@ option {
   width: 50%;
   transition: all .3s ease;
   z-index: 98;
+  height: 100vh;
 }
 
 .mobile-menu_disabled {
@@ -1564,7 +1577,7 @@ option {
   display: inline-block;
   transform: translateY(35%);
   position: relative;
-  /*&:after {
+  /* &:after {
             content: '';
             display: block;
             position: absolute;
@@ -1788,6 +1801,10 @@ option {
   height: 1px;
   border-bottom: 1px solid #e5e5e5;
   width: 83%;
+}
+
+.profile-menu__item_categories:after {
+  border-bottom: none;
 }
 
 .profile-menu__item:hover .profile-menu__item-text {
@@ -2668,7 +2685,19 @@ option {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.navigation-pages {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  width: 37%;
 }
 
 .navigation-page,
@@ -2697,7 +2726,7 @@ option {
 }
 
 .navigation-page {
-  margin-right: 12px;
+  /*margin-right: 12px;*/
 }
 
 .navigation-page_selected {
@@ -2708,14 +2737,15 @@ option {
 .navigation-separator {
   font-size: 16px;
   font-weight: 500;
-  margin-right: 12px;
+  /*margin-right: 12px;*/
 }
 
-.navigation-next-page {
+.navigation-next-page,
+.navigation-prev-page {
   background: url(../images/icons/arrow-next-nav.svg) 0 0/contain no-repeat;
   position: relative;
   height: 44px;
-  padding: 12px 28px 14px 20px;
+  padding: 12px 15px 14px 15px;
   width: 190px;
   font-size: 13px;
   font-weight: bold;
@@ -2723,7 +2753,8 @@ option {
   z-index: 1;
 }
 
-.navigation-next-page:hover {
+.navigation-next-page:hover,
+.navigation-prev-page:hover {
   color: #383984;
 }
 
@@ -3132,6 +3163,29 @@ option {
     background: #fff;
     width: 100%;
     border-top: 1px solid #fff;
+  }
+
+  .navigation {
+    margin: 0 auto;
+  }
+
+  .navigation-next-page,
+  .navigation-prev-page {
+    display: none;
+  }
+
+  .navigation-pages {
+    margin: 0 auto;
+    justify-content: center;
+    width: auto;
+  }
+
+  .navigation-page {
+    margin-right: 12px;
+  }
+
+  .navigation-separator {
+    margin-right: 12px;
   }
 }
 

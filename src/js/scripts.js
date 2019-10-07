@@ -55,12 +55,15 @@ $(function() {
         $(this).addClass('mobile-nav-menu__burger_opened');
         $('.mobile-menu').removeClass('mobile-menu_disabled');
         $('.mobile-overlay').removeClass('overlay_disabled');
+        $('body').addClass('hidden'); 
+
     });
 
     $('.mobile-overlay').on('click', function() {
         $(this).addClass('overlay_disabled');
         $('.mobile-nav-menu__burger').removeClass('mobile-nav-menu__burger_opened');
         $('.mobile-menu').addClass('mobile-menu_disabled');
+         $('body').removeClass('hidden'); 
     })
 
     $('.mobile-nav-menu__item_search').on('click', function(e) {
