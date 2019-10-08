@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="css/main-menu_signed.css">
     <!-- <link rel="stylesheet" href="css/main-menu_unsigned.css"> -->
-        <link rel="stylesheet" href="vendors/css/jquery.formstyler.css">
+    <link rel="stylesheet" href="vendors/css/jquery.formstyler.css">
     <link rel="stylesheet" href="css/add_article.css" type="text/css">
 </head>
 
@@ -234,7 +234,8 @@
                         <div class="pub-period__period-btn">
                             <span class="pub-period__period-icon"></span>
                             <span class="pub-period__btn-label">Выбрать период</span>
-                            <input type="range" name="period" min="0" max="0" class="pub-period__period-input">
+                            <input type="hidden" name="periodmin" value="0" class="pub-period__period-input">
+                            <input type="hidden" name="periodmax" value="0" class="pub-period__period-input">
                         </div>
                     </div>
                     <div class="pub-theme">
@@ -255,11 +256,12 @@
                             <div class=" pub-maininfo__category-input_main-category-container addarticle-select-container">
                                 <select name="category-name" id="category-name" class=" pub-maininfo__input pub-maininfo__category-input pub-maininfo__category-input_main-category addarticle-select">
                                     <option disabled selected>Выберите название категории</option>
-                                    <option value="1">Категория 1</option>
-                                    </option>
-                                    <option value="2">Категория 2</option>
-                                    </option>
-                                    <option value="3">Категория 3</option>
+                                    <option value="111">Категория 1</option>
+                                    <option value="222">Категория 2</option>
+                                    <option value="333">Категория 3</option>
+                                    <option value="444">Категория 4</option>
+                                    <option value="555">Категория 5</option>
+                                    <option value="666">Категория 6</option>
                                 </select>
                             </div>
                             <div class="pub-maininfo__category-secoundary-inputs-container">
@@ -270,12 +272,17 @@
                                 <label for="additional-category" class="pub-maininfo__category-label">Дополнительные категории (до четырёх)</label>
                                 <select name="category-name" id="category-name" class="pub-maininfo__input pub-maininfo__category-input pub-maininfo__category-input_additional-category pub-maininfo__input addarticle-select">
                                     <option disabled selected>Выбрать дополнительные</option>
-                                    <option value="11">Россия</option>
-                                    </option>
-                                    <option value="11">Россия</option>
-                                    </option>
-                                    <option value="11">Россия</option>
+                                    <option value="11">Категория 1</option>
+                                    <option value="22">Категория 2</option>
+                                    <option value="33">Категория 3</option>
+                                    <option value="44">Категория 4</option>
+                                    <option value="55">Категория 5</option>
+                                    <option value="66">Категория 6</option>
                                 </select>
+                                <input type="hidden" id="category1" name="addcategory[]" value="">
+                                <input type="hidden" id="category2" name="addcategory[]" value="">
+                                <input type="hidden" id="category3" name="addcategory[]" value="">
+                                <input type="hidden" id="category4" name="addcategory[]" value="">
                             </div>
                         </div>
                     </div>
@@ -289,7 +296,7 @@
                         <p class="pub-maininfo__content-title pub-maininfo__title">Содержание <sup class="star">*</sup></p>
                         <div class="pub-maininfo__content-inputs-container pub-maininfo__inputs-container">
                             <textarea name="article-content" id="article-content" placeholder="Начните писать текст" class="pub-maininfo__input pub-maininfo__content-input">
-							</textarea>
+                            </textarea>
                         </div>
                     </div>
                     <div class="pub-maininfo__SEO-title">

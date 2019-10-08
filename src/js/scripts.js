@@ -55,7 +55,7 @@ $(function() {
         $(this).addClass('mobile-nav-menu__burger_opened');
         $('.mobile-menu').removeClass('mobile-menu_disabled');
         $('.mobile-overlay').removeClass('overlay_disabled');
-        $('body').addClass('hidden'); 
+        $('body').addClass('hidden');
 
     });
 
@@ -63,7 +63,7 @@ $(function() {
         $(this).addClass('overlay_disabled');
         $('.mobile-nav-menu__burger').removeClass('mobile-nav-menu__burger_opened');
         $('.mobile-menu').addClass('mobile-menu_disabled');
-         $('body').removeClass('hidden'); 
+        $('body').removeClass('hidden');
     })
 
     $('.mobile-nav-menu__item_search').on('click', function(e) {
@@ -500,6 +500,51 @@ $(function() {
         }
     });
 
+    // $('.pub-maininfo__category-input_main-category select').on('change', function() {
+    //     $('select.pub-maininfo__category-input_additional-category').removeAttr('disabled');
+    //     console.log('fff')
+    //     $('select.pub-maininfo__category-input_additional-category').trigger('refresh');
+    // })
+
+    $('.pub-maininfo__category-input_main-category .jq-selectbox__dropdown li').on('click', function() {
+        $('.pub-maininfo__category-input_additional-category .jq-selectbox__dropdown li').each((i, item) => {
+            $(item).removeClass('category_selected');
+            $(item).removeClass('category_disabled');
+
+            if ($(item).text() == $(this).text()) {
+                $(item).addClass('category_disabled');
+            }
+        });
+
+        $('.pub-maininfo__category-secoundary-inputs-container input[type="hidden"]').val('')
+    });
+
+    $('.pub-maininfo__category-input_additional-category .jq-selectbox__dropdown li').on('click', function(e) {
+        var selectedCount = 0;
+
+        $(this).parent().children().each((i, item) => {
+            if ($(item).hasClass('category_selected')) {
+                selectedCount++;
+            }
+        });
+
+        if ($(this).hasClass('category_selected') && !$(this).hasClass('category_disabled')) {
+            $(this).removeClass('category_selected');
+            $('.pub-maininfo__category-secoundary-inputs-container').find('input[id="category' + String(selectedCount) + '"]').val('');
+            selectedCount--;
+        } else if (!$(this).hasClass('category_selected') && !$(this).hasClass('category_disabled') && selectedCount < 5) {
+            $(this).addClass('category_selected');
+            var $optionValue = $(this).closest('.pub-maininfo__category-input_additional-category').find('option:eq(' + String($(this).index() + ')')).attr('value');
+            $('.pub-maininfo__category-secoundary-inputs-container').find('input[id="category' + String(selectedCount + 1) + '"]').val($optionValue);
+        }
+    });
+
+    $('.addarticle-form').on('submit', function(e) {
+        e.preventDefault();
+        tinyMCE.triggerSave();
+        sendForm($(this), window.location.pathname);
+    });
+
     //ADD ARTICLE END
 
     //FEED
@@ -845,8 +890,12 @@ $(function() {
     $('.period-modal__enter-btn').on('click', function(e) {
         e.preventDefault();
         if (firstMonth && secondMonth) {
-            $('.pub-period__period-input').attr('min', $('[data-order = first]').attr('data-month'));
-            $('.pub-period__period-input').attr('max', $('[data-order = second]').attr('data-month'));
+            $('[data-order = first]').attr('data-month').length == 1 ?
+                $('input[name="periodmin"]').attr('value', 0 + $('[data-order = first]').attr('data-month')) :
+                $('input[name="periodmin"]').attr('value', $('[data-order = first]').attr('data-month'));
+            $('[data-order = second]').attr('data-month').length == 1 ?
+                $('input[name="periodmax"]').attr('value', 0 + $('[data-order = second]').attr('data-month')) :
+                $('input[name="periodmax"]').attr('value', $('[data-order = second]').attr('data-month'));
         }
 
         hideModal();
@@ -882,8 +931,8 @@ $(function() {
             if ($(this).attr('data-order') === 'first') {
                 $(this).removeAttr('data-order');
                 firstMonth = false;
-                $('.pub-period__period-input').attr('min', '');
-                $('.pub-period__period-input').attr('max', '');
+                $('input[name="periodmin"]').attr('value', '');
+                $('input[name="periodmax"]').attr('value', '');
                 for (var i = 0; i < months.length; i++) {
                     $(months[i]).removeClass('period-modal__period-table-item_selected');
                     $(months[i]).removeAttr('data-order');
@@ -894,11 +943,11 @@ $(function() {
                 $(this).removeAttr('data-order');
                 secondMonth = false;
                 $('.pub-period__btn-label').text('Выбрать период');
-                $('.pub-period__period-input').attr('min', '');
-                $('.pub-period__period-input').attr('max', '');
+                $('input[name="periodmin"]').attr('value', '');
+                $('input[name="periodmax"]').attr('value', '');
             }
         }
-    })
+    });
 
     //MODALS END
 });
@@ -910,6 +959,12 @@ function sendForm(form, url) {
         type: "POST",
         url: url,
         data: $data,
+        success: function(data) {
+            console.log(data);
+        },
+        error: function(error) {
+            console.log(error);
+        },
         dataType: 'json'
     });
 }

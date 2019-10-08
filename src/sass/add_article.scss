@@ -24,6 +24,16 @@ textarea {
     font: normal 13px Roboto;
 }
 
+.category_selected {
+    background: #c4dfa5 !important;
+}
+
+.category_disabled {
+    background: #fafafa !important;
+    color: #73777d !important;
+    cursor: default;
+}
+
 .addarticle-form {
     @include flex;
     align-items: flex-start;
