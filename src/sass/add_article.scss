@@ -18,7 +18,10 @@
 }
 
 /* END HIDDEN ITEMS */
-
+.mce-top-part.mce-container.mce-stack-layout-item.mce-first {
+    position: static !important;
+    z-index: 1 !important;
+}
 
 textarea {
     font: normal 13px Roboto;
@@ -1076,6 +1079,33 @@ textarea {
 
     &__SEO-description-input {
         height: 120px;
+    }
+
+    &__selected-categories {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    &__selected-category {
+        background: darken(#f4f7fb, 10%);
+        padding: 2px 9px 2px 3px;
+        border: 1px solid darken(#f4f7fb, 25%);
+        position: relative;
+        cursor: pointer;
+        margin-right: 5px;
+        display: inline-block;
+        margin-top: 5px;
+        border-radius: 2px;
+
+        &:after {
+            content: '';
+            background: url(../images/icons/close-icon.svg) 0 0 / contain no-repeat;
+            width: 5px;
+            height: 5px;
+            position: absolute;
+            top: 2px;
+            right: 2px;
+        }
     }
 }
 
