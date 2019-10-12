@@ -383,6 +383,26 @@ $(function() {
 
     // ADD ARTICLE
 
+    setTimeout(function() {
+        if ($('.pub-maininfo__selected-categories').length > 0) {         
+            $('.pub-maininfo__category-input_main-category option').each((i, item1) => {
+                $('.pub-maininfo__category-secoundary-inputs-container').find('input[type="hidden"]').each((j, item2) => {
+                    if ($(item1).val() == $(item2).val()) {
+                        $('.pub-maininfo__category-input_additional-category li').each((k, item3) => {
+                            if ($(item1).text() == $(item3).text()) {
+                               $(item3).addClass('category_selected');
+                               $('.pub-maininfo__selected-categories').append('<span class="pub-maininfo__selected-category">' + $(item1).text() + '</span>')
+                            }
+                        })
+                    }
+                });
+            })
+
+        };
+    }, 100);
+
+
+
     if ($('input[name="periodmin"]').val() != 0 && $('input[name="periodmax"]').val() != 0) {
         var months = $('.period-modal__period-table-item');
         var start = +$('[data-order = first]').attr('data-month');
@@ -564,6 +584,16 @@ $(function() {
 
                     if ($(item).text() == $(e.target).text()) {
                         $(item).removeClass('category_selected');
+                        $('.pub-maininfo__category-input_main-category option').each((j, item1) => {
+                            $('.pub-maininfo__category-secoundary-inputs-container input[type="hidden"]').each((k, item3) => {
+                                if($(item1).val() == $(item3).val()) {
+                                    console.log($(item1).val(), $(item3).val())
+                                    $(item3).val('');
+                                    selectedCount--;
+                                }
+                            })
+                        });
+                        
                         $(e.target).remove();
                     }
                 });
@@ -571,7 +601,10 @@ $(function() {
             $('.pub-maininfo__category-secoundary-inputs-container').find('input[id="category' + String(selectedCount) + '"]').val('');
             selectedCount--;
         }
-    })
+       
+    });
+
+
 
     $('.addarticle-form').on('submit', function(e) {
         tinyMCE.triggerSave();
