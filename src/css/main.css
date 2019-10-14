@@ -72,7 +72,10 @@
 
 /* HIDDEN ITEMS */
 
-.profile-menu__item_archive {
+.profile-menu__item_archive,
+.profile-menu__item_categories,
+.mobile-profile-menu__item_categories,
+.mobile-profile-menu__item_archive {
   display: none;
 }
 
@@ -1950,6 +1953,205 @@ option {
   transition: all 0.3s ease;
 }
 
+.profile-menu__contacts {
+  margin-top: 25px;
+}
+
+.profile-menu__contacts-soc-item {
+  padding: 4px 9px;
+  display: inline-block;
+  border-radius: 2px;
+  border: solid 1px #e6e9f1;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: auto;
+}
+
+.profile-menu__contacts-soc-icon {
+  margin-right: 8px;
+}
+
+.profile-menu__contacts-soc-text {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.profile-menu__contacts-soc-text_vk {
+  color: #4a76a8;
+}
+
+.profile-menu__contacts-soc-text_fb {
+  color: #4267b2;
+}
+
+.profile-menu__contacts-soc-text_ok {
+  color: #ee8208;
+  transform: translateY(-2px);
+}
+
+.profile-menu__contacts-address,
+.profile-menu__contacts-phone {
+  font-size: 14px;
+  font-weight: 500;
+  color: #21224e;
+  line-height: 1.14;
+  margin-bottom: 17px;
+}
+
+.profile-menu__contacts-address {
+  margin-top: 13px;
+}
+
+.profile-menu__contacts-website {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e5cd6;
+}
+
+.profile-menu__contacts-website:hover {
+  text-decoration: underline;
+}
+
+.user-content__maintext {
+  font-family: ALS;
+  font-size: 20px;
+  font-weight: bold;
+  color: #21224e;
+  line-height: 1.3;
+  margin-top: 20px;
+  width: 90%;
+}
+
+.user-content__text {
+  font-family: Roboto;
+  font-size: 17px;
+  line-height: 1.41;
+  color: #2e2e2e;
+  margin-top: 10px;
+}
+
+.user-content__cards {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.user-content__card {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10%;
+}
+
+.user-content__card * {
+  transition: all .3s ease;
+}
+
+.user-content__card:last-child {
+  margin-right: 0;
+}
+
+.user-content__card:hover svg {
+  transform: scale(1.1);
+}
+
+.user-content__card:hover .user-content__card-text {
+  color: #21224e;
+}
+
+.user-content__card-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e5cd6;
+  margin-top: 8px;
+}
+
+.user-content__groups {
+  margin-top: 12px;
+}
+
+.user-content__group {
+  display: block;
+}
+
+.user-content__link {
+  font-family: Roboto;
+  font-size: 17px;
+  color: #1e5cd6;
+  text-decoration: underline;
+  line-height: 1.4;
+}
+
+#map {
+  margin-top: 22px;
+  width: 100%;
+  height: 176px;
+}
+
+.myprofile__lastactive {
+  margin-top: -20px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.myprofile__lastactive-icon {
+  width: 25px;
+  height: 20px;
+  margin-right: 7px;
+}
+
+.myprofile__lastactive-text {
+  font-weight: 500;
+  color: #21224e;
+}
+
+.myprofile__hint {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 33px;
+}
+
+.myprofile__hint-text {
+  position: absolute;
+  font-weight: 500;
+  color: #9e9e9e;
+  right: 15%;
+}
+
+.myprofile__hint-text:before {
+  content: '';
+  background: #979797;
+  width: 12px;
+  height: 1px;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: rotate(-30deg);
+}
+
 .mobile-profile-menu {
   /*padding: 19px 17px;*/
   margin-top: 120px;
@@ -3187,6 +3389,10 @@ option {
   .navigation-separator {
     margin-right: 12px;
   }
+
+  .myprofile__hint-text {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1180px) {
@@ -3252,6 +3458,10 @@ option {
 
   .main-content {
     width: 60%;
+  }
+
+  .main-content_anotherprofile {
+    padding: 0 15px;
   }
 
   .user-data_mt {

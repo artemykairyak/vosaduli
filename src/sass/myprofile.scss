@@ -5,7 +5,6 @@
 /* HIDDEN ITEMS */
 
 .header-menu__item {
-
     &_journal,
     &_notes,
     &_messages {
@@ -1783,9 +1782,6 @@
 }
 
 @media screen and (max-width: 1050px) {
-    .user-data {
-        margin: 0;
-    }
 
     .header-menu {
         height: 40px;

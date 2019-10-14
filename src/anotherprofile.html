@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Описание страницы для SEO и соцсетей">
+    <meta name="keywords" content="ключевые, слова, через, запятую">
+    <title>Елена Старовойтова</title>
+    <link rel="icon" href="images/icons/favicon-96x96.png" type="image/png">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/main-menu_signed.css">
+    <!-- <link rel="stylesheet" href="css/main-menu_unsigned.css"> -->
+    <link rel="stylesheet" href="css/journal.css" type="text/css">
+    <link rel="stylesheet" href="css/myprofile.css" type="text/css">
+</head>
+
+<body>
+    <div class="overlay overlay_disabled"></div>
+    <div class="mobile-menu mobile-menu_disabled">
+        <div class="mobile-menu__header">
+            <a href="#" tabindex="-1" class="mobile-menu__sign-in button">Войти</a>
+            <a href="#" tabindex="-1" class="mobile-menu__sign-up button">Регистрация</a>
+        </div>
+        <div class="mobile-menu__header">
+            <a href="#" tabindex="-1" class="mobile-menu__avatar">
+                <img class="mobile-menu__avatar-pic" src="images/avatar.jpg" alt="">
+            </a>
+        </div>
+        <ul class="mobile-menu__items">
+            <li class="mobile-menu__item mobile-menu__item_mainpage"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_mainpage">Главная страница</a></li>
+            <li class="mobile-menu__item mobile-menu__item_groups"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_groups">Общаться в сообществах</a></li>
+            <li class="mobile-menu__item mobile-menu__item_ask"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_ask">Задать вопрос</a></li>
+            <li class="mobile-menu__item mobile-menu__item_adv"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_adv">Подать объявление</a></li>
+            <!--  <li class="mobile-menu__item mobile-menu__item_addpost"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_addpost">Написать пост</a></li> -->
+            <li class="mobile-menu__item mobile-menu__item_garden"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_garden">Сад и участок</a></li>
+            <li class="mobile-menu__item mobile-menu__item_kailyard"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_kailyard">Огород</a></li>
+            <li class="mobile-menu__item mobile-menu__item_flowers"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_flowers">Цветы и растения</a></li>
+            <li class="mobile-menu__item mobile-menu__item_design"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_design">Ландшафтный дизайн</a></li>
+            <li class="mobile-menu__item mobile-menu__item_building"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_building">Стройка</a></li>
+            <li class="mobile-menu__item mobile-menu__item_relax"><a href="#" tabindex="-1" class="mobile-menu__link mobile-menu__link_relax">Отдых</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="mobile-overlay overlay_disabled"></div>
+        <div class="wrapper">
+            <header class="header">
+                <div class="submenu">
+                    <ul class="submenu__container">
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Вопросы и ответы</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Компании</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Садовые магазины</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Юристы</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Журналы</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-menu">
+                    <a href="/" class="logo">
+                        <div class="logo__picture"></div>
+                    </a>
+                    <div class="search">
+                        <form action="test.php" class="search-form" method="GET">
+                            <input type="text" class="search-input" placeholder="Поиск по сайту" name="search">
+                            <span class="search-input-container">
+                                <input type="submit" name="search-btn" class="search__button" value="">
+                                <span class="svg" data-src="images/icons/search-icon.svg"></span>
+                            </span>
+                            <div class="search__shadow"></div>
+                        </form>
+                    </div>
+                    <div class="icons-section">
+                        <a href="#" class="icons-section__item icons-section__item_contests">
+                            <div class="icons-section__icon icons-section__icon_contests"></div>
+                            <span class="icons-section__label">Конкурсы</span>
+                        </a>
+                        <a href="#" class="icons-section__item icons-section__item_events">
+                            <div class="icons-section__icon icons-section__icon_events"></div>
+                            <span class="icons-section__label">События
+                            </span>
+                            <sup class="icons-section__counter">1</sup>
+                        </a>
+                        <a href="#" class="icons-section__item icons-section__item_messages">
+                            <div class="icons-section__icon icons-section__icon_messages"></div>
+                            <span class="icons-section__label">Сообщения</span>
+                        </a>
+                        <a href="#" class="icons-section__item icons-section__item_feed">
+                            <div class="icons-section__icon icons-section__icon_feed"></div>
+                            <span class="icons-section__label">Моя лента</span>
+                        </a>
+                    </div>
+                    <div class="user-info">
+                        <div class="user-info__text">
+                            <span class="user-info__greeting">Привет,</span>
+                            <span class="user-info__username">Елена Старовойтова</span>
+                        </div>
+                        <a href="#" class="user-info__avatar">
+                            <img src="images/avatar.jpg" alt="" class="user-info__avatar-picture avatar">
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile-nav-menu">
+                    <div class="mobile-nav-menu__burger mobile-nav-menu__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="mobile-nav-menu__items">
+                        <li class="mobile-nav-menu__item mobile-nav-menu__item_search">
+                            <a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_search"></a>
+                        </li>
+                        <li class="mobile-nav-menu__item mobile-nav-menu__item_tags">
+                            <a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_tags"></a>
+                        </li>
+                        <li class="mobile-nav-menu__item mobile-nav-menu__item_bookmarks">
+                            <a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_bookmarks"></a>
+                        </li>
+                        <li class="mobile-nav-menu__item mobile-nav-menu__item_tridot"></li>
+                        <li class="mobile-nav-menu__item mobile-nav-menu__item_add-photo">
+                            <a href="#" class="mobile-nav-menu__link_add-photo-icon"></a>
+                            <a href="#" class="mobile-nav-menu__link mobile-nav-menu__link_add-photo">Добавить пост</a>
+                        </li>
+                    </ul>
+                    <div class="mobile-search mobile-search_hidden">
+                        <form action="test.php" method="GET" name="mobile-search__form">
+                            <div class="mobile-search__container">
+                                <input type="text" class="mobile-search__input search-input" placeholder="Поиск по сайту" name="search">
+                                <span class="mobile-search__input-container">
+                                    <input type="submit" name="search-btn" class="search__button" value="">
+                                    <span class="svg" data-src="images/icons/search-icon.svg"></span>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="nav-menu">
+                    <ul class="nav-menu__container">
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Сад</a>
+                        </li>
+                        <li class="nav-menu__separator"></li>
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Огород</a>
+                        </li>
+                        <li class="nav-menu__separator"></li>
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Цветы и растения</a>
+                        </li>
+                        <li class="nav-menu__separator"></li>
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Ландшафт</a>
+                        </li>
+                        <li class="nav-menu__separator"></li>
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Стройка</a>
+                        </li>
+                        <li class="nav-menu__separator"></li>
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Заготовки</a>
+                        </li>
+                        <li class="nav-menu__separator"></li>
+                        <li class="nav-menu__item nav-menu__item_relax">
+                            <a href="#" class="nav-menu__link">Отдых</a>
+                        </li>
+                        <li class="nav-menu__item nav-menu__item_shop">
+                            <span class="nav-menu__item-shop-icon">
+                                <span class="svg" data-src="images/icons/shop-icon.svg"></span>
+                            </span>
+                            <a href="#" class="nav-menu__link">Магазин</a>
+                        </li>
+                        <li class="nav-menu__tridot"></li>
+                        <li class="nav-menu__item nav-menu__item_add-photo">
+                            <a href="#" class="nav-menu__link nav-menu__link_add-photo">Добавить пост</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile-profile-menu">
+                    <ul class="mobile-profile-menu__container">
+                        <li class="mobile-profile-menu__item mobile-profile-menu__item_profile">
+                            <a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_profile">
+                                <span class="svg" data-src="images/icons/nickname-user-icon-none.svg"></span>
+                            </a>
+                        </li>
+                        <li class="mobile-profile-menu__item mobile-profile-menu__item_journal">
+                            <a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_journal mobile-profile-menu__link_active">
+                                <span class="svg" data-src="images/icons/dnevnik.svg"></span>
+                            </a>
+                        </li>
+                        <li class="mobile-profile-menu__item mobile-profile-menu__item_friends">
+                            <a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_friends">
+                                <span class="svg" data-src="images/icons/friends-user-icon-none.svg"></span>
+                            </a>
+                        </li>
+                        <li class="mobile-profile-menu__item mobile-profile-menu__item_categories">
+                            <a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_categories">
+                                <span class="svg" data-src="images/icons/folders-jurnal-icon-none.svg"></span>
+                            </a>
+                        </li>
+                        <li class="mobile-profile-menu__item mobile-profile-menu__item_archive">
+                            <a href="#" class="mobile-profile-menu__link mobile-profile-menu__link_archive">
+                                <span class="svg" data-src="images/icons/archive-jurnal-icon-none.svg"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user-data user-data_mt user-data_mb user-data_m" style="background: url(images/bg.jpg) center / cover no-repeat;">
+                    <div class="user-data__info">
+                        <a href="#" class="user-data__avatar user-data__avatar_online">
+                            <img src="images/avatar.jpg" alt="" class="user-data__avatar-picture">
+                        </a>
+                        <div class="user-data__text">
+                            <h1 class="user-data__username">Елена Старовойтова</h1>
+                            <p class="user-data__bio">@helenayagodka / теоретик</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="actions">
+                <a href="#" class="actions__add-friend button">Добавить в друзья</a>
+                <a href="#" class="actions__write-message button">Написать сообщение</a>
+                <a href="#" class="actions__more button">...</a>
+            </div>
+            <div class="content content_mt15px">
+                <div class="left-sidebar">
+                    <div class="profile-menu">
+                        <ul class="profile-menu__container">
+                            <li class="profile-menu__item profile-menu__item_profile">
+                                <a href="#" class="profile-menu__link profile-menu__link_profile">
+                                    <span class="profile-menu__item-icon">
+                                        <span class="svg" data-src="images/icons/nickname-user-icon-none.svg"></span>
+                                    </span>
+                                    <p class="profile-menu__item-text">Профиль</p>
+                                </a>
+                            </li>
+                            <li class="profile-menu__item profile-menu__item_journal">
+                                <a href="#" class="profile-menu__link profile-menu__link_journal profile-menu__link_active">
+                                    <span class="profile-menu__item-icon">
+                                        <span class="svg" data-src="images/icons/dnevnik.svg"></span>
+                                    </span>
+                                    <p class="profile-menu__item-text">Журнал</p>
+                                </a>
+                            </li>
+                            <li class="profile-menu__item profile-menu__item_friends">
+                                <a href="#" class="profile-menu__link profile-menu__link_friends">
+                                    <span class="profile-menu__item-icon">
+                                        <span class="svg" data-src="images/icons/friends-user-icon-none.svg"></span>
+                                    </span>
+                                    <p class="profile-menu__item-text">Друзья</p>
+                                </a>
+                            </li>
+                            <li class="profile-menu__item profile-menu__item_categories">
+                                <a href="#" class="profile-menu__link profile-menu__link_categories">
+                                    <span class="profile-menu__item-icon">
+                                        <span class="svg" data-src="images/icons/folders-jurnal-icon-none.svg"></span>
+                                    </span>
+                                    <p class="profile-menu__item-text">Рубрики</p>
+                                </a>
+                                <ul class="profile-menu__submenu">
+                                    <li class="profile-menu__submenu-item">
+                                        <a href="#" class="profile-menu__submenu-link">Фотоальбомы</a>
+                                    </li>
+                                    <li class="profile-menu__submenu-item">
+                                        <a href="#" class="profile-menu__submenu-link">Безымянная</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="profile-menu__item profile-menu__item_archive profile-menu__item_expand">
+                                <a href="#" class="profile-menu__link profile-menu__link_archive">
+                                    <span class="profile-menu__item-icon">
+                                        <span class="svg" data-src="images/icons/archive-jurnal-icon-none.svg"></span>
+                                    </span>
+                                    <p class="profile-menu__item-text">Архив</p>
+                                </a>
+                                <ul class="profile-menu__submenu">
+                                    <li class="profile-menu__submenu-item">
+                                        <a href="#" class="profile-menu__submenu-link">Январь</a>
+                                    </li>
+                                    <li class="profile-menu__submenu-item">
+                                        <a href="#" class="profile-menu__submenu-link">Февраль</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="profile-menu__contacts">
+                        <div class="profile-menu__contacts-soc">
+                            <a href="#" class="profile-menu__contacts-soc-item profile-menu__contacts-soc-item_vk">
+                                <span class="profile-menu__contacts-soc-icon profile-menu__contacts-soc-icon_vk">
+                                    <span class="svg" data-src="images/icons/vkcont.svg"></span>
+                                </span>
+                                <span class="profile-menu__contacts-soc-text profile-menu__contacts-soc-text_vk">id467037532</span>
+                            </a>
+                            <a href="#" class="profile-menu__contacts-soc-item profile-menu__contacts-soc-item_fb">
+                                <span class="profile-menu__contacts-soc-icon profile-menu__contacts-soc-icon_fb">
+                                    <span class="svg" data-src="images/icons/fbcont.svg"></span>
+                                </span>
+                                <span class="profile-menu__contacts-soc-text profile-menu__contacts-soc-text_fb">Elena Star</span>
+                            </a>
+                            <a href="#" class="profile-menu__contacts-soc-item profile-menu__contacts-soc-item_ok">
+                                <span class="profile-menu__contacts-soc-icon profile-menu__contacts-soc-icon_ok">
+                                    <span class="svg" data-src="images/icons/okcont.svg"></span>
+                                </span>
+                                <span class="profile-menu__contacts-soc-text profile-menu__contacts-soc-text_ok">Елена Старовойтова</span>
+                            </a>
+                        </div>
+                        <div class="profile-menu__contacts-address">356021 Россия, г. Новосибирск, улица Войковская, д. 36, офис 302</div>
+                        <div class="profile-menu__contacts-phone">+7 915 364-34-30</div>
+                        <a href="#" class="profile-menu__contacts-website">elenastar.com</a>
+                    </div>
+                </div>
+                <div class="main-content main-content_anotherprofile">
+                    <div class="myprofile">
+                        <div class="myprofile-cards">
+                            <div class="myprofile__hint">
+                                <div class="myprofile__hint-icon">
+                                    <span class="svg" data-src="images/icons/like-btn.svg"></span>
+                                </div>
+                                <p class="myprofile__hint-text">
+                                    нажимайте, если вам<br /> симпатичен пользователь
+                                </p>
+                            </div>
+                            <div class="myprofile-cards__container">
+                                <div class="myprofile-cards__card myprofile-cards__card_rating">
+                                    <span class="myprofile-cards__card-title">Рейтинг</span>
+                                    <div class="myprofile-cards__card-value">-5</div>
+                                </div>
+                                <div class="myprofile-cards__card myprofile-cards__card_reputation">
+                                    <span class="myprofile-cards__card-title">Репутация</span>
+                                    <div class="myprofile-cards__card-value">27</div>
+                                </div>
+                                <div class="myprofile-cards__card myprofile-cards__card_prizes">
+                                    <span class="myprofile-cards__card-title">Награды</span>
+                                    <div class="myprofile-cards__card-value">0</div>
+                                </div>
+                                <div class="myprofile-cards__card myprofile-cards__card_posts">
+                                    <span class="myprofile-cards__card-title">Публикации</span>
+                                    <div class="myprofile-cards__card-value">21</div>
+                                </div>
+                            </div>
+                            <div class="myprofile-cards__other-stats">
+                                <div class="myprofile-cards__other-stats-item myprofile-cards__other-stats_likedpeople">
+                                    <span class="myprofile-cards__other-stats-icon"></span>
+                                    <span class="myprofile-cards__other-stats-value">0 человек</span>
+                                </div>
+                                <div class="myprofile-cards__other-stats-item myprofile-cards__other-stats_followedpeople">
+                                    <span class="myprofile-cards__other-stats-icon"></span>
+                                    <span class="myprofile-cards__other-stats-value">35 человек</span>
+                                </div>
+                                <div class="myprofile-cards__other-stats-item myprofile-cards__other-stats_coins">
+                                    <span class="myprofile-cards__other-stats-icon"></span>
+                                    <span class="myprofile-cards__other-stats-value">1000 монет</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="myprofile__lastactive">
+                            <span class="myprofile__lastactive-icon">
+                                <span class="svg" data-src="images/icons/timer-icon.svg"></span>
+                            </span>
+                            <span class="myprofile__lastactive-text">Видели на сайте 42 минуты назад</span>
+                        </div>
+                    </div>
+                    <div class="user-content">
+                        <p class="user-content__maintext">— Привет!</p>
+                        <p class="user-content__text">
+                            Я живу в станице, получается, 24 часа в сутки и 365 дней в году — на даче! Скучать некогда, еще столько всего нужно сделать: построить, посадить, попробовать вырастить!
+                        </p>
+                        <p class="user-content__maintext">— Мой день рождения 23.09.1973, на Восадули с мая 2019, где у меня уже:</p>
+                        <div class="user-content__cards">
+                            <a href="#" class="user-content__card user-content__card-icon_messages">
+                                <span class="user-content__card-icon user-content__card-icon_messages">
+                                    <span class="svg" data-src="images/icons/mess-icon.svg"></span>
+                                </span>
+                                <span class="user-content__card-text">108 сообщений</span>
+                            </a>
+                            <a href="#" class="user-content__card user-content__card-icon_friends">
+                                <span class="user-content__card-icon user-content__card-icon_friends">
+                                    <span class="svg" data-src="images/icons/friends-icon.svg"></span>
+                                </span>
+                                <span class="user-content__card-text">37 друзей</span>
+                            </a>
+                            <a href="#" class="user-content__card user-content__card-icon_albums">
+                                <span class="user-content__card-icon user-content__card-icon_albums">
+                                    <span class="svg" data-src="images/icons/album-icon.svg"></span>
+                                </span>
+                                <span class="user-content__card-text">2 фотоальбома</span>
+                            </a>
+                        </div>
+                        <p class="user-content__maintext">— Я проживаю в городе Новосибирск, как и 17851 пользователь Восадули.ру</p>
+                        <div id="map"></div>
+                        <p class="user-content__maintext">— Я состою в 4 сообществах:</p>
+                        <ul class="user-content__groups">
+                            <li class="user-content__group">
+                                <a href="" class="user-content__link">
+                                    Овощи в Новосибе
+                                </a>
+                            </li>
+                            <li class="user-content__group">
+                                <a href="" class="user-content__link">
+                                    Порядок в гараже
+                                </a>
+                            </li>
+                            <li class="user-content__group">
+                                <a href="" class="user-content__link">
+                                    Несушки-хвастушки
+                                </a>
+                            </li>
+                            <li class="user-content__group">
+                                <a href="" class="user-content__link">
+                                    Редкие виды рододендронов
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="blogs-menu">
+                    <div class="blogs-menu__header">
+                        <span class="blogs-menu__logo"></span>
+                        <p class="blogs-menu__title">Читатели пишут</p>
+                        <a href="#" class="blogs-menu__add-post"></a>
+                    </div>
+                    <div class="blogs-menu__triggers triggers">
+                        <a href="#" class="blogs-menu__trigger blogs-menu__trigger_new trigger trigger_active">Новое</a>
+                        <a href="#" class="blogs-menu__trigger blogs-menu__trigger_best trigger">Лучшее</a>
+                    </div>
+                    <div class="blogs-menu__new blogs-menu__container" data-page="1">
+                        <div class="blogs-menu__track blogs-menu__track_new">
+                            <a href="" class="blogs-menu__item">
+                                <div class="blogs-menu__item-avatar">
+                                    <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
+                                </div>
+                                <div class="blogs-menu__item-info">
+                                    <div class="blogs-menu__item-header">
+                                        <span class="blogs-menu__item-name">Катерина</span>
+                                        <span class="blogs-menu__item-date">Сегодня</span>
+                                    </div>
+                                    <p class="blogs-menu__item-text">Высаживаю весной и собираю летом томат «Столичный F1»</p>
+                                    <div class="blogs-menu__item-footer">
+                                        <span class="blogs-menu__item-likes">23</span>
+                                        <span class="blogs-menu__item-comments">14</span>
+                                        <span class="blogs-menu__item-bookmarks">8</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="blogs-menu__item">
+                                <div class="blogs-menu__item-avatar">
+                                    <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
+                                </div>
+                                <div class="blogs-menu__item-info">
+                                    <div class="blogs-menu__item-header">
+                                        <span class="blogs-menu__item-name">Катерина</span>
+                                        <span class="blogs-menu__item-date">Сегодня</span>
+                                    </div>
+                                    <p class="blogs-menu__item-text">Высаживаю весной и собираю летом томат «Столичный F1»</p>
+                                    <div class="blogs-menu__item-footer">
+                                        <span class="blogs-menu__item-likes">23</span>
+                                        <span class="blogs-menu__item-comments">14</span>
+                                        <span class="blogs-menu__item-bookmarks">8</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="blogs-menu__item">
+                                <div class="blogs-menu__item-avatar">
+                                    <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
+                                </div>
+                                <div class="blogs-menu__item-info">
+                                    <div class="blogs-menu__item-header">
+                                        <span class="blogs-menu__item-name">Катерина</span>
+                                        <span class="blogs-menu__item-date">Сегодня</span>
+                                    </div>
+                                    <p class="blogs-menu__item-text">Высаживаю весной и собираю летом томат «Столичный F1»</p>
+                                    <div class="blogs-menu__item-footer">
+                                        <span class="blogs-menu__item-likes">23</span>
+                                        <span class="blogs-menu__item-comments">14</span>
+                                        <span class="blogs-menu__item-bookmarks">8</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="blogs-menu__item">
+                                <div class="blogs-menu__item-avatar">
+                                    <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
+                                </div>
+                                <div class="blogs-menu__item-info">
+                                    <div class="blogs-menu__item-header">
+                                        <span class="blogs-menu__item-name">Катерина</span>
+                                        <span class="blogs-menu__item-date">Сегодня</span>
+                                    </div>
+                                    <p class="blogs-menu__item-text">Высаживаю весной и собираю летом томат «Столичный F1»</p>
+                                    <div class="blogs-menu__item-footer">
+                                        <span class="blogs-menu__item-likes">23</span>
+                                        <span class="blogs-menu__item-comments">14</span>
+                                        <span class="blogs-menu__item-bookmarks">8</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="blogs-menu__item">
+                                <div class="blogs-menu__item-avatar">
+                                    <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
+                                </div>
+                                <div class="blogs-menu__item-info">
+                                    <div class="blogs-menu__item-header">
+                                        <span class="blogs-menu__item-name">Катерина</span>
+                                        <span class="blogs-menu__item-date">Сегодня</span>
+                                    </div>
+                                    <p class="blogs-menu__item-text">Высаживаю весной и собираю летом томат «Столичный F1»</p>
+                                    <div class="blogs-menu__item-footer">
+                                        <span class="blogs-menu__item-likes">23</span>
+                                        <span class="blogs-menu__item-comments">14</span>
+                                        <span class="blogs-menu__item-bookmarks">8</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blogs-menu__best blogs-menu__container blogs-menu_hidden" data-page="1">
+                        <div class="blogs-menu__track blogs-menu__track_best">
+                            <a href="#" class="blogs-menu__item">
+                                <div class="blogs-menu__item-avatar">
+                                    <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
+                                </div>
+                                <div class="blogs-menu__item-info">
+                                    <div class="blogs-menu__item-header">
+                                        <span class="blogs-menu__item-name">Катерина</span>
+                                        <span class="blogs-menu__item-date">Сегодня</span>
+                                    </div>
+                                    <p class="blogs-menu__item-text">Высаживаю весной и собираю летом томат «Столичный F1»</p>
+                                    <div class="blogs-menu__item-footer">
+                                        <span class="blogs-menu__item-likes">23</span>
+                                        <span class="blogs-menu__item-comments">14</span>
+                                        <span class="blogs-menu__item-bookmarks">8</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="blogs-menu__item">
+                                <div class="blogs-menu__item-avatar">
+                                    <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
+                                </div>
+                                <div class="blogs-menu__item-info">
+                                    <div class="blogs-menu__item-header">
+                                        <span class="blogs-menu__item-name">Катерина</span>
+                                        <span class="blogs-menu__item-date">Сегодня</span>
+                                    </div>
+                                    <p class="blogs-menu__item-text">Высаживаю весной и собираю летом томат «Столичный F1»</p>
+                                    <div class="blogs-menu__item-footer">
+                                        <span class="blogs-menu__item-likes">23</span>
+                                        <span class="blogs-menu__item-comments">14</span>
+                                        <span class="blogs-menu__item-bookmarks">8</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="blogs-menu__item">
+                                <div class="blogs-menu__item-avatar">
+                                    <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
+                                </div>
+                                <div class="blogs-menu__item-info">
+                                    <div class="blogs-menu__item-header">
+                                        <span class="blogs-menu__item-name">Катерина</span>
+                                        <span class="blogs-menu__item-date">Сегодня</span>
+                                    </div>
+                                    <p class="blogs-menu__item-text">Высаживаю весной и собираю летом томат «Столичный F1»</p>
+                                    <div class="blogs-menu__item-footer">
+                                        <span class="blogs-menu__item-likes">23</span>
+                                        <span class="blogs-menu__item-comments">14</span>
+                                        <span class="blogs-menu__item-bookmarks">8</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="blogs-menu__item">
+                                <div class="blogs-menu__item-avatar">
+                                    <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
+                                </div>
+                                <div class="blogs-menu__item-info">
+                                    <div class="blogs-menu__item-header">
+                                        <span class="blogs-menu__item-name">Катерина</span>
+                                        <span class="blogs-menu__item-date">Сегодня</span>
+                                    </div>
+                                    <p class="blogs-menu__item-text">Высаживаю весной и собираю летом томат «Столичный F1»</p>
+                                    <div class="blogs-menu__item-footer">
+                                        <span class="blogs-menu__item-likes">23</span>
+                                        <span class="blogs-menu__item-comments">14</span>
+                                        <span class="blogs-menu__item-bookmarks">8</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="blogs-menu__item">
+                                <div class="blogs-menu__item-avatar">
+                                    <img src="images/avatar.jpg" alt="" class="blogs-menu__item-avatar-picture avatar">
+                                </div>
+                                <div class="blogs-menu__item-info">
+                                    <div class="blogs-menu__item-header">
+                                        <span class="blogs-menu__item-name">Катерина</span>
+                                        <span class="blogs-menu__item-date">Сегодня</span>
+                                    </div>
+                                    <p class="blogs-menu__item-text">Высаживаю весной и собираю летом томат «Столичный F1»</p>
+                                    <div class="blogs-menu__item-footer">
+                                        <span class="blogs-menu__item-likes">23</span>
+                                        <span class="blogs-menu__item-comments">14</span>
+                                        <span class="blogs-menu__item-bookmarks">8</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blogs-menu__navigation">
+                        <a href="#" class="blogs-menu__prev blogs-menu__prev_disabled">
+                            <div class="svg" data-src="images/icons/arrow-sidbar-up.svg"></div>
+                        </a>
+                        <a href="#" class="blogs-menu__all-blogs">Все блоги</a>
+                        <a href="#" class="blogs-menu__next">
+                            <div class="svg" data-src="images/icons/arrow-sidbar-down.svg"></div>
+                        </a>
+                    </div>
+                    <a href="#" class="blogs-menu__add-button button">Добавить запись</a>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer__wrapper">
+                    <div class="footer__top">
+                        <div class="footer__firstcol">
+                            <a href="/" class="footer-logo-pic">
+                                <span class="svg" data-src="images/icons/logo-footer-copy-2.svg"></span>
+                            </a>
+                        </div>
+                        <div class="footer__secondcol">
+                            <div class="footer__address-wrapper">
+                                <p class="footer__company">
+                                    ООО «Гутелот»
+                                </p>
+                                <p class="footer__requisites">
+                                    ИНН: 7734569386 ОГРН: 1077760027311
+                                </p>
+                                <p class="footer__address">
+                                    г. Москва, ул. Маршала Катукова, д.20
+                                </p>
+                            </div>
+                            <ul class="footer__icons">
+                                <li class="footer__icons-icon footer__icons-icon_ok">
+                                    <a href="https://www.ok.ru/vosaduly" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                        <span class="svg" data-src="images/icons/ok-icon-copy.svg"></span>
+                                    </a>
+                                </li>
+                                <li class="footer__icons-icon footer__icons-icon_vk">
+                                    <a href="https://vk.com/vosadulyclub" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                        <span class="svg" data-src="images/icons/vk-icon-copy.svg"></span>
+                                    </a>
+                                </li>
+                                <li class="footer__icons-icon footer__icons-icon_fb">
+                                    <a href="https://www.facebook.com/vosaduly.ru" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                        <span class="svg" data-src="images/icons/fb-icon-copy.svg"></span>
+                                    </a>
+                                </li>
+                                <li class="footer__icons-icon footer__icons-icon_insta">
+                                    <a href="https://www.instagram.com/vosaduly.ru" rel="nofollow noopener" target="_blank" class="footer__icons-link">
+                                        <span class="svg" data-src="images/icons/insta-icon-copy.svg"></span>
+                                    </a>
+                                </li>
+                                <li class="footer__icons-icon footer__icons-icon_twi">
+                                    <a href="https://twitter.com/vosaduly" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                        <span class="svg" data-src="images/icons/twi-icon-copy.svg"></span>
+                                    </a>
+                                </li>
+                                <li class="footer__icons-icon footer__icons-icon_tg">
+                                    <a href="https://t.me/vosaduly" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                        <span class="svg" data-src="images/icons/tg-icon-copy.svg"></span>
+                                    </a>
+                                </li>
+                                <li class="footer__icons-icon footer__icons-icon_youtube">
+                                    <a href="https://www.youtube.com/channel/UCqgbH9G1FrtTbBeBy4KKH7w" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                        <span class="svg" data-src="images/icons/youtube-icon-copy.svg"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__thirdcol">
+                            <p class="footer__contacts">
+                                <a href="mailto:glavred@vosaduly.ru" class="footer__email">glavred@vosaduly.ru</a>
+                                <a href="tel:+74953690680" class="footer__phone">+7 (495) 369-06-80</a>
+                            </p>
+                        </div>
+                        <ul class="footer__fourthcol">
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">О проекте</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">Рекламодателям</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">Правообладателям</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">Правила сайта</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="footer__ask-btn">Задать вопрос</a>
+                    </div>
+                    <div class="footer__bottom">
+                        <p class="footer__copyright">2016-2019 © ООО «Гутелот» Все права защищены</p>
+                        <p class="footer__notification-alert">Перепечатка любых материалов без согласования запрещена</p>
+                        <a href="#" class="footer__policy">Политика конфиденциальности</a>
+                    </div>
+                    <div class="footer__top_tablet">
+                        <div class="footer__logo">
+                            <a href="/" class="footer-logo-pic">
+                                <span class="svg" data-src="images/icons/logo-footer-copy-2.svg"></span>
+                            </a>
+                        </div>
+                        <p class="footer__copyright">
+                            Восадули.ру
+                        </p>
+                    </div>
+                    <div class="footer__middle_tablet">
+                        <ul class="footer__icons">
+                            <li class="footer__icons-icon footer__icons-icon_ok">
+                                <a href="https://www.ok.ru/vosaduly" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                    <span class="svg" data-src="images/icons/ok-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_vk">
+                                <a href="https://vk.com/vosadulyclub" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                    <span class="svg" data-src="images/icons/vk-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_fb">
+                                <a href="https://www.facebook.com/vosaduly.ru" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                    <span class="svg" data-src="images/icons/fb-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_insta">
+                                <a href="https://www.instagram.com/vosaduly.ru" rel="nofollow noopener" target="_blank" class="footer__icons-link">
+                                    <span class="svg" data-src="images/icons/insta-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_twi">
+                                <a href="https://twitter.com/vosaduly" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                    <span class="svg" data-src="images/icons/twi-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_tg">
+                                <a href="https://t.me/vosaduly" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                    <span class="svg" data-src="images/icons/tg-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_youtube">
+                                <a href="https://www.youtube.com/channel/UCqgbH9G1FrtTbBeBy4KKH7w" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                    <span class="svg" data-src="images/icons/youtube-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__bottom_tablet">
+                        <div class="footer__email">
+                            <span class="svg" data-src="images/icons/mail-icon.svg"></span>
+                            <a href="mailto:glavred@vosaduly.ru" class="footer__email-link">glavred@vosaduly.ru</a>
+                        </div>
+                        <ul class="footer__menu">
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">Условия использования</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">Обратная связь</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">Рекламодателям</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#" class="footer__menu-link">Карта сайта</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__top_mobile">
+                        <div class="footer__logo">
+                            <a href="/" class="footer-logo-pic">
+                                <span class="svg" data-src="images/icons/logo-footer-copy-2.svg"></span>
+                            </a>
+                        </div>
+                        <p class="footer__copyright">
+                            2016-2019 © ООО «Гутелот»
+                        </p>
+                    </div>
+                    <div class="footer__bottom_mobile">
+                        <ul class="footer__icons">
+                            <li class="footer__icons-icon footer__icons-icon_ok">
+                                <a href="https://www.ok.ru/vosaduly" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                    <span class="svg" data-src="images/icons/ok-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_vk">
+                                <a href="https://vk.com/vosadulyclub" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                    <span class="svg" data-src="images/icons/vk-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_fb">
+                                <a href="https://www.facebook.com/vosaduly.ru" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                    <span class="svg" data-src="images/icons/fb-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_insta">
+                                <a href="https://www.instagram.com/vosaduly.ru" rel="nofollow noopener" target="_blank" class="footer__icons-link">
+                                    <span class="svg" data-src="images/icons/insta-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_twi">
+                                <a href="https://twitter.com/vosaduly" class="footer__icons-link" rel="nofollow noopener" target="_blank">
+                                    <span class="svg" data-src="images/icons/twi-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_tg">
+                                <a href="https://t.me/vosaduly" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                    <span class="svg" data-src="images/icons/tg-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                            <li class="footer__icons-icon footer__icons-icon_youtube">
+                                <a href="https://www.youtube.com/channel/UCqgbH9G1FrtTbBeBy4KKH7w" rel="nofollow noopener" class="footer__icons-link" target="_blank">
+                                    <span class="svg" data-src="images/icons/youtube-icon-copy.svg"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="vendors/js/jquery-3.4.1.min.js"></script>
+    <script src="vendors/js/easySVG.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhIi2rJWsLqcG02sIw3ebg7MUp0c_w6tg"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

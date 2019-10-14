@@ -1819,10 +1819,6 @@
 }
 
 @media screen and (max-width: 1050px) {
-  .user-data {
-    margin: 0;
-  }
-
   .header-menu {
     height: 40px;
     position: relative;
