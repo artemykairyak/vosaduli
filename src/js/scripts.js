@@ -37,6 +37,11 @@ $(function() {
         }
     });
 
+    $('.icons-section__item_events').on('click', function(e) {
+        e.preventDefault();
+        $('.popup_events').toggleClass('popup_disabled');
+    })
+
     $('.mobile-nav-menu__burger').on('click', function() {
         $(this).addClass('mobile-nav-menu__burger_opened');
         $('.mobile-menu').removeClass('mobile-menu_disabled');
@@ -49,7 +54,7 @@ $(function() {
         $('.mobile-nav-menu__burger').removeClass('mobile-nav-menu__burger_opened');
         $('.mobile-menu').addClass('mobile-menu_disabled');
         $('body').removeClass('hidden');
-    })
+    });
 
     $('.mobile-nav-menu__item_search').on('click', function(e) {
         e.preventDefault();
@@ -81,6 +86,36 @@ $(function() {
     //BASE END
 
     // MYPROFILE
+    var username = $('.user-data__username');
+
+    $('.user-data__text').on('click', function(e) {
+        console.log(username.text());
+        if($(e.target).parent().is('.user-data__edit') || $(e.target).parent().is('svg')) {
+            username.detach();
+            var save = '<span class="user-data__text_save"><span class="svg" data-src="images/icons/uil-check-circle.svg"></span></span>'
+            var close = '<span class="user-data__text_close"><span class="svg" data-src="images/icons/uil-check-circle2.svg"></span></span>'
+            $('.user-data__edit').hide();
+            $('<input class="user-data__text_edited" type="text" value="' + username.text() + '">').insertAfter($('.user-data__edit'));
+            $('.user-data__text').append($(save));
+            $('.user-data__text').append($(close));
+            SVGrefresh(); 
+        }
+
+        if($(e.target).parent().is($('.user-data__text_save')) || $(e.target).parent().is('svg')) {
+            var newUsername = $('.user-data__text_edited').val();
+            $('.user-data__text').prepend(username.html(newUsername));
+            $('.user-data__text_edited').remove();
+            $('.user-data__text_save, .user-data__text_close').remove();
+            $('.user-data__edit').show();
+        }
+
+        if($(e.target).parent().is($('.user-data__text_close')) || $(e.target).parent().is('svg')) {
+            $('.user-data__text').prepend(username)
+            $('.user-data__text_edited').remove();
+            $('.user-data__text_save, .user-data__text_close').remove();
+            $('.user-data__edit').show();
+        }
+    });
 
     $('.user-data__avatar-changeavatar-input').on('focus', function() {
         $('.user-data__avatar-changephoto').addClass('user-data__avatar-changephoto_focus');
@@ -1022,20 +1057,40 @@ $(function() {
 
     //MODALS END
 
-    // MAP
+    // ANOTHER PROFILE
 
-    function initialize() {
-        var myLatlng = new google.maps.LatLng(55.014048, 82.913005);
-        var myOptions = {
-            zoom: 8,
-            center: myLatlng
-        }
-        var map = new google.maps.Map(document.getElementById("map"), myOptions);
+    if ($(window).width() < 1035) {
+        replaceContacts();
+    } else {
+        replaceContactsBack();
     }
 
-    initialize();
-    // MAP END
+    $(window).on('resize', function() {
+        if ($(window).width() < 1035) {
+            replaceContacts();
+        } else {
+            replaceContactsBack();
+        }
+    })
+
+    // ANOTHER PROFILE END
 });
+
+function replaceContactsBack() {
+    var contacts = $('.profile-menu__contacts');
+    contacts.detach();
+    $('.left-sidebar').append(contacts);
+    $('.actions').removeClass('actions_withcontacts');
+}
+
+function replaceContacts() {
+    var contacts = $('.profile-menu__contacts');
+    contacts.detach();
+    $('.actions').prepend(contacts);
+    $('.actions').addClass('actions_withcontacts');
+}
+
+replaceContacts();
 
 function sendForm(form, url) {
     var formName = form.attr('name');

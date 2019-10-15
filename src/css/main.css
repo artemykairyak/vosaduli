@@ -145,6 +145,10 @@ textarea {
   resize: none;
 }
 
+.header + .container {
+  margin-top: 75px;
+}
+
 .input {
   height: 40px;
   color: #2e2e2e;
@@ -1570,6 +1574,21 @@ option {
   margin-bottom: 20px;
 }
 
+.user-data * {
+  transition: all .3s ease;
+}
+
+.user-data__edit {
+  position: absolute;
+  top: -15px;
+  right: -30px;
+  cursor: pointer;
+}
+
+.user-data__edit:hover {
+  transform: scale(1.1);
+}
+
 .user-data__info {
   padding-top: 5%;
   height: 376px;
@@ -1621,6 +1640,32 @@ option {
   color: #fff;
   margin-left: 24px;
   margin-bottom: 57px;
+  position: relative;
+}
+
+.user-data__text_edited {
+  font-family: ALS;
+  font-size: 49px;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  display: inline-block;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.user-data__text_save {
+  position: absolute;
+  top: -15px;
+  right: -30px;
+  cursor: pointer;
+}
+
+.user-data__text_close {
+  position: absolute;
+  top: 15px;
+  right: -30px;
+  cursor: pointer;
 }
 
 .user-data__username {
@@ -1638,6 +1683,10 @@ option {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+}
+
+.actions_withcontacts {
+  flex-wrap: wrap;
 }
 
 .actions__add-friend,
@@ -2023,6 +2072,10 @@ option {
   width: 90%;
 }
 
+.user-content__maintext:last-child {
+  display: none;
+}
+
 .user-content__text {
   font-family: Roboto;
   font-size: 17px;
@@ -2075,10 +2128,12 @@ option {
   font-weight: 500;
   color: #1e5cd6;
   margin-top: 8px;
+  text-align: center;
 }
 
 .user-content__groups {
   margin-top: 12px;
+  display: none;
 }
 
 .user-content__group {
@@ -2091,6 +2146,10 @@ option {
   color: #1e5cd6;
   text-decoration: underline;
   line-height: 1.4;
+}
+
+.user-content__link:hover {
+  color: #21224e;
 }
 
 #map {
@@ -2190,6 +2249,10 @@ option {
 
 .main-content {
   width: 53%;
+}
+
+.main-content_anotherprofile {
+  padding: 0 15px;
 }
 
 .triggers {
@@ -2944,7 +3007,6 @@ option {
 
 .navigation-next-page,
 .navigation-prev-page {
-  background: url(../images/icons/arrow-next-nav.svg) 0 0/contain no-repeat;
   position: relative;
   height: 44px;
   padding: 12px 15px 14px 15px;
@@ -2958,6 +3020,14 @@ option {
 .navigation-next-page:hover,
 .navigation-prev-page:hover {
   color: #383984;
+}
+
+.navigation-next-page {
+  background: url(../images/icons/arrow-next-nav.svg) 0 0/contain no-repeat;
+}
+
+.navigation-prev-page {
+  background: url(../images/icons/prev_btn.svg) 0 0/contain no-repeat;
 }
 
 .authors {
@@ -3390,7 +3460,7 @@ option {
     margin-right: 12px;
   }
 
-  .myprofile__hint-text {
+  .myprofile__hint {
     display: none;
   }
 }
@@ -3460,10 +3530,6 @@ option {
     width: 60%;
   }
 
-  .main-content_anotherprofile {
-    padding: 0 15px;
-  }
-
   .user-data_mt {
     margin-top: 0;
   }
@@ -3484,6 +3550,13 @@ option {
 
   .user-data__username {
     font-size: 46px;
+  }
+
+  .profile-menu__contacts {
+    width: 95%;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
 }
 
@@ -3757,15 +3830,14 @@ option {
     transform: translateY(15%);
   }
 
-  .actions {
-    padding-left: 35%;
-    justify-content: flex-start;
-  }
-
   .modal {
     width: 80%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .user-content__maintext {
+    width: 100%;
   }
 }
 
@@ -3895,6 +3967,16 @@ option {
   .navigation-separator {
     font-size: 13px !important;
   }
+
+  .user-content__cards {
+    flex-wrap: wrap;
+  }
+
+  .user-content__card {
+    width: 90%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 395px) {
@@ -3957,6 +4039,10 @@ option {
 
   .footer__icons-icon:first-child {
     margin-left: 0;
+  }
+
+  .profile-menu__contacts {
+    margin-top: 0;
   }
 }
 
