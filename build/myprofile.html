@@ -46,6 +46,33 @@
        </ul>
     </div>
     <div class="overlay overlay_disabled"></div>
+     <div class="success-modal modal modal_disabled">
+         <div class="success-modal__close modal__close">
+            <span class="svg" data-src="images/icons/close-icon.svg"></span>
+        </div>
+        <div class="success-modal-icon">
+            <span class="svg" data-src="images/icons/success.svg"></span>
+        </div>
+        <p class="success-modal__text">
+            Спасибо!<br/>
+            Действие выполнено успешно!<br/>
+        </p>
+        <a href="#" class="success-modal-btn modal__btn">Понятно</a>
+     </div>
+     <div class="error-modal modal modal_disabled">
+         <div class="error-modal__close modal__close">
+            <span class="svg" data-src="images/icons/close-icon.svg"></span>
+        </div>
+        <div class="error-modal-icon">
+            <span class="svg" data-src="images/icons/error.svg"></span>
+        </div>
+        <p class="error-modal__text">
+            Упс!<br/>
+            Произошла ошибка.<br/>
+            Попробуйте ещё раз.
+        </p>
+        <a href="#" class="error-modal-btn modal__btn">Понятно</a>
+     </div>
     <div class="sign-in-modal modal modal_disabled">
         <div class="sign-in-modal__close modal__close">
             <span class="svg" data-src="images/icons/close-icon.svg"></span>
@@ -392,7 +419,7 @@
                         </span>
                         <div class="user-data__text">
                             <span class="user-data__edit">
-                                <span class="svg" data-src="images/icons/edit.svg"></span>
+                                <span class="svg user-data__edit-svg" data-src="images/icons/edit.svg"></span>
                             </span>
                             <h1 class="user-data__username">Елена Старовойтова</h1>
                             <p class="user-data__bio">@helenayagodka / теоретик</p>

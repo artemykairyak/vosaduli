@@ -46,7 +46,7 @@ $(function() {
         $(this).addClass('mobile-nav-menu__burger_opened');
         $('.mobile-menu').removeClass('mobile-menu_disabled');
         $('.mobile-overlay').removeClass('overlay_disabled');
-        $('body').addClass('hidden');
+        // $('body').addClass('hidden');
     });
 
     $('.mobile-overlay').on('click', function() {
@@ -72,9 +72,7 @@ $(function() {
     });
 
     $('.likes-btn').on('click', function(e) {
-        e.preventDefault();
-        $(this).toggleClass('likes-btn_liked-anim');
-        $(this).toggleClass('likes-btn_liked');
+       
     });
 
     if ($('.actions__add-friend').hasClass('actions__add-friend_sended')) {
@@ -83,33 +81,67 @@ $(function() {
         $('.actions__add-friend').text('Удалить из друзей');
     }
 
+    $('.controls').on('click', function(e) {
+        console.log($(e.target));
+        console.log($(e.target).closest('.likes-btn__icon').length);
+        if($(e.target).closest('.likes-btn__icon').length > 0) {
+            $(e.target).on('click', function(e) {
+                 e.preventDefault();
+                 console.log(1);
+                 console.log('22 ' + $(e.target).closest('.likes-btn'));
+                $(e.target).closest('.likes-btn').toggleClass('likes-btn_liked-anim');
+                $(e.target).closest('.likes-btn').toggleClass('likes-btn_liked');
+            })
+        }
+    })
+
     //BASE END
 
     // MYPROFILE
     var username = $('.user-data__username');
 
     $('.user-data__text').on('click', function(e) {
-        console.log(username.text());
-        if($(e.target).parent().is('.user-data__edit') || $(e.target).parent().is('svg')) {
+        if ($(e.target).parent().is('.user-data__edit') || $(e.target).parent().is('.user-data__edit-svg')) {
             username.detach();
-            var save = '<span class="user-data__text_save"><span class="svg" data-src="images/icons/uil-check-circle.svg"></span></span>'
-            var close = '<span class="user-data__text_close"><span class="svg" data-src="images/icons/uil-check-circle2.svg"></span></span>'
+            var save = '<span class="user-data__text_save"><span class="svg user-data__text_save-svg" data-src="images/icons/uil-check-circle.svg"></span></span>'
+            var close = '<span class="user-data__text_close"><span class="svg user-data__text_close-svg" data-src="images/icons/uil-check-circle2.svg"></span></span>'
             $('.user-data__edit').hide();
             $('<input class="user-data__text_edited" type="text" value="' + username.text() + '">').insertAfter($('.user-data__edit'));
             $('.user-data__text').append($(save));
             $('.user-data__text').append($(close));
-            SVGrefresh(); 
+            SVGrefresh();
         }
 
-        if($(e.target).parent().is($('.user-data__text_save')) || $(e.target).parent().is('svg')) {
+        if ($(e.target).parent().is($('.user-data__text_save')) || $(e.target).parent().is($('.user-data__text_save-svg'))) {
             var newUsername = $('.user-data__text_edited').val();
-            $('.user-data__text').prepend(username.html(newUsername));
-            $('.user-data__text_edited').remove();
-            $('.user-data__text_save, .user-data__text_close').remove();
-            $('.user-data__edit').show();
+
+            if (newUsername.split(' ')[0] && newUsername.split(' ')[1]) {
+                $('.user-data__text').prepend(username.html(newUsername.split(' ')[0] + ' ' + newUsername.split(' ')[1]));
+                $('.user-data__text_edited').remove();
+                $('.user-data__text_save, .user-data__text_close').remove();
+                $('.user-data__edit').show();
+                var data = {
+                    name: newUsername.split(' ')[0],
+                    surname: newUsername.split(' ')[1]
+                }
+
+                console.log(data)
+                $.ajax({
+                    type: "POST",
+                    url: window.location.pathname,
+                    data: data,
+                    success: function(data) {
+                        console.log(data);
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    },
+                    dataType: 'json'
+                });
+            }
         }
 
-        if($(e.target).parent().is($('.user-data__text_close')) || $(e.target).parent().is('svg')) {
+        if ($(e.target).parent().is($('.user-data__text_close')) || $(e.target).parent().is($('.user-data__text_close-svg'))) {
             $('.user-data__text').prepend(username)
             $('.user-data__text_edited').remove();
             $('.user-data__text_save, .user-data__text_close').remove();
@@ -581,7 +613,6 @@ $(function() {
         });
 
         $('.pub-maininfo__selected-categories').empty();
-
         $('.pub-maininfo__category-secoundary-inputs-container input[type="hidden"]').val('')
     });
 
@@ -639,8 +670,6 @@ $(function() {
 
     });
 
-
-
     $('.addarticle-form').on('submit', function(e) {
         tinyMCE.triggerSave();
     });
@@ -662,6 +691,20 @@ $(function() {
     if ($('.questions__item-content').length > 0) {
         cutText($('.questions__item-content'), 70);
     }
+
+    $('.report-btn').on('click', function(e) {
+        e.preventDefault();
+        $(this).find($('.report-popup')).toggleClass('popup_disabled');
+    });
+
+    $('.report-popup').on('click', function() {
+        showModal($('.report-modal'))
+    });
+
+    $('.report-reason').on('submit', function(e) {
+        e.preventDefault();
+        sendForm($(this), window.location.pathname);
+    })
 
     $('.questions__trigger').on('click', function(e) {
         e.preventDefault();
@@ -1055,6 +1098,11 @@ $(function() {
         }
     });
 
+    $('.error-modal-btn, .success-modal-btn').on('click', function(e) {
+        e.preventDefault();
+        hideNoOverlayModal($('.modal'));
+    })
+
     //MODALS END
 
     // ANOTHER PROFILE
@@ -1090,22 +1138,40 @@ function replaceContacts() {
     $('.actions').addClass('actions_withcontacts');
 }
 
-replaceContacts();
 
 function sendForm(form, url) {
     var formName = form.attr('name');
     var $data = $(form).serialize() + '&' + formName + '=1';
+    console.log($data);
     $.ajax({
         type: "POST",
         url: url,
         data: $data,
         success: function(data) {
-            console.log(data);
+            showNoOverlayModal($('.success-modal'));
         },
         error: function(error) {
-            console.log(error);
+            showNoOverlayModal($('.error-modal'));
         },
         dataType: 'json'
+    });
+}
+
+function showNoOverlayModal(modal) {
+    $('.overlay').addClass('overlay_transparent');
+    $('.overlay').removeClass('overlay_disabled');
+    modal.removeClass('modal_disabled');
+    modal.animate({ 'opacity': '1' }, 300);
+    setTimeout(() => {
+        hideNoOverlayModal(modal);
+    }, 3000)
+}
+
+function hideNoOverlayModal(modal) {
+    $('.overlay').addClass('overlay_disabled');
+    $('.overlay').removeClass('overlay_transparent');
+    modal.animate({ 'opacity': '0' }, 300, function() {
+        modal.addClass('modal_disabled');
     });
 }
 

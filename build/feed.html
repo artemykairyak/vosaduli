@@ -20,6 +20,26 @@
 
 <body>
     <div class="overlay overlay_disabled"></div>
+    <div class="report-modal modal modal_disabled">
+        <div class="report-modal__close modal__close">
+            <span class="svg" data-src="images/icons/close-icon.svg"></span>
+        </div>
+        <div class="report-modal__title">
+            <span class="report-modal__title-icon">
+                <span class="svg" data-src="images/icons/abuze-icon-copy.svg"></span>
+            </span>
+            <p class="report-modal__title-text">Причина жалобы</p>
+        </div>
+        <form action="test.php" name="report-reason" class="report-modal__form">
+            <div class="report-modal__input-container">
+                <textarea class="report-modal__reason" name="report-reason-text" id="report-reason-text"></textarea>
+            </div>
+            <div class="edit-info__save-btn-container">
+                <input type="submit" class="edit-info__save-btn" name="report-btn" value="Отправить">
+                <div class="edit-info__shadow"></div>
+            </div>
+        </form>
+    </div>
     <div class="sign-in-modal modal modal_disabled">
         <div class="sign-in-modal__close modal__close">
             <span class="svg" data-src="images/icons/close-icon.svg"></span>
@@ -343,7 +363,7 @@
             <div class="content content_mt15px">
                 <div class="left-sidebar left-sidebar_border">
                     <a href="#" class="ad">
-                        <img src="images/ad.png"  alt="">
+                        <img src="images/ad.png" alt="">
                     </a>
                     <div class="questions questions_mt15px">
                         <div class="questions__header">
@@ -570,6 +590,7 @@
                                                 </span>5</a>
                                             <a href="#" class="feed__article-comment-btn comment-btn button">Комментировать</a>
                                             <a href="#" class="feed__article-report report-btn">
+                                                <span class="report-popup popup_disabled">Пожаловаться</span>
                                                 <span class="svg" data-src="images/icons/abuze-icon-copy.svg"></span>
                                             </a>
                                         </div>
@@ -802,7 +823,7 @@
                 </div>
                 <div class="right-sidebar right-sidebar_feed">
                     <a href="#" class="ad">
-                        <img src="images/ad.png"  alt="">
+                        <img src="images/ad.png" alt="">
                     </a>
                     <div class="authors">
                         <div class="authors__header">
@@ -1118,7 +1139,7 @@
                         </div>
                     </div>
                     <a href="#" class="ad">
-                        <img src="images/ad.png"  alt="">
+                        <img src="images/ad.png" alt="">
                     </a>
                     <div class="experience">
                         <div class="experience__header">
@@ -1225,7 +1246,7 @@
                         <a href="#" class="experience__add-button button">Поделиться опытом</a>
                     </div>
                     <a href="#" class="ad ad_feed-last">
-                        <img src="images/ad.png"  alt="">
+                        <img src="images/ad.png" alt="">
                     </a>
                 </div>
             </div>
