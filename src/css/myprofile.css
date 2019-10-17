@@ -891,7 +891,7 @@
   display: inline-block;
   width: 9px;
   height: 7px;
-  background: url(../../images/icons/select-arr_disabled.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/select-arr_disabled.svg) 0 0/contain no-repeat;
 }
 
 .jq-selectbox__select-text {
@@ -911,7 +911,7 @@
   transform: translateY(-50%);
   content: '';
   display: inline-block;
-  background: url(../../images/icons/select-arr.svg) 0 0/contain no-repeat;
+  background: url(../images/icons/select-arr.svg) 0 0/contain no-repeat;
   width: 9px;
   height: 7px;
 }

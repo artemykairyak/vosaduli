@@ -2555,6 +2555,11 @@ button {
     -webkit-appearance: none;
     -moz-appearance: none;
     box-sizing: border-box;
+
+}
+
+input[type="submit"] {
+    outline: none;
 }
 
 textarea {
@@ -3199,6 +3204,11 @@ option {
         line-height: 23px;
         width: 70%;
     }
+
+    &-icon svg {
+        width: 113px !important;
+        height: 113px !important;
+    }
 }
 
 .success-modal {
@@ -3282,6 +3292,10 @@ option {
 
     .edit-info__save-btn {
         width: 100%;
+
+        &:focus {
+           color: $blue;
+        }
     }
 
 }
@@ -4199,6 +4213,7 @@ option {
 
     & * {
         transition: all .3s ease;
+        box-sizing: border-box;
     }
 
     &__edit {

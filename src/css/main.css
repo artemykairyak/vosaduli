@@ -2629,6 +2629,10 @@ button {
   box-sizing: border-box;
 }
 
+input[type="submit"] {
+  outline: none;
+}
+
 textarea {
   resize: none;
 }
@@ -3277,6 +3281,12 @@ option {
   width: 70%;
 }
 
+.success-modal-icon svg,
+.error-modal-icon svg {
+  width: 113px !important;
+  height: 113px !important;
+}
+
 .success-modal-btn {
   border: 1px solid #90c952;
 }
@@ -3355,6 +3365,10 @@ option {
 
 .report-modal .edit-info__save-btn {
   width: 100%;
+}
+
+.report-modal .edit-info__save-btn:focus {
+  color: #21224e;
 }
 
 .success-modal-btn,
@@ -4256,6 +4270,7 @@ option {
 
 .user-data * {
   transition: all .3s ease;
+  box-sizing: border-box;
 }
 
 .user-data__edit {

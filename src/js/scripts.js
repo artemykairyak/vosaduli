@@ -71,27 +71,17 @@ $(function() {
         }
     });
 
-    $('.likes-btn').on('click', function(e) {
-       
-    });
-
     if ($('.actions__add-friend').hasClass('actions__add-friend_sended')) {
         $('.actions__add-friend').text('Заявка отправлена');
     } else if ($('.actions__add-friend').hasClass('actions__add-friend_added')) {
         $('.actions__add-friend').text('Удалить из друзей');
     }
 
-    $('.controls').on('click', function(e) {
-        console.log($(e.target));
-        console.log($(e.target).closest('.likes-btn__icon').length);
-        if($(e.target).closest('.likes-btn__icon').length > 0) {
-            $(e.target).on('click', function(e) {
-                 e.preventDefault();
-                 console.log(1);
-                 console.log('22 ' + $(e.target).closest('.likes-btn'));
-                $(e.target).closest('.likes-btn').toggleClass('likes-btn_liked-anim');
-                $(e.target).closest('.likes-btn').toggleClass('likes-btn_liked');
-            })
+    $('.main-content').on('click', function(e) {
+        if ($(e.target).closest('.likes-btn__icon').length > 0) {
+            e.preventDefault();
+            $(e.target).closest('.likes-btn').toggleClass('likes-btn_liked-anim');
+            $(e.target).closest('.likes-btn').toggleClass('likes-btn_liked');
         }
     })
 
@@ -103,8 +93,8 @@ $(function() {
     $('.user-data__text').on('click', function(e) {
         if ($(e.target).parent().is('.user-data__edit') || $(e.target).parent().is('.user-data__edit-svg')) {
             username.detach();
-            var save = '<span class="user-data__text_save"><span class="svg user-data__text_save-svg" data-src="images/icons/uil-check-circle.svg"></span></span>'
-            var close = '<span class="user-data__text_close"><span class="svg user-data__text_close-svg" data-src="images/icons/uil-check-circle2.svg"></span></span>'
+            var save = '<span class="user-data__text_save"><span class="svg user-data__text_save-svg" data-src="/templates/vosaduly/images/icons/uil-check-circle.svg"></span></span>'
+            var close = '<span class="user-data__text_close"><span class="svg user-data__text_close-svg" data-src="/templates/vosaduly/images/icons/uil-check-circle2.svg"></span></span>'
             $('.user-data__edit').hide();
             $('<input class="user-data__text_edited" type="text" value="' + username.text() + '">').insertAfter($('.user-data__edit'));
             $('.user-data__text').append($(save));
@@ -463,12 +453,21 @@ $(function() {
                         })
                     }
                 });
-            })
+            });
 
+            $('.pub-maininfo__category-secoundary-inputs-container').find('input[type="hidden"]').each((i, item3) => {
+                if($(item3).val() != '') {
+                    $('.pub-maininfo__selected-category').each((j, item4) => {
+                        $(item4).attr('data-value', $(item3).val());
+                        return false;
+                    })
+                }
+            }
         };
     }, 100);
 
-
+    var firstMonth = false;
+    var secondMonth = false;
 
     if ($('input[name="periodmin"]').val() != 0 && $('input[name="periodmax"]').val() != 0) {
         var months = $('.period-modal__period-table-item');
@@ -618,10 +617,11 @@ $(function() {
 
     $('.pub-maininfo__category-secoundary-inputs-container').on('click', function(e) {
         var selectedCount = 0;
-
+        var ind = 0;
         if ($(e.target).is($('.pub-maininfo__category-input_additional-category .jq-selectbox__dropdown li'))) {
             $(e.target).parent().children().each((i, item) => {
                 if ($(item).hasClass('category_selected')) {
+                    ind = $('.pub-maininfo__category-input_additional-category option:eq(' + i + ')').val();
                     selectedCount++;
                 }
             });
@@ -636,10 +636,18 @@ $(function() {
                 $('.pub-maininfo__category-secoundary-inputs-container').find('input[id="category' + String(selectedCount) + '"]').val('');
                 selectedCount--;
             } else if (!$(e.target).hasClass('category_selected') && !$(e.target).hasClass('category_disabled') && selectedCount < 4) {
-                $('.pub-maininfo__selected-categories').append('<span class="pub-maininfo__selected-category">' + $(e.target).text() + '</span>')
+
+
                 $(e.target).addClass('category_selected');
                 var $optionValue = $(e.target).closest('.pub-maininfo__category-input_additional-category').find('option:eq(' + String($(e.target).index() + ')')).attr('value');
-                $('.pub-maininfo__category-secoundary-inputs-container').find('input[id="category' + String(selectedCount + 1) + '"]').val($optionValue);
+                $('.pub-maininfo__category-secoundary-inputs-container').find('input[type="hidden"]').each((i, item) => {
+                    if ($(item).val() == '') {
+                        $('.pub-maininfo__selected-categories').append('<span class="pub-maininfo__selected-category" data-value="' + $optionValue + '">' + $(e.target).text() + '</span>');
+                        // $('.pub-maininfo__selected-categories').attr('data-value', )
+                        $(item).val($optionValue);
+                        return false;
+                    }
+                });
             }
         } else if ($(e.target).is($('.pub-maininfo__selected-category'))) {
             $(e.target).closest($('.pub-maininfo__category-secoundary-inputs-container'))
@@ -650,24 +658,30 @@ $(function() {
 
                     if ($(item).text() == $(e.target).text()) {
                         $(item).removeClass('category_selected');
-                        $('.pub-maininfo__category-input_main-category option').each((j, item1) => {
-                            $('.pub-maininfo__category-secoundary-inputs-container input[type="hidden"]').each((k, item3) => {
-                                if ($(item1).val() == $(item3).val()) {
-                                    console.log($(item1).val(), $(item3).val())
-                                    $(item3).val('');
-                                    selectedCount--;
-                                }
-                            })
-                        });
-
-                        $(e.target).remove();
                     }
+
+
                 });
+            $(e.target).remove();
 
-            $('.pub-maininfo__category-secoundary-inputs-container').find('input[id="category' + String(selectedCount) + '"]').val('');
-            selectedCount--;
+            $('.pub-maininfo__category-secoundary-inputs-container input[type="hidden"]').each((k, item3) => {
+                var res = false;
+                if ($(item3).val() != '') {
+                    $('.pub-maininfo__selected-category').each((j, item1) => {
+
+                        if ($(item3).val() == $(item1).attr('data-value')) {
+                            res = true;
+                            return false;
+                        }
+                    });
+                    if (!res) {
+                        $(item3).val('');
+                        selectedCount--;
+                        return false;
+                    }
+                }
+            })
         }
-
     });
 
     $('.addarticle-form').on('submit', function(e) {
@@ -1049,9 +1063,6 @@ $(function() {
 
         hideModal();
     });
-
-    var firstMonth = false;
-    var secondMonth = false;
 
     $('.period-modal__period-table-item').on('click', function() {
         if (!$(this).hasClass('period-modal__period-table-item_selected')) {
