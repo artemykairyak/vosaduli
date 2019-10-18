@@ -2916,6 +2916,19 @@ option {
     &_disabled {
         display: none;
     }
+
+    &_events {
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -10px;
+            right: 25%;
+            background: url(../images/icons/arr.svg) 0 0 / contain no-repeat;
+            width: 27px;
+            height: 12px;
+        }
+    }
 }
 
 .report-btn {
@@ -2951,6 +2964,18 @@ option {
 
     &:hover {
         color: #1e5cd6;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        height: 12px;
+        width: 25px;
+        background: url(../images/icons/arr.svg) 0 0/ contain no-repeat;
+        transform: translateX(-50%) rotate(180deg);
     }
 }
 
@@ -3343,11 +3368,6 @@ option {
 
 .sign-in-modal,
 .sign-up-modal {
-    &__input {
-        &_password {
-            font-size: 32px;
-        }
-    }
 
     &__show-pass {
         position: absolute;
@@ -4221,10 +4241,11 @@ option {
         top: -15px;
         right: -30px;
         cursor: pointer;
+        opacity: 0.6;
 
-        &:hover {
-            transform: scale(1.1);
-        }
+            &:hover {
+                opacity: 1;
+            }
     }
 
     &__info {
@@ -4258,7 +4279,7 @@ option {
                 height: 12px;
                 border: solid 2px #ffffff;
                 position: absolute;
-                left: 25px;
+                left: 30px;
                 top: 13px;
                 border-radius: 100%;
                 z-index: 5;
@@ -4274,8 +4295,6 @@ option {
         mask-size: 100%;
         position: relative;
         display: inline-block;
-
-
     }
 
     &__text {
@@ -4299,16 +4318,26 @@ option {
 
         &_save {
             position: absolute;
-            top: -15px;
+            top: 25px;
             right: -30px;
             cursor: pointer;
+            opacity: 0.6;
+
+            &:hover {
+                opacity: 1;
+            }
         }
 
         &_close {
             position: absolute;
-            top: 15px;
-            right: -30px;
+            top: 25px;
+            right: -63px;
             cursor: pointer;
+            opacity: 0.6;
+
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 
@@ -5644,7 +5673,7 @@ option {
 
         position: relative;
         height: 44px;
-        padding: 12px 15px 14px 15px;
+        
         width: 190px;
         font-size: 13px;
         font-weight: bold;
@@ -5658,10 +5687,12 @@ option {
 
     &-next-page {
         background: url(../images/icons/arrow-next-nav.svg) 0 0 / contain no-repeat;
+        padding: 12px 15px 14px 15px;
     }
 
     &-prev-page {
         background: url(../images/icons/prev_btn.svg) 0 0 / contain no-repeat;
+        padding: 12px 10px 14px 20px;
     }
 }
 
@@ -6695,7 +6726,7 @@ option {
         &_online {
             &:before {
                 left: 7px;
-                top: 5px;
+                top: 3px;
                 height: 10px;
                 width: 10px;
             }

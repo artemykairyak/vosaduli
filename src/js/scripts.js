@@ -2,6 +2,17 @@ $(function() {
 
     //BASE
 
+    if ($('.main-menu').offset().top > 33) {
+        $('.main-menu').addClass('main-menu_scrolled');
+    }
+
+    if ($('.nav-menu').offset().top > 100) {
+        $('.nav-menu').removeClass('nav-menu_hidden');
+        $('.nav-menu').addClass('nav-menu_showed');
+    } else {
+        $('.nav-menu').removeClass('nav-menu_showed');
+    }
+
     var scrollPos = 0;
     $(window).on('scroll', function(e) {
         var st = $(this).scrollTop();
@@ -456,14 +467,14 @@ $(function() {
             });
 
             $('.pub-maininfo__category-secoundary-inputs-container').find('input[type="hidden"]').each((i, item3) => {
-                if($(item3).val() != '') {
+                if ($(item3).val() != '') {
                     $('.pub-maininfo__selected-category').each((j, item4) => {
                         $(item4).attr('data-value', $(item3).val());
                         return false;
-                    })
+                    });
                 }
-            }
-        };
+            });
+        }
     }, 100);
 
     var firstMonth = false;
@@ -595,12 +606,6 @@ $(function() {
         }
     });
 
-    // $('.pub-maininfo__category-input_main-category select').on('change', function() {
-    //     $('select.pub-maininfo__category-input_additional-category').removeAttr('disabled');
-    //     console.log('fff')
-    //     $('select.pub-maininfo__category-input_additional-category').trigger('refresh');
-    // })
-
     $('.pub-maininfo__category-input_main-category .jq-selectbox__dropdown li').on('click', function() {
         $('.pub-maininfo__category-input_additional-category .jq-selectbox__dropdown li').each((i, item) => {
             $(item).removeClass('category_selected');
@@ -715,8 +720,9 @@ $(function() {
         showModal($('.report-modal'))
     });
 
-    $('.report-reason').on('submit', function(e) {
+    $('.report-modal__form').on('submit', function(e) {
         e.preventDefault();
+        $('.report-modal').addClass('modal_disabled');
         sendForm($(this), window.location.pathname);
     })
 
@@ -1148,7 +1154,6 @@ function replaceContacts() {
     $('.actions').prepend(contacts);
     $('.actions').addClass('actions_withcontacts');
 }
-
 
 function sendForm(form, url) {
     var formName = form.attr('name');

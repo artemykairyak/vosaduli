@@ -174,13 +174,29 @@
     }
 
     .icons-section__counter {
-    	right: 7px;
-    	top: -7px;
+        right: 7px;
+        top: -7px;
+    }
+
+    .popup {
+        left: -200%;
+        width: 180px;
+
+
+        &_events {
+            &:before {
+                left: 30%;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 480px) {
     .icons-section {
         width: 45%;
+    }
+
+    .popup {
+        width: 160px;
     }
 }
