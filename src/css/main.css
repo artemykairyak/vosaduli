@@ -77,8 +77,9 @@
 .profile-menu__item_archive,
 .profile-menu__item_categories,
 .mobile-profile-menu__item_categories,
-.mobile-profile-menu__item_archive {
-  display: none;
+.mobile-profile-menu__item_archive,
+.nav-menu__item_shop {
+  display: none !important;
 }
 
 /* END HIDDEN ITEMS */
@@ -3696,6 +3697,10 @@ option {
   border-top: none;
 }
 
+.logo {
+  padding-left: 10px;
+}
+
 .logo__picture {
   background: url(../images/icons/logo.svg) 0 0/contain no-repeat;
   width: 151px;
@@ -6138,6 +6143,10 @@ option {
 
   .nav-menu {
     display: none;
+  }
+
+  .logo {
+    padding-left: 0;
   }
 
   .submenu {

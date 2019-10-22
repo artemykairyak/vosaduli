@@ -132,10 +132,10 @@ $(function() {
                     url: window.location.pathname,
                     data: data,
                     success: function(data) {
-                        console.log(data);
+                        showNoOverlayModal($('.success-modal'));
                     },
                     error: function(error) {
-                        console.log(error);
+                        showNoOverlayModal($('.error-modal'));
                     },
                     dataType: 'json'
                 });
