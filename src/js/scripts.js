@@ -2,11 +2,11 @@ $(function() {
 
     //BASE
 
-    if ($('.main-menu').offset().top > 33) {
+    if ($('.main-menu').length > 0 && $('.main-menu').offset().top > 33) {
         $('.main-menu').addClass('main-menu_scrolled');
     }
 
-    if ($('.nav-menu').offset().top > 100) {
+    if ($('.nav-menu').length > 0 && $('.nav-menu').offset().top > 100) {
         $('.nav-menu').removeClass('nav-menu_hidden');
         $('.nav-menu').addClass('nav-menu_showed');
     } else {
@@ -26,7 +26,7 @@ $(function() {
             }
         } else {
             $('.mobile-nav-menu').removeClass('mobile-nav-menu_hidden');
-            if ($('.nav-menu').offset().top > 66) {
+            if ($('.nav-menu').length > 0 && $('.nav-menu').offset().top > 66) {
                 $('.nav-menu').removeClass('nav-menu_hidden');
                 $('.nav-menu').addClass('nav-menu_showed');
             } else {
@@ -41,7 +41,7 @@ $(function() {
     });
 
     $(window).on('scroll', function() {
-        if ($('.main-menu').offset().top > 33) {
+        if ($('.main-menu').length > 0 && $('.main-menu').offset().top > 33) {
             $('.main-menu').addClass('main-menu_scrolled');
         } else {
             $('.main-menu').removeClass('main-menu_scrolled');
@@ -711,9 +711,12 @@ $(function() {
         cutText($('.questions__item-content'), 70);
     }
 
+    var href = '';
+
     $('.report-btn').on('click', function(e) {
         e.preventDefault();
         $(this).find($('.report-popup')).toggleClass('popup_disabled');
+        href = $(this).attr('href');
     });
 
     $('.report-popup').on('click', function() {
@@ -723,7 +726,23 @@ $(function() {
     $('.report-modal__form').on('submit', function(e) {
         e.preventDefault();
         $('.report-modal').addClass('modal_disabled');
-        sendForm($(this), window.location.pathname);
+        var formName = $(this).attr('name');
+        var $data = $(this).serialize() + '&' + 'href=' + href + '&'+ formName + '=1';
+        console.log($data);
+        $.ajax({
+            type: "POST",
+            url: window.location.pathname,
+            data: $data,
+            success: function(data) {
+                showNoOverlayModal($('.success-modal'));
+                console.log(data);
+            },
+            error: function(error) {
+                showNoOverlayModal($('.error-modal'));
+                console.log(error);
+            },
+            dataType: 'json'
+        });
     })
 
     $('.questions__trigger').on('click', function(e) {
@@ -1165,9 +1184,11 @@ function sendForm(form, url) {
         data: $data,
         success: function(data) {
             showNoOverlayModal($('.success-modal'));
+            console.log(data);
         },
         error: function(error) {
             showNoOverlayModal($('.error-modal'));
+            console.log(error);
         },
         dataType: 'json'
     });
