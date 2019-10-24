@@ -215,6 +215,7 @@
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+  align-items: center;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -259,6 +260,7 @@
 .friend__write-btn {
   font-weight: 500;
   color: #1e5cd6;
+  display: none;
 }
 
 @media screen and (max-width: 550px) {
@@ -285,10 +287,18 @@
     height: 70px;
   }
 
+  .friends__menu-link {
+    padding: 10px;
+  }
+
   .friends__menu-item {
-    padding: 10px 10px;
     height: 30px;
     font-size: 12px;
+    padding: 0;
+  }
+
+  .friends__menu-item:hover:before {
+    height: 30px;
   }
 
   .friends__menu-item:before,

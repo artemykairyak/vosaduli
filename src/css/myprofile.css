@@ -1117,7 +1117,7 @@
   right: 15px;
   transition: all 0.3s ease;
   cursor: pointer;
-  z-index: 20;
+  z-index: 19;
 }
 
 .user-data__avatar-changephoto input[type="file"],
@@ -1835,10 +1835,10 @@
     position: absolute;
     right: 15px;
     width: 65%;
-    margin-right: 0;
-    margin-left: 15%;
-    margin-top: 9px;
-    margin-bottom: 9px;
+    /*margin-right: 0;
+        margin-left: 15%;
+        margin-top: 9px;
+        margin-bottom: 9px;*/
   }
 
   .header-menu__nav-arrow {
@@ -1986,6 +1986,14 @@
     padding: 23px 15px 26px;
   }
 
+  .myprofile__submenu-item {
+    margin-right: 15px;
+  }
+
+  .myprofile__submenu-item:last-child {
+    margin-right: 0;
+  }
+
   .myprofile-contacts__form-footer {
     font-size: 12px;
   }
@@ -2046,8 +2054,10 @@
   }
 
   .header-menu__container {
-    width: 65%;
+    /*width: 65%;*/
     padding: 0;
+    position: static;
+    margin: 0 auto;
   }
 
   .header-menu__container:after {
@@ -2237,6 +2247,10 @@
   .myprofile__submenu {
     width: 90%;
     justify-content: space-between;
+  }
+
+  .myprofile__submenu-item {
+    margin-right: 0;
   }
 
   .edit-info {

@@ -8,7 +8,7 @@
 .profile-menu__item_archive,
 .profile-menu__item_categories,
 .mobile-profile-menu__item_categories,
-.mobile-profile-menu__item_archive, 
+.mobile-profile-menu__item_archive,
 .nav-menu__item_shop {
     display: none !important;
 }
@@ -3032,7 +3032,7 @@ option {
 .mobile-overlay {
     width: 100%;
     left: auto;
-    z-index: 60;
+    z-index: 90;
 }
 
 .modal {
@@ -3320,7 +3320,7 @@ option {
         width: 100%;
 
         &:focus {
-           color: $blue;
+            color: $blue;
         }
     }
 
@@ -3563,7 +3563,7 @@ option {
 
 .menu li:hover {
     .text {
-         color: #1e5cd6;
+        color: #1e5cd6;
     }
 
     .item {
@@ -4246,9 +4246,9 @@ option {
         cursor: pointer;
         opacity: 0.6;
 
-            &:hover {
-                opacity: 1;
-            }
+        &:hover {
+            opacity: 1;
+        }
     }
 
     &__info {
@@ -4307,6 +4307,60 @@ option {
         margin-bottom: 57px;
         position: relative;
 
+        &.mobile-edit {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            margin: 0;
+            transition: none;
+            z-index: 25;
+
+            /*&:after {
+                content: '';
+                position: absolute;
+                bottom: -10%;
+                left: 0;
+                width: 100%;
+                height: 10%;
+                background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0, rgba(255,255,255,0) 60%);
+
+            }*/
+
+            .user-data__text_edited {
+                width: auto;
+                text-align: center;
+                margin-bottom: 2%;
+            }
+
+            .user-data__text_save,
+            .user-data__text_close {
+                position: absolute;
+                display: inline-block;
+                top: 70%;
+                transition: none;
+                right: auto;
+
+            }
+
+            .user-data__text_save {
+                left: 50%;
+                transform: translateX(-100%);
+            }
+
+            .user-data__text_close {
+                left: 55%;
+                transform: translateX(-100%);
+            }
+        }
+
         &_edited {
             outline: none;
             font-family: ALS;
@@ -4317,6 +4371,7 @@ option {
             display: inline-block;
             color: #fff;
             border-bottom: 2px solid #fff;
+            width: 90%;
         }
 
         &_save {
@@ -4348,7 +4403,7 @@ option {
         font-family: ALS;
         font-size: 49px;
         font-weight: bold;
-
+        max-width: 600px;
     }
 
     &__bio {
@@ -5676,7 +5731,7 @@ option {
 
         position: relative;
         height: 44px;
-        
+
         width: 190px;
         font-size: 13px;
         font-weight: bold;
@@ -6236,6 +6291,12 @@ option {
 
     .user-data__username {
         font-size: 46px;
+        max-width: 400px;
+    }
+
+    .user-data__text_edited {
+        font-size: 46px;
+        width: 85%;
     }
 
     .profile-menu__contacts {
@@ -6411,6 +6472,11 @@ option {
     }
 
     .user-data__username {
+        max-width: 300px;
+    }
+
+    .user-data__username,
+    .user-data__text_edited {
         font-size: 42px;
     }
 
@@ -6475,7 +6541,8 @@ option {
         }
     }
 
-    .user-data__username {
+    .user-data__username,
+    .user-data__text_edited {
         font-size: 32px;
     }
 
@@ -6496,9 +6563,13 @@ option {
         width: 65%;
         max-width: 100%;
     }
+
+    .user-data__text.mobile-edit .user-data__text_close {
+        transform: translateX(-50%);
+    }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 610px) {
 
     .user-data__info {
         display: -webkit-flex;
@@ -6507,7 +6578,11 @@ option {
         display: -o-flex;
         display: flex;
         align-items: flex-end;
-        justify-content: space-between;
+
+    }
+
+    .user-data__edit {
+        right: 0px;
     }
 
     .user-data__username {
@@ -6644,7 +6719,9 @@ option {
 }
 
 @media screen and (max-width: 440px) {
-    .user-data__username {
+
+    .user-data__username,
+    .user-data__text_edited {
         font-size: 24px;
     }
 
@@ -6722,6 +6799,10 @@ option {
     .user-data__username {
         font-size: 20px;
         margin-bottom: 5px;
+    }
+
+    .user-data__text_edited {
+        font-size: 20px;
     }
 
     .user-data__text {

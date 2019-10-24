@@ -104,13 +104,19 @@ $(function() {
     $('.user-data__text').on('click', function(e) {
         if ($(e.target).parent().is('.user-data__edit') || $(e.target).parent().is('.user-data__edit-svg')) {
             username.detach();
-            var save = '<span class="user-data__text_save"><span class="svg user-data__text_save-svg" data-src="/templates/vosaduly/images/icons/uil-check-circle.svg"></span></span>'
-            var close = '<span class="user-data__text_close"><span class="svg user-data__text_close-svg" data-src="/templates/vosaduly/images/icons/uil-check-circle2.svg"></span></span>'
+             var save = '<span class="user-data__text_save"><span class="svg user-data__text_save-svg" data-src="/templates/vosaduly/images/icons/uil-check-circle.svg"></span></span>'
+             var close = '<span class="user-data__text_close"><span class="svg user-data__text_close-svg" data-src="/templates/vosaduly/images/icons/uil-check-circle2.svg"></span></span>'
+            //var save = '<span class="user-data__text_save"><span class="svg user-data__text_save-svg" data-src="images/icons/uil-check-circle.svg"></span></span>'
+            //var close = '<span class="user-data__text_close"><span class="svg user-data__text_close-svg" data-src="images/icons/uil-check-circle2.svg"></span></span>'
             $('.user-data__edit').hide();
-            $('<input class="user-data__text_edited" type="text" value="' + username.text() + '">').insertAfter($('.user-data__edit'));
+            $('<input size=0 class="user-data__text_edited" type="text" value="' + username.text() + '">').insertAfter($('.user-data__edit'));
             $('.user-data__text').append($(save));
             $('.user-data__text').append($(close));
             SVGrefresh();
+
+            if($(window).width() < 900) {
+                $('.user-data__text').addClass('mobile-edit');
+            }
         }
 
         if ($(e.target).parent().is($('.user-data__text_save')) || $(e.target).parent().is($('.user-data__text_save-svg'))) {
@@ -124,6 +130,10 @@ $(function() {
                 var data = {
                     name: newUsername.split(' ')[0],
                     surname: newUsername.split(' ')[1]
+                }
+
+                if($(window).width() < 900) {
+                    $('.user-data__text').removeClass('mobile-edit');
                 }
 
                 console.log(data)
@@ -147,6 +157,10 @@ $(function() {
             $('.user-data__text_edited').remove();
             $('.user-data__text_save, .user-data__text_close').remove();
             $('.user-data__edit').show();
+
+            if($(window).width() < 900) {
+                $('.user-data__text').removeClass('mobile-edit');
+            }
         }
     });
 
@@ -284,12 +298,16 @@ $(function() {
             pullDrag: false,
             responsive: {
                 0: {
-                    items: 2.7,
-                    nav: false,
-                    margin: 10,
+                    items: 2,
+                    nav: true,
+                    margin: 5,
                     mouseDrag: true,
                     touchDrag: true,
                     pullDrag: true
+                },
+                490: {
+                    margin: 10,
+                    items: 4
                 },
                 690: {
                     items: 4
@@ -712,11 +730,13 @@ $(function() {
     }
 
     var href = '';
+    var reportTitle = '';
 
     $('.report-btn').on('click', function(e) {
         e.preventDefault();
         $(this).find($('.report-popup')).toggleClass('popup_disabled');
         href = $(this).attr('href');
+        reportTitle = $(this).attr('data-title');
     });
 
     $('.report-popup').on('click', function() {
@@ -727,7 +747,7 @@ $(function() {
         e.preventDefault();
         $('.report-modal').addClass('modal_disabled');
         var formName = $(this).attr('name');
-        var $data = $(this).serialize() + '&' + 'href=' + href + '&'+ formName + '=1';
+        var $data = $(this).serialize() + '&' + 'href=' + href + '&'+ 'title=' + reportTitle + '&' + formName + '=1';
         console.log($data);
         $.ajax({
             type: "POST",

@@ -152,6 +152,7 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	align-items: center;
 	@include borderBottom;
 
 	&:last-child {
@@ -196,6 +197,7 @@
 	&__write-btn {
 		font-weight: 500;
 		color: #1e5cd6;
+		display: none;
 	}
 
 }
@@ -224,10 +226,20 @@
 		height: 70px;
 	}
 
+	.friends__menu-link {
+		padding: 10px;
+	}
+
 	.friends__menu-item {
-		padding: 10px 10px;
 		height: 30px;
 		font-size: 12px;
+		padding: 0;
+
+		&:hover {
+			&:before {
+				height: 30px;
+			}
+		}
 
 		&:before, &:after {
 			height: 30px;
