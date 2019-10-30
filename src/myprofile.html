@@ -73,6 +73,26 @@
         </p>
         <a href="#" class="error-modal-btn modal__btn">Понятно</a>
     </div>
+    <div class="forget-password-modal modal modal_disabled">
+        <div class="forget-password-modal__close modal__close">
+            <span class="svg" data-src="images/icons/close-icon.svg"></span>
+        </div>
+        <h2 class="forget-password-modal__title modal__title">Восстановление пароля</h2>
+        <form action="/auth/login" name="forget-password-form" class="forget-password-modal__form modal__form" method="POST">
+            <div class="modal__input-container forget-password-modal__input-container forget-password-modal__input-container_email">
+                <p class="modal__label forget-password-modal__label forget-password-modal__label_email">
+                    Введите ваш e-mail<sup class="star">*</sup>
+                </p>
+                <div class="modal__input-wrapper forget-password-modal__input-wrapper">
+                    <input type="text" name="login_email" class="modal__input sign-in-modal__input forget-password-modal__input_email">
+                </div>
+            </div>
+            <div class="forget-password-modal__enter-btn-container">
+                <input type="submit" value="Продолжить" class="modal__btn forget-password-modal__enter-btn" name="submit">
+                <div class="modal__btn-shadow"></div>
+            </div>
+        </form>
+    </div>
     <div class="sign-in-modal modal modal_disabled">
         <div class="sign-in-modal__close modal__close">
             <span class="svg" data-src="images/icons/close-icon.svg"></span>

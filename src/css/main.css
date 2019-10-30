@@ -2168,6 +2168,14 @@ body .chosen-container-single .chosen-search input[type="text"] {
   background: #f0f2f7;
 }
 
+.widget_main {
+  border-radius: 2px;
+  border: 1px solid #e6e9f1;
+  margin-top: 0 !important;
+  padding: 21px 16px 25px;
+  background: #fff;
+}
+
 .ctype-journal .photo {
   width: 55px;
   height: 55px;
@@ -2372,6 +2380,10 @@ body .chosen-container-single .chosen-search input[type="text"] {
 
 .form_row_label {
   display: block;
+}
+
+.row {
+  height: 100% !important;
 }
 
 .options-wrapp {
@@ -3284,6 +3296,10 @@ option {
   border-radius: 23.5px;
 }
 
+.modal__label_error {
+  color: #f8454b;
+}
+
 .success-modal,
 .error-modal {
   background: #FFFFFF;
@@ -3437,7 +3453,8 @@ option {
 }
 
 .sign-in-modal__show-pass,
-.sign-up-modal__show-pass {
+.sign-up-modal__show-pass,
+.forget-password-modal__show-pass {
   position: absolute;
   width: 16px;
   height: 14px;
@@ -3448,22 +3465,26 @@ option {
 }
 
 .sign-in-modal__show-pass_showed,
-.sign-up-modal__show-pass_showed {
+.sign-up-modal__show-pass_showed,
+.forget-password-modal__show-pass_showed {
   font-size: 17px;
 }
 
 .sign-in-modal__show-pass path,
-.sign-up-modal__show-pass path {
+.sign-up-modal__show-pass path,
+.forget-password-modal__show-pass path {
   transition: all 0.3s ease;
 }
 
 .sign-in-modal__show-pass:hover path,
-.sign-up-modal__show-pass:hover path {
+.sign-up-modal__show-pass:hover path,
+.forget-password-modal__show-pass:hover path {
   opacity: 0.7;
 }
 
 .sign-in-modal__bottom-inputs,
-.sign-up-modal__bottom-inputs {
+.sign-up-modal__bottom-inputs,
+.forget-password-modal__bottom-inputs {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -3474,7 +3495,8 @@ option {
 }
 
 .sign-in-modal__rememberme-checkbox,
-.sign-up-modal__rememberme-checkbox {
+.sign-up-modal__rememberme-checkbox,
+.forget-password-modal__rememberme-checkbox {
   width: 12px;
   height: 12px;
   border: 1px solid #c4d2e1;
@@ -3485,14 +3507,17 @@ option {
 }
 
 .sign-in-modal__rememberme-checkbox:checked,
-.sign-up-modal__rememberme-checkbox:checked {
+.sign-up-modal__rememberme-checkbox:checked,
+.forget-password-modal__rememberme-checkbox:checked {
   background: url(../images/icons/checkmark-icon.svg) 0 0/contain no-repeat;
 }
 
 .sign-in-modal__rememberme-label,
 .sign-in-modal__forget-password,
 .sign-up-modal__rememberme-label,
-.sign-up-modal__forget-password {
+.sign-up-modal__forget-password,
+.forget-password-modal__rememberme-label,
+.forget-password-modal__forget-password {
   font-size: 12px;
   font-weight: 500;
   color: #5b5b5b;
@@ -3503,12 +3528,15 @@ option {
 .sign-in-modal__rememberme-label:hover,
 .sign-in-modal__forget-password:hover,
 .sign-up-modal__rememberme-label:hover,
-.sign-up-modal__forget-password:hover {
+.sign-up-modal__forget-password:hover,
+.forget-password-modal__rememberme-label:hover,
+.forget-password-modal__forget-password:hover {
   color: #282828;
 }
 
 .sign-in-modal__enter-btn-container,
-.sign-up-modal__enter-btn-container {
+.sign-up-modal__enter-btn-container,
+.forget-password-modal__enter-btn-container {
   position: relative;
   z-index: 1;
   margin: 0 auto;
@@ -3517,18 +3545,21 @@ option {
 }
 
 .sign-in-modal__enter-btn-container *,
-.sign-up-modal__enter-btn-container * {
+.sign-up-modal__enter-btn-container *,
+.forget-password-modal__enter-btn-container * {
   transition: all .3s ease;
 }
 
 .sign-in-modal__enter-btn-container:hover .modal__btn-shadow,
-.sign-up-modal__enter-btn-container:hover .modal__btn-shadow {
+.sign-up-modal__enter-btn-container:hover .modal__btn-shadow,
+.forget-password-modal__enter-btn-container:hover .modal__btn-shadow {
   top: 0;
   left: 0;
 }
 
 .sign-in-modal__register-btn,
-.sign-up-modal__register-btn {
+.sign-up-modal__register-btn,
+.forget-password-modal__register-btn {
   font-size: 12px;
   font-weight: 500;
   color: #45aaf2;
@@ -3536,7 +3567,8 @@ option {
 }
 
 .sign-in-modal__register-btn:hover,
-.sign-up-modal__register-btn:hover {
+.sign-up-modal__register-btn:hover,
+.forget-password-modal__register-btn:hover {
   color: #0e78c3;
 }
 
@@ -3607,6 +3639,10 @@ option {
 
 .sign-up-modal__policyaccept-temps:hover {
   text-decoration: underline;
+}
+
+.forget-password-modal__title {
+  font-size: 28px;
 }
 
 .header {
@@ -4231,6 +4267,10 @@ option {
   display: -o-flex;
   display: flex;
   align-items: center;
+}
+
+.mobile-nav-menu__item_search {
+  display: none;
 }
 
 .mobile-nav-menu__link {
@@ -4891,6 +4931,10 @@ option {
   margin-right: 10%;
 }
 
+.user-content__card-icon_messages {
+  display: none;
+}
+
 .user-content__card * {
   transition: all .3s ease;
 }
@@ -5379,6 +5423,7 @@ option {
 
 .questions__trigger {
   border-right: 1px solid #e5e5e5;
+  z-index: 1;
 }
 
 .questions__trigger:last-child {
@@ -6473,6 +6518,10 @@ option {
     left: -50%;
   }
 
+  .mobile-nav-menu__item_search {
+    display: inline-block;
+  }
+
   .submenu {
     display: none;
   }
@@ -6671,6 +6720,11 @@ option {
     top: 2px;
   }
 
+  .user-data__edit svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
   .user-data__info {
     display: -webkit-flex;
     display: -moz-flex;
@@ -6803,7 +6857,7 @@ option {
   }
 
   .mobile-nav-menu__item {
-    margin-left: 30px;
+    margin-left: 15px;
   }
 
   .user-data__avatar-picture {

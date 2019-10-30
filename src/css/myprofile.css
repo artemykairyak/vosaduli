@@ -1994,6 +1994,11 @@
     margin-right: 0;
   }
 
+  .feed__submenu-item_datefilter,
+  .feed__submenu-item_interestingfilter {
+    margin-right: 0;
+  }
+
   .myprofile-contacts__form-footer {
     font-size: 12px;
   }
@@ -2061,7 +2066,7 @@
   }
 
   .header-menu__container:after {
-    content: '';
+    /*content: '';*/
     position: absolute;
     right: 0;
     top: 0;
@@ -2078,7 +2083,9 @@
   }
 
   .header-menu__container {
-    width: 60%;
+    width: 85% !important;
+    padding: 0 17%;
+    right: 0;
   }
 
   .myprofile__tabs {
@@ -2238,10 +2245,6 @@
   .user-data__avatar-changephoto:not(.user-data__avatar-changephoto_header) {
     top: -8px;
     right: 0;
-  }
-
-  .header-menu__container {
-    width: 90%;
   }
 
   .myprofile__submenu {
