@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Описание страницы для SEO и соцсетей">
+    <meta name="keywords" content="ключевые, слова, через, запятую">
+    <title>Журнал</title>
+    <link rel="icon" href="images/icons/favicon-96x96.png" type="image/png">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/main-menu_signed.css">
+    <!-- <link rel="stylesheet" href="css/main-menu_unsigned.css"> -->
+    <link rel="stylesheet" href="css/journal.css" type="text/css">
+</head>
+
+<body>
+    <main>
+        <div class="mobile-overlay overlay_disabled"></div>
+        <div class="wrapper">
+            <form action="test.php" name="confirm-registration" class="confirm-registration" method="POST">
+                <p class="confirm-registration__title">Подтверждение регистрации</p>
+            <div class="modal__input-container confirm-registration__input-container">
+                <p class="modal__label confirm-registration__label">
+                    Код подтверждения
+                </p>
+                <div class="modal__input-wrapper confirm-registration__input-wrapper">
+                    <input type="text" name="confirm-code" class="modal__input confirm-registration__input-code">
+                </div>
+                <a href="#" class="confirm-registration__resend-btn">Отправить ещё раз</a>
+                <span class="confirm-registration__resend-timer disabled">Отправить ещё раз через: <span class="confirm-registration__counter"></span></span>
+            </div>
+            <div class="confirm-registration__btn-container">
+                <input type="submit" value="Продолжить" class="modal__btn confirm-registration__btn" name="submit">
+                <div class="modal__btn-shadow"></div>
+            </div>
+        </form>
+        </div>
+    </main>
+    <script src="vendors/js/jquery-3.4.1.min.js"></script>
+    <script src="vendors/js/easySVG.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

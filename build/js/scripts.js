@@ -86,26 +86,29 @@ $(function () {
   $('.main-content').on('click', function (e) {
     if ($(e.target).closest('.likes-btn__icon').length > 0) {
       e.preventDefault();
-      $(e.target).closest('.likes-btn').toggleClass('likes-btn_liked-anim');
-      $(e.target).closest('.likes-btn').toggleClass('likes-btn_liked');
-      var id = $(e.target).closest('.feed__article-likes').data('id');
-      var item = $(e.target).closest('.feed__article-likes');
-      var svg = $(e.target).closest('.feed__article-likes').find('span');
-      $.ajax({
-        url: window.location.pathname,
-        data: {
-          id: id
-        },
-        dataType: 'json',
-        type: 'POST',
-        success: function success(result) {
-          if (result.success) {
-            $(item).html(result.likes);
-            $(item).prepend(svg);
-            SVGrefresh();
+
+      if (!!$(e.target).closest('.likes-btn').attr('data-login')) {
+        $(e.target).closest('.likes-btn').toggleClass('likes-btn_liked-anim');
+        $(e.target).closest('.likes-btn').toggleClass('likes-btn_liked');
+        var id = $(e.target).closest('.feed__article-likes').data('id');
+        var item = $(e.target).closest('.feed__article-likes');
+        var svg = $(e.target).closest('.feed__article-likes').find('span');
+        $.ajax({
+          url: window.location.pathname,
+          data: {
+            id: id
+          },
+          dataType: 'json',
+          type: 'POST',
+          success: function success(result) {
+            if (result.success) {
+              $(item).html(result.likes);
+              $(item).prepend(svg);
+              SVGrefresh();
+            }
           }
-        }
-      });
+        });
+      }
     }
   }); //BASE END
   // MYPROFILE
@@ -394,6 +397,29 @@ $(function () {
   }
 
   ; //MODERATION END
+  //CONFIRM
+
+  $('.confirm-registration__resend-btn').on('click', function (e) {
+    e.preventDefault();
+
+    if (!$(this).hasClass('disabled')) {
+      $('.confirm-registration__resend-timer').removeClass('disabled');
+      $('.confirm-registration__resend-btn').addClass('disabled');
+      $('.confirm-registration__counter').text(30);
+      var seconds = 29;
+      var timer = setInterval(function () {
+        $('.confirm-registration__counter').text(seconds);
+        seconds--;
+
+        if (seconds <= 0) {
+          clearInterval(timer);
+          seconds = 29;
+          $('.confirm-registration__resend-timer').addClass('disabled');
+          $('.confirm-registration__resend-btn').removeClass('disabled');
+        }
+      }, 1000);
+    }
+  }); //END CONFIRM
   // ADD ARTICLE
 
   setTimeout(function () {
@@ -824,7 +850,14 @@ $(function () {
     hideModal();
     showModal($('.forget-password-modal'));
   });
-  $('.overlay, .modal__close').on('click', function () {
+  $('.modal__close').on('click', function () {
+    if ((!$('.sign-in-modal').hasClass('modal_disabled') || !$('.sign-up-modal').hasClass('modal_disabled') || !$('.forget-password-modal').hasClass('modal_disabled')) && !$('.error-modal').hasClass('modal_disabled')) {
+      hideModal($(this).closest('.modal'), true);
+    } else {
+      hideModal($(this).closest('.modal'));
+    }
+  });
+  $('.overlay').on('click', function () {
     hideModal();
   });
   $('.sign-in-modal__form').on('submit', function (e) {
@@ -899,7 +932,12 @@ $(function () {
   });
   $('.error-modal-btn, .success-modal-btn').on('click', function (e) {
     e.preventDefault();
-    hideNoOverlayModal($('.modal'));
+
+    if (!$('.sign-in-modal').hasClass('modal_disabled') || !$('.sign-up-modal').hasClass('modal_disabled') || !$('.forget-password-modal').hasClass('modal_disabled')) {
+      hideNoOverlayModal($(this).closest('.modal'), true);
+    } else {
+      hideNoOverlayModal($(this).closest('.modal'));
+    }
   }); //MODALS END
   // ANOTHER PROFILE
 
@@ -941,39 +979,115 @@ function sendForm(form, url) {
     url: url,
     data: $data,
     success: function success(data) {
-      console.log(!form.hasClass('sign-in-modal__form') || !form.hasClass('sign-up-modal__form'));
-
-      if ((!form.hasClass('sign-in-modal__form') || !form.hasClass('sign-in-modal__form')) && (!form.hasClass('sign-in-modal__form') || !form.hasClass('sign-up-modal__form'))) {
-        showNoOverlayModal($('.success-modal'));
-      } else {
-        window.location.reload();
-      }
+      showNoOverlayModal($('.success-modal'));
+      console.log(data);
     },
     error: function error(_error3) {
-      if (!form.hasClass('sign-in-modal__form') || !form.hasClass('sign-up-modal__form')) {
-        showNoOverlayModal($('.error-modal'));
-        console.log(_error3);
-      }
+      console.log(_error3);
+      showNoOverlayModal($('.error-modal'));
     },
     dataType: 'json'
   });
 }
 
-function showNoOverlayModal(modal) {
-  $('.overlay').addClass('overlay_transparent');
-  $('.overlay').removeClass('overlay_disabled');
+function checkForm(form) {
+  var formName = form.attr('name');
+  var $data = $(form).serialize() + '&' + formName + '=1';
+  console.log($data);
+
+  if (form.hasClass('sign-up-modal__form')) {
+    $.ajax({
+      type: "POST",
+      url: '/auth/register',
+      data: $data,
+      success: function success(data) {
+        console.log(data);
+
+        if (!data.errors) {
+          document.location.href = 'http://' + document.location.host + '/auth/verify';
+        } else {
+          showNoOverlayModal($('.error-modal'), data.errors);
+        }
+      },
+      error: function error(_error4) {
+        console.log(_error4);
+        var defaultErrorText = 'Упс!<br>Произошла ошибка.<br>Попробуйте ещё раз.';
+        showNoOverlayModal($('.error-modal'), defaultErrorText);
+      },
+      dataType: 'json'
+    });
+  }
+
+  if (form.hasClass('sign-in-modal__form')) {
+    $.ajax({
+      type: "POST",
+      url: '/auth/login',
+      data: $data,
+      success: function success(data) {
+        console.log(data);
+
+        if (!data.errors) {
+          document.location.reload();
+        } else {
+          showNoOverlayModal($('.error-modal'), data.errors);
+        }
+      },
+      error: function error(_error5) {
+        console.log(_error5);
+        var defaultErrorText = 'Упс!<br>Произошла ошибка.<br>Попробуйте ещё раз.';
+        showNoOverlayModal($('.error-modal'), defaultErrorText);
+      },
+      dataType: 'json'
+    });
+  }
+
+  if (form.hasClass('forget-password-modal__form')) {
+    $.ajax({
+      type: "POST",
+      url: '/auth/restore',
+      data: $data,
+      success: function success(data) {
+        console.log(data);
+
+        if (!data.errors) {
+          showNoOverlayModal($('.success-modal'), 'Проверьте почту.');
+        } else {
+          showNoOverlayModal($('.error-modal'), data.errors);
+        }
+      },
+      error: function error(_error6) {
+        console.log(_error6);
+        var defaultErrorText = 'Упс!<br>Произошла ошибка.<br>Попробуйте ещё раз.';
+        showNoOverlayModal($('.error-modal'), defaultErrorText);
+      },
+      dataType: 'json'
+    });
+  }
+}
+
+function showNoOverlayModal(modal, text) {
+  if (!text) {
+    $('.overlay').addClass('overlay_transparent');
+    $('.overlay').removeClass('overlay_disabled');
+  } else {
+    modal.find('.error-modal__text').html(text);
+  }
+
   modal.removeClass('modal_disabled');
   modal.animate({
     'opacity': '1'
   }, 300);
   setTimeout(function () {
-    hideNoOverlayModal(modal);
+    hideNoOverlayModal(modal, true);
   }, 3000);
 }
 
-function hideNoOverlayModal(modal) {
-  $('.overlay').addClass('overlay_disabled');
-  $('.overlay').removeClass('overlay_transparent');
+function hideNoOverlayModal(modal, overlay) {
+  if (!overlay) {
+    $('.overlay').addClass('overlay_disabled');
+    $('.overlay').removeClass('overlay_transparent');
+  }
+
   modal.animate({
     'opacity': '0'
   }, 300, function () {
@@ -993,8 +1107,8 @@ function validationModalForm(form) {
     }
   });
 
-  if (ok) {
-    sendForm(form, form.attr('action'));
+  if (ok && (form.hasClass('sign-up-modal__form') || form.hasClass('sign-in-modal__form') || form.hasClass('forget-password-modal__form'))) {
+    checkForm(form);
   }
 }
 
@@ -1107,8 +1221,10 @@ function showModal(modal) {
   modal.removeClass('modal_disabled');
 }
 
-function hideModal(modal) {
-  $('.overlay').addClass('overlay_disabled');
+function hideModal(modal, overlay) {
+  if (!overlay) {
+    $('.overlay').addClass('overlay_disabled');
+  }
 
   if (!modal) {
     $('.modal').addClass('modal_disabled');

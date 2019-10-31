@@ -710,7 +710,7 @@
 }
 
 .category-item,
-category-description {
+.category-description {
   font-family: "Roboto", sans-serif;
   color: #282829;
   text-align: left;
@@ -721,7 +721,7 @@ category-description {
 }
 
 .category-item p,
-category-description p {
+.category-description p {
   padding-bottom: 22px;
 }
 
@@ -865,6 +865,12 @@ category-description p {
 .user-info .avatar {
   width: 42px;
   height: 42px;
+}
+
+.user a img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .user-info .desc-wrap {
@@ -2578,6 +2584,10 @@ body .chosen-container-single .chosen-search input[type="text"] {
   opacity: 0.8;
 }
 
+.category-header-main .cloud .popular-themes {
+  max-height: 200px;
+}
+
 /* End other headings */
 
 /* END OLD STYLES */
@@ -2651,7 +2661,8 @@ textarea {
 }
 
 .header + .container {
-  margin-top: 140px;
+  /*margin-top: 140px;*/
+  margin-top: 90px;
 }
 
 .input {
@@ -3082,6 +3093,7 @@ option {
   border: solid 2px #ffffff;
   background-color: #d8d8d8;
   border-radius: 100%;
+  overflow: hidden;
 }
 
 .overlay,
@@ -3308,6 +3320,7 @@ option {
   padding: 50px 30px 40px;
   width: 30%;
   opacity: 0;
+  z-index: 105;
 }
 
 .success-modal__text,
@@ -3648,6 +3661,91 @@ option {
 .header {
   /*padding-top: 55px;*/
 }
+
+/* CONFIRM PAGE */
+
+.confirm-registration {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.confirm-registration__title {
+  font-family: MuseoCyrl;
+  font-size: 30px;
+  font-weight: 700;
+  color: #21224e;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.confirm-registration__input-container {
+  margin: 15px 0;
+  width: 40%;
+  text-align: center;
+}
+
+.confirm-registration__label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2e2e2e;
+}
+
+.confirm-registration__input-wrapper {
+  margin-bottom: 15px;
+}
+
+.confirm-registration__resend-btn,
+.confirm-registration__resend-timer {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.confirm-registration__resend-btn {
+  color: #45aaf2;
+  margin-bottom: 5px;
+  transition: all .3s ease;
+}
+
+.confirm-registration__resend-btn.disabled {
+  color: #f4f7fb;
+}
+
+.confirm-registration__resend-btn.disabled:hover {
+  color: #f4f7fb;
+  cursor: default;
+}
+
+.confirm-registration__resend-btn:hover {
+  color: #0e78c3;
+}
+
+.confirm-registration__resend-timer.disabled {
+  display: none;
+}
+
+.confirm-registration__btn-container {
+  position: relative;
+  z-index: 1;
+}
+
+.confirm-registration__btn-container * {
+  transition: all .3s ease;
+}
+
+.confirm-registration__btn-container:hover .modal__btn-shadow {
+  top: 0;
+  left: 0;
+}
+
+/* END CONFIRM PAGE */
 
 .search-input {
   height: 37px;

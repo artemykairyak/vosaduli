@@ -640,7 +640,7 @@
 }
 
 .category-item,
-category-description {
+.category-description {
     font-family: "Roboto", sans-serif;
     color: #282829;
     text-align: left;
@@ -651,7 +651,7 @@ category-description {
 }
 
 .category-item p,
-category-description p {
+.category-description p {
     padding-bottom: 22px;
 }
 
@@ -795,6 +795,12 @@ category-description p {
 .user-info .avatar {
     width: 42px;
     height: 42px;
+}
+
+.user a img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .user-info .desc-wrap {
@@ -2505,6 +2511,10 @@ body .chosen-container-single .chosen-search input[type="text"] {
     opacity: 0.8;
 }
 
+.category-header-main .cloud .popular-themes {
+    max-height: 200px;
+}
+
 /* End other headings */
 
 
@@ -2580,7 +2590,8 @@ textarea {
 }
 
 .header+.container {
-    margin-top: 140px;
+    /*margin-top: 140px;*/
+    margin-top: 90px;
 }
 
 .input {
@@ -3016,6 +3027,7 @@ option {
     border: solid 2px #ffffff;
     background-color: #d8d8d8;
     border-radius: 100%;
+    overflow: hidden;
 }
 
 .overlay,
@@ -3236,6 +3248,7 @@ option {
     padding: 50px 30px 40px;
     width: 30%;
     opacity: 0;
+    z-index: 105;
 
     &__text {
         margin: 30px auto 20px;
@@ -3560,6 +3573,95 @@ option {
 .header {
     /*padding-top: 55px;*/
 }
+
+/* CONFIRM PAGE */
+
+.confirm-registration {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        font-family: MuseoCyrl;
+        font-size: 30px;
+        font-weight: 700;
+        color: #21224e;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__input-container {
+        margin: 15px 0;
+        width: 40%;
+        text-align: center;
+    }
+
+    &__label {
+        font-size: 14px;
+        font-weight: 700;
+        color: $text;
+    }
+
+    &__input-wrapper {
+        margin-bottom: 15px;
+    }
+
+    &__resend-btn,
+    &__resend-timer {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    &__resend-btn {
+        color: #45aaf2;
+        margin-bottom: 5px;
+        transition: all .3s ease;
+
+        &.disabled {
+            color: #f4f7fb;
+
+            &:hover {
+                color: #f4f7fb;
+                cursor: default;
+            }
+        }
+
+        &:hover {
+            color: darken(#45aaf2, 20%);
+        }
+    }
+
+    &__resend-timer {
+        &.disabled {
+            display: none;
+        }
+    }
+
+   &__btn-container {
+        position: relative;
+        z-index: 1;
+
+        & * {
+            transition: all .3s ease;
+        }
+
+        &:hover {
+            .modal__btn-shadow {
+                top: 0;
+                left: 0;
+            }
+        }
+   }
+}
+
+/* END CONFIRM PAGE */
 
 .search-input {
     height: 37px;
