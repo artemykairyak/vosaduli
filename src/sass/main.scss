@@ -9,7 +9,7 @@
 .profile-menu__item_categories,
 .mobile-profile-menu__item_categories,
 .mobile-profile-menu__item_archive,
-.nav-menu__item_shop {
+.nav-menu__item_shop, .messages {
     display: none !important;
 }
 
@@ -2512,8 +2512,10 @@ body .chosen-container-single .chosen-search input[type="text"] {
 }
 
 .category-header-main .cloud .popular-themes {
-    max-height: 200px;
+    max-height: 200px !important;
 }
+
+
 
 /* End other headings */
 
@@ -3070,6 +3072,7 @@ option {
     max-width: 480px;
     text-align: center;
     max-height: 100vh;
+    width: 50%;
 
     &_disabled {
         display: none;
@@ -3485,10 +3488,6 @@ option {
         font-weight: 500;
         color: #45aaf2;
         transition: all .3s ease;
-
-        &:hover {
-            color: darken(#45aaf2, 20%);
-        }
     }
 }
 
@@ -3573,6 +3572,33 @@ option {
 .header {
     /*padding-top: 55px;*/
 }
+
+/* TINYMCE FIXES  */
+
+.icon-t {
+    position: relative;
+}
+
+.icon-t svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-item li {
+    display: block;
+}
+
+.content-item img,
+.feed__article-text img, 
+.journal__article-text img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* END TINYMCE FIXES  */
+
 
 /* CONFIRM PAGE */
 
@@ -4873,6 +4899,7 @@ option {
 
     &__contacts {
         margin-top: 25px;
+        margin-left: 15px;
 
         &-soc-item {
             padding: 4px 9px;
@@ -5461,6 +5488,7 @@ option {
         overflow-y: hidden;
         box-sizing: border-box;
         height: 660px;
+        margin-top: 5px;
     }
 
     &__item {
@@ -6294,6 +6322,10 @@ option {
         margin-top: 120px;
     }
 
+    .header+.container {
+        margin-top: 140px;
+    }
+
     .main-menu {
         position: fixed;
         top: 0;
@@ -6302,6 +6334,10 @@ option {
         background: #fff;
         width: 100%;
         border-top: 1px solid #fff;
+    }
+
+    .confirm-registration {
+        margin-top: 60px;
     }
 
     .navigation {
@@ -6666,6 +6702,20 @@ option {
             order: 1;
         }
     }
+
+    .comments-title-wrap .b-btn-subscribe {
+        float: none !important;
+    }
+
+    .comments-title {
+        position: relative;
+    }
+
+    .comments-title span {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+    }
 }
 
 @media screen and (max-width: 690px) {
@@ -6755,6 +6805,10 @@ option {
     .user-content__maintext {
         width: 100%;
     }
+
+    .confirm-registration__input-container {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -6764,6 +6818,14 @@ option {
         &_disabled {
             left: -80%;
         }
+    }
+
+    #comments_widget .form-comments .b-btn-submit {
+        margin: 0 auto 25px !important;
+    }
+
+    .confirm-registration {
+        margin-top: 140px;
     }
 
     .mobile-profile-menu {

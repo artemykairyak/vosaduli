@@ -54,7 +54,7 @@ gulp.task('buildJs', function () {
 		 .pipe(babel({
             presets: ['@babel/env']
         }))
-		// .pipe(uglyfly())
+		.pipe(uglyfly())
 		.pipe(gulp.dest('build/js'))
 		.pipe(reload({stream: true}));
 });

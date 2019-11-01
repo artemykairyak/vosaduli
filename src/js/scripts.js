@@ -497,6 +497,14 @@ $(function() {
             $('.confirm-registration__resend-timer').removeClass('disabled');
             $('.confirm-registration__resend-btn').addClass('disabled');
             $('.confirm-registration__counter').text(30);
+
+            $.ajax({
+                type: "POST",
+                url: '/auth/resubmit',
+                data: {},
+                dataType: 'json'
+            });
+
             let seconds = 29;
             var timer = setInterval(function() {
 
@@ -784,37 +792,45 @@ $(function() {
     var href = '';
     var reportTitle = '';
 
-    $('.report-btn').on('click', function(e) {
-        e.preventDefault();
-        $(this).find($('.report-popup')).toggleClass('popup_disabled');
-        href = $(this).attr('href');
-        reportTitle = $(this).attr('data-title');
+    $('.report-btn').on('mouseenter', function(e) {
+        $(this).find($('.report-popup')).removeClass('popup_disabled');
     });
 
-    $('.report-popup').on('click', function() {
+    $('.report-btn').on('mouseleave', function(e) {
+        $(this).find($('.report-popup')).addClass('popup_disabled');
+    });
+
+    $('.report-btn').on('click', function(e) {
+        e.preventDefault();
+        href = $(this).attr('href');
+        reportTitle = $(this).attr('data-title');
         showModal($('.report-modal'))
     });
 
     $('.report-modal__form').on('submit', function(e) {
         e.preventDefault();
-        $('.report-modal').addClass('modal_disabled');
-        var formName = $(this).attr('name');
-        var $data = $(this).serialize() + '&' + 'href=' + href + '&' + 'title=' + reportTitle + '&' + formName + '=1';
-        console.log($data);
-        $.ajax({
-            type: "POST",
-            url: window.location.pathname,
-            data: $data,
-            success: function(data) {
-                showNoOverlayModal($('.success-modal'));
-                console.log(data);
-            },
-            error: function(error) {
-                showNoOverlayModal($('.error-modal'));
-                console.log(error);
-            },
-            dataType: 'json'
-        });
+
+        if ($('.report-modal__reason').val()) {
+            $('.report-modal').addClass('modal_disabled');
+            var formName = $(this).attr('name');
+            var $data = $(this).serialize() + '&' + 'href=' + href + '&' + 'title=' + reportTitle + '&' + formName + '=1';
+            $.ajax({
+                type: "POST",
+                url: window.location.pathname,
+                data: $data,
+                success: function(data) {
+                    showNoOverlayModal($('.success-modal'), 'Ваша жалоба была отправлена!');
+                    $('.report-modal__reason').val('');
+                },
+                error: function(error) {
+                    showNoOverlayModal($('.error-modal'));
+                    console.log(error);
+                },
+                dataType: 'json'
+            });
+        } else {
+            showNoOverlayModal($('.error-modal'), 'Укажите причину жалобы.');
+        }
     })
 
     $('.questions__trigger').on('click', function(e) {
@@ -1108,13 +1124,13 @@ $(function() {
             if ($(this).hasClass('feed__tabs-tab_allfeed')) {
                 $('.myprofile__submenu_myfeed').addClass('myprofile__submenu_hidden');
                 $('.myprofile__submenu_allfeed').removeClass('myprofile__submenu_hidden');
-                $('.feed_allfeed').removeClass('feed_hidden');
-                $('.feed_myfeed').addClass('feed_hidden');
+                //$('.feed_allfeed').removeClass('feed_hidden');
+                //$('.feed_myfeed').addClass('feed_hidden');
             } else {
                 $('.myprofile__submenu_myfeed').removeClass('myprofile__submenu_hidden');
                 $('.myprofile__submenu_allfeed').addClass('myprofile__submenu_hidden');
-                $('.feed_allfeed').addClass('feed_hidden');
-                $('.feed_myfeed').removeClass('feed_hidden');
+                //$('.feed_allfeed').addClass('feed_hidden');
+                //$('.feed_myfeed').removeClass('feed_hidden');
             }
         }
     })
@@ -1320,7 +1336,6 @@ function sendForm(form, url) {
 function checkForm(form) {
     var formName = form.attr('name');
     var $data = $(form).serialize() + '&' + formName + '=1';
-    console.log($data);
 
     if (form.hasClass('sign-up-modal__form')) {
         $.ajax({
@@ -1328,7 +1343,6 @@ function checkForm(form) {
             url: '/auth/register',
             data: $data,
             success: function(data) {
-                console.log(data);
                 if (!data.errors) {
                     document.location.href = 'http://' + document.location.host + '/auth/verify';
                 } else {
@@ -1399,9 +1413,9 @@ function showNoOverlayModal(modal, text) {
 
     modal.removeClass('modal_disabled');
     modal.animate({ 'opacity': '1' }, 300);
-    setTimeout(() => {
-        hideNoOverlayModal(modal, true);
-    }, 3000)
+        setTimeout(() => {
+            hideNoOverlayModal(modal, true);
+        }, 3000) 
 }
 
 function hideNoOverlayModal(modal, overlay) {
@@ -1421,6 +1435,10 @@ function validationModalForm(form) {
     inputs.each(function(i, elem) {
         if (!$(elem).val()) {
             $(elem).closest('.modal__input-container').find('.modal__label').addClass('modal__label_error');
+            ok = false;
+        } else if ($(elem).hasClass('sign-up-modal__input_name') && $(elem).val().trim().indexOf(' ') > 0) {
+            $(elem).closest('.modal__input-container').find('.modal__label').addClass('modal__label_error');
+            showNoOverlayModal($('.error-modal'), 'Укажите ТОЛЬКО имя')
             ok = false;
         } else {
             $(elem).closest('.modal__input-container').find('.modal__label').removeClass('modal__label_error');
