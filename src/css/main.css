@@ -4154,6 +4154,7 @@ option {
   border-radius: 18.5px;
   line-height: 33px;
   font-weight: bold;
+  outline: none;
 }
 
 .mobile-menu__sign-in:before,
@@ -6328,6 +6329,11 @@ option {
   background: 0 0;
   transition: .5s;
   cursor: pointer;
+  outline: none;
+}
+
+.footer__ask-btn:focus {
+  border-color: #6386a9;
 }
 
 .footer__ask-btn:hover {

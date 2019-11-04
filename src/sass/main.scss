@@ -4086,6 +4086,7 @@ option {
         border-radius: 18.5px;
         line-height: 33px;
         font-weight: bold;
+        outline: none;
 
         &:before,
         &:after {
@@ -6265,6 +6266,11 @@ option {
         background: 0 0;
         transition: .5s;
         cursor: pointer;
+        outline: none;
+
+        &:focus {
+            border-color: darken(#94acc4, 15%);
+        }
 
         &:hover {
             background: #21224e;
@@ -6278,7 +6284,6 @@ option {
 }
 
 @media screen and (max-width: 1280px) {
-
     .nav-menu,
     .main-menu {
         width: 100%;

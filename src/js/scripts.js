@@ -51,7 +51,7 @@ $(function() {
     $('.icons-section__item_events').on('click', function(e) {
         e.preventDefault();
         $('.popup_events').toggleClass('popup_disabled');
-    })
+    });
 
     $('.mobile-nav-menu__burger').on('click', function() {
         $(this).addClass('mobile-nav-menu__burger_opened');
@@ -115,7 +115,14 @@ $(function() {
                 })
             }
         }
-    })
+    });
+
+    $('.nav-menu__link_add-photo, .questions__add-post, .questions__add-button, .mobile-nav-menu__link_add-photo-icon').on('click', function(e) { 
+        if($('.icons-section__icon_events').length == 0) {
+            e.preventDefault();
+            showModal($('.sign-in-modal'));
+        }
+    });
 
     //BASE END
 
@@ -821,6 +828,7 @@ $(function() {
                 success: function(data) {
                     showNoOverlayModal($('.success-modal'), 'Ваша жалоба была отправлена!');
                     $('.report-modal__reason').val('');
+                    $('.overlay').addClass('overlay_disabled');
                 },
                 error: function(error) {
                     showNoOverlayModal($('.error-modal'));
@@ -1548,9 +1556,12 @@ function cutText(element, len) {
     });
 }
 
-function showModal(modal) {
-    $('.overlay').removeClass('overlay_disabled');
+function showModal(modal, showOverlay) {
     modal.removeClass('modal_disabled');
+    if(!showOverlay) {
+        $('.overlay').removeClass('overlay_disabled'); 
+    }
+   
 }
 
 function hideModal(modal, overlay) {
