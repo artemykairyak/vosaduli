@@ -9,7 +9,8 @@
 .profile-menu__item_categories,
 .mobile-profile-menu__item_categories,
 .mobile-profile-menu__item_archive,
-.nav-menu__item_shop, .messages {
+.nav-menu__item_shop,
+.messages {
     display: none !important;
 }
 
@@ -3005,6 +3006,173 @@ option {
     }
 }
 
+.nyroModalCont {
+    background: #FFFFFF !important;
+    border-radius: 8px;
+    padding: 40px 25px 36px !important;
+    max-width: 553px !important;
+    width: 50%;
+
+    & * {
+        box-sizing: border-box !important;
+    }
+}
+
+#pm_notices_list {
+    padding: 0 !important;
+
+    .item {
+        background: #fff !important;
+        border: none !important;
+        position: relative;
+
+        .date {
+            font-weight: 500 !important;
+            font-size: 12px !important;
+            line-height: 15px !important;
+            color: #94ACC4 !important;
+            padding: 0 !important;
+            margin-bottom: 11px !important;
+        }
+
+        .content {
+            border: none;
+            padding: 11px 0 30px !important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: #282829;
+            margin: 0 !important;
+            margin-bottom: 15px !important;
+
+            a {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 18px;
+
+                text-decoration: none !important &:hover {
+                    text-decoration: underline !important;
+                    color: #F58D00 !important;
+                }
+            }
+        }
+    }
+}
+
+.nyroModalCont::-webkit-scrollbar {
+    width: 0;
+}
+
+.nyroModalCont {
+    -ms-overflow-style: none;
+}
+
+.nyroModalCont {
+    overflow: -moz-scrollbars-none;
+}
+
+#pm_notices_window {
+    width: auto !important;
+    position: relative !important;
+}
+
+#pm_notices_list .item .close-button a {
+    background: url(../images/icons/close-icon.svg) 0 0 / contain no-repeat !important;
+    width: 16px;
+    height: 16px;
+
+    &:hover {
+        background-position-x: inherit !important;
+        opacity: 0.6;
+    }
+}
+
+#pm_notices_list .item .close-button {
+    float: none !important;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+.events-popup {
+    &__controls {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    &__control {
+        padding: 0 30px;
+
+        &:after {
+            top: 2px;
+            left: 2px;
+        }
+
+        &_clear {
+            color: #4E801A;
+            margin-right: 3%;
+
+            &:before {
+                border: 1px solid #90C952;
+            }
+
+            &:after {
+                background: #C4DFA5;
+            }
+
+            &:hover {
+                color: #4E801A;
+
+                &:after {
+                    background: #C4DFA5;
+                }
+
+                &:before {
+                    border: 1px solid #90C952;
+                }
+            }
+        }
+
+        &_close {
+           color: $blue;
+
+            &:before {
+                border: 1px solid #94ACC4;
+            }
+
+            &:after {
+                background: #C4D2E1;
+            }
+
+            &:hover {
+                color: $blue;
+
+                &:after {
+                    background: #C4D2E1;
+                }
+
+                &:before {
+                    border: 1px solid #94ACC4;
+                }
+            }
+        }
+    }
+}
+
 .comment-btn {
     padding: 0 28px;
 }
@@ -3591,7 +3759,7 @@ option {
 }
 
 .content-item img,
-.feed__article-text img, 
+.feed__article-text img,
 .journal__article-text img {
     max-width: 100% !important;
     height: auto !important;
@@ -3670,7 +3838,7 @@ option {
         }
     }
 
-   &__btn-container {
+    &__btn-container {
         position: relative;
         z-index: 1;
 
@@ -3684,7 +3852,7 @@ option {
                 left: 0;
             }
         }
-   }
+    }
 }
 
 /* END CONFIRM PAGE */
@@ -6284,6 +6452,7 @@ option {
 }
 
 @media screen and (max-width: 1280px) {
+
     .nav-menu,
     .main-menu {
         width: 100%;
