@@ -88,6 +88,12 @@ $(function() {
         $('.actions__add-friend').text('Удалить из друзей');
     }
 
+    $('.user-info__avatar').on('click', function(e) {
+        if($(window).width() <= 786) {
+            e.preventDefault();
+        }
+    })
+
     $('.main-content').on('click', function(e) {
         if ($(e.target).closest('.likes-btn__icon').length > 0) {
             e.preventDefault();

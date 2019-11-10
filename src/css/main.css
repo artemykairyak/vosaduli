@@ -1132,6 +1132,10 @@
   color: #1e5cd6;
 }
 
+.nyroModalLink {
+  height: 100%;
+}
+
 .content_list_item,
 .field-name-content,
 #tinymce {
@@ -3075,7 +3079,13 @@ option {
   border-radius: 8px;
   padding: 40px 25px 36px !important;
   max-width: 553px !important;
-  width: 50%;
+  width: 50% !important;
+  margin: 0 !important;
+  top: 10% !important;
+  bottom: auto !important;
+  left: 50% !important;
+  right: 50% !important;
+  transform: translate(-50%, -5%);
 }
 
 .nyroModalCont * {
@@ -3103,7 +3113,7 @@ option {
 
 #pm_notices_list .item .content {
   border: none;
-  padding: 11px 0 30px !important;
+  padding: 11px 0 10px !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -3132,17 +3142,24 @@ option {
   width: 0;
 }
 
-.nyroModalCont {
+#pm_notices_window::-webkit-scrollbar {
+  width: 0;
+}
+
+.nyroModalCont,
+#pm_notices_window {
   -ms-overflow-style: none;
 }
 
-.nyroModalCont {
+.nyroModalCont,
+#pm_notices_window {
   overflow: -moz-scrollbars-none;
 }
 
 #pm_notices_window {
   width: auto !important;
   position: relative !important;
+  height: 90% !important;
 }
 
 #pm_notices_list .item .close-button a {
@@ -3189,7 +3206,7 @@ option {
 
 .events-popup__control_clear {
   color: #4E801A;
-  margin-right: 3%;
+  margin-right: 7%;
 }
 
 .events-popup__control_clear:before {
@@ -6812,6 +6829,10 @@ option {
 }
 
 @media screen and (max-width: 768px) {
+  .nyroModalCont {
+    width: 70% !important;
+  }
+
   .mobile-menu {
     width: 50%;
   }
@@ -6965,6 +6986,10 @@ option {
 }
 
 @media screen and (max-width: 610px) {
+  .nyroModalCont {
+    width: 80% !important;
+  }
+
   .user-data__info {
     display: -webkit-flex;
     display: -moz-flex;
@@ -7019,6 +7044,15 @@ option {
 }
 
 @media screen and (max-width: 480px) {
+  #pm_notices_list .item .close-button {
+    right: 0;
+  }
+
+  #pm_notices_list .item .close-button a {
+    width: 13px;
+    height: 13px;
+  }
+
   .mobile-menu {
     width: 80%;
   }
@@ -7121,6 +7155,11 @@ option {
 }
 
 @media screen and (max-width: 440px) {
+  .nyroModalCont {
+    width: 100% !important;
+    margin: 30px 0 !important;
+  }
+
   .user-data__username,
   .user-data__text_edited {
     font-size: 24px;
@@ -7171,6 +7210,10 @@ option {
 }
 
 @media screen and (max-width: 395px) {
+  .events-popup__control {
+    padding: 0 15px;
+  }
+
   .mobile-menu__link {
     font-size: 14px;
   }
