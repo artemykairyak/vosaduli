@@ -347,6 +347,11 @@
   transition: all .3s ease;
 }
 
+.header-menu__nav-arrow svg {
+  width: 13px;
+  height: 13px;
+}
+
 .myprofile-section_disabled {
   display: none;
 }

@@ -294,6 +294,11 @@
         text-align: center;
         transition: all .3s ease;
     }
+
+    &__nav-arrow svg {
+        width: 13px;
+        height: 13px;
+    }
 }
 
 .myprofile {

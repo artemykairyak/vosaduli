@@ -57,7 +57,6 @@ $(function() {
         $(this).addClass('mobile-nav-menu__burger_opened');
         $('.mobile-menu').removeClass('mobile-menu_disabled');
         $('.mobile-overlay').removeClass('overlay_disabled');
-        // $('body').addClass('hidden');
     });
 
     $('.mobile-overlay').on('click', function() {
@@ -88,11 +87,23 @@ $(function() {
         $('.actions__add-friend').text('Удалить из друзей');
     }
 
-    $('.user-info__avatar').on('click', function(e) {
-        if($(window).width() <= 786) {
-            e.preventDefault();
-        }
-    })
+    $('.favorites').click(function () {
+        var uri = $(this).children('a').data('uri');
+        var id = $(this).children('a').data('id');
+        var user_id = $(this).children('a').data('user');
+
+        $.post('/' + uri, {
+            favorites: 1,
+            id,
+            user_id
+        }, function(result) {
+            if (result.success) {
+                showNoOverlayModal($('.success-modal'), result.message);
+            } else {
+                showNoOverlayModal($('.error-modal'));
+            }
+        }, 'json')
+    });
 
     $('.main-content').on('click', function(e) {
         if ($(e.target).closest('.likes-btn__icon').length > 0) {
@@ -1188,6 +1199,14 @@ $(function() {
         showModal($('.forget-password-modal'));
     });
 
+    $('#popup-manager').on('click', function(e) {
+        if($(e.target).is($('.events-popup__control_close'))) {
+            e.preventDefault();
+            $('#popup-manager').empty();
+            $('#popup-manager').removeClass('popup-show');
+        }
+    });
+
     $('.modal__close').on('click', function() {
         if ((!$('.sign-in-modal').hasClass('modal_disabled') ||
                 !$('.sign-up-modal').hasClass('modal_disabled') ||
@@ -1422,7 +1441,7 @@ function showNoOverlayModal(modal, text) {
         $('.overlay').addClass('overlay_transparent');
         $('.overlay').removeClass('overlay_disabled');
     } else {
-        modal.find('.error-modal__text').html(text);
+        modal.find('.modal__text').html(text);
     }
 
     modal.removeClass('modal_disabled');
