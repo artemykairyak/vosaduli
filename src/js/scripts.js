@@ -19,8 +19,9 @@ $(function() {
 
         if (st > scrollPos) {
             $('.mobile-nav-menu').addClass('mobile-nav-menu_hidden');
-            $('.nav-menu').addClass('nav-menu_hidden');
             $('.nav-menu').removeClass('nav-menu_showed');
+            $('.nav-menu').addClass('nav-menu_hidden');
+
             if (!$('.mobile-search').hasClass('mobile-search_hidden')) {
                 $('.mobile-search').slideUp(300);
             }
@@ -29,6 +30,9 @@ $(function() {
             if ($('.nav-menu').length > 0 && $('.nav-menu').offset().top > 66) {
                 $('.nav-menu').removeClass('nav-menu_hidden');
                 $('.nav-menu').addClass('nav-menu_showed');
+            } else if (scrollPos >= 100 && $('.main-menu').hasClass('main-menu_scrolled')) {
+                $('.nav-menu').removeClass('nav-menu_showed');
+                $('.nav-menu').removeClass('nav-menu_hidden');
             } else {
                 $('.nav-menu').removeClass('nav-menu_showed');
             }
@@ -87,7 +91,7 @@ $(function() {
         $('.actions__add-friend').text('Удалить из друзей');
     }
 
-    $('.favorites').click(function () {
+    $('.favorites').click(function() {
         var uri = $(this).children('a').data('uri');
         var id = $(this).children('a').data('id');
         var user_id = $(this).children('a').data('user');
@@ -134,8 +138,8 @@ $(function() {
         }
     });
 
-    $('.nav-menu__link_add-photo, .questions__add-post, .questions__add-button, .mobile-nav-menu__link_add-photo-icon').on('click', function(e) { 
-        if($('.icons-section__icon_events').length == 0) {
+    $('.nav-menu__link_add-photo, .questions__add-post, .questions__add-button, .mobile-nav-menu__link_add-photo-icon').on('click', function(e) {
+        if ($('.icons-section__icon_events').length == 0) {
             e.preventDefault();
             showModal($('.sign-in-modal'));
         }
@@ -151,8 +155,6 @@ $(function() {
             username.detach();
             var save = '<span class="user-data__text_save"><span class="svg user-data__text_save-svg" data-src="/templates/vosaduly/images/icons/uil-check-circle.svg"></span></span>'
             var close = '<span class="user-data__text_close"><span class="svg user-data__text_close-svg" data-src="/templates/vosaduly/images/icons/uil-check-circle2.svg"></span></span>'
-            //var save = '<span class="user-data__text_save"><span class="svg user-data__text_save-svg" data-src="images/icons/uil-check-circle.svg"></span></span>'
-            //var close = '<span class="user-data__text_close"><span class="svg user-data__text_close-svg" data-src="images/icons/uil-check-circle2.svg"></span></span>'
             $('.user-data__edit').hide();
             $('<input size=0 class="user-data__text_edited" type="text" value="' + username.text() + '">').insertAfter($('.user-data__edit'));
             $('.user-data__text').append($(save));
@@ -173,6 +175,7 @@ $(function() {
                 $('.user-data__text_edited').remove();
                 $('.user-data__text_save, .user-data__text_close').remove();
                 $('.user-data__edit').show();
+
                 var data = {
                     name: newUsername.split(' ')[0],
                     surname: newUsername.split(' ')[1]
@@ -1200,7 +1203,7 @@ $(function() {
     });
 
     $('#popup-manager').on('click', function(e) {
-        if($(e.target).is($('.events-popup__control_close'))) {
+        if ($(e.target).is($('.events-popup__control_close'))) {
             e.preventDefault();
             $('#popup-manager').empty();
             $('#popup-manager').removeClass('popup-show');
@@ -1446,9 +1449,9 @@ function showNoOverlayModal(modal, text) {
 
     modal.removeClass('modal_disabled');
     modal.animate({ 'opacity': '1' }, 300);
-        setTimeout(() => {
-            hideNoOverlayModal(modal, true);
-        }, 3000) 
+    setTimeout(() => {
+        hideNoOverlayModal(modal, true);
+    }, 3000)
 }
 
 function hideNoOverlayModal(modal, overlay) {
@@ -1583,10 +1586,10 @@ function cutText(element, len) {
 
 function showModal(modal, showOverlay) {
     modal.removeClass('modal_disabled');
-    if(!showOverlay) {
-        $('.overlay').removeClass('overlay_disabled'); 
+    if (!showOverlay) {
+        $('.overlay').removeClass('overlay_disabled');
     }
-   
+
 }
 
 function hideModal(modal, overlay) {

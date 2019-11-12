@@ -1,5 +1,5 @@
 .search {
-  width: 65%;
+  width: 63%;
 }
 
 .icons-section {
@@ -62,22 +62,20 @@
 }
 
 @media screen and (max-width: 1226px) {
-  .search {
-    display: none;
-  }
-
   .main-menu {
     padding: 13px 20px 13px 26px;
+  }
+
+  .sign-buttons {
+    display: none;
   }
 
   .logo__picture {
     width: 100px;
     height: 30px;
   }
-}
 
-@media screen and (max-width: 440px) {
-  .sign-buttons {
-    display: none;
+  .search {
+    width: 85%;
   }
 }
