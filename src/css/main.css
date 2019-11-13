@@ -2610,6 +2610,10 @@ body .chosen-container-single .chosen-search input[type="text"] {
   display: none;
 }
 
+#moderation_content_list .row {
+  width: 100%;
+}
+
 /* End other headings */
 
 /* END OLD STYLES */
@@ -3660,6 +3664,11 @@ option {
   margin-right: 15px;
 }
 
+.report-modal__title-icon svg {
+  width: 38px;
+  height: 38px;
+}
+
 .report-modal__title-icon svg path:first-child {
   stroke: #fb3647;
 }
@@ -3968,6 +3977,11 @@ option {
   align-items: center;
   width: 100%;
   padding: 0 15px;
+}
+
+.bookmarks .moderation-articles__article-controls_right svg {
+  width: 7px;
+  height: 11px;
 }
 
 .bookmarks .moderation-articles__article {
@@ -5582,6 +5596,11 @@ option {
   align-items: center;
 }
 
+.mobile-profile-menu__link svg {
+  width: 25px;
+  height: 25px;
+}
+
 .mobile-profile-menu__link_active svg path:last-child {
   transition: all 0.3s ease;
   fill: #383AAA;
@@ -5699,6 +5718,8 @@ option {
   max-height: 90vh;
   overflow-y: auto;
   box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .right-sidebar * {
@@ -6673,6 +6694,11 @@ option {
 
 .footer__icons-icon_youtube svg {
   width: 21px;
+  height: 14px;
+}
+
+.footer__email svg {
+  width: 20px;
   height: 14px;
 }
 
