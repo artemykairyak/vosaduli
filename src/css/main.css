@@ -2614,6 +2614,14 @@ body .chosen-container-single .chosen-search input[type="text"] {
   width: 100%;
 }
 
+.item.ms-item.service {
+  display: flex !important;
+  position: absolute !important;
+  right: 2rem !important;
+  width: 20rem !important;
+  top: 1rem !important;
+}
+
 /* End other headings */
 
 /* END OLD STYLES */
