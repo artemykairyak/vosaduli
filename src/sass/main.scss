@@ -10,7 +10,7 @@
 .mobile-profile-menu__item_categories,
 .mobile-profile-menu__item_archive,
 .nav-menu__item_shop,
-.messages {
+.messages,.myprofile__tabs-tab_main {
     display: none !important;
 }
 
@@ -25,6 +25,20 @@
 .widget-wrapper-sidebar .widget-body {
     height: 70% !important;
 }
+
+.cropper-canvas {
+   
+    width: 100% !important;
+}
+
+* {
+    -webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+.cropper-container.cropper-bg {
+    width: 100% !important;
+}
+
 
 .h1 {
     font-size: 38px;
@@ -2549,6 +2563,10 @@ body .chosen-container-single .chosen-search input[type="text"] {
     top: 1rem !important;
 }
 
+.textarea-icons {
+    display: none !important;
+}
+
 /* End other headings */
 
 
@@ -2615,6 +2633,10 @@ button {
 
 }
 
+input[type="text"]:not(.user-data__text_edited) {
+    font-size: 15px !important;
+}
+
 input[type="submit"] {
     outline: none;
 }
@@ -2640,6 +2662,11 @@ textarea {
     background-color: #ffffff;
     font-weight: 500;
 
+    &:focus {
+        outline: none;
+        border: 1px solid darken(#c4d2e1, 20%);
+    }
+
     @include placeholder {
         font-family: Roboto;
         font-size: 16px;
@@ -2657,6 +2684,11 @@ textarea {
     padding: 0 16px;
     font-family: CeraPRO;
     font-weight: 500;
+
+      &:focus {
+        outline: none;
+        border: 1px solid darken(#c4d2e1, 20%);
+    }
 
 }
 
@@ -2718,6 +2750,10 @@ option {
     }
 }
 
+button:focus {
+    outline: none;
+}
+
 .button {
     height: 37px;
     text-transform: uppercase;
@@ -2731,8 +2767,10 @@ option {
     text-align: center;
     transition: all 0.2s ease;
 
-    &:hover {
+
+    &:hover, &:focus {
         color: #21224e;
+        outline: none;
 
         &:before {
             border: solid 1px darken(#ccd6e2, 10%);
@@ -2758,8 +2796,9 @@ option {
         color: #4e801a;
         text-align: center;
 
-        &:hover {
+        &:hover, &:focus {
             color: darken(#4e801a, 5%);
+            outline: none;
 
             &:before {
                 border: solid 1px darken(#90c952, 10%);
@@ -3540,6 +3579,15 @@ option {
     color: #f8454b;
 }
 
+.avatar-modal {
+    max-width: 100% !important;
+    &__image {
+         display: block;
+         max-width: 100%;
+         height: auto
+    }
+}
+
 .success-modal,
 .error-modal {
     background: #FFFFFF;
@@ -4133,6 +4181,7 @@ option {
         display: -o-flex;
         display: flex;
         justify-content: space-between;
+        visibility: hidden;
     }
 
     &__link {
@@ -4235,6 +4284,10 @@ option {
     }
 }
 
+.search__button:focus {
+    color: #1e5cd6 !important;
+}
+
 .icons-section {
     width: 38%;
     display: -webkit-flex;
@@ -4253,6 +4306,13 @@ option {
         display: flex;
         align-items: center;
         position: relative;
+
+        &:focus {
+            outline: none;
+            .icons-section__label {
+                color: #1e5cd6;
+            }
+        }
     }
 
     &__icon {
@@ -5130,6 +5190,14 @@ option {
         display: flex;
         align-items: center;
         position: relative;
+
+        &:focus {
+            outline: none;
+            .profile-menu__item-text {
+                color: $blue;
+            }
+
+        }
 
         &_active {
             svg path:last-child {
@@ -6603,6 +6671,14 @@ option {
             transition: all .3s ease;
         }
 
+        &-link:focus {
+            outline: none;
+
+             svg path {
+                fill: #1e5cd6;
+            }
+        }
+
         &-icon:hover {
             svg path {
                 fill: #1e5cd6;
@@ -6905,19 +6981,6 @@ option {
         margin-bottom: 30px;
         margin-top: 20px;
     }
-}
-
-@media screen and (max-width: 915px) {
-
-    .navigation-page {
-        &:nth-child(5) {
-            display: flex;
-        }
-    }
-
-    .navigation-next-page {
-        display: none;
-    }
 
     .footer {
 
@@ -7025,6 +7088,21 @@ option {
         &__menu-link:hover {
             text-decoration: underline;
         }
+}
+
+@media screen and (max-width: 915px) {
+
+    .navigation-page {
+        &:nth-child(5) {
+            display: flex;
+        }
+    }
+
+    .navigation-next-page {
+        display: none;
+    }
+
+    
     }
 }
 

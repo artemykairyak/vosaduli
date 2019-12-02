@@ -91,22 +91,47 @@ $(function() {
         $('.actions__add-friend').text('Удалить из друзей');
     }
 
+    $('.actions__add-friend').on('click', function(e) {
+        e.preventDefault();
+        let link = $('.actions__add-friend').attr('href');
+        console.log(link);
+        $.ajax({
+            type: "POST",
+            url: link,
+            data: { submit: 1 },
+            success: function(data) {
+                document.location.reload();
+            },
+            error: function(error) {
+                // showNoOverlayModal($('.error-modal'));
+                document.location.reload();
+            },
+            dataType: 'json'
+        });
+
+    })
+
     $('.favorites').click(function() {
         var uri = $(this).children('a').data('uri');
         var id = $(this).children('a').data('id');
         var user_id = $(this).children('a').data('user');
 
-        $.post('/' + uri, {
-            favorites: 1,
-            id,
-            user_id
-        }, function(result) {
-            if (result.success) {
-                showNoOverlayModal($('.success-modal'), result.message);
-            } else {
-                showNoOverlayModal($('.error-modal'));
-            }
-        }, 'json')
+        if ($('.icons-section__icon_events').length == 0) {
+            e.preventDefault();
+            showModal($('.sign-in-modal'));
+        } else {
+            $.post('/' + uri, {
+                favorites: 1,
+                id,
+                user_id
+            }, function(result) {
+                if (result.success) {
+                    showNoOverlayModal($('.success-modal'), result.message);
+                } else {
+                    showNoOverlayModal($('.error-modal'));
+                }
+            }, 'json')
+        }
     });
 
     $('.main-content').on('click', function(e) {
@@ -211,6 +236,96 @@ $(function() {
             }
         }
     });
+
+    let cropImage = {};
+    let type = '';
+    let mimeType = '';
+
+    $('#change-avatar').on('change', function(e) {
+        let file = this.files[0];
+
+        type = file.name.split('.').pop();
+        mimeType = file.type;
+
+        if (file.type.indexOf('image', 0) !== -1) {
+            var reader = new FileReader();
+
+            reader.onload = function(event) {
+                let dataUri = event.target.result;
+                $('.avatar-modal').removeClass('modal_disabled');
+                $('.avatar-modal__image').attr('src', dataUri);
+                const image = document.querySelector('.avatar-modal__image');
+                const cropper = new Cropper(image, {
+                    aspectRatio: 1 / 1,
+                    crop(event) {
+                        cropImage = cropper.getCroppedCanvas();
+                    },
+                });
+            };
+
+            reader.onerror = function(event) {
+                console.log(error);
+            };
+
+            reader.readAsDataURL(file);
+        }
+    });
+
+    function dataURItoBlob(dataURI) {
+        var binary = atob(dataURI.split(',')[1]);
+        var array = [];
+        for (var i = 0; i < binary.length; i++) {
+            array.push(binary.charCodeAt(i));
+        }
+
+        return new Blob([new Uint8Array(array)], { type: mimeType });
+    }
+
+    $('.avatar-modal__button').on('click', function() {
+
+        var dataURL = cropImage.toDataURL('image/jpeg', 0.5);
+        var blob = dataURItoBlob(dataURL);
+        var fd = new FormData();
+        fd.append("canvasImage", blob, 'blob.' + type);
+        let data = {};
+
+        $.ajax({
+            type: "POST",
+            url: '/images/upload/canvasImage?sizes=normal,micro,small,big,original',
+            data: fd,
+            success: function(result) {
+                if (result.success) {
+
+                    var avatar = {
+                        avatar: {
+                            original: result.paths.original.path,
+                            normal: result.paths.normal.path,
+                            big: result.paths.big.path,
+                            small: result.paths.small.path,
+                            micro: result.paths.micro.path
+                        }
+                    }
+
+                    $.ajax({
+                        url: window.location.pathname,
+                        data: avatar,
+                        dataType: 'json',
+                        success: function(result) {
+                            if (result.success) {
+                                location.reload();
+                            }
+                        }
+                    })
+                }
+            },
+            error: function(error) {
+                console.log(error)
+            },
+            dataType: 'json',
+            processData: false,
+            contentType: false,
+        });
+    })
 
     $('.user-data__avatar-changeavatar-input').on('focus', function() {
         $('.user-data__avatar-changephoto').addClass('user-data__avatar-changephoto_focus');
@@ -1308,6 +1423,7 @@ $(function() {
         if (!$('.sign-in-modal').hasClass('modal_disabled') || !$('.sign-up-modal').hasClass('modal_disabled') ||
             !$('.forget-password-modal').hasClass('modal_disabled')) {
             hideNoOverlayModal($(this).closest('.modal'), true);
+            $('.overlay_transparent').addClass('overlay_disabled')
         } else {
             hideNoOverlayModal($(this).closest('.modal'));
         }
@@ -1461,6 +1577,7 @@ function hideNoOverlayModal(modal, overlay) {
     }
     modal.animate({ 'opacity': '0' }, 300, function() {
         modal.addClass('modal_disabled');
+        $('.overlay_transparent').addClass('overlay_disabled')
     });
 
 }

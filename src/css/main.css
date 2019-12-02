@@ -79,7 +79,8 @@
 .mobile-profile-menu__item_categories,
 .mobile-profile-menu__item_archive,
 .nav-menu__item_shop,
-.messages {
+.messages,
+.myprofile__tabs-tab_main {
   display: none !important;
 }
 
@@ -93,6 +94,18 @@
 
 .widget-wrapper-sidebar .widget-body {
   height: 70% !important;
+}
+
+.cropper-canvas {
+  width: 100% !important;
+}
+
+* {
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+.cropper-container.cropper-bg {
+  width: 100% !important;
 }
 
 .h1 {
@@ -2622,6 +2635,10 @@ body .chosen-container-single .chosen-search input[type="text"] {
   top: 1rem !important;
 }
 
+.textarea-icons {
+  display: none !important;
+}
+
 /* End other headings */
 
 /* END OLD STYLES */
@@ -2686,6 +2703,10 @@ button {
   box-sizing: border-box;
 }
 
+input[type="text"]:not(.user-data__text_edited) {
+  font-size: 15px !important;
+}
+
 input[type="submit"] {
   outline: none;
 }
@@ -2710,6 +2731,11 @@ textarea {
   border: solid 1px #c4d2e1;
   background-color: #ffffff;
   font-weight: 500;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid #809ebf;
 }
 
 .input::-webkit-input-placeholder {
@@ -2749,6 +2775,11 @@ textarea {
   padding: 0 16px;
   font-family: CeraPRO;
   font-weight: 500;
+}
+
+.edit-input:focus {
+  outline: none;
+  border: 1px solid #809ebf;
 }
 
 select::-ms-expand {
@@ -2808,6 +2839,10 @@ option {
   border: none !important;
 }
 
+button:focus {
+  outline: none;
+}
+
 .button {
   height: 37px;
   text-transform: uppercase;
@@ -2822,15 +2857,19 @@ option {
   transition: all 0.2s ease;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   color: #21224e;
+  outline: none;
 }
 
-.button:hover:before {
+.button:hover:before,
+.button:focus:before {
   border: solid 1px #abbcd0;
 }
 
-.button:hover:after {
+.button:hover:after,
+.button:focus:after {
   background: #e1e9f4;
   top: -1px;
   left: -1px;
@@ -2850,15 +2889,19 @@ option {
   text-align: center;
 }
 
-.button_green:hover {
+.button_green:hover,
+.button_green:focus {
   color: #416b16;
+  outline: none;
 }
 
-.button_green:hover:before {
+.button_green:hover:before,
+.button_green:focus:before {
   border: solid 1px #77b137;
 }
 
-.button_green:hover:after {
+.button_green:hover:after,
+.button_green:focus:after {
   background: #b8d892;
   top: -1px;
   left: -1px;
@@ -3609,6 +3652,16 @@ option {
   color: #f8454b;
 }
 
+.avatar-modal {
+  max-width: 100% !important;
+}
+
+.avatar-modal__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .success-modal,
 .error-modal {
   background: #FFFFFF;
@@ -4206,6 +4259,7 @@ option {
   display: -o-flex;
   display: flex;
   justify-content: space-between;
+  visibility: hidden;
 }
 
 .submenu__link {
@@ -4305,6 +4359,10 @@ option {
   border-radius: 18.5px;
 }
 
+.search__button:focus {
+  color: #1e5cd6 !important;
+}
+
 .icons-section {
   width: 38%;
   display: -webkit-flex;
@@ -4324,6 +4382,14 @@ option {
   display: flex;
   align-items: center;
   position: relative;
+}
+
+.icons-section__item:focus {
+  outline: none;
+}
+
+.icons-section__item:focus .icons-section__label {
+  color: #1e5cd6;
 }
 
 .icons-section__icon {
@@ -5185,6 +5251,14 @@ option {
   display: flex;
   align-items: center;
   position: relative;
+}
+
+.profile-menu__link:focus {
+  outline: none;
+}
+
+.profile-menu__link:focus .profile-menu__item-text {
+  color: #21224e;
 }
 
 .profile-menu__link_active svg path:last-child {
@@ -6666,6 +6740,14 @@ option {
   transition: all .3s ease;
 }
 
+.footer__icons-link:focus {
+  outline: none;
+}
+
+.footer__icons-link:focus svg path {
+  fill: #1e5cd6;
+}
+
 .footer__icons-icon:hover svg path {
   fill: #1e5cd6;
 }
@@ -6958,16 +7040,6 @@ option {
     margin-bottom: 30px;
     margin-top: 20px;
   }
-}
-
-@media screen and (max-width: 915px) {
-  .navigation-page:nth-child(5) {
-    display: flex;
-  }
-
-  .navigation-next-page {
-    display: none;
-  }
 
   .footer__top,
   .footer__bottom {
@@ -7066,6 +7138,16 @@ option {
 
   .footer__menu-link:hover {
     text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 1050px) and (max-width: 915px) {
+  .navigation-page:nth-child(5) {
+    display: flex;
+  }
+
+  .navigation-next-page {
+    display: none;
   }
 }
 

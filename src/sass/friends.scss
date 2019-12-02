@@ -36,16 +36,16 @@
 			&:hover {
 				&:before {
 					content: '';
-    height: 37px;
-    width: 100%;
-    position: absolute;
-    border-radius: 2px;
-    border: 1px solid #94acc4;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    -webkit-transition: .3s;
-    transition: .3s;
+				    height: 37px;
+				    width: 100%;
+				    position: absolute;
+				    border-radius: 2px;
+				    border: 1px solid #94acc4;
+				    top: 0;
+				    left: 0;
+				    z-index: 1;
+				    -webkit-transition: .3s;
+				    transition: .3s;
 				}
 			}
 
@@ -101,6 +101,25 @@
 			position: relative;
 			padding: 14px 20px;
 			line-height: 1;
+
+			&:focus {
+				outline: none;
+				color: $blue;
+
+				&:before {
+					content: '';
+				    height: 37px;
+				    width: 100%;
+				    position: absolute;
+				    border-radius: 2px;
+				    border: 1px solid #94acc4;
+				    top: 0;
+				    left: 0;
+				    z-index: 1;
+				    -webkit-transition: .3s;
+				    transition: .3s;
+				}
+			}
 		}
 	}
 
@@ -133,6 +152,12 @@
 			color: $greyBlue;
 			font-size: 12px;
 			font-weight: bold;
+
+			&:focus {
+				outline: none;
+				color: $blue;
+				
+			}
 		}
 	}
 

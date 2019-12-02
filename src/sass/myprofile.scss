@@ -293,6 +293,23 @@
         line-height: 38px;
         text-align: center;
         transition: all .3s ease;
+
+        &:focus {
+            outline: none;
+
+            &:before {
+               transition: .3s;
+                content: '';
+                position: absolute;
+                height: 37px;
+                width: 100%;
+                border-radius: 18.5px;
+                border: 1px solid #e5e5e5;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+        }
     }
 
     &__nav-arrow svg {
@@ -509,6 +526,25 @@
             color: #5b5b5b;
             font-weight: bold;
             transition: all .3s ease;
+
+            &:focus {
+                outline: none;
+                    color: #21224e;
+
+                    &:before {
+                        content: '';
+                        height: 37px;
+                        width: 100%;
+                        position: absolute;
+                        border-radius: 2px;
+                        border: 1px solid #94acc4;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
+                        -webkit-transition: .3s;
+                        transition: .3s;
+                    }
+            }
         }
     }
 
@@ -804,6 +840,10 @@
         text-transform: uppercase;
         font-family: CeraPRO;
         cursor: pointer;
+
+        &:focus {
+            color: $blue;
+        }
     }
 
     &__shadow {

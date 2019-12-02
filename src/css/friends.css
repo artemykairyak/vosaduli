@@ -168,6 +168,25 @@
   line-height: 1;
 }
 
+.friends__menu-link:focus {
+  outline: none;
+  color: #21224e;
+}
+
+.friends__menu-link:focus:before {
+  content: '';
+  height: 37px;
+  width: 100%;
+  position: absolute;
+  border-radius: 2px;
+  border: 1px solid #94acc4;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 .friends .search__shadow {
   background: #fff;
 }
@@ -196,6 +215,11 @@
   color: #5e6d82;
   font-size: 12px;
   font-weight: bold;
+}
+
+.friends__search-button:focus {
+  outline: none;
+  color: #21224e;
 }
 
 .friends__friends-list,

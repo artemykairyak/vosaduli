@@ -347,6 +347,23 @@
   transition: all .3s ease;
 }
 
+.header-menu__link:focus {
+  outline: none;
+}
+
+.header-menu__link:focus:before {
+  transition: .3s;
+  content: '';
+  position: absolute;
+  height: 37px;
+  width: 100%;
+  border-radius: 18.5px;
+  border: 1px solid #e5e5e5;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .header-menu__nav-arrow svg {
   width: 13px;
   height: 13px;
@@ -549,6 +566,25 @@
   color: #5b5b5b;
   font-weight: bold;
   transition: all .3s ease;
+}
+
+.myprofile__submenu-link:focus {
+  outline: none;
+  color: #21224e;
+}
+
+.myprofile__submenu-link:focus:before {
+  content: '';
+  height: 37px;
+  width: 100%;
+  position: absolute;
+  border-radius: 2px;
+  border: 1px solid #94acc4;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .myprofile-cards {
@@ -847,6 +883,10 @@
   text-transform: uppercase;
   font-family: CeraPRO;
   cursor: pointer;
+}
+
+.edit-info__save-btn:focus {
+  color: #21224e;
 }
 
 .edit-info__shadow {
