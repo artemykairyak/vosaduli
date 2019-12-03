@@ -237,11 +237,23 @@ $(function() {
         }
     });
 
+    function createCropper(image) {
+        cropper = new Cropper(image, {
+            aspectRatio: 1 / 1,
+            viewMode: 2,
+            ready(event) {
+                cropImage = cropper.getCroppedCanvas();
+            }
+        });
+    }
+
+    let cropper = null;
     let cropImage = {};
     let type = '';
     let mimeType = '';
 
     $('#change-avatar').on('change', function(e) {
+        $('.overlay').removeClass('overlay_disabled');
         let file = this.files[0];
 
         type = file.name.split('.').pop();
@@ -254,13 +266,13 @@ $(function() {
                 let dataUri = event.target.result;
                 $('.avatar-modal').removeClass('modal_disabled');
                 $('.avatar-modal__image').attr('src', dataUri);
-                const image = document.querySelector('.avatar-modal__image');
-                const cropper = new Cropper(image, {
-                    aspectRatio: 1 / 1,
-                    crop(event) {
-                        cropImage = cropper.getCroppedCanvas();
-                    },
-                });
+                let image = document.querySelector('.avatar-modal__image');
+                if (!cropper) {
+                	createCropper(image);
+                } else {
+                    cropper.destroy();
+                    createCropper(image);
+                }
             };
 
             reader.onerror = function(event) {
@@ -283,7 +295,7 @@ $(function() {
 
     $('.avatar-modal__button').on('click', function() {
 
-        var dataURL = cropImage.toDataURL('image/jpeg', 0.5);
+        var dataURL = cropImage.toDataURL(mimeType);
         var blob = dataURItoBlob(dataURL);
         var fd = new FormData();
         fd.append("canvasImage", blob, 'blob.' + type);
@@ -315,11 +327,14 @@ $(function() {
                                 location.reload();
                             }
                         }
-                    })
+                    });
+
                 }
             },
             error: function(error) {
-                console.log(error)
+                console.log(error);
+                $('#change-avatar').val('');
+                showModal($('.error-modal'));
             },
             dataType: 'json',
             processData: false,
@@ -1333,11 +1348,17 @@ $(function() {
             hideModal($(this).closest('.modal'), true);
         } else {
             hideModal($(this).closest('.modal'));
+            if ($('#change-avatar').length > 0) {
+                $('#change-avatar').val('');
+            }
         }
     });
 
     $('.overlay').on('click', function() {
         hideModal();
+        if ($('#change-avatar').length > 0) {
+            $('#change-avatar').val('');
+        }
     });
 
     $('.sign-in-modal__form').on('submit', function(e) {
@@ -1427,7 +1448,6 @@ $(function() {
         } else {
             hideNoOverlayModal($(this).closest('.modal'));
         }
-
     })
 
     //MODALS END
