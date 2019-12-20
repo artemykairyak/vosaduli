@@ -88,6 +88,10 @@
   display: none;
 }
 
+img:not([src]) {
+  visibility: hidden;
+}
+
 /* END HIDDEN ITEMS */
 
 /* OLD STYLES */
